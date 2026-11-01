@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ひと工夫｜暮らし方</title>
-<meta name="description" content="住む・着る・食べる・健康・おかねの五つの場面で、いちばん効いた工夫をひとつずつ。意志で押し通すのではなく、仕組みに任せるための小さな工夫をまとめた個人的なノート。">
+<meta name="description" content="世の中で言われているライフハックを、時間・集中・住む・着る・食べる・体・眠り・おかね・デジタル・頭の中・人づきあいの11のカテゴリに整理した一覧。自分でやっているものには印をつけています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
@@ -39,51 +39,30 @@
   h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(2rem,6vw,2.8rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
   .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1.05rem,2.6vw,1.4rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1.1em;opacity:.85}
   .lead{color:var(--muted);margin:0;max-width:34em}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
 
   .toc{list-style:none;margin:30px 0 0;padding:18px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
     border-top:1px solid var(--line)}
   .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
   .toc a:hover{color:var(--accent)}
 
-  section{padding:56px 0 0}
+  section{padding:52px 0 0}
   .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
   h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.3rem;letter-spacing:.04em;margin:0 0 6px}
-  h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1rem;margin:28px 0 6px}
-  .pull{font-family:"Noto Serif JP",serif;font-weight:500;font-size:1.05rem;line-height:1.8;margin:.2em 0 1em;opacity:.85}
-  .note{color:var(--faint);font-size:.82rem;margin:0 0 22px}
+  .note{color:var(--faint);font-size:.82rem;margin:0}
   p{margin:0 0 14px}
 
-  .points{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
-  .points li{padding:14px 18px;background:var(--card);border-radius:3px;font-size:.95rem}
-  .points b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;margin-bottom:2px}
+  .points{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
+  .points li{padding:12px 16px;background:var(--card);border-radius:3px;font-size:.95rem;line-height:1.75}
+  .points b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;margin-bottom:1px}
   .points span{color:var(--muted);font-size:.9rem}
-
-  .two{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0 0}
-  @media (min-width:640px){.two{grid-template-columns:1fr 1fr}}
-  .two div{padding:16px 18px;border:1px solid var(--line);border-radius:3px}
-  .two b{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--accent);margin-bottom:8px}
-  .two ul{margin:0;padding-left:1.1em;font-size:.9rem;color:var(--muted)}
-  .two li{margin:0 0 5px}
-
-  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:20px 0 0;font-size:.86rem;color:var(--muted)}
-  .flow span{padding:7px 13px;background:var(--card);border-radius:3px}
-  .flow i{font-style:normal;color:var(--faint)}
-  .flow .key{color:var(--ink);box-shadow:inset 0 0 0 1px var(--accent)}
-
-  .todo{margin:16px 0 0;padding:16px 18px;border:1px dashed var(--line);border-radius:3px;
-    color:var(--faint);font-size:.86rem;line-height:1.85}
-  .todo b{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--accent);margin-bottom:6px;font-weight:700}
+  .points li.me b::before{content:"●";color:var(--accent);font-size:.62em;vertical-align:.22em;margin-right:.5em}
 
   .open ul{margin:14px 0 0;padding-left:1.2em;color:var(--muted);font-size:.92rem}
   .open li{margin:0 0 7px}
 
-  .src{display:grid;border-top:1px solid var(--line);margin-top:12px}
-  .src a{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
-    padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-size:.92rem}
-  .src a:hover{color:var(--accent)}
-  .src small{color:var(--faint);font-size:.76rem;letter-spacing:.06em;white-space:nowrap}
-
-  .tl{margin-top:18px;font-size:.9rem;color:var(--muted)}
+  .tl{margin-top:12px;font-size:.86rem;color:var(--faint)}
   .tl a{color:var(--accent)}
 
   footer{margin:88px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
@@ -98,128 +77,202 @@
     <p class="eyebrow">LIFE HACKS</p>
     <h1>ひと工夫</h1>
     <p class="mn-tagline">頑張るのではなく、簡単にする。</p>
-    <p class="lead">五つの場面それぞれで、いちばん効いた工夫をひとつずつ。意志で押し通すためのものではなく、意志を使わずに済ませるためのものです。</p>
+    <p class="lead">世の中で言われているひと工夫を、場面ごとに整理した一覧です。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
     <ul class="toc">
-      <li><a href="#why">なぜ、ひと工夫か</a></li>
+      <li><a href="#time">時間</a></li>
+      <li><a href="#focus">集中</a></li>
       <li><a href="#home">住む</a></li>
       <li><a href="#clothes">着る</a></li>
       <li><a href="#food">食べる</a></li>
-      <li><a href="#health">健康</a></li>
+      <li><a href="#health">体</a></li>
+      <li><a href="#sleep">眠り</a></li>
       <li><a href="#money">おかね</a></li>
-      <li><a href="#common">効く工夫に共通すること</a></li>
+      <li><a href="#digital">デジタル</a></li>
+      <li><a href="#mind">頭の中</a></li>
+      <li><a href="#people">人づきあい</a></li>
       <li><a href="#open">まだ効いていないこと</a></li>
     </ul>
   </header>
 
-  <section id="why">
-    <span class="sec-n">01 / WHY</span>
-    <h2>なぜ、ひと工夫か</h2>
-    <p class="pull">意志の量を増やさずに、暮らしを一段よくする。</p>
-    <p><a href="../way-of-living/">暮らし方</a>に「小さく変えて、習慣にする」と書きました。ここはその実地のほうです。五つの場面それぞれで、実際にいちばん効いたものを一つずつ並べています。</p>
-    <p>効いたものを並べてみると、性格がはっきりしていました。どれも<b>毎回考えなくて済むようにする</b>工夫で、気合いを入れ直すたぐいのものが一つもありません。意志は、使えば減るものとして扱っています。</p>
-    <p class="tl">ここに書いたものは、各ノートから抜き出して並べ直したものです。経緯や迷いはそれぞれのノートのほうに書いています。</p>
+  <section id="time">
+    <span class="sec-n">01 / TIME</span>
+    <h2>時間</h2>
+    <p class="note">やることを減らすより、置き場所を決める。</p>
+    <ul class="points">
+      <li><b>二分で終わることは、その場で終える</b><span>覚えておく手間のほうが高くつく。</span></li>
+      <li><b>リストではなく、時間割に置く</b><span>いつやるかが決まっていないものは、やらない。</span></li>
+      <li><b>重いものを、朝に</b><span>判断力が一番ある時間を、一番重い仕事に使う。</span></li>
+      <li><b>似た作業は、まとめる</b><span>切り替えのたびに立ち上げ直す時間が消える。</span></li>
+      <li><b>自分の締め切りを、手前に置く</b><span>本当の期限の前に、見せる相手のいる期限を作る。</span></li>
+      <li><b>待ち時間の持ち物を、先に決める</b><span>移動と行列で何をするかを、その場で考えない。</span></li>
+    </ul>
+  </section>
+
+  <section id="focus">
+    <span class="sec-n">02 / FOCUS</span>
+    <h2>集中</h2>
+    <p class="note">集中は、途切れてから戻るまでが高い。</p>
+    <ul class="points">
+      <li><b>25分で区切る</b><span>終わりが見えていると、始めやすい。</span></li>
+      <li><b>通知は、切っておく</b><span>一度の着信で、戻るのに十数分かかる。</span></li>
+      <li><b>机に出すのは、一つだけ</b><span>視界に入るものが少ないほど戻りやすい。</span></li>
+      <li><b>やめるときは、途中でやめる</b><span>次に座ったとき、書き出しに困らない。</span></li>
+      <li><b>会議は25分・50分で切る</b><span>移動と記録の時間を、最初から残しておく。</span></li>
+      <li><b>やらないことを、決める</b><span>足すより、減らすほうが効く。</span></li>
+    </ul>
   </section>
 
   <section id="home">
-    <span class="sec-n">02 / HOME</span>
+    <span class="sec-n">03 / HOME</span>
     <h2>住む</h2>
-    <p class="pull">定位置を決める。片付けるのではなく。</p>
-    <p>散らかるのは決まって、机の上と床でした。そこに残るものを数えたら、候補に挙げた七つが全部そのまま残っていた。そして定位置があるのは、カバンだけでした。散らかるかどうかは性格ではなく、置き場所を決めてあるかどうかの差だった、ということになります。</p>
-    <p>残るものは性質で二つに割れました。外から入ってきて止まるもの（郵便物、買ってきたもの、バッグから出したもの）と、使ったあと戻り道がないもの（脱いだ服、充電ケーブル、読みかけの本、飲みもの）。だとすれば要るのは二種類の置き場所です。<b>入ってくるものを受ける場所</b>と、<b>使ったものが戻る場所</b>。前者は玄関からの動線上に、後者は使う場所のすぐ近くに。</p>
-    <p>決めるのは七つだけ。一度決めれば、あとは戻すだけになります。カバンがすでにそうなっているように。</p>
+    <p class="note">散らかるかどうかは、置き場所を決めてあるかどうかの差。</p>
     <ul class="points">
-      <li><b>床から手をつける</b><span>床が見えると、部屋全体が片付いたように感じる。散らかりは遠ざかっているサインなので、いちばん先に出るサインを、いちばん先に消す。</span></li>
-      <li><b>事実で切ってから、感覚で見る</b><span>手放すときは「一年使っていないか」を先に通し、それでも残ったものを「ときめかないか」で見る。感覚から始めると手が止まるので、順番は逆にしない。</span></li>
-      <li><b>買ったら、ひとつ手放す</b><span>気が向いたときに片付けるのではなく、買うという出来事に手放すことを結びつける。総量を変えないと決めておけば、増やすことを我慢しなくていい。</span></li>
+      <li class="me"><b>定位置を決める</b><span>片付ける手間を、戻す手間に変える。</span></li>
+      <li class="me"><b>床から手をつける</b><span>床が見えると、部屋全体が片付いて見える。</span></li>
+      <li class="me"><b>買ったら、ひとつ手放す</b><span>総量を変えないと決めれば、増やすのを我慢しなくていい。</span></li>
+      <li class="me"><b>事実で切ってから、感覚で見る</b><span>一年使っていないかを先に通し、残ったものを好きかどうかで見る。</span></li>
+      <li><b>使う場所のそばに置く</b><span>動線から外れた収納は、使われない。</span></li>
+      <li><b>迷ったものは箱に入れ、日付を書く</b><span>半年開けなければ、中身を見ずに手放せる。</span></li>
+      <li><b>平らな面を、空けておく</b><span>平らな場所には必ず物が溜まる。</span></li>
     </ul>
-    <p class="tl">くわしくは <a href="../home/#order">住む</a> に書いています。</p>
+    <p class="tl">自分の記録は <a href="../home/#order">住む</a>。</p>
   </section>
 
   <section id="clothes">
-    <span class="sec-n">03 / CLOTHES</span>
+    <span class="sec-n">04 / CLOTHES</span>
     <h2>着る</h2>
-    <p class="pull">組み合わせごと、人に決めてもらう。</p>
-    <p>朝はその場で選びます。前の晩に決めたり、曜日で固定したりはしていません。それでも迷いが少ないのは、単品ではなく<b>組み方ごと受け取っている</b>からでした。</p>
-    <p>制服化とは逆のやり方です。自分でルールを決めて選択肢を減らすのではなく、組み合わせを考える仕事そのものを外に出す。結果は同じで、朝に使う意思の量が減ります。「毎朝迷わない型をつくる」という目標は、組み合わせについてはこれで足りていました。</p>
+    <p class="note">朝に使う意思の量を、減らす。</p>
     <ul class="points">
-      <li><b>型は、すでにある</b><span>夏は7分丈のシャツ1枚、それ以外はシャツ＋ジャケット。全シーズン、シャツが軸だった。作るのではなく、言葉にしていなかっただけ。</span></li>
-      <li><b>下は固定して、上で幅を作る</b><span>上半身は二十着ほどあるのに、パンツは4本、靴は2足でぜんぶを回している。意図して決めたわけではないのに、そういう形になっていた。</span></li>
-      <li><b>直さずに、買い替える</b><span>手放したくなるのは形が傷んだときではなく、毛玉やへたりで触り心地が変わったとき。そこは修理では戻らない。</span></li>
-      <li><b>季節の変わり目に、まとめて出す</b><span>着るたびではなく1シーズンごとにクリーニングへ。しまう前に整える、というリズムにする。</span></li>
+      <li><b>制服化する</b><span>毎朝の判断を、一度の決定に置き換える。</span></li>
+      <li class="me"><b>組み合わせごと、人に決めてもらう</b><span>選ぶ仕事そのものを、外に出す。</span></li>
+      <li class="me"><b>下を固定して、上で幅を作る</b><span>組み合わせの数は、上半身だけで足りる。</span></li>
+      <li><b>着たら、ハンガーを逆向きに戻す</b><span>着ていない服が、一目で分かる。</span></li>
+      <li class="me"><b>季節の変わり目に、まとめて出す</b><span>しまう前に整える、というリズムにする。</span></li>
+      <li><b>同じ靴を、続けて履かない</b><span>一日休ませると長持ちする。</span></li>
+      <li class="me"><b>直さずに、買い替える</b><span>触り心地は、修理では戻らない。</span></li>
     </ul>
-    <p class="tl">くわしくは <a href="../clothes/#have">着る</a> に書いています。</p>
+    <p class="tl">自分の記録は <a href="../clothes/#have">着る</a>。</p>
   </section>
 
   <section id="food">
-    <span class="sec-n">04 / FOOD</span>
+    <span class="sec-n">05 / FOOD</span>
     <h2>食べる</h2>
-    <p class="pull">最初のひと口だけ、味わう。</p>
-    <p>全部の食事でなくていい、というのがこの工夫の要です。色、香り、食感、温度に気づきながら食べるのを、最初のひと口にだけ置く。ながら食べでは、せっかくのおいしさを半分しか受け取れていないのかもしれません。</p>
-    <p>おいしかった食事は、その場所や一緒にいた人、そのときの気持ちと結びついて記憶に残ります。味わうことは、思い出をつくることでもある。ひと口だけなら、忙しい日でも落とさずに済みます。</p>
+    <p class="note">我慢ではなく、続けられる形を探す。</p>
     <ul class="points">
-      <li><b>自炊に寄せず、選ぶところで調整する</b><span>外食が中心なので、無理に自炊へ寄せない。ヘルシーそうな店を選ぶところで整える。</span></li>
-      <li><b>疲れたときは、食事と水分から</b><span>回復の基本は睡眠と休息。そこに、消化しやすいものとエネルギー・タンパク質を足す。</span></li>
-      <li><b>我慢を目的にしない</b><span>好きなものを手放すのではなく、続けられる形を探す。数字を減らすことより、健康的な体になること。</span></li>
+      <li class="me"><b>最初のひと口だけ、味わう</b><span>全部の食事でなくていい。</span></li>
+      <li><b>先に、水を一杯</b><span>空腹と渇きを、混同しない。</span></li>
+      <li><b>皿を小さくする</b><span>量ではなく、器で満足を作る。</span></li>
+      <li><b>空腹のまま買い物に行かない</b><span>判断が甘くなる。</span></li>
+      <li><b>作るなら、まとめて作る</b><span>減らすのは調理ではなく、始める回数。</span></li>
+      <li class="me"><b>選ぶところで整える</b><span>自炊に寄せず、店選びで調整する。</span></li>
+      <li class="me"><b>我慢を、目的にしない</b><span>数字を減らすことより、健康な体になること。</span></li>
     </ul>
-    <p class="tl">くわしくは <a href="../food/">食べる</a> に書いています。</p>
+    <p class="tl">自分の記録は <a href="../food/">食べる</a>。</p>
   </section>
 
   <section id="health">
-    <span class="sec-n">05 / HEALTH</span>
-    <h2>健康</h2>
-    <p class="pull">疲れる前に、小さく戻す。</p>
-    <p>疲れてから大きく立て直すより、溜まる前に小さく戻すほうが安く済みます。画面を見続ける日は、遠くを見る。肩を上げて、力を抜く。飲み物をきっかけに、数分だけ仕事から離れる。目の疲れ、首の痛み、肩の凝りはつながっているので、30分に一度、少し体を動かすだけでも違います。</p>
-    <p>大事なのは完璧な休憩法ではなく、<b>「忙しいから休めない」を前提にしても差し込める短さ</b>にしておくことです。休むのは中断ではなく、次の時間も自分を使えるようにするための準備。</p>
+    <span class="sec-n">06 / BODY</span>
+    <h2>体</h2>
+    <p class="note">溜まってから立て直すほうが、高くつく。</p>
     <ul class="points">
-      <li><b>会話できる強度で動く</b><span>速さや量を追わない。苦しくなれば歩く。翌日ぐったりするのは頑張った証ではなく、強度を下げるサイン。</span></li>
-      <li><b>道具は揃えず、データだけ集約する</b><span>デバイスを一つにする必要はない。目的ごとに向いたものを使い、集める先を一か所にする。同じ指標が重なるときは、どれを正とするかだけ決めておく。</span></li>
-      <li><b>自分では気づけないところは、人に見てもらう</b><span>毎月の整体と、半年ごとの歯科検診。自分の感覚では拾えない変化を、定期で拾う。</span></li>
-      <li><b>やめない理由を、一つに絞らない</b><span>続いている習慣はどれも目的が複数ある。ジムは運動と、大きなお風呂と、人のいる場所にいること。散歩は歩くことと、考えがほどけること。</span></li>
+      <li class="me"><b>疲れる前に、小さく戻す</b><span>忙しくても差し込める短さにしておく。</span></li>
+      <li class="me"><b>会話できる強度で動く</b><span>翌日ぐったりするのは、強度を下げるサイン。</span></li>
+      <li><b>30分に一度、立つ</b><span>姿勢は、時間で崩れる。</span></li>
+      <li><b>20分ごとに、20秒、遠くを見る</b><span>目の疲れは、首と肩につながっている。</span></li>
+      <li><b>移動に混ぜる</b><span>運動の時間を作らず、階段とひと駅分で済ませる。</span></li>
+      <li class="me"><b>定期で、人に見てもらう</b><span>自分の感覚では拾えない変化がある。</span></li>
+      <li class="me"><b>やめない理由を、一つに絞らない</b><span>目的が複数ある習慣は、動機が一つ切れても止まらない。</span></li>
     </ul>
-    <p class="tl">くわしくは <a href="../health-habits/#recover">健康</a> に書いています。</p>
+    <p class="tl">自分の記録は <a href="../health-habits/#recover">健康</a>。</p>
+  </section>
+
+  <section id="sleep">
+    <span class="sec-n">07 / SLEEP</span>
+    <h2>眠り</h2>
+    <p class="note">寝る時刻ではなく、起きる時刻で決まる。</p>
+    <ul class="points">
+      <li><b>起きる時刻だけ、固定する</b><span>寝る時刻は、後からついてくる。</span></li>
+      <li><b>朝に、光を浴びる</b><span>体内時計は、朝で決まる。</span></li>
+      <li><b>カフェインは、昼まで</b><span>抜けるのに5〜6時間かかる。</span></li>
+      <li><b>寝床は、寝るためだけに使う</b><span>場所と行為を、結びつけておく。</span></li>
+      <li><b>眠れないときは、一度寝床を出る</b><span>粘ると、寝床が目覚めと結びつく。</span></li>
+      <li><b>気になることは、書き出してから寝る</b><span>頭に残すと、覚えておくために起きてしまう。</span></li>
+    </ul>
   </section>
 
   <section id="money">
-    <span class="sec-n">06 / MONEY</span>
+    <span class="sec-n">08 / MONEY</span>
     <h2>おかね</h2>
-    <p class="pull">支出の通り道を、先に整えておく。</p>
-    <p>節約を頑張るのではなく、毎日の支払いが通る道を整えておく。それだけで返ってくるものがあります。頑張りの量ではなく、通り道の形で決まる部分だからです。</p>
-    <p>把握は一か所に集約して、<b>見る頻度のほうを決めておく</b>。見えていないものは判断できませんが、見続けると今度はお金に心を取られる側に戻ってしまう。見えるようにしておく理由は、考えなくて済む時間を増やすためです。</p>
+    <p class="note">頑張りの量ではなく、通り道の形で決まる。</p>
     <ul class="points">
-      <li><b>表示価格ではなく、総額で比べる</b><span>安く見えても、付け足すものや移動まで含めると差が縮まることがある。最後にいくらかかるかで比べる。</span></li>
-      <li><b>減らすのではなく、使い切る</b><span>サブスクは「毎月出ていくお金」ではなく「道具箱」として見る。解約を考える前に、そもそも何ができるのかを把握する。</span></li>
-      <li><b>安さで選ばない／回数で測らない</b><span>値段ではなく、自分に合っていて気持ちよく使えるか。「何回使ったか」ではなく「それで何ができるようになったか」で見る。</span></li>
+      <li><b>先に、貯める分を引く</b><span>残ったら貯めるのではなく、残りで暮らす。</span></li>
+      <li><b>自動で移す</b><span>意志の介在する場所を、減らす。</span></li>
+      <li class="me"><b>一か所に集約し、見る頻度を決める</b><span>見えないと判断できず、見続けると心を取られる。</span></li>
+      <li class="me"><b>表示価格ではなく、総額で比べる</b><span>付け足すものと移動まで入れると、差は縮む。</span></li>
+      <li><b>欲しくなったら、24時間おく</b><span>欲しさは減り、必要は残る。</span></li>
+      <li class="me"><b>サブスクは、道具箱として見る</b><span>解約を考える前に、何ができるのかを把握する。</span></li>
+      <li><b>固定費から見直す</b><span>一度の手間が、毎月効く。</span></li>
     </ul>
-    <p class="tl">くわしくは <a href="../money/#budget">おかね</a> に書いています。</p>
+    <p class="tl">自分の記録は <a href="../money/#budget">おかね</a>。</p>
   </section>
 
-  <section id="common">
-    <span class="sec-n">07 / COMMON</span>
-    <h2>効く工夫に共通すること</h2>
-    <p class="pull">効いたものは、どれも「毎回考えない」ための工夫だった。</p>
-    <p>五つを並べてみると、形が揃っていました。</p>
+  <section id="digital">
+    <span class="sec-n">09 / DIGITAL</span>
+    <h2>デジタル</h2>
+    <p class="note">探している時間が、いちばん長い。</p>
     <ul class="points">
-      <li><b>決めるのは、一度でいい</b><span>定位置も、服の型も、決める作業は一度きり。あとは戻すだけ、足すだけになる。</span></li>
-      <li><b>すでにある出来事に、結びつける</b><span>買ったら手放す。季節が変わったら出す。新しい時間を作らず、すでに起きることに乗せる。</span></li>
-      <li><b>判断そのものを、外に出す</b><span>服の組み合わせは人に、体の変化は整体と歯科に、お金の把握はアプリに。自分の中で処理しない。</span></li>
-      <li><b>事実で切ってから、感覚で見る</b><span>順番を逆にすると手が止まる。感覚は、事実で絞ったあとの最後の一押しに使う。</span></li>
-      <li><b>やめない理由を、一つに絞らない</b><span>目的が複数ある習慣は、どれか一つの動機が切れても止まらない。</span></li>
+      <li><b>通知は原則オフ、例外だけオン</b><span>既定値を、逆にしておく。</span></li>
+      <li><b>ホーム画面に置くものを減らす</b><span>開く手間が増えると、開かなくなる。</span></li>
+      <li><b>保存先を、一か所に決める</b><span>どこに置いたかを考える時間が消える。</span></li>
+      <li><b>名前の頭に、日付を書く</b><span>並べるだけで、時系列になる。</span></li>
+      <li><b>ショートカットは、五つだけ覚える</b><span>全部覚えようとすると、何も残らない。</span></li>
+      <li class="me"><b>集める先を、一つにする</b><span>道具は目的ごとに選び、データの行き先だけ揃える。</span></li>
+      <li><b>パスワードは、管理ソフトに任せる</b><span>覚えることを、やめる。</span></li>
     </ul>
-    <p>逆に、ここに<b>意志を強くする工夫は一つもありません</b>。気合いで続いたものは、結局どれも残っていませんでした。</p>
   </section>
 
-  <section id="open">
-    <span class="sec-n">08 / OPEN</span>
+  <section id="mind">
+    <span class="sec-n">10 / MIND</span>
+    <h2>頭の中</h2>
+    <p class="note">意志は、使えば減るものとして扱う。</p>
+    <ul class="points">
+      <li><b>全部、書き出す</b><span>覚えておく仕事を、紙に渡す。</span></li>
+      <li class="me"><b>すでにある出来事に、結びつける</b><span>新しい時間を作らず、起きることに乗せる。</span></li>
+      <li class="me"><b>決めるのは、一度でいい</b><span>決め直しが要らない形にしておく。</span></li>
+      <li><b>二度目に困ったら、仕組みにする</b><span>一度目は、手でやる。</span></li>
+      <li><b>選択肢は、三つに絞る</b><span>多いほど、決められない。</span></li>
+      <li><b>休みも、予定として入れる</b><span>空いた時間は、必ず埋まる。</span></li>
+      <li><b>迷ったら、小さく試す</b><span>考えるより、やってみるほうが早く分かる。</span></li>
+    </ul>
+  </section>
+
+  <section id="people">
+    <span class="sec-n">11 / PEOPLE</span>
+    <h2>人づきあい</h2>
+    <p class="note">相手の手間を、先に減らしておく。</p>
+    <ul class="points">
+      <li><b>返事は、早く短く</b><span>長さより、早さのほうが喜ばれる。</span></li>
+      <li><b>日程は、候補を出す</b><span>相手に考えさせない。</span></li>
+      <li><b>頼むときは、期限と形を添える</b><span>曖昧な依頼は、戻ってこない。</span></li>
+      <li><b>断る理由は、一つだけ言う</b><span>並べるほど、弱くなる。</span></li>
+      <li><b>会ったら、その場で次を決める</b><span>後からの調整が、いちばん重い。</span></li>
+      <li><b>覚えておきたい日は、登録する</b><span>記憶ではなく、通知に任せる。</span></li>
+    </ul>
+  </section>
+
+  <section id="open" class="open">
+    <span class="sec-n">12 / OPEN</span>
     <h2>まだ効いていないこと</h2>
     <p class="note">うまくいっていないものも、同じ場所に置いておきます。</p>
-    <ul class="open">
+    <ul>
       <li>七つの定位置を、実際にどこに決めるか（<a href="../home/#order">住む</a>）</li>
       <li>失敗だと分かっているヨーグルトメーカーを、まだ手放せていない（<a href="../home/#things">住む</a>）</li>
       <li>衣替えが思いつきのままで、定期になっていない（<a href="../clothes/#care">着る</a>）</li>
       <li>動画配信を3つ契約して、1つは役割が決まっていない（<a href="../money/#spend">おかね</a>）</li>
       <li>健康診断に行けていない（<a href="../health-habits/#habit">健康</a>）</li>
     </ul>
-    <p class="tl">ここが埋まったら、効いた工夫のほうへ移します。</p>
+    <p class="tl">効くようになったら、上のどこかへ移します。</p>
   </section>
 
   <footer>
