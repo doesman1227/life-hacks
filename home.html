@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>住む｜ライフハック</title>
+<meta name="description" content="片付け・収納・手放す・掃除・洗濯・ごみの18の工夫を、なぜ効くのかとやり方まで。ライフハック一覧の「住む」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">03 / HOME</p>
+    <h1>住む</h1>
+    <p class="mn-tagline">散らかるかどうかは、置き場所を決めてあるかどうかの差。</p>
+    <p class="lead">一覧に並べた18の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#tidy">片付け</a></li>
+      <li><a href="#store">収納</a></li>
+      <li><a href="#let-go">手放す</a></li>
+      <li><a href="#clean">掃除</a></li>
+      <li><a href="#laundry">洗濯</a></li>
+      <li><a href="#trash">ごみ</a></li>
+    </ul>
+  </header>
+
+  <section id="tidy">
+    <span class="sec-n">01</span>
+    <h2>片付け</h2>
+    <p class="note">終わらせることより、始められることを先に決める。</p>
+
+    <div class="item me">
+      <h3>床から手をつける</h3>
+      <p class="why">散らかりは、置ける面が埋まった順に広がる。最後に埋まるのが床なので、床にものがある状態は「かなり溜まっている」という一番遅い合図になる。そこを先に消すと、片付いた感覚がいちばん大きく返ってくる。</p>
+      <ul class="how">
+        <li>床のものを、一か所に集める（分類はまだしない）</li>
+        <li>定位置があるものだけ、先に戻す</li>
+        <li>残ったものが「定位置の決まっていないもの」。それだけを次に考える</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>集めた山の前で分類を始めると、そこで止まる。戻すのと決めるのは、別の日でいい。</p>
+    </div>
+
+    <div class="item">
+      <h3>一か所だけ、やる</h3>
+      <p class="why">部屋全体を目標にすると、所要時間が読めないので始まらない。机の上、流しの中、玄関の三和土のように、終わりが見える範囲に区切ると、着手の判断が軽くなる。</p>
+      <ul class="how">
+        <li>今日やる場所を、ひとつだけ口に出す</li>
+        <li>そこが終わったら、たとえ時間が余ってもやめる</li>
+        <li>次にやる場所を決めてから離れる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>平らな面を、空けておく</h3>
+      <p class="why">平らで空いている場所は「とりあえず置ける場所」として使われる。置かれたものは次のものを呼ぶので、空けてあること自体が散らかりを防ぐ。逆に言えば、埋まった平面は放っておくと必ず層になる。</p>
+      <ul class="how">
+        <li>机・ダイニング・カウンターなど、平面を数える</li>
+        <li>常設していいものを、各面に一つか二つだけ決める</li>
+        <li>それ以外が乗ったら、その日のうちに下ろす</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>空けた平面に、別の「とりあえず置き場」を作ると元に戻る。受ける場所は玄関側に一つだけにする。</p>
+    </div>
+  </section>
+
+  <section id="store">
+    <span class="sec-n">02</span>
+    <h2>収納</h2>
+    <p class="note">しまう場所ではなく、戻す道をつくる。</p>
+
+    <div class="item me">
+      <h3>定位置を決める</h3>
+      <p class="why">片付けを「作業」ではなく「戻す動作」に変える。決めるのは一度でよく、あとは毎回考えなくて済む。残りやすいものは、外から入ってきて止まるもの（郵便物、買ってきたもの）と、使ったあと戻り道がないもの（脱いだ服、ケーブル、読みかけの本）の二種類に割れる。</p>
+      <ul class="how">
+        <li>散らかる場所に残っているものを、書き出す</li>
+        <li>「入ってくるもの」と「使ったあと戻るもの」に分ける</li>
+        <li>前者は玄関からの動線上に、後者は使う場所のすぐ近くに置き場を決める</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>きれいな場所に決めると続かない。見た目より、手が届く距離で決める。</p>
+    </div>
+
+    <div class="item">
+      <h3>使う場所のそばに置く</h3>
+      <p class="why">収納は、しまいやすさではなく取り出しやすさで決まる。動線から外れた場所は、出すのも戻すのも面倒になり、結局その辺に置かれる。同じものを二か所に分けて置くほうが、一か所にまとめるより回ることもある。</p>
+      <ul class="how">
+        <li>そのものを、どこで使っているか思い出す</li>
+        <li>使う場所から三歩以内に置けないか探す</li>
+        <li>置けないなら、使う場所のほうを動かせないか考える</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>二動作以上かけない</h3>
+      <p class="why">扉を開けて、箱を出して、蓋を開けて、ではしまわれない。よく使うものほど、動作の数が戻すかどうかを決める。見た目を揃える収納は、たいてい動作を増やしている。</p>
+      <ul class="how">
+        <li>毎日使うものは、置くだけ・掛けるだけにする</li>
+        <li>週に一度のものまでは、二動作まで許す</li>
+        <li>年に一度のものは、奥でも高いところでもいい</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="let-go">
+    <span class="sec-n">03</span>
+    <h2>手放す</h2>
+    <p class="note">増やすのを我慢するより、総量を決めてしまう。</p>
+
+    <div class="item me">
+      <h3>事実で切ってから、感覚で見る</h3>
+      <p class="why">最初から「好きかどうか」で見ると、ほとんどのものに迷いが出て手が止まる。先に期間という事実で機械的に絞り、残ったものだけを感覚で見ると、判断の回数そのものが減る。</p>
+      <ul class="how">
+        <li>一年使っていないものを、まず全部出す</li>
+        <li>出したものだけを、好きかどうかで見る</li>
+        <li>迷ったものは捨てず、次の「箱」へ回す</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>順番を逆にすると、思い出の話になって終わらない。事実の網は、感覚より先に。</p>
+    </div>
+
+    <div class="item me">
+      <h3>買ったら、ひとつ手放す</h3>
+      <p class="why">総量を一定にすると決めておけば、買うことを我慢しなくていい。片付けを気が向いたときの作業ではなく、買うという出来事に結びつけるので、新しい時間を作らずに済む。</p>
+      <ul class="how">
+        <li>買ったものと同じ種類のものから、ひとつ選ぶ</li>
+        <li>選ぶのは、開封する前にする</li>
+        <li>手放し先（売る・譲る・捨てる）を、その場で決める</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>迷ったものは箱に入れ、日付を書く</h3>
+      <p class="why">捨てる判断を、今すぐ下さなくていい形にする。半年開けなかったという事実が、中身を見ずに手放す根拠になる。迷いを先送りするのではなく、期限付きで預ける。</p>
+      <ul class="how">
+        <li>迷ったものを箱に入れ、今日の日付を書く</li>
+        <li>半年後の日付を、カレンダーに入れる</li>
+        <li>その日が来たら、中を見ずに箱ごと手放す</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>箱が増えると、ただの倉庫になる。箱は常に一つだけにする。</p>
+    </div>
+  </section>
+
+  <section id="clean">
+    <span class="sec-n">04</span>
+    <h2>掃除</h2>
+    <p class="note">まとめてやらないために、散らしておく。</p>
+
+    <div class="item">
+      <h3>汚れたその場で、ひと拭き</h3>
+      <p class="why">汚れは乾いて固まるほど落ちにくくなる。濡れているうちなら水だけで済み、洗剤も時間も道具も要らない。掃除という行事をなくして、調理や洗面の一部に混ぜてしまう。</p>
+      <ul class="how">
+        <li>コンロ・洗面・鏡の近くに、拭くものを常設する</li>
+        <li>使い終わりの最後の動作として、一度だけ拭く</li>
+        <li>汚れが残っても追わない。次の機会でいい</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>掃除道具は、使う場所ごとに置く</h3>
+      <p class="why">取りに行く距離が、そのままやらない理由になる。一式を一か所にまとめるのは管理の都合であって、使う側の都合ではない。道具が安いものほど、分散させたほうが回る。</p>
+      <ul class="how">
+        <li>場所ごとに必要な道具を一つだけ選ぶ</li>
+        <li>その場所の、手の届くところに置く</li>
+        <li>見える場所に出すのが嫌なら、置ける形のものに替える</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>週に一度の場所は、曜日で決める</h3>
+      <p class="why">「全部やる日」を作ると、その日が重くなって飛ぶ。場所を曜日に割り振ると、一日あたりが十分ほどになり、飛ばしても一週間後に戻ってくる。</p>
+      <ul class="how">
+        <li>週一でいい場所を、三つか四つ挙げる</li>
+        <li>それぞれを別の曜日に割り当てる</li>
+        <li>飛ばした日は追いかけず、翌週に回す</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>割り当てを増やすと、どの曜日も重くなる。曜日は埋めきらず、空の日を残す。</p>
+    </div>
+  </section>
+
+  <section id="laundry">
+    <span class="sec-n">05</span>
+    <h2>洗濯</h2>
+    <p class="note">面倒なのは洗うことではなく、その前後。</p>
+
+    <div class="item">
+      <h3>入れる時点で、分けておく</h3>
+      <p class="why">洗濯でいちばん手数がかかるのは、洗う前の仕分け。脱ぐ時点で行き先が分かれていれば、その工程が丸ごと消える。分けるのは洗い方が違うものだけでよく、増やすほど続かない。</p>
+      <ul class="how">
+        <li>かごを二つか三つに増やす（普段着／分けたいもの）</li>
+        <li>かごは、脱ぐ場所に置く</li>
+        <li>迷うものは普段着のほうへ。例外を作りすぎない</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>畳まないものを、決める</h3>
+      <p class="why">畳む工程は、きれいさのためで、機能のためではない。下着やタオルのように見えないものは放り込む、シャツのように形が要るものは吊るす、と決めると、取り込みから収納までが一動作になる。</p>
+      <ul class="how">
+        <li>畳まないもの（放り込む・吊るす）を先に決める</li>
+        <li>放り込む先は、仕切りのある箱にする</li>
+        <li>残ったものだけ畳む</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>乾いたら、その日のうちにしまう</h3>
+      <p class="why">取り込んだまま積むと、山そのものがたんすとして機能しはじめ、しまう動機が消える。乾いたものを一度も床や椅子に置かないだけで、洗濯は終わる。</p>
+      <ul class="how">
+        <li>取り込む時間を、しまえる時間に合わせる</li>
+        <li>取り込みながら、そのまま行き先へ運ぶ</li>
+        <li>途中に置かない。床・椅子・ソファを経由させない</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>夜に取り込むと、しまう体力が残っていない。乾きが遅い日は、翌朝まで干したままのほうが早い。</p>
+    </div>
+  </section>
+
+  <section id="trash">
+    <span class="sec-n">06</span>
+    <h2>ごみ</h2>
+    <p class="note">溜めないのではなく、出すまでを一本の線にする。</p>
+
+    <div class="item">
+      <h3>替えの袋を、ごみ箱の底に入れておく</h3>
+      <p class="why">満杯のごみ箱を前に、袋を取りに行くところで手が止まる。底に数枚入れておけば、袋を縛って取り出し、そのまま次を広げるまでが一動作になる。</p>
+      <ul class="how">
+        <li>ごみ箱の底に、替えの袋を三枚ほど入れる</li>
+        <li>袋を替えたら、残りの枚数を見る</li>
+        <li>最後の一枚を使ったときが、補充の合図</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>出す日は、前の晩に玄関へ</h3>
+      <p class="why">朝は、出すかどうかを判断する余裕がない。前の晩のうちに玄関まで動かしておけば、朝は持って出るだけになる。忘れるのは記憶の問題ではなく、動かす時間帯の問題。</p>
+      <ul class="how">
+        <li>収集日の前の晩に、まとめて玄関へ</li>
+        <li>玄関に置く場所を、固定する</li>
+        <li>曜日は覚えず、ごみ箱の近くに貼る</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>資源ごみの置き場を、玄関の外に</h3>
+      <p class="why">缶・瓶・段ボールは、たまる速さに対して出す機会が少ない。部屋の中に置き場を作ると、部屋が集積所になる。外に出せる場所があるなら、そこが一番いい収納になる。</p>
+      <ul class="how">
+        <li>玄関の外や物置に、資源ごみの場所を決める</li>
+        <li>段ボールは、受け取ったその場でたたむ</li>
+        <li>出せない住環境なら、部屋の中でも玄関に最も近い場所にする</li>
+      </ul>
+    </div>
+
+    <p class="tl">自分の部屋の記録は <a href="../home/">住む</a> に書いています。</p>
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>
