@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>眠り｜ライフハック</title>
+<meta name="description" content="起きる・寝る前・寝床・昼の9項目を、なぜ効くのかとやり方まで。ライフハック一覧の「眠り」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">09 / SLEEP</p>
+    <h1>眠り</h1>
+    <p class="mn-tagline">寝る時刻ではなく、起きる時刻で決まる。</p>
+    <p class="lead">一覧に並べた9の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">起きる</a></li>
+      <li><a href="#g2">寝る前</a></li>
+      <li><a href="#g3">寝床</a></li>
+      <li><a href="#g4">昼</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>起きる</h2>
+
+    <div class="item">
+      <h3>起きる時刻だけ、固定する</h3>
+      <p class="why">寝る時刻は、その日の都合で動く。起きる時刻を固定すると、眠気のほうが後からついてくる。</p>
+      <ul class="how">
+        <li>休みの日も、起きる時刻を変えない</li>
+        <li>眠い日は、昼に短く補う</li>
+        <li>寝る時刻は、固定しない</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>寝た時間が短い日ほど、寝坊したくなる。ずらすのは一時間までにする。</p>
+    </div>
+
+    <div class="item">
+      <h3>朝に、光を浴びる</h3>
+      <p class="why">体内時計は、朝の光で合う。起きてすぐ浴びるほど、その日の夜の眠気が早く来る。</p>
+      <ul class="how">
+        <li>起きたら、カーテンを開ける</li>
+        <li>数分、窓際か外に出る</li>
+        <li>曇りでも、屋外のほうが明るい</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>寝る前</h2>
+
+    <div class="item">
+      <h3>カフェインは、昼まで</h3>
+      <p class="why">抜けるのに五、六時間かかる。夕方の一杯は、寝つきより眠りの深さに効く。</p>
+      <ul class="how">
+        <li>昼を過ぎたら、カフェインを取らない</li>
+        <li>午後は、カフェインのない飲み物に替える</li>
+        <li>効きやすい日は、朝だけにする</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>寝る前に、明かりを落とす</h3>
+      <p class="why">暗さが合図になる。明るいままだと、体のほうが夜だと判断できない。</p>
+      <ul class="how">
+        <li>寝る一時間前から、照明を落とす</li>
+        <li>手元だけ、暖色の明かりにする</li>
+        <li>画面は、明るさを下げる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>気になることは、書き出してから寝る</h3>
+      <p class="why">頭に残したままだと、覚えておくために眠りが浅くなる。外に出すと、思い出す必要がなくなる。</p>
+      <ul class="how">
+        <li>寝る前に、気がかりを全部書く</li>
+        <li>明日やることも、一緒に書く</li>
+        <li>紙は、見えない場所に置く</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>寝床</h2>
+
+    <div class="item">
+      <h3>寝床は、寝るためだけに使う</h3>
+      <p class="why">場所と行為が結びつくと、横になった時点で眠くなる。寝床で起きている時間が長いと、その結びつきが薄れる。</p>
+      <ul class="how">
+        <li>寝床で、画面を見ない</li>
+        <li>読書も、別の場所でする</li>
+        <li>眠くなってから、寝床に入る</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>眠れないときは、一度寝床を出る</h3>
+      <p class="why">粘るほど、寝床が目覚めと結びつく。いったん出るほうが、結果として早く眠れる。</p>
+      <ul class="how">
+        <li>20分ほど眠れなければ、寝床を出る</li>
+        <li>暗いところで、静かに過ごす</li>
+        <li>眠くなったら、戻る</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>昼</h2>
+
+    <div class="item">
+      <h3>昼寝は、20分まで</h3>
+      <p class="why">20分を超えると深い眠りに入り、起きたあとが重くなる。短いほど、目覚めが軽い。</p>
+      <ul class="how">
+        <li>タイマーを20分にする</li>
+        <li>横になれないなら、座ったままでいい</li>
+        <li>午後の早い時間にする</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>夕方以降は、横にならない</h3>
+      <p class="why">夕方の短い居眠りが、夜の眠気をいちばん削る。眠いときほど、座って過ごす。</p>
+      <ul class="how">
+        <li>夕方以降は、ソファで横にならない</li>
+        <li>眠気が来たら、立って動く</li>
+        <li>どうしても眠いなら、早く寝る</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

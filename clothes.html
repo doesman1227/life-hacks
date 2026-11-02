@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>着る｜ライフハック</title>
+<meta name="description" content="選ぶ・買う・手入れ・手放すの11項目を、なぜ効くのかとやり方まで。ライフハック一覧の「着る」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">06 / CLOTHES</p>
+    <h1>着る</h1>
+    <p class="mn-tagline">朝に使う意思の量を、減らす。</p>
+    <p class="lead">一覧に並べた11の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">選ぶ</a></li>
+      <li><a href="#g2">買う</a></li>
+      <li><a href="#g3">手入れ</a></li>
+      <li><a href="#g4">手放す</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>選ぶ</h2>
+
+    <div class="item me">
+      <h3>組み合わせごと、人に決めてもらう</h3>
+      <p class="why">制服化が「自分でルールを決めて選択肢を減らす」やり方なのに対して、これは組み合わせを考える仕事そのものを外に出すやり方。結果は同じで、朝に使う意思の量が減る。</p>
+      <ul class="how">
+        <li>単品ではなく、上下の組み方ごと受け取る</li>
+        <li>そのまま着る。崩して組み直さない</li>
+        <li>合わなかった組み合わせは、次に伝える</li>
+      </ul>
+    </div>
+
+    <div class="item me">
+      <h3>下を固定して、上で幅を作る</h3>
+      <p class="why">組み合わせの数は、上半身だけで十分作れる。下を固定すると、迷う場所が半分になり、靴も合わせやすくなる。</p>
+      <ul class="how">
+        <li>パンツと靴を、数本・数足に絞る</li>
+        <li>上は、その数本に合う色だけ買う</li>
+        <li>迷ったら、下から先に決める</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>制服化する</h3>
+      <p class="why">毎朝の判断を、一度の決定に置き換えるやり方。選択の回数そのものが減るので、朝の負荷が下がる。</p>
+      <ul class="how">
+        <li>よく着ている組み合わせを、二つか三つ決める</li>
+        <li>同じものを複数持つか、曜日で割り当てる</li>
+        <li>例外の日だけ、別に考える</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>決めた型に飽きたときに、全部作り直したくなる。替えるのは一要素だけにする。</p>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>買う</h2>
+
+    <div class="item me">
+      <h3>直さずに、買い替える</h3>
+      <p class="why">手放したくなるのは形が傷んだときではなく、毛玉やへたりで触り心地が変わったとき。そこは修理では戻らない。</p>
+      <ul class="how">
+        <li>傷んだ理由が、形か、生地かを見る</li>
+        <li>生地なら、直さずに買い替える</li>
+        <li>同じものがあるなら、同じものを買う</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>手持ちと三通り組めないなら、買わない</h3>
+      <p class="why">一着で完結する服は、出番が来ないまま残る。手持ちと三通り組めるかどうかで、買う前に使用回数が読める。</p>
+      <ul class="how">
+        <li>買う前に、手持ちの何と合わせるか三つ挙げる</li>
+        <li>挙がらなければ、買わない</li>
+        <li>挙がったら、その三つを実際に着てみる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>試着しないものは、買わない</h3>
+      <p class="why">サイズ表は、同じ数字でも作りが違う。見るのは丈や胸囲より、肩の位置と袖の長さ。</p>
+      <ul class="how">
+        <li>肩線が、自分の肩の端に来ているか見る</li>
+        <li>腕を前に出して、突っ張らないか見る</li>
+        <li>座ってみて、丈を見る</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>手入れ</h2>
+
+    <div class="item me">
+      <h3>季節の変わり目に、まとめて出す</h3>
+      <p class="why">着るたびに出すのではなく、一シーズンの終わりにまとめて出す。しまう前に整える、というリズムにすると、来年そのまま着られる。</p>
+      <ul class="how">
+        <li>シーズンの終わりに、出すものを集める</li>
+        <li>まとめて持っていく</li>
+        <li>戻ってきたら、そのまましまう</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>思いついたときにやると、年によって抜ける。衣替えの日と同じ日に固定する。</p>
+    </div>
+
+    <div class="item">
+      <h3>同じ靴を、続けて履かない</h3>
+      <p class="why">靴は一日履くと湿気を含む。一日休ませると乾いて、型崩れと傷みが目に見えて減る。</p>
+      <ul class="how">
+        <li>二足以上を、交代で履く</li>
+        <li>脱いだ靴は、風の通る場所に置く</li>
+        <li>乾いてから、しまう</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>帰ったら、ブラシをかける</h3>
+      <p class="why">汚れは、積もる前なら払うだけで落ちる。帰宅後の数十秒を定位置の動作にすると、手入れが行事でなくなる。</p>
+      <ul class="how">
+        <li>玄関に、ブラシを置く</li>
+        <li>脱いだ上着を、その場で払う</li>
+        <li>月に一度は、全体をかける</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>手放す</h2>
+
+    <div class="item">
+      <h3>着たら、ハンガーを逆向きに戻す</h3>
+      <p class="why">持っている服のうち、実際に着ているものは思ったより少ない。向きで記録すると、数えなくても分かる。</p>
+      <ul class="how">
+        <li>シーズンの初めに、全部のハンガーを同じ向きにする</li>
+        <li>着て戻すときだけ、逆向きにする</li>
+        <li>シーズンの終わりに、向きの変わっていない服を見る</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>一年袖を通していない服は、出す</h3>
+      <p class="why">一年という事実で切ると、迷いの回数が減る。迷ったものだけ、あとで感覚で見ればいい。</p>
+      <ul class="how">
+        <li>一年着ていない服を、全部出す</li>
+        <li>出したものだけ、好きかどうかで見る</li>
+        <li>残すものは、理由を一つ言えるものだけ</li>
+      </ul>
+    </div>
+
+    <p class="tl">自分の服の記録は <a href="../clothes/">着る</a>。</p>
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

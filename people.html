@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人づきあい｜ライフハック</title>
+<meta name="description" content="連絡・頼む・断る・約束・贈りものの8項目を、なぜ効くのかとやり方まで。ライフハック一覧の「人づきあい」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">15 / PEOPLE</p>
+    <h1>人づきあい</h1>
+    <p class="mn-tagline">相手の手間を、先に減らしておく。</p>
+    <p class="lead">一覧に並べた8の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">連絡</a></li>
+      <li><a href="#g2">頼む・断る</a></li>
+      <li><a href="#g3">約束</a></li>
+      <li><a href="#g4">贈りもの</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>連絡</h2>
+
+    <div class="item">
+      <h3>返事は、早く短く</h3>
+      <p class="why">長い返事を考えているうちに、返す時機を逃す。短くても早いほうが、相手の仕事が進む。</p>
+      <ul class="how">
+        <li>すぐ返せるものは、その場で返す</li>
+        <li>長くなるものは、いつ返すかだけ先に伝える</li>
+        <li>丁寧さより、早さを優先する</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>日程は、候補を出す</h3>
+      <p class="why">「いつがいいですか」は、相手に考えさせる。候補があると、選ぶだけで済む。</p>
+      <ul class="how">
+        <li>こちらから、三つほど候補を出す</li>
+        <li>所要時間と場所も、一緒に書く</li>
+        <li>決まったら、その場で招待を送る</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>頼む・断る</h2>
+
+    <div class="item">
+      <h3>頼むときは、期限と形を添える</h3>
+      <p class="why">曖昧な依頼は、戻ってこない。いつまでに、どんな形で欲しいかを言うと、相手も断りやすい。</p>
+      <ul class="how">
+        <li>期限を、具体的な日時で書く</li>
+        <li>欲しい形（長さ・形式）を添える</li>
+        <li>急ぎでないなら、そう言う</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>断る理由は、一つだけ言う</h3>
+      <p class="why">理由を並べるほど、言い訳に見えて弱くなる。一つだけ言って、代わりに何ができるかを添える。</p>
+      <ul class="how">
+        <li>断ると、先に伝える</li>
+        <li>理由は、一つだけ</li>
+        <li>できることがあれば、添える</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>約束</h2>
+
+    <div class="item">
+      <h3>会ったら、その場で次を決める</h3>
+      <p class="why">後からの日程調整が、いちばん重い。会っている場で決めると、数十秒で済む。</p>
+      <ul class="how">
+        <li>別れる前に、次の予定を決める</li>
+        <li>曖昧なら、仮でも日付を置く</li>
+        <li>その場で、カレンダーに入れる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>覚えておきたい日は、登録する</h3>
+      <p class="why">記憶に頼ると、思い出したときには過ぎている。登録しておけば、覚えていなくても間に合う。</p>
+      <ul class="how">
+        <li>誕生日や記念日を、カレンダーに入れる</li>
+        <li>数日前に、通知が来るようにする</li>
+        <li>毎年繰り返す設定にする</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>贈りもの</h2>
+
+    <div class="item">
+      <h3>贈ったものを、記録しておく</h3>
+      <p class="why">次に迷わないし、同じものが重ならない。もらったものも、一緒に残しておくと返しやすい。</p>
+      <ul class="how">
+        <li>贈ったものと日付を、一か所に書く</li>
+        <li>もらったものも、同じ場所に書く</li>
+        <li>次に選ぶとき、それを見る</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>消えるものを選ぶ</h3>
+      <p class="why">置き場所を相手に作らせない。食べるもの、使ってなくなるものは、好みが外れても残らない。</p>
+      <ul class="how">
+        <li>食べもの・消耗品から選ぶ</li>
+        <li>形に残るものは、相手が決められる形にする</li>
+        <li>大きいものは、先に聞く</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

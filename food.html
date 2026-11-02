@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>食べる｜ライフハック</title>
+<meta name="description" content="買い物・作る・外食・食べ方・続け方の11項目を、なぜ効くのかとやり方まで。ライフハック一覧の「食べる」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">07 / FOOD</p>
+    <h1>食べる</h1>
+    <p class="mn-tagline">我慢ではなく、続けられる形を探す。</p>
+    <p class="lead">一覧に並べた11の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">買い物</a></li>
+      <li><a href="#g2">作る</a></li>
+      <li><a href="#g3">外食</a></li>
+      <li><a href="#g4">食べ方</a></li>
+      <li><a href="#g5">続け方</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>買い物</h2>
+
+    <div class="item">
+      <h3>空腹のまま買い物に行かない</h3>
+      <p class="why">空腹だと、量も種類も判断が甘くなる。買う前の状態のほうが、買い物のリストより効く。</p>
+      <ul class="how">
+        <li>食後か、何か口に入れてから行く</li>
+        <li>難しければ、先に飲み物を買う</li>
+        <li>急いでいる日は、店に入らない</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>買うものを決めてから、店に入る</h3>
+      <p class="why">決めずに入ると、安さと陳列で決まる。先に決めておくと、店の中で考える時間が消える。</p>
+      <ul class="how">
+        <li>買うものを、入る前に書く</li>
+        <li>書いたもの以外は、一周目で取らない</li>
+        <li>どうしても欲しいものは、最後に一つだけ</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>作る</h2>
+
+    <div class="item">
+      <h3>作るなら、まとめて作る</h3>
+      <p class="why">減らすべきなのは調理そのものではなく、台所を立ち上げる回数。一度の支度で数回分を作ると、片付けも一回で済む。</p>
+      <ul class="how">
+        <li>作る日を決めて、数回分をまとめて作る</li>
+        <li>取り分けて、冷蔵・冷凍に分ける</li>
+        <li>食べる日は、温めるだけにする</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>切るだけで食べられるものを、常に置く</h3>
+      <p class="why">疲れた日に何も作れない前提で、台所を組んでおく。そこに何もないと、その日の食事がまるごと崩れる。</p>
+      <ul class="how">
+        <li>切るだけ・温めるだけのものを、常備する</li>
+        <li>切らさないものを、三つだけ決める</li>
+        <li>買い物のたびに、その三つを確認する</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>外食</h2>
+
+    <div class="item me">
+      <h3>選ぶところで整える</h3>
+      <p class="why">外食が中心なら、無理に自炊へ寄せない。店を選ぶところで整えれば、作らなくても形は変えられる。</p>
+      <ul class="how">
+        <li>よく行く店の中で、軽いものがある店を知っておく</li>
+        <li>迷ったら、その店にする</li>
+        <li>メニューは、座る前に決めておく</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>量は、頼むときに決める</h3>
+      <p class="why">残すかどうかを食べながら考えると、たいてい全部食べる。頼む時点で決めてしまえば、我慢する場面が来ない。</p>
+      <ul class="how">
+        <li>頼むときに、量を選ぶ（少なめ・小盛り）</li>
+        <li>足りなければ、あとから足す</li>
+        <li>先に全部出てくる形は、避ける</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>食べ方</h2>
+
+    <div class="item me">
+      <h3>最初のひと口だけ、味わう</h3>
+      <p class="why">全部の食事でなくていい、というのがこの工夫の要。色、香り、食感、温度に気づきながら食べるのを、最初のひと口にだけ置く。おいしかった食事は、場所や一緒にいた人と結びついて記憶に残る。</p>
+      <ul class="how">
+        <li>最初のひと口だけ、画面と会話を止める</li>
+        <li>色・香り・食感・温度のどれかに気づく</li>
+        <li>二口目からは、いつもどおりでいい</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>先に、水を一杯</h3>
+      <p class="why">空腹と渇きは、似た感覚として出る。先に水を入れると、どちらだったかが分かれる。</p>
+      <ul class="how">
+        <li>食事の前に、コップ一杯の水を飲む</li>
+        <li>そのうえで、まだ空腹かを見る</li>
+        <li>食事中も、そばに置いておく</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>皿を小さくする</h3>
+      <p class="why">満足は量ではなく、見た目の占有率で決まる部分がある。同じ量でも、小さい皿に盛ると足りて見える。</p>
+      <ul class="how">
+        <li>ひとまわり小さい皿に替える</li>
+        <li>盛りきりにして、鍋ごと出さない</li>
+        <li>足りなければ、おかわりを取りに行く</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g5">
+    <span class="sec-n">05</span>
+    <h2>続け方</h2>
+
+    <div class="item me">
+      <h3>我慢を、目的にしない</h3>
+      <p class="why">好きなものを手放す形は続かない。数字を減らすことより、健康な体になることを先に置くと、続く形が見つかる。</p>
+      <ul class="how">
+        <li>やめるものではなく、増やすものを決める</li>
+        <li>好きなものは、頻度か量で調整する</li>
+        <li>続かなかった方法は、意志ではなく形を疑う</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>食べたものを、写真に撮る</h3>
+      <p class="why">記録は、正確さより続くことのほうが効く。書く形式だと止まるが、撮るだけなら残る。</p>
+      <ul class="how">
+        <li>食べる前に、一枚撮る</li>
+        <li>計算も記入もしない</li>
+        <li>週に一度、並べて眺める</li>
+      </ul>
+    </div>
+
+    <p class="tl">自分の食の記録は <a href="../food/">食べる</a>。</p>
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

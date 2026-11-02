@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>デジタル｜ライフハック</title>
+<meta name="description" content="通知と画面・ファイル・入力・パスワード・写真の11項目を、なぜ効くのかとやり方まで。ライフハック一覧の「デジタル」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">11 / DIGITAL</p>
+    <h1>デジタル</h1>
+    <p class="mn-tagline">探している時間が、いちばん長い。</p>
+    <p class="lead">一覧に並べた11の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">通知と画面</a></li>
+      <li><a href="#g2">ファイル</a></li>
+      <li><a href="#g3">入力</a></li>
+      <li><a href="#g4">パスワード</a></li>
+      <li><a href="#g5">写真</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>通知と画面</h2>
+
+    <div class="item">
+      <h3>通知は原則オフ、例外だけオン</h3>
+      <p class="why">既定値を逆にする。全部切ってから必要なものだけ戻すと、戻らないものが本当に要らなかったものになる。</p>
+      <ul class="how">
+        <li>通知を、いったん全部切る</li>
+        <li>困ったものだけ、戻す</li>
+        <li>一週間後に、戻したものを見直す</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>ホーム画面に置くものを減らす</h3>
+      <p class="why">開く手間が増えると、開かなくなる。逆に、置いてあるだけで開いてしまう。置き方のほうを変える。</p>
+      <ul class="how">
+        <li>よく開いてしまうものを、ホームから外す</li>
+        <li>検索して開く形にする</li>
+        <li>残すのは、よく使う数個だけ</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>ファイル</h2>
+
+    <div class="item">
+      <h3>保存先を、一か所に決める</h3>
+      <p class="why">探す時間が、いちばん長い。どこに置いたかを考えなくて済むだけで、作業の立ち上がりが速くなる。</p>
+      <ul class="how">
+        <li>保存する場所を、一つ決める</li>
+        <li>種類ではなく、一か所に入れて検索で探す</li>
+        <li>他の場所に散ったものを、少しずつ寄せる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>名前の頭に、日付を書く</h3>
+      <p class="why">並べるだけで時系列になる。整理の仕組みを作らなくても、名前の形だけで済む。</p>
+      <ul class="how">
+        <li>ファイル名の頭を、年月日にする</li>
+        <li>その後ろに、中身が分かる短い言葉</li>
+        <li>区切りは、いつも同じ記号にする</li>
+      </ul>
+    </div>
+
+    <div class="item me">
+      <h3>集める先を、一つにする</h3>
+      <p class="why">道具は目的ごとに選んでいい。揃えるのは道具ではなく、データの行き先。同じ指標が重なるときは、どれを正とするかだけ決めておく。</p>
+      <ul class="how">
+        <li>記録が集まる先を、一つ決める</li>
+        <li>他の道具は、そこへ送る設定にする</li>
+        <li>重なる数字は、どれを正とするか決める</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>入力</h2>
+
+    <div class="item">
+      <h3>ショートカットは、五つだけ覚える</h3>
+      <p class="why">全部覚えようとすると、何も残らない。よく使う五つだけなら、一週間で手が覚える。</p>
+      <ul class="how">
+        <li>よく使う操作を、五つ選ぶ</li>
+        <li>一週間、その五つだけ意識して使う</li>
+        <li>慣れたら、次の五つを足す</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>よく打つ文章は、登録しておく</h3>
+      <p class="why">住所も定型文も、二度目からは打たない。打つ回数より、打ち間違いが減るほうが効く。</p>
+      <ul class="how">
+        <li>よく打つ文章を、登録する</li>
+        <li>短い呼び出し語を決める</li>
+        <li>使わなかったものは、消す</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>パスワード</h2>
+
+    <div class="item">
+      <h3>パスワードは、管理ソフトに任せる</h3>
+      <p class="why">覚えることをやめると、全部を別のものにできる。使い回しをやめるのが、いちばん大きい。</p>
+      <ul class="how">
+        <li>管理ソフトを一つ決める</li>
+        <li>よく使うものから、順に入れ替える</li>
+        <li>生成されたものを、そのまま使う</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>二段階認証を、先に入れておく</h3>
+      <p class="why">後から入れるのは、たいてい何かあった後。大事なものから順に、落ち着いているうちに済ませる。</p>
+      <ul class="how">
+        <li>メールと、お金まわりから入れる</li>
+        <li>予備のコードを、紙でも持つ</li>
+        <li>機種を変える前に、移行方法を確認する</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g5">
+    <span class="sec-n">05</span>
+    <h2>写真</h2>
+
+    <div class="item">
+      <h3>撮ったその場で、要らないものを消す</h3>
+      <p class="why">後でまとめて、はやらない。連写した直後なら、どれが要るかがまだ分かる。</p>
+      <ul class="how">
+        <li>撮った直後に、失敗を消す</li>
+        <li>似た写真は、一枚だけ残す</li>
+        <li>迷ったら、残さない</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>見返すものだけ、別の場所に移す</h3>
+      <p class="why">全部残すと、一枚も見返さない。選んだものだけを別にすると、そこが見返す場所になる。</p>
+      <ul class="how">
+        <li>良かった写真を、別のアルバムに入れる</li>
+        <li>月に一度、その月から数枚選ぶ</li>
+        <li>元の場所は、倉庫として置いておく</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

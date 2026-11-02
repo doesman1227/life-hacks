@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>発想｜ライフハック</title>
+<meta name="description" content="広げる・変える・寝かせる・決める前にの10項目を、なぜ効くのかとやり方まで。ライフハック一覧の「発想」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">04 / IDEAS</p>
+    <h1>発想</h1>
+    <p class="mn-tagline">考えるのではなく、考えが出る形を作る。</p>
+    <p class="lead">一覧に並べた10の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">広げる</a></li>
+      <li><a href="#g2">変える</a></li>
+      <li><a href="#g3">寝かせる</a></li>
+      <li><a href="#g4">決める前に</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>広げる</h2>
+
+    <div class="item">
+      <h3>書きながら、考える</h3>
+      <p class="why">頭の中だけで考えると、同じところを何度も回る。書くと、考えた分が外に出て、次を考える場所が空く。</p>
+      <ul class="how">
+        <li>思いついた順に、短く書き出す</li>
+        <li>整理はしない。並べるだけ</li>
+        <li>出し切ってから、読み返す</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>数を先に出す</h3>
+      <p class="why">良い案を一つ出そうとすると、最初の案を守りはじめる。先に数を出すと、選ぶ側に回れる。</p>
+      <ul class="how">
+        <li>数を決める（まず20個）</li>
+        <li>質は見ない。くだらないものも書く</li>
+        <li>出し切ってから、見比べる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>制約を、先に置く</h3>
+      <p class="why">自由に考えていいと言われると、かえって出てこない。枠があると、その枠の中で手が動く。</p>
+      <ul class="how">
+        <li>予算・時間・大きさなど、条件を先に決める</li>
+        <li>その条件でできることだけを考える</li>
+        <li>行き詰まったら、条件を一つだけ外す</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>変える</h2>
+
+    <div class="item">
+      <h3>逆から考える</h3>
+      <p class="why">どうすればうまくいくかより、どうすれば失敗するかのほうが具体的に出る。出た失敗を裏返すと、やるべきことになる。</p>
+      <ul class="how">
+        <li>「確実に失敗させるには」と書いて、並べる</li>
+        <li>出てきたものを、裏返す</li>
+        <li>裏返せないものは、本当の弱点として残す</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>他の分野のやり方を、当ててみる</h3>
+      <p class="why">似た構造の問題は、別の業界ですでに解かれていることが多い。分野が遠いほど、組み合わせは新しく見える。</p>
+      <ul class="how">
+        <li>いまの問題を、構造だけで言い直す</li>
+        <li>同じ構造の問題がある分野を探す</li>
+        <li>そこでの解き方を、こちらに当てはめる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>人に話してみる</h3>
+      <p class="why">説明するために順番を組み直すので、話している途中で自分の考えが整う。相手の質問は、抜けている場所を指してくれる。</p>
+      <ul class="how">
+        <li>詳しくない人に、一から説明する</li>
+        <li>詰まったところを、覚えておく</li>
+        <li>もらった質問を、そのまま検討項目にする</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>寝かせる</h2>
+
+    <div class="item">
+      <h3>一晩おく</h3>
+      <p class="why">出したばかりの案は、出した労力の分だけ良く見える。一晩おくと、その色が落ちて、要るものだけが残る。</p>
+      <ul class="how">
+        <li>案を書いたら、その日は決めない</li>
+        <li>翌朝、見出しだけ読み返す</li>
+        <li>半分くらい消える前提でいる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>行き詰まったら、場所を変える</h3>
+      <p class="why">同じ机では、同じ順番で考えてしまう。場所が変わると、思い出すものが変わる。</p>
+      <ul class="how">
+        <li>行き詰まったら、立って外に出る</li>
+        <li>歩きながら、問題を一つだけ持っておく</li>
+        <li>出てきたら、その場で短く書く</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>決める前に</h2>
+
+    <div class="item">
+      <h3>問いのほうを、書き直す</h3>
+      <p class="why">解けないときは、答えではなく問いが悪いことが多い。問いを狭めるか、一段上げると、別の手が見える。</p>
+      <ul class="how">
+        <li>いまの問いを、一文で書く</li>
+        <li>「本当に解きたいのは何か」と一段上げる</li>
+        <li>または、具体的な場面まで狭める</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>最悪の場合を、具体的に書く</h3>
+      <p class="why">漠然とした不安は、大きさが分からないので手が止まる。具体的に書くと、たいてい思ったより小さく、備えも決まる。</p>
+      <ul class="how">
+        <li>いちばん悪い結果を、具体的に書く</li>
+        <li>起きたときに、何をするかを書く</li>
+        <li>そのうえで、起きる確率を見積もる</li>
+      </ul>
+    </div>
+
+    <p class="tl">作るときの考え方は <a href="../way-of-creating/">創り方</a>。</p>
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

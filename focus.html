@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>集中｜ライフハック</title>
+<meta name="description" content="机まわり・区切り・通知と連絡・会議・引き受け方の10項目を、なぜ効くのかとやり方まで。ライフハック一覧の「集中」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">02 / FOCUS</p>
+    <h1>集中</h1>
+    <p class="mn-tagline">集中は、途切れてから戻るまでが高い。</p>
+    <p class="lead">一覧に並べた10の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">机まわり</a></li>
+      <li><a href="#g2">区切り</a></li>
+      <li><a href="#g3">通知と連絡</a></li>
+      <li><a href="#g4">会議</a></li>
+      <li><a href="#g5">引き受け方</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>机まわり</h2>
+
+    <div class="item">
+      <h3>机に出すのは、一つだけ</h3>
+      <p class="why">視界に入るものは、見ていなくても注意を取る。別の仕事の資料が端にあるだけで、戻るのが遅くなる。</p>
+      <ul class="how">
+        <li>今やる仕事のものだけ、机に出す</li>
+        <li>終わったら、机に戻してから次を出す</li>
+        <li>画面も同じ。関係ないウィンドウは閉じる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>作業ごとに、場所を変える</h3>
+      <p class="why">場所は合図になる。同じ机で全部やると切り替えに時間がかかるが、場所を変えると頭のほうが先に切り替わる。</p>
+      <ul class="how">
+        <li>書く・読む・話すで、場所を分ける</li>
+        <li>移動が無理なら、椅子の向きや照明だけでも変える</li>
+        <li>場所と作業の組み合わせは、固定する</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>区切り</h2>
+
+    <div class="item">
+      <h3>25分で区切る</h3>
+      <p class="why">終わりの見えない作業は、始めるのが重い。短く区切ると、始める判断が軽くなり、途中の疲れも溜まりにくい。</p>
+      <ul class="how">
+        <li>タイマーを25分にして、始める</li>
+        <li>途中で思いついた別のことは、紙にメモして続ける</li>
+        <li>鳴ったら5分離れる</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>乗っているときに止めると惜しいが、止めたほうが次に戻りやすい。</p>
+    </div>
+
+    <div class="item">
+      <h3>やめるときは、途中でやめる</h3>
+      <p class="why">切りのいいところで終えると、次に座ったとき何から書くかをまた考えることになる。途中で止めると、続きが見えている状態から始められる。</p>
+      <ul class="how">
+        <li>次の一行が分かっている状態で、手を止める</li>
+        <li>どこから続けるかを、一行書いておく</li>
+        <li>片付けてから離れる</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>通知と連絡</h2>
+
+    <div class="item">
+      <h3>通知は、切っておく</h3>
+      <p class="why">一度の着信で集中が切れると、戻るまでに十数分かかると言われる。見る時間を決めるほうが、結果として早く返せる。</p>
+      <ul class="how">
+        <li>作業中は、通知を全部切る</li>
+        <li>例外にする相手だけ、鳴るようにしておく</li>
+        <li>区切りごとに、まとめて見る</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>連絡を見る時刻を、決めておく</h3>
+      <p class="why">いつでも見る状態は、いつでも中断される状態でもある。時刻を決めると、相手にとっても返事の予想が立つ。</p>
+      <ul class="how">
+        <li>一日に見る回数を決める（朝・昼すぎ・夕方など）</li>
+        <li>その時刻に、まとめて返す</li>
+        <li>急ぎの連絡だけ、別の経路を用意しておく</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>会議</h2>
+
+    <div class="item">
+      <h3>会議は25分・50分で切る</h3>
+      <p class="why">次の予定にそのままつながる会議は、移動も記録も残さない。短く切ると、終わりの意識が働いて話も締まる。</p>
+      <ul class="how">
+        <li>招集するときは、25分か50分で設定する</li>
+        <li>残りの時間で、決まったことを書く</li>
+        <li>延びそうなら、次を決めて終える</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>終わりに、決まったことを読み上げる</h3>
+      <p class="why">話した内容と、決まったことは違う。その場で声に出すと、認識の違いがその場で出る。</p>
+      <ul class="how">
+        <li>終わる前に、決まったこととやる人を読み上げる</li>
+        <li>違っていれば、その場で直す</li>
+        <li>そのまま記録として送る</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g5">
+    <span class="sec-n">05</span>
+    <h2>引き受け方</h2>
+
+    <div class="item">
+      <h3>やらないことを、決める</h3>
+      <p class="why">足すより、減らすほうが時間に効く。何をやらないかが決まっていないと、全部が候補のまま残る。</p>
+      <ul class="how">
+        <li>いまの仕事を並べて、効いていないものを探す</li>
+        <li>やめるか、減らすか、人に渡すかを決める</li>
+        <li>やめたことを、書いて残しておく</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>やめた仕事ほど、誰かが困っていないか気になる。一か月だけ止めて様子を見る形にする。</p>
+    </div>
+
+    <div class="item">
+      <h3>即答せず、一度持ち帰る</h3>
+      <p class="why">その場の勢いで引き受けた仕事は、来週の自分が払う。一拍おくと、断れるものと断れないものが分かれる。</p>
+      <ul class="how">
+        <li>その場で返事をせず、いつ返すかだけ伝える</li>
+        <li>いまの予定に入るかどうかを見る</li>
+        <li>入らないなら、何を落とすかと一緒に返す</li>
+      </ul>
+    </div>
+
+    <p class="tl">仕事の進め方そのものは <a href="../way-of-working/">働き方</a>。</p>
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

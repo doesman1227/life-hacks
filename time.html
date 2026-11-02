@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>時間｜ライフハック</title>
+<meta name="description" content="朝・予定・細切れ時間・先延ばしの11項目を、なぜ効くのかとやり方まで。ライフハック一覧の「時間」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">01 / TIME</p>
+    <h1>時間</h1>
+    <p class="mn-tagline">やることを減らすより、置き場所を決める。</p>
+    <p class="lead">一覧に並べた11の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">朝</a></li>
+      <li><a href="#g2">予定</a></li>
+      <li><a href="#g3">細切れ時間</a></li>
+      <li><a href="#g4">先延ばし</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>朝</h2>
+
+    <div class="item">
+      <h3>重いものを、朝に</h3>
+      <p class="why">判断力は、使うほど目減りする。朝いちばんの頭は、その日いちばん安い値段で買える資源になる。だから、同じ仕事でも朝に置くか夕方に置くかで、かかる時間がはっきり変わる。</p>
+      <ul class="how">
+        <li>前の日に、明日いちばん重い仕事を一つ決める</li>
+        <li>朝、その仕事から始める。連絡や雑務は後ろへ回す</li>
+        <li>終わったら、残りは軽い仕事だけにする</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>重い仕事に二時間かかると見積もると、朝に置けなくなる。置くのは最初の30分ぶんだけでいい。</p>
+    </div>
+
+    <div class="item">
+      <h3>前の晩に、明日の三つを決めておく</h3>
+      <p class="why">朝に「何からやるか」を考えると、いちばん高い時間を段取りに使うことになる。前の晩の自分は判断が粗いが、三つ選ぶくらいなら十分できる。</p>
+      <ul class="how">
+        <li>寝る前に、明日やることを三つだけ書く</li>
+        <li>順番も決めておく</li>
+        <li>朝は、その紙を見るだけにする</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>朝いちばんは、連絡より自分の仕事</h3>
+      <p class="why">受信箱を先に開くと、その日の予定が人の都合で埋まる。返信は、相手の仕事を進める作業なので、自分の仕事を一つ終えてからでも遅くない。</p>
+      <ul class="how">
+        <li>朝のうちは、メールとチャットを開かない</li>
+        <li>自分の仕事を一つ終える</li>
+        <li>そのあとで、まとめて返す</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>急ぎが来ていないか不安なら、件名だけ見て閉じる。開くと返したくなる。</p>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>予定</h2>
+
+    <div class="item">
+      <h3>リストではなく、時間割に置く</h3>
+      <p class="why">やることリストは、量は見えるが、入るかどうかが見えない。時間の枠に置いた瞬間、入らないことが分かり、減らす判断ができる。</p>
+      <ul class="how">
+        <li>やることを、所要時間付きで書き出す</li>
+        <li>カレンダーの空きに、実際に置いていく</li>
+        <li>置けなかったものは、やらないか、別の日にする</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>予定を詰めきると、一つ崩れた時点で全部崩れる。半分だけ埋める。</p>
+    </div>
+
+    <div class="item">
+      <h3>自分の締め切りを、手前に置く</h3>
+      <p class="why">本当の期限だけだと、着手は必ず期限際になる。手前に別の期限を作ると、そこで一度、形が見える。見せる相手がいる期限ほど効く。</p>
+      <ul class="how">
+        <li>本当の期限の数日前に、自分の期限を決める</li>
+        <li>その日に誰かへ見せる約束をする</li>
+        <li>見せるのは、途中の状態でいい</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>予定と予定の間を、空けておく</h3>
+      <p class="why">移動と、記録と、頭の切り替えには必ず時間がかかる。そこを見ないで詰めると、遅れが後ろへ順送りになり、最後は全部が雑になる。</p>
+      <ul class="how">
+        <li>会議は、前後に10分ずつ空ける</li>
+        <li>移動のある日は、移動そのものを予定として入れる</li>
+        <li>空いた時間に、次の予定の準備と前の予定の記録をする</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>細切れ時間</h2>
+
+    <div class="item">
+      <h3>二分で終わることは、その場で終える</h3>
+      <p class="why">覚えておく、書き留める、思い出す、取りかかる。この一式のほうが、二分の作業より高くつく。短いものを溜めないだけで、リストは短くなる。</p>
+      <ul class="how">
+        <li>目の前に来たとき、二分で終わるか考える</li>
+        <li>終わるなら、その場で終える</li>
+        <li>終わらないなら、いつやるかを決めて手を離す</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>二分のつもりが十分かかることがある。延びたら、途中でも止めて予定に入れ直す。</p>
+    </div>
+
+    <div class="item">
+      <h3>待ち時間の持ち物を、先に決める</h3>
+      <p class="why">移動や行列で何をするかをその場で考えると、たいてい画面を見て終わる。先に決めておけば、細切れの時間が一つの作業になる。</p>
+      <ul class="how">
+        <li>移動中にやることを、一つだけ決めておく（読む・返す・考える）</li>
+        <li>そのための道具を、鞄に入れておく</li>
+        <li>決めたこと以外は、やらない</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>似た作業は、まとめる</h3>
+      <p class="why">作業が変わるたびに、道具も頭も立ち上げ直すことになる。同じ種類をまとめると、その立ち上げが一回で済む。</p>
+      <ul class="how">
+        <li>返信・支払い・買い物など、同じ種類の用事を書き出す</li>
+        <li>曜日か時間帯を決めて、そこに寄せる</li>
+        <li>途中で別の種類が来たら、メモして後ろに回す</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>先延ばし</h2>
+
+    <div class="item">
+      <h3>五分だけ、手をつける</h3>
+      <p class="why">先延ばしは、やる気の問題ではなく、始めるところだけが重い。始めてしまえば、途中でやめるほうが気持ち悪くなる。</p>
+      <ul class="how">
+        <li>タイマーを五分にする</li>
+        <li>五分だけやる。できが悪くてかまわない</li>
+        <li>五分経ったら、続けるかやめるか決める</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>次の一手を、動作で書く</h3>
+      <p class="why">「資料」「連絡」のような名詞では、手が動かない。動作で書いてあると、考えずに始められる。</p>
+      <ul class="how">
+        <li>やることを、体の動作で書き直す（表紙を作る、宛先を入れる）</li>
+        <li>最初の一手だけでいい</li>
+        <li>書けないときは、分かっていないところがそこにある</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

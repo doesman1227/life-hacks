@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>学び｜ライフハック</title>
+<meta name="description" content="読む・残す・身につける・調べるの10項目を、なぜ効くのかとやり方まで。ライフハック一覧の「学び」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">03 / LEARNING</p>
+    <h1>学び</h1>
+    <p class="mn-tagline">覚えることより、残る形で入れること。</p>
+    <p class="lead">一覧に並べた10の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">読む</a></li>
+      <li><a href="#g2">残す</a></li>
+      <li><a href="#g3">身につける</a></li>
+      <li><a href="#g4">調べる</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>読む</h2>
+
+    <div class="item">
+      <h3>読む前に、問いを一つ立てる</h3>
+      <p class="why">何を知りたいかが決まっていないと、全部が同じ重さで流れていく。問いがあると、関係するところだけが浮いて見える。</p>
+      <ul class="how">
+        <li>読む前に、知りたいことを一行書く</li>
+        <li>目次を見て、答えがありそうな章を決める</li>
+        <li>読み終わったら、その問いに答えてみる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>一冊を、読み切らない</h3>
+      <p class="why">通読は目的ではない。必要な章だけ読んで使うほうが、最後まで読んで忘れるより残る。</p>
+      <ul class="how">
+        <li>目次で、要るところだけ選ぶ</li>
+        <li>そこだけ読んで、いったん閉じる</li>
+        <li>足りなければ、また開く</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>積んだ本は、見える場所に</h3>
+      <p class="why">視界から消えた本は、読まれないまま時間だけが経つ。見える場所にあるだけで、手に取る回数が変わる。</p>
+      <ul class="how">
+        <li>読みかけの本は、机か動線上に置く</li>
+        <li>読む順に、立てて並べる</li>
+        <li>読む気がなくなった本は、山から下ろす</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>残す</h2>
+
+    <div class="item">
+      <h3>読んだら、自分の言葉で三行</h3>
+      <p class="why">引用をそのまま写しても、ほとんど残らない。言い換えた時点で、自分の持ちものになる。</p>
+      <ul class="how">
+        <li>読み終えたら、本を閉じて三行書く</li>
+        <li>書けないところは、読めていないところ</li>
+        <li>あとで読み返せる場所に置く</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>引用と、思ったことを分けて書く</h3>
+      <p class="why">あとで見たときに、どちらが本に書いてあったことか分からなくなると、どちらも使えなくなる。</p>
+      <ul class="how">
+        <li>引用は、記号やかぎかっこで囲む</li>
+        <li>自分の考えは、別の行に書く</li>
+        <li>出典とページを、引用のすぐ横に置く</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>出典は、その場で貼る</h3>
+      <p class="why">後から探すほうが、読むより時間がかかる。見つけた瞬間が、いちばん安く記録できる。</p>
+      <ul class="how">
+        <li>読んだ場所のURLか書名を、その場で貼る</li>
+        <li>日付も一緒に書く</li>
+        <li>あとで整理しようとしない</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>身につける</h2>
+
+    <div class="item">
+      <h3>覚えるより、使う場面を決める</h3>
+      <p class="why">使い道のない知識は、翌週には消える。どこで使うかが決まっていると、覚えようとしなくても残る。</p>
+      <ul class="how">
+        <li>学んだことを、使えそうな場面と結びつける</li>
+        <li>次の一週間で、一度使ってみる</li>
+        <li>使ってみて効かなければ、捨てる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>人に説明してみる</h3>
+      <p class="why">説明できないところが、分かっていないところ。話した相手の反応で、どこが伝わらないかも分かる。</p>
+      <ul class="how">
+        <li>誰かに、三分で説明してみる</li>
+        <li>詰まったところを、読み直す</li>
+        <li>相手がいなければ、書いて説明する</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>間隔を空けて、思い出す</h3>
+      <p class="why">読み返すより、思い出そうとするほうが残る。間隔を空けるほど、思い出す負荷が上がり、定着も強くなる。</p>
+      <ul class="how">
+        <li>読んだ翌日に、見ずに思い出してみる</li>
+        <li>一週間後、一か月後にもう一度</li>
+        <li>思い出せなかったところだけ、読み直す</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>調べる</h2>
+
+    <div class="item">
+      <h3>一次情報まで、一度は降りる</h3>
+      <p class="why">まとめは、まとめた人の都合で削られている。元の資料を一度見ておくと、どこが落ちているかが分かる。</p>
+      <ul class="how">
+        <li>まとめ記事の出典をたどる</li>
+        <li>原典・統計・一次資料を一度開く</li>
+        <li>違っていたら、まとめのほうを信じない</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>全部を一次情報で確認しようとすると続かない。大事な判断に関わるものだけでいい。</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

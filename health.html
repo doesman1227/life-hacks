@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>体｜ライフハック</title>
+<meta name="description" content="運動・姿勢と休憩・目と肩・続ける・検診の12項目を、なぜ効くのかとやり方まで。ライフハック一覧の「体」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">08 / BODY</p>
+    <h1>体</h1>
+    <p class="mn-tagline">溜まってから立て直すほうが、高くつく。</p>
+    <p class="lead">一覧に並べた12の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">運動</a></li>
+      <li><a href="#g2">姿勢と休憩</a></li>
+      <li><a href="#g3">目と肩</a></li>
+      <li><a href="#g4">続ける</a></li>
+      <li><a href="#g5">検診</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>運動</h2>
+
+    <div class="item me">
+      <h3>会話できる強度で動く</h3>
+      <p class="why">速さや量を追うと、翌日に響いて続かなくなる。会話ができる強度なら、毎回同じようにこなせる。翌日ぐったりするのは頑張った証ではなく、強度を下げるサイン。</p>
+      <ul class="how">
+        <li>話せる程度の強度を保つ</li>
+        <li>苦しくなったら、歩く</li>
+        <li>翌日に残ったら、次回は下げる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>移動に混ぜる</h3>
+      <p class="why">運動の時間を別に作ると、忙しい週から落ちる。移動に混ぜると、落ちる理由がなくなる。</p>
+      <ul class="how">
+        <li>階段を使う</li>
+        <li>ひと駅手前で降りる</li>
+        <li>歩く道を、少し長いほうにする</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>着替えを、前の晩に出しておく</h3>
+      <p class="why">行くかどうかを朝に考えると、たいてい行かない。着替えが出ていると、判断の前に手が動く。</p>
+      <ul class="how">
+        <li>前の晩に、着替えを出す</li>
+        <li>持ち物も、そのまま入れておく</li>
+        <li>行かない日も、出すのはやめない</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>姿勢と休憩</h2>
+
+    <div class="item me">
+      <h3>疲れる前に、小さく戻す</h3>
+      <p class="why">疲れてから大きく立て直すより、溜まる前に小さく戻すほうが安い。大事なのは完璧な休憩法ではなく、忙しい日でも差し込める短さにしておくこと。</p>
+      <ul class="how">
+        <li>30分に一度、短く離れる</li>
+        <li>飲み物を取りに立つ、を合図にする</li>
+        <li>休むのを、中断ではなく準備と考える</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>30分に一度、立つ</h3>
+      <p class="why">姿勢は時間で崩れる。意識で直すより、立つ回数を増やすほうが早い。</p>
+      <ul class="how">
+        <li>30分ごとに、一度立つ</li>
+        <li>立ったついでに、肩を回す</li>
+        <li>会議中でも、立って聞く日を作る</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>画面の上端を、目の高さに</h3>
+      <p class="why">見下ろす角度が、首と肩に効く。机ではなく、画面の高さのほうを合わせる。</p>
+      <ul class="how">
+        <li>画面の上端を、目の高さに合わせる</li>
+        <li>足が床につく高さに、椅子を直す</li>
+        <li>外付けの画面か、台で高さを作る</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>目と肩</h2>
+
+    <div class="item">
+      <h3>20分ごとに、20秒、遠くを見る</h3>
+      <p class="why">近くを見続けると、目のピントを合わせる筋肉が固まる。遠くを見るのは、その筋肉を休ませる動作。</p>
+      <ul class="how">
+        <li>20分ごとに、窓の外など遠くを見る</li>
+        <li>20秒くらい、そのまま</li>
+        <li>まばたきを、意識して入れる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>肩を上げて、力を抜く</h3>
+      <p class="why">力を抜こうとしても抜けない。一度入れてから抜くほうが、早く落ちる。</p>
+      <ul class="how">
+        <li>息を吸いながら、肩を耳まで上げる</li>
+        <li>数秒止める</li>
+        <li>息を吐きながら、落とす</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>続ける</h2>
+
+    <div class="item me">
+      <h3>やめない理由を、一つに絞らない</h3>
+      <p class="why">続いている習慣はどれも目的が複数ある。ジムは運動と、大きなお風呂と、人のいる場所にいること。目的が複数あると、動機が一つ切れても止まらない。</p>
+      <ul class="how">
+        <li>続けたいことに、別の目的を足す</li>
+        <li>場所や人と結びつける</li>
+        <li>効果が出ない時期も、別の理由で行く</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>記録は、やったかどうかだけ</h3>
+      <p class="why">量や数字を書き始めると、書くこと自体が重くなって止まる。やったかどうかだけなら、途切れても戻れる。</p>
+      <ul class="how">
+        <li>やった日に、印をつけるだけにする</li>
+        <li>数値は、機械に任せる</li>
+        <li>途切れても、さかのぼって埋めない</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g5">
+    <span class="sec-n">05</span>
+    <h2>検診</h2>
+
+    <div class="item me">
+      <h3>定期で、人に見てもらう</h3>
+      <p class="why">自分の感覚では、ゆっくりした変化は拾えない。毎月の整体や、半年ごとの歯科検診のように、定期で外から見てもらう。</p>
+      <ul class="how">
+        <li>通う間隔を決めて、予定に入れる</li>
+        <li>体と歯で、別々に持つ</li>
+        <li>言われたことは、その場でメモする</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>次の予約は、帰る前に取る</h3>
+      <p class="why">あとで取ると、取らない。帰る前なら、その場の数十秒で済む。</p>
+      <ul class="how">
+        <li>受付で、次の予約を取る</li>
+        <li>カレンダーに、その場で入れる</li>
+        <li>都合が変わったら、ずらすだけにする</li>
+      </ul>
+    </div>
+
+    <p class="tl">自分の体の記録は <a href="../health-habits/">健康</a>。</p>
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

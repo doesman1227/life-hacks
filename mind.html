@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>頭の中｜ライフハック</title>
+<meta name="description" content="メモ・決める・習慣の8項目を、なぜ効くのかとやり方まで。ライフハック一覧の「頭の中」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">14 / MIND</p>
+    <h1>頭の中</h1>
+    <p class="mn-tagline">意志は、使えば減るものとして扱う。</p>
+    <p class="lead">一覧に並べた8の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">メモ</a></li>
+      <li><a href="#g2">決める</a></li>
+      <li><a href="#g3">習慣</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>メモ</h2>
+
+    <div class="item">
+      <h3>全部、書き出す</h3>
+      <p class="why">覚えておく仕事を紙に渡すと、考える場所が空く。覚えている限り、頭はそれを守り続ける。</p>
+      <ul class="how">
+        <li>気になっていることを、全部書き出す</li>
+        <li>整理はしない。出し切る</li>
+        <li>終わったら、やることだけ拾う</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>書く場所を、一つに決める</h3>
+      <p class="why">どこに書いたかを思い出す時間が、いちばん無駄。書く場所は、探さなくていいことのほうが大事。</p>
+      <ul class="how">
+        <li>書く場所を、一つに決める</li>
+        <li>思いついたら、そこにだけ書く</li>
+        <li>整理は、あとでまとめてやる</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>決める</h2>
+
+    <div class="item me">
+      <h3>決めるのは、一度でいい</h3>
+      <p class="why">定位置も、服の型も、決める作業は一度きり。あとは戻すだけ、足すだけになる。毎回考えないための工夫として効く。</p>
+      <ul class="how">
+        <li>繰り返し迷っていることを、一度だけ決める</li>
+        <li>決めたことを、書いて残す</li>
+        <li>状況が変わるまで、決め直さない</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>選択肢は、三つに絞る</h3>
+      <p class="why">多いほど決められず、決めたあとも迷いが残る。先に絞るほうが、満足も高い。</p>
+      <ul class="how">
+        <li>候補を、三つまでに絞る</li>
+        <li>絞る基準を、先に決める</li>
+        <li>三つの中から選んだら、他は見ない</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>迷ったら、小さく試す</h3>
+      <p class="why">考えて分かることには限りがある。小さく試すと、考えても出なかった事実が出る。</p>
+      <ul class="how">
+        <li>試せる最小の形を考える</li>
+        <li>期限を決めて、やってみる</li>
+        <li>結果を見てから、決める</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>習慣</h2>
+
+    <div class="item me">
+      <h3>すでにある出来事に、結びつける</h3>
+      <p class="why">新しい時間を作らず、すでに起きることに乗せる。買ったら手放す、季節が変わったら出す、のように。</p>
+      <ul class="how">
+        <li>毎日・毎週、必ず起きることを探す</li>
+        <li>その直後に、新しい習慣を置く</li>
+        <li>続かなければ、結びつける先を変える</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>二度目に困ったら、仕組みにする</h3>
+      <p class="why">一度目は手でやったほうが早い。二度目に困ったときが、仕組みにする合図。</p>
+      <ul class="how">
+        <li>同じことで二度困ったら、立ち止まる</li>
+        <li>手順を書くか、自動にする</li>
+        <li>三度目からは、それを使う</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>一日休んでも、二日は休まない</h3>
+      <p class="why">途切れたこと自体より、戻れなくなることのほうが効く。一日なら、まだ習慣の中にいる。</p>
+      <ul class="how">
+        <li>休んだ翌日は、短くてもやる</li>
+        <li>できない日は、最小の形でやる</li>
+        <li>二日空いたら、仕切り直しとして始める</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>

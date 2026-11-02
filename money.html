@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>おかね｜ライフハック</title>
+<meta name="description" content="貯める・固定費・買い物・把握の9項目を、なぜ効くのかとやり方まで。ライフハック一覧の「おかね」を深掘りしたページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#73706a; --faint:#a8a49c;
+    --line:#e5e2db; --card:#f3f1ec; --accent:#a06a52;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+      --line:#262421; --card:#181614; --accent:#d1916f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#918c84; --faint:#5c5852;
+    --line:#262421; --card:#181614; --accent:#d1916f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:64px 0 20px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(1.9rem,5.5vw,2.5rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.25rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em;font-size:.95rem}
+  .legend{color:var(--faint);font-size:.82rem;margin:10px 0 0}
+  .legend i{font-style:normal;color:var(--accent)}
+
+  .toc{list-style:none;margin:26px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;
+    border-top:1px solid var(--line)}
+  .toc a{font-size:.8rem;color:var(--muted);text-decoration:none}
+  .toc a:hover{color:var(--accent)}
+
+  section{padding:52px 0 0}
+  .sec-n{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint);margin-bottom:8px}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
+  .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
+
+  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
+  .item:last-of-type{border-bottom:0}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .how{margin:0;padding:0;list-style:none}
+  .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
+  .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
+    font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
+  .how{counter-reset:step}
+  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
+    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
+
+  .tl{margin-top:16px;font-size:.86rem;color:var(--faint)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="./">← ライフハック</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">10 / MONEY</p>
+    <h1>おかね</h1>
+    <p class="mn-tagline">頑張りの量ではなく、通り道の形で決まる。</p>
+    <p class="lead">一覧に並べた9の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <ul class="toc">
+      <li><a href="#g1">貯める</a></li>
+      <li><a href="#g2">固定費</a></li>
+      <li><a href="#g3">買い物</a></li>
+      <li><a href="#g4">把握</a></li>
+    </ul>
+  </header>
+
+  <section id="g1">
+    <span class="sec-n">01</span>
+    <h2>貯める</h2>
+
+    <div class="item">
+      <h3>先に、貯める分を引く</h3>
+      <p class="why">残ったら貯める形だと、残らない。先に引いて、残りで暮らす形にすると、我慢の場面が月末に来なくなる。</p>
+      <ul class="how">
+        <li>毎月いくら貯めるかを決める</li>
+        <li>給料が入った日に、先に移す</li>
+        <li>残った額で、その月を暮らす</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>最初から高く設定すると、取り崩して元に戻る。続いた額から、少しずつ上げる。</p>
+    </div>
+
+    <div class="item">
+      <h3>自動で移す</h3>
+      <p class="why">毎月手で動かす形は、忙しい月に止まる。意志の介在する場所を減らすと、続くかどうかが性格と無関係になる。</p>
+      <ul class="how">
+        <li>自動振替を設定する</li>
+        <li>日付は、入金の直後にする</li>
+        <li>額を変えるときだけ、手を入れる</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g2">
+    <span class="sec-n">02</span>
+    <h2>固定費</h2>
+
+    <div class="item">
+      <h3>固定費から見直す</h3>
+      <p class="why">一度の手間が、毎月効き続ける。日々の節約と違って、意識し続ける必要がない。</p>
+      <ul class="how">
+        <li>毎月出ていくものを、全部書き出す</li>
+        <li>使っていないもの、重なっているものを探す</li>
+        <li>高いものから順に、一つずつ見直す</li>
+      </ul>
+    </div>
+
+    <div class="item me">
+      <h3>サブスクは、道具箱として見る</h3>
+      <p class="why">「毎月出ていくお金」として見ると、解約するかどうかの話にしかならない。道具箱として見ると、まだ使っていない機能が見える。</p>
+      <ul class="how">
+        <li>契約しているものを、全部並べる</li>
+        <li>それぞれ、何ができるのかを調べ直す</li>
+        <li>役割が重なっているものだけ、落とす</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g3">
+    <span class="sec-n">03</span>
+    <h2>買い物</h2>
+
+    <div class="item me">
+      <h3>表示価格ではなく、総額で比べる</h3>
+      <p class="why">安く見えても、付け足すものや移動まで含めると差が縮まる。最後にいくらかかるかで比べる。</p>
+      <ul class="how">
+        <li>本体以外に要るものを、全部足す</li>
+        <li>移動と時間も、金額に直す</li>
+        <li>そのうえで、並べて比べる</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>欲しくなったら、24時間おく</h3>
+      <p class="why">欲しさは時間で減り、必要は残る。買わない判断ではなく、時間をおく判断にすると、我慢している感じがしない。</p>
+      <ul class="how">
+        <li>欲しいものを、メモに書く</li>
+        <li>一日おいてから、もう一度見る</li>
+        <li>まだ欲しければ、買う</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>一回あたりに、直してみる</h3>
+      <p class="why">高いか安いかは、値段ではなく使う回数で変わる。毎日使うものと、年に一度のものを、同じ基準で見ない。</p>
+      <ul class="how">
+        <li>値段を、使う回数で割る</li>
+        <li>一回あたりで、別のものと比べる</li>
+        <li>回数が読めないものは、買わない</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="g4">
+    <span class="sec-n">04</span>
+    <h2>把握</h2>
+
+    <div class="item me">
+      <h3>一か所に集約し、見る頻度を決める</h3>
+      <p class="why">見えていないものは判断できないが、見続けると今度はお金に心を取られる。集約するのは、考えなくていい時間を増やすため。</p>
+      <ul class="how">
+        <li>口座とカードを、一つのアプリに集める</li>
+        <li>見る日を決める（週に一度、月に一度）</li>
+        <li>それ以外の日は、開かない</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>支払いを、一枚にまとめる</h3>
+      <p class="why">通る道が少ないほど、記録が自動で揃う。分散していると、集計そのものが仕事になる。</p>
+      <ul class="how">
+        <li>主に使う一枚を決める</li>
+        <li>引き落としも、その一枚に寄せる</li>
+        <li>用途で分けたいときだけ、二枚目を使う</li>
+      </ul>
+    </div>
+
+    <p class="tl">自分の家計の記録は <a href="../money/">おかね</a>。</p>
+  </section>
+
+  <footer>
+    <p>専門家ではない個人が、自分の暮らしについてまとめた個人的なノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="./">← ライフハック</a>　<a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>
