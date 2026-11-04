@@ -2211,7 +2211,7 @@
       if(mode==='me') ok=/\bme\b/.test(c);
       else if(mode==='try') ok=/\btry\b/.test(c);
       else if(mode==='cand') ok=!/\bme\b/.test(c)&&!/\btry\b/.test(c);
-      else if(mode==='ev') ok=!!li.querySelector('.ev');
+      else if(mode==='ev') ok=!!li.querySelector('.tag[class*="ev-"]');
       if(ok&&s) ok=li.getAttribute('data-t').indexOf(s)>=0;
       li.hidden=!ok; if(ok) n++;
     });
