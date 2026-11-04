@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ライフハック｜暮らし方</title>
-<meta name="description" content="世の中で言われているライフハックを、時間・集中・住む・着る・食べる・体・眠り・おかね・デジタル・頭の中・人づきあい・学び・発想・旅と持ち物・気持ち・備えの16カテゴリと、片付け・洗濯・ごみ・買い物といった場面ごとの小分類に整理した一覧。自分でやっているものには印をつけています。">
+<meta name="description" content="世の中で言われているライフハックを、時間・集中・住む・着る・食べる・体・眠り・おかね・デジタル・頭の中・人づきあい・学び・発想・旅と持ち物・気持ち・備えの16カテゴリと、片付け・洗濯・ごみ・買い物といった場面ごとの小分類に整理した一覧。採用したものには印を、裏付けの強さが分かったものにはその目安を付けています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
@@ -62,6 +62,27 @@
   .points b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;margin-bottom:1px}
   .points span{color:var(--muted);font-size:.9rem}
   .points li.me b::before{content:"●";color:var(--accent);font-size:.62em;vertical-align:.22em;margin-right:.5em}
+  .points li.try b::before{content:"○";color:var(--accent);font-size:.62em;vertical-align:.22em;margin-right:.5em}
+
+  .ev{display:block;margin-top:8px;font-style:normal;font-size:.74rem;line-height:1.7;color:var(--faint)}
+  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
+    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
+  .ev-s small{border-color:var(--accent);color:var(--accent)}
+  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+
+  .filter{margin:28px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
+  .filter input{width:100%;padding:11px 14px;background:var(--card);border:1px solid var(--line);
+    border-radius:3px;color:var(--ink);font-family:inherit;font-size:.92rem;line-height:1.6}
+  .filter input::placeholder{color:var(--faint)}
+  .filter input:focus{outline:none;border-color:var(--accent)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 0}
+  .chip{padding:5px 13px;background:transparent;border:1px solid var(--line);border-radius:999px;
+    color:var(--muted);font-family:inherit;font-size:.76rem;line-height:1.6;cursor:pointer}
+  .chip:hover{color:var(--ink)}
+  .chip.on{border-color:var(--accent);color:var(--accent)}
+  .count{font-size:.76rem;color:var(--faint);margin:11px 0 0}
+  .empty{color:var(--faint);font-size:.9rem;margin:40px 0 0}
+  [hidden]{display:none!important}
 
   .open ul{margin:14px 0 0;padding-left:1.2em;color:var(--muted);font-size:.92rem}
   .open li{margin:0 0 7px}
@@ -86,8 +107,9 @@
     <p class="eyebrow">LIFE HACKS</p>
     <h1>ライフハック</h1>
     <p class="mn-tagline">頑張るのではなく、簡単にする。</p>
-    <p class="lead">世の中で言われているライフハックを、場面ごとに整理した一覧です。</p>
-    <p class="legend">いくつかの場面には、いま自分が最善だと思っているやり方を先頭に置いています。<i>●</i> は一覧の中で実際にやっているもの。</p>
+    <p class="lead">世の中で言われているライフハックを集めた候補の一覧です。この中から、採用するものを決めていきます。</p>
+    <p class="legend"><i>●</i> はやっているもの、<i>○</i> は試しているもの。印のないものは候補です。裏付けの強さが分かったものは、項目の下に書いています。何も書いていないものは、まだ調べていません。</p>
+    <p class="legend">いくつかの場面には、いま自分が最善だと思っているやり方を先頭に置いています。</p>
     <ul class="toc">
       <li><a href="#time">時間</a></li>
       <li><a href="#focus">集中</a></li>
@@ -105,8 +127,21 @@
       <li><a href="#mind">頭の中</a></li>
       <li><a href="#people">人づきあい</a></li>
       <li><a href="#ready">備え</a></li>
+      <li><a href="#weak">根拠が弱いもの</a></li>
       <li><a href="#open">まだ効いていないこと</a></li>
     </ul>
+    <div class="filter" id="filter" hidden>
+      <input type="search" id="q" placeholder="キーワードで探す（例：スマホ、冷蔵庫）" autocomplete="off">
+      <div class="chips">
+        <button type="button" class="chip on" data-f="all">すべて</button>
+        <button type="button" class="chip" data-f="me">やっている</button>
+        <button type="button" class="chip" data-f="try">試している</button>
+        <button type="button" class="chip" data-f="cand">候補</button>
+        <button type="button" class="chip" data-f="ev">裏付けあり</button>
+      </div>
+      <p class="count" id="count"></p>
+    </div>
+    <p class="empty" id="empty" hidden>見つかりませんでした。言葉を変えてみてください。</p>
   </header>
 
   <section id="time">
@@ -128,6 +163,7 @@
       <li><b>目標を見る時刻を、決めておく</b><span>常に見ていると、手元のほうが進まない。</span></li>
       <li><b>三割は、目標と関係ないことに使う</b><span>全部を向けると、続かなくなる。</span></li>
       <li><b>予定と予定の間を、空けておく</b><span>移動と記録の時間は、必ずかかる。</span></li>
+      <li><b>一日の終わりに、締めの手順を決める</b><span>やり残しを書き出し、次の一手といつやるかを書いてから閉じる。</span><em class="ev ev-m"><small>一部に研究</small>やり残しが頭に居座る現象と、いつどう再開するかを書くと収まるという実験がある。手順そのものを試した研究はない。</em></li>
     </ul>
     <h3>細切れ時間</h3>
     <ul class="points">
@@ -150,6 +186,8 @@
     <ul class="points">
       <li><b>机に出すのは、一つだけ</b><span>視界に入るものが少ないほど戻りやすい。</span></li>
       <li><b>作業ごとに、場所を変える</b><span>場所が合図になり、切り替えが早くなる。</span></li>
+      <li><b>スマホは、別の部屋に置く</b><span>電源を切って伏せても、手の届く所にあるだけで削られる。</span><em class="ev ev-m"><small>一部に研究</small>近くにあるだけで作業の成績が下がるという実験がある。</em></li>
+      <li><b>誰かと並んで、別々の作業をする</b><span>会話はしない。始めに今日やることを一言だけ宣言する。</span><em class="ev ev-p"><small>実践知</small>利用者の自己申告が中心で、比べる相手を置いた試験はない。</em></li>
     </ul>
     <h3>区切り</h3>
     <ul class="points">
@@ -158,8 +196,9 @@
     </ul>
     <h3>通知と連絡</h3>
     <ul class="points">
-      <li><b>通知は、切っておく</b><span>一度の着信で、戻るのに十数分かかる。</span></li>
+      <li><b>通知は、切っておく</b><span>一度の着信で、戻るのに十数分かかる。</span><em class="ev ev-m"><small>一部に研究</small>割り込みのあと元の作業に戻るまでに時間がかかることが示されている。</em></li>
       <li><b>連絡を見る時刻を、決めておく</b><span>いつでも見るより、決まった時刻のほうが早く返せる。</span></li>
+      <li><b>画面を白黒にする</b><span>色の報酬を落とすと、意味もなく開く回数が減る。</span><em class="ev ev-s"><small>研究あり</small>比べる群を置いた試験で画面を見る時間が減った。減るのは主にSNSと流し見で、動画はあまり減らない。</em></li>
     </ul>
     <h3>会議</h3>
     <ul class="points">
@@ -202,9 +241,11 @@
     <ul class="points">
       <li><b>覚えるより、使う場面を決める</b><span>使い道のない知識は、翌週には消える。</span></li>
       <li><b>「できない」を「まだできない」に言い換える</b><span>能力の話から、段階の話に変わる。</span></li>
-      <li><b>人に説明してみる</b><span>説明できないところが、分かっていないところ。</span></li>
+      <li><b>人に説明してみる</b><span>説明できないところが、分かっていないところ。</span><em class="ev ev-s"><small>研究あり</small>自分で説明させる学び方は、まとめ分析で中くらいの効果が報告されている。</em></li>
       <li><b>上達を、段階に分けておく</b><span>どこまで来たかが分かると、次に何をするかが決まる。</span></li>
-      <li><b>間隔を空けて、思い出す</b><span>読み返すより、思い出そうとするほうが残る。</span></li>
+      <li><b>間隔を空けて、思い出す</b><span>読み返すより、思い出そうとするほうが残る。</span><em class="ev ev-s"><small>研究あり</small>学習法を比べたまとめで、最も再現性が高い部類とされる。</em></li>
+      <li><b>読み返さず、白紙に書き出す</b><span>思い出す側に回ると、抜けている所がその場で分かる。</span><em class="ev ev-s"><small>研究あり</small>学習法を比べたまとめで、最も再現性が高い部類とされる。</em></li>
+      <li><b>ひとつを固めず、混ぜて練習する</b><span>同じ型を続けて解かず、種類を交ぜる。手応えは悪いのに、結果は良くなる。</span><em class="ev ev-s"><small>研究あり</small>同じ型を続けるより試験の成績が良くなることが示されている。</em></li>
     </ul>
     <h3>調べる</h3>
     <ul class="points">
@@ -233,7 +274,7 @@
     </ul>
     <h3>変える</h3>
     <ul class="points">
-      <li><b>逆から考える</b><span>どうすれば失敗するかを、先に並べる。</span></li>
+      <li><b>逆から考える</b><span>どうすれば最悪にできるかを十個出し、一つずつ裏返す。</span><em class="ev ev-p"><small>実践知</small>笑いながら出すほうが、遠慮が外れる。</em></li>
       <li><b>他の分野のやり方を、当ててみる</b><span>似た問題は、別の場所で解かれていることが多い。</span></li>
       <li><b>人に話してみる</b><span>説明するために、考えのほうが整う。</span></li>
     </ul>
@@ -250,12 +291,14 @@
       <li><b>別の時代や立場の人として、考えてみる</b><span>自分の前提が、どこにあるのか分かる。</span></li>
       <li><b>自分と正反対の役を、一日演じる</b><span>癖は、やめようとしているあいだは見えない。</span></li>
       <li><b>夢を、起きてすぐ書き留める</b><span>脈絡のない組み合わせが、手がかりになることがある。</span></li>
+      <li><b>物に向かって、声に出して説明する</b><span>相手は人でなくていい。言葉にすると、飛ばしていた前提が出てくる。</span><em class="ev ev-p"><small>実践知</small>プログラマの古典から広まったやり方。</em></li>
     </ul>
     <h3>決める前に</h3>
     <ul class="points">
       <li><b>問いのほうを、書き直す</b><span>解けないのは、問いが悪いことが多い。</span></li>
       <li><b>最悪の場合を、具体的に書く</b><span>漠然とした不安は、書くと小さくなる。</span></li>
       <li><b>運に賭ける前に、運以外を潰す</b><span>潰し終えて残った小さな運だけに、賭ける。</span></li>
+      <li><b>一年後に大失敗したと仮定して、理由を書く</b><span>失敗の物語を過去形で書くと、遠慮なく弱点が出る。</span><em class="ev ev-m"><small>一部に研究</small>先に結果を決めてから振り返らせると、具体的な理由が出やすいことが示されている。大きな決定だけに使う。</em></li>
     </ul>
     <p class="tl"><a href="ideas.html">くわしく見る →</a>　作るときの考え方は <a href="../way-of-creating/">創り方</a>。</p>
   </section>
@@ -283,6 +326,8 @@
       <li class="me"><b>定位置を決める</b><span>片付ける手間を、戻す手間に変える。</span></li>
       <li><b>使う場所のそばに置く</b><span>動線から外れた収納は、使われない。</span></li>
       <li><b>二動作以上かけない</b><span>扉を開けて箱を出して、では戻さなくなる。</span></li>
+      <li><b>シーツ一式を、枕カバーの中にしまう</b><span>セットで一つになるので、探すのと組み合わせるのが消える。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li><b>充電器は、場所ごとに置いて動かさない</b><span>寝室・机・車にそれぞれ置く。持ち歩くのは旅行用の一組だけ。</span><em class="ev ev-p"><small>実践知</small>安い道具を複数持って、探す手間のほうを消す考え方。</em></li>
     </ul>
     <h3>手放す</h3>
     <ul class="points">
@@ -296,6 +341,7 @@
       <li><b>汚れたその場で、ひと拭き</b><span>乾く前なら、洗剤も時間も要らない。</span></li>
       <li><b>掃除道具は、使う場所ごとに置く</b><span>取りに行く距離が、やらない理由になる。</span></li>
       <li><b>週に一度の場所は、曜日で決める</b><span>全部やる日を作らない。</span></li>
+      <li><b>風呂を出る前に、壁と床の水を切る</b><span>一、二分。残った水が、水垢とカビの元になる。</span><em class="ev ev-p"><small>実践知</small>論文はない。残り水を物理的に減らす、という理屈だけ。</em></li>
     </ul>
     <h3>汚れ落とし</h3>
     <ul class="points">
@@ -306,7 +352,7 @@
     <h3>洗濯</h3>
     <ul class="points">
       <li><b>入れる時点で、分けておく</b><span>洗う前の仕分けが、いちばん面倒な工程。</span></li>
-      <li><b>畳まないものを、決める</b><span>下着とタオルは放り込む、シャツは吊るす。</span></li>
+      <li><b>畳まないものを、決める</b><span>下着とタオルは種類別のカゴへ放り込み、シャツは干したハンガーのまましまう。</span><em class="ev ev-p"><small>実践知</small>干す→取り込む→畳む→しまう、の二工程を削る。</em></li>
       <li><b>乾いたら、その日のうちにしまう</b><span>取り込んだまま積むと、山がたんすになる。</span></li>
     </ul>
     <h3>ごみ</h3>
@@ -340,6 +386,7 @@
       <li class="me"><b>直さずに、買い替える</b><span>触り心地は、修理では戻らない。</span></li>
       <li><b>手持ちと三通り組めないなら、買わない</b><span>一着で完結する服は、出番が来ない。</span></li>
       <li><b>試着しないものは、買わない</b><span>サイズではなく、肩と袖の長さを見る。</span></li>
+      <li><b>靴下は、同じものだけを買う</b><span>片方なくしても、残り全部と組になる。</span><em class="ev ev-p"><small>実践知</small></em></li>
     </ul>
     <h3>手入れ</h3>
     <ul class="points">
@@ -351,6 +398,7 @@
     <ul class="points">
       <li><b>着たら、ハンガーを逆向きに戻す</b><span>着ていない服が、一目で分かる。</span></li>
       <li><b>一年袖を通していない服は、出す</b><span>迷ったら、来年も着ない。</span></li>
+      <li><b>三か月、決めた数だけで暮らしてみる</b><span>残りは箱に封をする。開けなかったものが、手放す候補。</span><em class="ev ev-p"><small>実践知</small>捨てる判断の前に、使わずに済むかを試せるのが利点。</em></li>
     </ul>
     <p class="tl"><a href="clothes.html">くわしく見る →</a>　自分の記録は <a href="../clothes/">着る</a>。</p>
   </section>
@@ -368,20 +416,23 @@
     </div>
     <h3>買い物</h3>
     <ul class="points">
-      <li><b>空腹のまま買い物に行かない</b><span>判断が甘くなる。</span></li>
+      <li><b>空腹のまま買い物に行かない</b><span>判断が甘くなる。</span><em class="ev ev-m"><small>一部に研究</small>空腹時に買う量が増えるという実験がある。</em></li>
       <li><b>買うものを決めてから、店に入る</b><span>決めずに入ると、安さで決まる。</span></li>
+      <li><b>行く前に、冷蔵庫の中を撮る</b><span>店で写真を見れば、家にあるものを買わない。</span><em class="ev ev-p"><small>実践知</small></em></li>
     </ul>
     <h3>作る</h3>
     <ul class="points">
       <li><b>作るなら、まとめて作る</b><span>減らすのは調理ではなく、始める回数。</span></li>
       <li><b>一人の時間で、作れるものを増やす</b><span>没頭できて、人と過ごす場でも使える。</span></li>
       <li><b>切るだけで食べられるものを、常に置く</b><span>疲れた日に、何も作れなくていい形にしておく。</span></li>
+      <li><b>先に食べる箱を、冷蔵庫に作る</b><span>開封済みと期限の近いものを一か所に。献立はそこから決める。</span><em class="ev ev-p"><small>実践知</small></em></li>
     </ul>
     <h3>台所の困りごと</h3>
     <ul class="points">
       <li><b>しおれた葉物は、お湯に浸す</b><span>50度くらいのお湯に1〜2分。水を吸い直して戻る。</span></li>
       <li><b>硬くなりそうな肉は、酸性のものに漬ける</b><span>炭酸飲料・ヨーグルト・塩麹。保水力が上がる。</span></li>
       <li><b>手の油は、洗う前に砂糖でこする</b><span>石けんの量が、半分で済む。</span></li>
+      <li><b>余った香草は、油と一緒に凍らせる</b><span>刻んで製氷皿に入れ、油を注ぐ。使うときは、そのまま鍋に落とす。</span><em class="ev ev-p"><small>実践知</small></em></li>
     </ul>
     <h3>外食</h3>
     <ul class="points">
@@ -394,7 +445,7 @@
       <li><b>先に、水を一杯</b><span>空腹と渇きを、混同しない。</span></li>
       <li><b>皿の半分を、野菜で埋める</b><span>残りの半分の中では、好きなものを食べていい。</span></li>
       <li><b>野菜から食べて、炭水化物は最後に</b><span>同じ献立でも、血糖値の上がり方が変わる。</span></li>
-      <li><b>皿を小さくする</b><span>量ではなく、器で満足を作る。</span></li>
+      <li><b>皿を小さくする</b><span>量ではなく、器で満足を作る。</span><em class="ev ev-w"><small>根拠が弱い</small>よく引かれる実験は、のちに多くの論文が撤回された研究群に由来する。害はないが、効くと言い切る根拠はない。</em></li>
     </ul>
     <h3>続け方</h3>
     <ul class="points">
@@ -424,12 +475,15 @@
       <li><b>食後すぐに、少し動く</b><span>10分の早歩きか、その場でのスクワットでいい。</span></li>
       <li><b>移動に混ぜる</b><span>運動の時間を作らず、階段とひと駅分で済ませる。</span></li>
       <li><b>着替えを、前の晩に出しておく</b><span>行くかどうかを、朝に考えない。</span></li>
+      <li><b>まとまった時間が取れない日は、一分を数回ばらまく</b><span>階段を速く上がる、その場で数回。食後や仕事の切れ目に入れる。</span><em class="ev ev-s"><small>研究あり</small>短い活動で食後の血糖の上がり方がゆるむという分析と、日常の短く強めの動きが死亡リスクの低さと関連したという大規模な解析がある。治療の代わりではない。</em></li>
     </ul>
     <h3>姿勢と休憩</h3>
     <ul class="points">
       <li class="me"><b>疲れる前に、小さく戻す</b><span>忙しくても差し込める短さにしておく。</span></li>
       <li><b>30分に一度、立つ</b><span>姿勢は、時間で崩れる。</span></li>
       <li><b>画面の上端を、目の高さに</b><span>見下ろす角度が、首と肩に効く。</span></li>
+      <li><b>同じ姿勢を続けない。座る・立つ・歩くを回す</b><span>良い姿勢を保つより、変え続けるほうを目標にする。</span><em class="ev ev-m"><small>一部に研究</small>近年のまとめは、椅子そのものより姿勢を変えることを重く見る方向で一致しつつある。立ちっぱなしも同じく良くない。</em></li>
+      <li><b>猫背は、骨盤を立てて肩甲骨を寄せて戻す</b><span>三十秒。器具はいらない。一時間に一度でいい。</span><em class="ev ev-p"><small>実践知</small></em></li>
     </ul>
     <h3>目と肩</h3>
     <ul class="points">
@@ -464,7 +518,7 @@
     <h3>起きる</h3>
     <ul class="points">
       <li><b>起きる時刻だけ、固定する</b><span>寝る時刻は、後からついてくる。</span></li>
-      <li><b>朝に、光を浴びる</b><span>体内時計は、朝で決まる。</span></li>
+      <li><b>朝に、光を浴びる</b><span>体内時計は、朝で決まる。</span><em class="ev ev-s"><small>研究あり</small>体内時計を合わせる一番強い手がかりは光。曇りの日の屋外でも、室内の照明より明るい。</em></li>
       <li><b>朝食で、たんぱく質を摂る</b><span>朝に入れた材料が、夜の眠気のもとになる。</span></li>
       <li><b>コーヒーは、起きて90分あけてから</b><span>起きた直後は、体が自分で目を覚ましている。</span></li>
       <li><b>眠る時間を、先に予定として取る</b><span>削るのは簡単だが、引かれるのは判断力。</span></li>
@@ -477,11 +531,13 @@
       <li><b>ぬるめの湯に、ゆっくり浸かる</b><span>上がったあとに体温が下がる流れが、眠気を作る。</span></li>
       <li><b>目元と背中を、温めてほぐす</b><span>力が抜けると、呼吸のほうが先に落ち着く。</span></li>
       <li><b>気になることは、書き出してから寝る</b><span>頭に残すと、覚えておくために起きてしまう。</span></li>
+      <li><b>風呂は、寝る一時間半前に済ませる</b><span>温まったあと体温が下がっていくのが、眠気の合図になる。</span><em class="ev ev-s"><small>研究あり</small>十七の研究をまとめた分析で、寝つくまでの時間が短くなった。四十度前後に十分以上。</em></li>
+      <li><b>寝る支度にも、合図をかける</b><span>起きる時刻だけでなく、灯りを落とす時刻にも知らせを置く。</span><em class="ev ev-m"><small>一部に研究</small>同じ順番を繰り返すこと自体には裏付けがあるが、この合図そのものを試した研究はない。</em></li>
     </ul>
     <h3>寝床</h3>
     <ul class="points">
       <li><b>寝床は、寝るためだけに使う</b><span>場所と行為を、結びつけておく。</span></li>
-      <li><b>眠れないときは、一度寝床を出る</b><span>粘ると、寝床が目覚めと結びつく。</span></li>
+      <li><b>眠れないときは、一度寝床を出る</b><span>粘ると、寝床が目覚めと結びつく。</span><em class="ev ev-s"><small>研究あり</small>不眠に対する認知行動療法の中核にある手順。</em></li>
       <li><b>眠れない夜は、横になっているだけでいいと考える</b><span>焦りを足さないほうが、結果として眠れる。</span></li>
       <li><b>重さのある毛布を、試す</b><span>軽い圧がかかると、落ち着く人がいる。</span></li>
     </ul>
@@ -517,6 +573,9 @@
       <li><b>固定費から見直す</b><span>一度の手間が、毎月効く。</span></li>
       <li class="me"><b>サブスクは、道具箱として見る</b><span>解約を考える前に、何ができるのかを把握する。</span></li>
       <li><b>窓から逃げる分を、止める</b><span>断熱シートやカーテンで、冷暖房費が下がる。</span></li>
+      <li><b>定期課金は、続ける・やめる・交渉するの三つに分ける</b><span>明細から全部書き出し、最後に使った日を並べてから決める。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li><b>無料のお試しは、申し込んだその場で終わりの予定を入れる</b><span>二日前に知らせが来るようにしておく。</span><em class="ev ev-p"><small>実践知</small>衝動を抑えるのではなく、忘れることを防ぐ仕掛け。</em></li>
+      <li><b>やめる前に、高いので解約したいと言ってみる</b><span>引き止めの値引きを出せる窓口は多い。下がらなくても、失うのは電話代だけ。</span><em class="ev ev-p"><small>実践知</small>実例の報告はあるが、どれくらい下がるかの統計はない。</em></li>
     </ul>
     <h3>買い物</h3>
     <ul class="points">
@@ -548,6 +607,7 @@
     <ul class="points">
       <li><b>通知は原則オフ、例外だけオン</b><span>既定値を、逆にしておく。</span></li>
       <li><b>ホーム画面に置くものを減らす</b><span>開く手間が増えると、開かなくなる。</span></li>
+      <li><b>メールは読まず、送信者で検索してまとめて消す</b><span>届いたお知らせは、その場で配信を止める。入口のほうを減らす。</span><em class="ev ev-p"><small>実践知</small></em></li>
     </ul>
     <h3>ファイル</h3>
     <ul class="points">
@@ -569,6 +629,7 @@
     <ul class="points">
       <li><b>撮ったその場で、要らないものを消す</b><span>後でまとめては、やらない。</span></li>
       <li><b>見返すものだけ、別の場所に移す</b><span>全部残すと、一枚も見返さない。</span></li>
+      <li><b>全部見ようとせず、重複とスクリーンショットから消す</b><span>標準機能の重複統合と、検索で出した塊だけを処理する。月ごとに十五分。</span><em class="ev ev-p"><small>実践知</small>一枚ずつ判断すると、決める疲れで続かない。</em></li>
     </ul>
     <p class="tl"><a href="digital.html">くわしく見る →</a></p>
   </section>
@@ -587,6 +648,10 @@
       <li><b>前の晩に、玄関へ出しておく</b><span>朝の判断を、一つ減らす。</span></li>
       <li><b>持ち物リストは、使い回す</b><span>毎回ゼロから考えない。</span></li>
       <li><b>予約と身分証は、画面の外にも持つ</b><span>電池が切れても困らない形にする。</span></li>
+      <li><b>身分証とカードは、両面を撮って自分に送る</b><span>保険証書も同じ。なくしたときに、話が早い。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li><b>カードは、別の銀行のものを二枚、別の場所に入れる</b><span>財布ごと失っても、片方が残る。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li><b>預ける荷物は、中身ではなく外側を撮る</b><span>窓口では、言葉より写真のほうが通る。駐車場の区画も同じ。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li><b>地図は、落としたあと機内モードで一度開く</b><span>落とせたつもりで、現地の圏外で気づくことが多い。</span><em class="ev ev-p"><small>実践知</small></em></li>
     </ul>
     <h3>移動中</h3>
     <ul class="points">
@@ -615,7 +680,7 @@
     </div>
     <h3>呼吸</h3>
     <ul class="points">
-      <li><b>呼吸を、数える</b><span>数えるほうに、注意が移る。</span></li>
+      <li><b>呼吸を、数える</b><span>数えるほうに、注意が移る。</span><em class="ev ev-m"><small>一部に研究</small>ゆっくりした呼吸が落ち着きに向かうという報告はあるが、数え方の違いまでは分かっていない。</em></li>
       <li><b>落ち着きたいときは、吐くほうを長くする</b><span>吸うほうを長くすると、逆に目が覚める。</span></li>
     </ul>
     <h3>体から戻す</h3>
@@ -623,12 +688,14 @@
       <li><b>自然の中に、出る</b><span>気分の切り替えとしては、いちばん安い。</span></li>
       <li><b>体をゆるめる場所を、決めておく</b><span>湯・サウナ・整体。気分は、体の側から戻ることがある。</span></li>
       <li><b>今に戻りたいときは、体の感覚に触る</b><span>手を擦る、足を踏む。考えから、感覚のほうに移す。</span></li>
+      <li><b>見えるもの五つから、数えて戻る</b><span>見える五つ、触れる四つ、聞こえる三つ、匂い二つ、味一つ。約一分。</span><em class="ev ev-w"><small>根拠が弱い</small>臨床の現場で広く教えられているが、この手順そのものを調べた試験はほとんどない。低リスクのその場しのぎとして。</em></li>
     </ul>
     <h3>言葉にする</h3>
     <ul class="points">
       <li><b>感情に、名前と割合をつける</b><span>「不安70、怒り30」。数え始めると、暴れ方が収まる。</span></li>
       <li><b>自分の強みを三つ書いて、朝に読む</b><span>いまの状況の悪さと、自分の価値を切り離しておく。</span></li>
       <li><b>責めすぎているときは、人にかける言葉を自分にかける</b><span>友人が同じ状況なら、そこまで言わない。</span></li>
+      <li><b>自分に厳しくなったら、三つの文を唱える</b><span>これは苦しい瞬間だ。苦しみは誰にでもある。いまの自分に優しくしよう。</span><em class="ev ev-s"><small>研究あり</small>八週間のプログラムの試験で、自分への慈しみと生活満足が上がった。対象は成功ではなく、失敗した場面。</em></li>
     </ul>
     <h3>ひとりのとき</h3>
     <ul class="points">
@@ -644,10 +711,11 @@
       <li><b>SNSとニュースから、離れる日を作る</b><span>入れるのをやめるだけで、戻ることがある。</span></li>
       <li><b>連絡を返さない時間を、作る</b><span>いつでも返せる状態は、休んでいない状態。</span></li>
       <li><b>友達の数を、数えない</b><span>比べる相手は、画面の中にしかいない。</span></li>
+      <li><b>心配に、営業時間を決める</b><span>一日十五分だけ。時間外に浮かんだらメモに書いて、その時間まで送る。</span><em class="ev ev-m"><small>一部に研究</small>認知行動療法の技法。不安の強い人では心配が減ったという試験がある一方、結果は研究によって分かれる。</em></li>
     </ul>
     <h3>戻す</h3>
     <ul class="points">
-      <li><b>感謝できることを、三つ書く</b><span>悪いほうだけ数えるのを、やめる。</span></li>
+      <li><b>感謝できることを、三つ書く</b><span>悪いほうだけ数えるのを、やめる。</span><em class="ev ev-m"><small>一部に研究</small>効果を報告する研究は多いが、比べる相手の置き方によって結果が揺れる。</em></li>
       <li><b>落ち込む時間を、先に決めておく</b><span>5分だけ落ち込んで、学びと次の一手を一行ずつ書く。</span></li>
       <li><b>他人の口で、自分に反論させる</b><span>「本当にそうか」は、自分の声では届かない。</span></li>
       <li><b>悪い出来事を、三つの軸で見直す</b><span>いつまで続くか、どこまで及ぶか、変えられるか。性格の話にしない。</span></li>
@@ -657,7 +725,7 @@
     <h3>休む</h3>
     <ul class="points">
       <li><b>休みも、予定として入れる</b><span>空いた時間は、必ず埋まる。</span></li>
-      <li><b>歩きながら、考える</b><span>座ったまま考えると、同じ場所を回る。</span></li>
+      <li><b>歩きながら、考える</b><span>座ったまま考えると、同じ場所を回る。</span><em class="ev ev-s"><small>研究あり</small>歩行中と歩いた直後に発散的な思考が上がった四つの実験がある。答えを一つに絞る作業では、座るほうがよい。</em></li>
     </ul>
     <p class="tl"><a href="mood.html">くわしく見る →</a>　気持ちの整え方そのものは <a href="../thinking/">考え方</a>。</p>
   </section>
@@ -697,10 +765,11 @@
       <li><b>「みんながやっている」を、理由にしない</b><span>多いことは、正しいこととは別。</span></li>
       <li><b>気になったことは、48時間以内に一手だけ試す</b><span>検索する、一行送る。それだけで確かめられる。</span></li>
       <li><b>迷ったら、小さく試す</b><span>考えるより、やってみるほうが早く分かる。</span></li>
+      <li><b>十分後・十か月後・十年後で見る</b><span>十分で重大だが十か月で消えるものは感情。逆は、見落としている本命。</span><em class="ev ev-p"><small>実践知</small>数字で比べるべき決定には向かない。</em></li>
     </ul>
     <h3>もし〜なら</h3>
     <ul class="points">
-      <li><b>「もしXしたら、Yをする」の形で決める</b><span>条件と行動を対で持つと、その場で考えずに動ける。</span></li>
+      <li><b>「もしXしたら、Yをする」の形で決める</b><span>条件と行動を対で持つと、その場で考えずに動ける。</span><em class="ev ev-s"><small>研究あり</small>多くの研究をまとめた分析で、実行の確率が上がることが示されている。</em></li>
       <li><b>禁止ではなく、代わりにすることを決める</b><span>「〜しない」は反動が来る。置き換える先を書く。</span></li>
       <li><b>つまずく日の分も、先に決めておく</b><span>疲れて帰った日に何をするかまで決めておく。</span></li>
       <li><b>決めごとは、1〜3個までにする</b><span>増やすと、覚えていられない。</span></li>
@@ -712,6 +781,8 @@
       <li><b>二度目に困ったら、仕組みにする</b><span>一度目は、手でやる。</span></li>
       <li><b>小さな不便を、自分で作っておく</b><span>一駅歩く、使わない日を作る。大きく困ったときの慣れになる。</span></li>
       <li><b>一日休んでも、二日は休まない</b><span>途切れたことより、戻れないことが効く。</span></li>
+      <li><b>始める日は、区切りの日に合わせる</b><span>月初、週明け、誕生日の翌日、引っ越しの初日。失敗しても、次の区切りから。</span><em class="ev ev-s"><small>研究あり</small>大規模なデータで、区切りの日の直後に新しい行動が増えることが示されている。</em></li>
+      <li><b>好きなことを、面倒なことのときだけ解禁する</b><span>続きが気になるものを、運動や家事と抱き合わせる。</span><em class="ev ev-s"><small>研究あり</small>元の実験では通う回数が増え、六千人規模の追試でも効果は出たが小さく、時間が経つと薄れる。</em></li>
     </ul>
     <p class="tl"><a href="mind.html">くわしく見る →</a></p>
   </section>
@@ -810,8 +881,20 @@
     <p class="tl"><a href="ready.html">くわしく見る →</a></p>
   </section>
   
+  <section id="weak" class="open">
+    <span class="sec-n">17 / WEAK</span>
+    <h2>根拠が弱いもの</h2>
+    <p class="note">よく見かけるけれど、採らなかったもの。理由と一緒に置いておきます。</p>
+    <ul>
+      <li><b>水に濡れたスマホを、米に入れる</b>　米が水を吸う効果は乏しく、粒やでんぷんが端子に入る。Apple は米袋に入れないよう案内していて、端子を下に向けて軽く叩き、風通しのよい場所で乾かすほうがよい。</li>
+      <li><b>卵の浮き沈みで、食べられるか判断する</b>　浮くかどうかは鮮度の目安であって、安全の判定ではない。浮いた卵が必ず傷んでいるわけでもなく、沈む卵でも汚染は分からない。日付と保存状態、割ったときの様子で見る。</li>
+      <li><b>一日一万歩</b>　この数字の出どころは研究ではなく、1960年代の万歩計の宣伝。歩くこと自体はよく支持されているが、近年の大きなまとめでは利益の多くは七千歩前後までに現れる。「一万に届かなければ意味がない」は誤り。</li>
+    </ul>
+    <p class="tl">一覧の中にも、裏付けの弱いものには同じ印を付けています。</p>
+  </section>
+
   <section id="open" class="open">
-    <span class="sec-n">17 / OPEN</span>
+    <span class="sec-n">18 / OPEN</span>
     <h2>まだ効いていないこと</h2>
     <p class="note">うまくいっていないものも、同じ場所に置いておきます。</p>
     <ul>
@@ -829,5 +912,51 @@
     <p><a class="back" href="../way-of-living/">← 暮らし方</a>　<a class="back" href="../">← m-note トップ</a></p>
   </footer>
 </div>
+<script>
+(function(){
+  var f=document.getElementById('filter');
+  if(!f||!document.querySelectorAll) return;
+  f.hidden=false;
+  var q=document.getElementById('q'), cnt=document.getElementById('count'),
+      empty=document.getElementById('empty'), mode='all',
+      items=[].slice.call(document.querySelectorAll('.points > li')),
+      lists=[].slice.call(document.querySelectorAll('ul.points')),
+      secs=[].slice.call(document.querySelectorAll('section')).filter(function(x){
+        return x.id!=='open'&&x.id!=='weak';});
+  items.forEach(function(li){li.setAttribute('data-t',li.textContent.toLowerCase());});
+  function apply(){
+    var s=q.value.trim().toLowerCase(), n=0;
+    items.forEach(function(li){
+      var c=li.className, ok=true;
+      if(mode==='me') ok=/\bme\b/.test(c);
+      else if(mode==='try') ok=/\btry\b/.test(c);
+      else if(mode==='cand') ok=!/\bme\b/.test(c)&&!/\btry\b/.test(c);
+      else if(mode==='ev') ok=!!li.querySelector('.ev');
+      if(ok&&s) ok=li.getAttribute('data-t').indexOf(s)>=0;
+      li.hidden=!ok; if(ok) n++;
+    });
+    lists.forEach(function(ul){ul.hidden=!ul.querySelector('li:not([hidden])');});
+    secs.forEach(function(sec){
+      sec.hidden=!sec.querySelector('ul.points:not([hidden])');
+      [].slice.call(sec.querySelectorAll('h3')).forEach(function(h){
+        var u=h.nextElementSibling;
+        h.hidden=!(u&&u.className==='points'&&!u.hidden);
+      });
+      var m=sec.querySelector('.mine'); if(m) m.hidden=(mode!=='all'||!!s);
+    });
+    var filtering=(!!s||mode!=='all');
+    empty.hidden=!(filtering&&n===0);
+    cnt.textContent=filtering?(n+'件を表示（全'+items.length+'件）'):('全'+items.length+'件');
+  }
+  q.addEventListener('input',apply);
+  [].slice.call(f.querySelectorAll('.chip')).forEach(function(b){
+    b.addEventListener('click',function(){
+      [].slice.call(f.querySelectorAll('.chip')).forEach(function(x){x.className='chip';});
+      b.className='chip on'; mode=b.getAttribute('data-f'); apply();
+    });
+  });
+  apply();
+})();
+</script>
 </body>
 </html>

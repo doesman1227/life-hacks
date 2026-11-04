@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>体｜ライフハック</title>
-<meta name="description" content="運動・姿勢と休憩・目と肩・続ける・検診の13項目を、なぜ効くのかとやり方まで。ライフハック一覧の「体」を深掘りしたページ。">
+<meta name="description" content="運動・姿勢と休憩・目と肩・続ける・検診の16項目を、なぜ効くのかとやり方まで。ライフハック一覧の「体」を深掘りしたページ。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
@@ -56,6 +56,12 @@
   .item:last-of-type{border-bottom:0}
   .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
+    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
+  .ev-s small{border-color:var(--accent);color:var(--accent)}
+  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -87,8 +93,8 @@
     <p class="eyebrow">08 / BODY</p>
     <h1>体</h1>
     <p class="mn-tagline">溜まってから立て直すほうが、高くつく。</p>
-    <p class="lead">一覧に並べた13の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
-    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <p class="lead">一覧に並べた16の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> はやっているもの、<i>○</i> は試しているもの。印のないものは候補です。</p>
     <ul class="toc">
       <li><a href="#g1">運動</a></li>
       <li><a href="#g2">姿勢と休憩</a></li>
@@ -152,6 +158,18 @@
       </ul>
     </div>
 
+    <div class="item">
+      <h3>まとまった時間が取れない日は、一分を数回ばらまく</h3>
+      <p class="why">運動の時間が取れない日は、ゼロになりやすい。一分を数回なら、着替えも移動もいらない。まとめてやるより劣るとしても、ゼロとの差のほうが大きい。</p>
+      <ul class="how">
+        <li>階段を速く上がる、その場でしゃがんで立つ、など一つ決める</li>
+        <li>息が上がるところまで、一分ほど</li>
+        <li>食後や仕事の切れ目に、一日数回入れる</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>心臓や膝に不安があるときは、強さを上げる前に相談する。</p>
+      <p class="ev ev-s"><small>研究あり</small>短い活動で食後の血糖の上がり方がゆるむという分析と、日常の短く強めの動きが死亡リスクの低さと関連したという大規模な解析がある。治療の代わりではない。</p>
+    </div>
+
   </section>
 
   <section id="g2">
@@ -186,6 +204,30 @@
         <li>足が床につく高さに、椅子を直す</li>
         <li>外付けの画面か、台で高さを作る</li>
       </ul>
+    </div>
+
+    <div class="item">
+      <h3>同じ姿勢を続けない。座る・立つ・歩くを回す</h3>
+      <p class="why">悪いのは姿勢そのものより、同じ形のまま固まること。立ちっぱなしも、座りっぱなしと同じように体に来る。良い姿勢を保とうとするより、変え続けるほうが続く。</p>
+      <ul class="how">
+        <li>三十分を、一区切りにする</li>
+        <li>二十分座ったら、八分立つ</li>
+        <li>そのあと二分、歩くか伸ばす</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>立つ机がなくても、二分歩くだけで形になる。</p>
+      <p class="ev ev-m"><small>一部に研究</small>近年のまとめは、椅子そのものより姿勢を変えることを重く見る方向で一致しつつある。立ちっぱなしも同じく良くない。</p>
+    </div>
+
+    <div class="item">
+      <h3>猫背は、骨盤を立てて肩甲骨を寄せて戻す</h3>
+      <p class="why">前かがみで縮むのは胸の側で、背中は伸ばされたまま固まる。骨盤を立ててから肩を後ろへ引くと、腰を反らさずに胸が開く。器具も場所もいらない。</p>
+      <ul class="how">
+        <li>座ったまま、腰を垂直に立てる</li>
+        <li>両肩を後ろへ引き、肩甲骨を背中の中央へ寄せる</li>
+        <li>三十秒そのままにして、力を抜く</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>腰を反らすと別の所が痛くなる。立てるだけでいい。</p>
+      <p class="ev ev-p"><small>実践知</small></p>
     </div>
 
   </section>

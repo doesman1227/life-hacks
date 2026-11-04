@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>おかね｜ライフハック</title>
-<meta name="description" content="貯める・固定費・買い物・把握の13項目を、なぜ効くのかとやり方まで。ライフハック一覧の「おかね」を深掘りしたページ。">
+<meta name="description" content="貯める・固定費・買い物・把握の16項目を、なぜ効くのかとやり方まで。ライフハック一覧の「おかね」を深掘りしたページ。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
@@ -56,6 +56,12 @@
   .item:last-of-type{border-bottom:0}
   .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
+    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
+  .ev-s small{border-color:var(--accent);color:var(--accent)}
+  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -87,8 +93,8 @@
     <p class="eyebrow">10 / MONEY</p>
     <h1>おかね</h1>
     <p class="mn-tagline">頑張りの量ではなく、通り道の形で決まる。</p>
-    <p class="lead">一覧に並べた13の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
-    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <p class="lead">一覧に並べた16の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> はやっているもの、<i>○</i> は試しているもの。印のないものは候補です。</p>
     <ul class="toc">
       <li><a href="#g1">貯める</a></li>
       <li><a href="#g2">固定費</a></li>
@@ -177,6 +183,42 @@
         <li>使わない部屋の窓は、冬は特に塞いでおく</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>全部の窓をやろうとすると手が止まる。いちばん長くいる部屋の窓だけでいい。</p>
+    </div>
+
+    <div class="item">
+      <h3>定期課金は、続ける・やめる・交渉するの三つに分ける</h3>
+      <p class="why">毎月の少額は、一つずつ見ても判断できない。全部を一枚に並べて最後に使った日を書くと、要らないものがはっきりする。三つに分けると、迷いが判断になる。</p>
+      <ul class="how">
+        <li>カードと口座の明細から、定期課金を全部書き出す</li>
+        <li>月額・年額・最後に使った日を並べる</li>
+        <li>続ける・やめる・交渉するの三つに分ける</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>年に一度の課金は見落とす。十二か月さかのぼって見る。</p>
+      <p class="ev ev-p"><small>実践知</small></p>
+    </div>
+
+    <div class="item">
+      <h3>無料のお試しは、申し込んだその場で終わりの予定を入れる</h3>
+      <p class="why">お試しが課金に変わるのは、気が変わったからではなく、忘れるから。申し込んだ瞬間がいちばん覚えている時間なので、そこで未来の自分に渡しておく。</p>
+      <ul class="how">
+        <li>登録したその場で、終わり二日前の予定を入れる</li>
+        <li>解約しても期間中は使えるかを、確かめる</li>
+        <li>使えるなら、その場で解約の手続きをする</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>予定の名前を「何を決めるのか」まで書かないと、当日に分からなくなる。</p>
+      <p class="ev ev-p"><small>実践知</small>衝動を抑えるのではなく、忘れることを防ぐ仕掛け。</p>
+    </div>
+
+    <div class="item">
+      <h3>やめる前に、高いので解約したいと言ってみる</h3>
+      <p class="why">解約を受ける窓口は、引き止めのための値引きを出せることが多い。気に入っているが価格が理由だ、と伝えると、提案が出てくる余地ができる。断られても、失うのは数分。</p>
+      <ul class="how">
+        <li>他社の価格と、自分の利用歴を手元に用意する</li>
+        <li>解約の窓口に、価格が理由だと伝える</li>
+        <li>提示された額・適用日・条件を、その場で書き留める</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>必ず下がるわけではない。下がらなければ、予定どおりやめる。</p>
+      <p class="ev ev-p"><small>実践知</small>実例の報告はあるが、どれくらい下がるかの統計はない。</p>
     </div>
 
   </section>

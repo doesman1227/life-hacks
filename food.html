@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>食べる｜ライフハック</title>
-<meta name="description" content="買い物・作る・台所の困りごと・外食・食べ方・続け方の20項目を、なぜ効くのかとやり方まで。ライフハック一覧の「食べる」を深掘りしたページ。">
+<meta name="description" content="買い物・作る・台所の困りごと・外食・食べ方・続け方の23項目を、なぜ効くのかとやり方まで。ライフハック一覧の「食べる」を深掘りしたページ。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
@@ -56,6 +56,12 @@
   .item:last-of-type{border-bottom:0}
   .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
+    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
+  .ev-s small{border-color:var(--accent);color:var(--accent)}
+  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -87,8 +93,8 @@
     <p class="eyebrow">07 / FOOD</p>
     <h1>食べる</h1>
     <p class="mn-tagline">我慢ではなく、続けられる形を探す。</p>
-    <p class="lead">一覧に並べた20の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
-    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <p class="lead">一覧に並べた23の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> はやっているもの、<i>○</i> は試しているもの。印のないものは候補です。</p>
     <ul class="toc">
       <li><a href="#g1">買い物</a></li>
       <li><a href="#g2">作る</a></li>
@@ -120,6 +126,7 @@
         <li>難しければ、先に飲み物を買う</li>
         <li>急いでいる日は、店に入らない</li>
       </ul>
+      <p class="ev ev-m"><small>一部に研究</small>空腹時に買う量が増えるという実験がある。</p>
     </div>
 
     <div class="item">
@@ -130,6 +137,18 @@
         <li>書いたもの以外は、一周目で取らない</li>
         <li>どうしても欲しいものは、最後に一つだけ</li>
       </ul>
+    </div>
+
+    <div class="item">
+      <h3>行く前に、冷蔵庫の中を撮る</h3>
+      <p class="why">同じものを二つ買うのは、覚えていないから起きる。店で思い出そうとしても思い出せないが、写真なら確かめられる。書き出す手間もいらない。</p>
+      <ul class="how">
+        <li>出る直前に、冷蔵庫と冷凍庫を撮る</li>
+        <li>店で迷ったら、写真を見る</li>
+        <li>買うものの紙も、写真を見ながら作る</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>前日に撮ると、意味が薄れる。出る直前に撮る。</p>
+      <p class="ev ev-p"><small>実践知</small></p>
     </div>
 
   </section>
@@ -168,6 +187,18 @@
       </ul>
     </div>
 
+    <div class="item">
+      <h3>先に食べる箱を、冷蔵庫に作る</h3>
+      <p class="why">捨てることになる食べものの多くは、見えない場所で期限を過ぎたもの。開封済みと期限の近いものを一か所に集めて目の高さに置くと、献立の出発点がそこになる。</p>
+      <ul class="how">
+        <li>透明な箱を、目の高さの手前に置く</li>
+        <li>開封済みと期限の近いものを、全部そこへ移す</li>
+        <li>献立は、まずその箱から決める</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>箱を奥に置くと、ただの別の冷蔵庫になる。手前に置く。</p>
+      <p class="ev ev-p"><small>実践知</small></p>
+    </div>
+
   </section>
 
   <section id="g3">
@@ -204,6 +235,18 @@
         <li>30秒ほどこする</li>
         <li>そのまま石けんで洗い流す</li>
       </ul>
+    </div>
+
+    <div class="item">
+      <h3>余った香草は、油と一緒に凍らせる</h3>
+      <p class="why">香りの強い葉ものは、そのまま冷蔵すると数日で色も香りも落ちる。刻んで油に沈めてから凍らせると空気に触れず、使うときに分ける手間もいらない。</p>
+      <ul class="how">
+        <li>余った香草を刻み、製氷皿に分けて入れる</li>
+        <li>浸るくらいまで、油を注ぐ</li>
+        <li>凍ったら袋に移し、使うぶんだけ鍋に落とす</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>水で凍らせると、炒めものには使いにくい。油にする。</p>
+      <p class="ev ev-p"><small>実践知</small></p>
     </div>
 
   </section>
@@ -287,6 +330,7 @@
         <li>盛りきりにして、鍋ごと出さない</li>
         <li>足りなければ、おかわりを取りに行く</li>
       </ul>
+      <p class="ev ev-w"><small>根拠が弱い</small>よく引かれる実験は、のちに多くの論文が撤回された研究群に由来する。害はないが、効くと言い切る根拠はない。</p>
     </div>
 
   </section>

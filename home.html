@@ -56,6 +56,12 @@
   .item:last-of-type{border-bottom:0}
   .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
+  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
+    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
+  .ev-s small{border-color:var(--accent);color:var(--accent)}
+  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -86,8 +92,8 @@
     <p class="eyebrow">05 / HOME</p>
     <h1>住む</h1>
     <p class="mn-tagline">散らかるかどうかは、置き場所を決めてあるかどうかの差。</p>
-    <p class="lead">一覧に並べた22の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
-    <p class="legend"><i>●</i> は自分でやっているもの。</p>
+    <p class="lead">一覧に並べた25の工夫を、なぜ効くのかと、どうやるかまで開きました。</p>
+    <p class="legend"><i>●</i> はやっているもの、<i>○</i> は試しているもの。印のないものは候補です。</p>
     <ul class="toc">
       <li><a href="#tidy">片付け</a></li>
       <li><a href="#store">収納</a></li>
@@ -181,6 +187,29 @@
         <li>年に一度のものは、奥でも高いところでもいい</li>
       </ul>
     </div>
+
+    <div class="item">
+      <h3>シーツ一式を、枕カバーの中にしまう</h3>
+      <p class="why">寝具は、枚数ではなく組み合わせを探すのに時間がかかる。洗って乾いた一式をまとめて枕カバーに入れておくと、棚から一つ取り出すだけで済む。残りが何組あるかも、見れば分かる。</p>
+      <ul class="how">
+        <li>洗って乾いたシーツ上下と枕カバーを、たたむ</li>
+        <li>そのうち一枚の枕カバーに、残りを入れる</li>
+        <li>棚には、その袋状のものだけを並べる</li>
+      </ul>
+      <p class="ev ev-p"><small>実践知</small>海外の家事のまとめで繰り返し挙がるやり方。研究の裏付けはない。</p>
+    </div>
+
+    <div class="item">
+      <h3>充電器は、場所ごとに置いて動かさない</h3>
+      <p class="why">充電器を一つだけ持って動かすと、探す時間と、どこかに置き忘れる回数が増える。安いものを必要な場所の数だけ買って動かさないほうが、結局は安く済む。持ち歩くのは旅行用の一組だけにする。</p>
+      <ul class="how">
+        <li>寝室・机・車など、充電する場所を数える</li>
+        <li>その数だけ買って、場所ごとに固定する</li>
+        <li>旅行用に一組だけ、鞄に入れておく</li>
+      </ul>
+      <p class="snag"><b>つまずくところ</b>旅行用の一組を、家で使ってしまうと元に戻る。色を変えておく。</p>
+      <p class="ev ev-p"><small>実践知</small>利用者の報告が中心で、裏付けは逸話のかたち。</p>
+    </div>
   </section>
 
   <section id="let-go">
@@ -267,6 +296,17 @@
       </ul>
       <p class="snag"><b>つまずくところ</b>割り当てを増やすと、どの曜日も重くなる。曜日は埋めきらず、空の日を残す。</p>
     </div>
+
+    <div class="item">
+      <h3>風呂を出る前に、壁と床の水を切る</h3>
+      <p class="why">水垢もカビも、残った水から始まる。乾くのを待つのではなく、出る前の一、二分で水を下へ送ってしまうと、あとでこする回数が減る。道具は小さなもの一つでいい。</p>
+      <ul class="how">
+        <li>最後に浴びたあと、体の水を手で切る</li>
+        <li>壁とドアの水を、上から下へ送る</li>
+        <li>床の水を、排水口のほうへ寄せる</li>
+      </ul>
+      <p class="ev ev-p"><small>実践知</small>論文はない。残り水を物理的に減らす、という理屈だけ。</p>
+    </div>
   </section>
 
   <section id="stains">
@@ -329,8 +369,10 @@
       <ul class="how">
         <li>畳まないもの（放り込む・吊るす）を先に決める</li>
         <li>放り込む先は、仕切りのある箱にする</li>
+        <li>シャツは、干したハンガーのままクローゼットへ戻す</li>
         <li>残ったものだけ畳む</li>
       </ul>
+      <p class="ev ev-p"><small>実践知</small>干す→取り込む→畳む→しまう、のうち二つを削る考え方。</p>
     </div>
 
     <div class="item">
