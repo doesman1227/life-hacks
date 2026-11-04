@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -108,7 +110,8 @@
     <span class="sec-n">01</span>
     <h2>停電</h2>
 
-    <div class="item">
+    <div class="item" id="i293">
+      <p class="meta"><span class="no">#293</span></p>
       <h3>懐中電灯は、水の入ったペットボトルに当てる</h3>
       <p class="why">懐中電灯は一点を照らす道具なので、部屋で使うと手元だけ明るくて周りが見えない。水を入れたペットボトルを上に載せると光が中で散り、ランタンのように面で照らせる。火を使わないので、どこに置いても危なくない。</p>
       <ul class="how">
@@ -119,7 +122,8 @@
       <p class="snag"><b>つまずくところ</b>ラベルが貼ってあると光が抜けない。剥がしておくと明るさが変わる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i294">
+      <p class="meta"><span class="no">#294</span></p>
       <h3>明かりは、部屋ごとに一つ置く</h3>
       <p class="why">停電は暗くなってから起きる。明かりを一か所にまとめていると、それを取りに行くために暗い家の中を歩くことになる。使う場所に置いてあるかどうかで、その日の安全が決まる。</p>
       <ul class="how">
@@ -130,7 +134,8 @@
       <p class="snag"><b>つまずくところ</b>しまい込むと存在を忘れる。見えるところに出しておくほうがいい。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i295">
+      <p class="meta"><span class="no">#295</span></p>
       <h3>冷蔵庫は、開けない</h3>
       <p class="why">停電しても、扉を閉めたままなら冷蔵室で数時間、冷凍室は半日ほどもつ。中身を確認しようとして開けるたびに冷気が逃げ、もつ時間が短くなる。先に食べるものを決めてから、一度だけ開ける。</p>
       <ul class="how">
@@ -146,7 +151,8 @@
     <span class="sec-n">02</span>
     <h2>断水</h2>
 
-    <div class="item">
+    <div class="item" id="i296">
+      <p class="meta"><span class="no">#296</span></p>
       <h3>飲む水と、流す水を分けて置く</h3>
       <p class="why">断水で困るのは飲み水だけではない。トイレを流す水は一回で数リットル必要で、量が桁ひとつ違う。同じ「水」として考えると、きれいな水をトイレに使うことになる。</p>
       <ul class="how">
@@ -156,7 +162,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i297">
+      <p class="meta"><span class="no">#297</span></p>
       <h3>風呂の残り湯を、次に入れるまで流さない</h3>
       <p class="why">溜めておけば、断水したときにトイレ一回分になる。何もしなくても溜まっている水なので、備えるための手間がかからない。洗濯に回せば、普段の水道代も下がる。</p>
       <ul class="how">
@@ -173,7 +180,8 @@
     <span class="sec-n">03</span>
     <h2>備蓄</h2>
 
-    <div class="item">
+    <div class="item" id="i298">
+      <p class="meta"><span class="no">#298</span></p>
       <h3>普段食べるものを、少し多めに買う</h3>
       <p class="why">非常食をまとめて買うと、気づいたときには期限が切れていて、丸ごと捨てることになる。普段食べているものを一つ多めに買い、食べた分だけ買い足すと、備蓄が勝手に入れ替わる。</p>
       <ul class="how">
@@ -183,7 +191,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i299">
+      <p class="meta"><span class="no">#299</span></p>
       <h3>電池は、サイズを一つに寄せる</h3>
       <p class="why">懐中電灯とラジオで電池のサイズが違うと、片方が切れたときに回せない。買う道具を同じサイズに寄せておけば、手元の電池をどの道具にも使える。備える量も少なくて済む。</p>
       <ul class="how">
@@ -193,7 +202,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i300">
+      <p class="meta"><span class="no">#300</span></p>
       <h3>火と水だけで食べられるものを、一食分置く</h3>
       <p class="why">電気が止まると、炊飯器も電子レンジも使えない。カセットコンロと鍋があれば湯が沸かせるので、乾麺やアルファ米、レトルトで一食は作れる。食べられるものが一つあるだけで、落ち着きが変わる。</p>
       <ul class="how">
@@ -210,7 +220,8 @@
     <span class="sec-n">04</span>
     <h2>持ち出し</h2>
 
-    <div class="item">
+    <div class="item" id="i301">
+      <p class="meta"><span class="no">#301</span></p>
       <h3>持ち出す袋は、玄関に置く</h3>
       <p class="why">押し入れの奥に置いた袋は、急ぐときに取り出せない。出るときに通る場所にあるかどうかだけで、持って出られるかが決まる。中身を揃えるより、置き場所のほうが先。</p>
       <ul class="how">
@@ -220,7 +231,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i302">
+      <p class="meta"><span class="no">#302</span></p>
       <h3>常備薬と眼鏡の予備を、その袋に入れる</h3>
       <p class="why">水や食べものは配られるが、自分の薬と度の合った眼鏡は代わりがない。買い直せないものから入れると、袋の中身が自然に決まる。</p>
       <ul class="how">
@@ -231,7 +243,8 @@
       <p class="snag"><b>つまずくところ</b>薬は期限がある。入れた日を書いておき、季節の変わり目に見る。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i303">
+      <p class="meta"><span class="no">#303</span></p>
       <h3>小銭の現金を、少し入れておく</h3>
       <p class="why">停電すると、カードも電子マネーもレジごと止まる。公衆電話や自動販売機、釣り銭の用意がない店では、硬貨のほうが通る。多くは要らないが、ゼロだと何も買えない。</p>
       <ul class="how">
@@ -247,7 +260,8 @@
     <span class="sec-n">05</span>
     <h2>連絡</h2>
 
-    <div class="item">
+    <div class="item" id="i304">
+      <p class="meta"><span class="no">#304</span></p>
       <h3>集まる場所を、先に決めておく</h3>
       <p class="why">災害のときは電話がつながらない。連絡が取れてから落ち合おうとすると、動けないまま時間が過ぎる。場所を先に決めておけば、連絡が取れなくても会える。</p>
       <ul class="how">
@@ -257,7 +271,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i305">
+      <p class="meta"><span class="no">#305</span></p>
       <h3>大事な書類は、写真に撮っておく</h3>
       <p class="why">保険証や通帳、免許証は、手元になくても番号が分かれば話が進むことが多い。原本を持ち出せなくても、写真があれば手続きが止まらない。</p>
       <ul class="how">
@@ -274,7 +289,8 @@
     <span class="sec-n">06</span>
     <h2>手元のもので</h2>
 
-    <div class="item">
+    <div class="item" id="i306">
+      <p class="meta"><span class="no">#306</span></p>
       <h3>開かない袋は、10円玉を2枚で挟んですべらせる</h3>
       <p class="why">袋の口が切れないのは、指がすべるから。硬貨二枚で挟むと力が一点にかかり、縁が裂ける。はさみを探しに行かなくて済むので、台所でも外でも使える。</p>
       <ul class="how">
@@ -284,7 +300,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i307">
+      <p class="meta"><span class="no">#307</span></p>
       <h3>スマホは、ラップで巻くと水とほこりを防げる</h3>
       <p class="why">雨の日や砂ぼこりの中では、端子と隙間から水やほこりが入る。ラップを巻くだけで一応の覆いになり、巻いたままでも画面は反応する。専用のケースを買わなくても、台所のもので足りる。</p>
       <ul class="how">

@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -107,7 +109,8 @@
     <span class="sec-n">01</span>
     <h2>広げる</h2>
 
-    <div class="item">
+    <div class="item" id="i53">
+      <p class="meta"><span class="no">#53</span></p>
       <h3>書きながら、考える</h3>
       <p class="why">頭の中だけで考えると、同じところを何度も回る。書くと、考えた分が外に出て、次を考える場所が空く。</p>
       <ul class="how">
@@ -117,7 +120,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i54">
+      <p class="meta"><span class="no">#54</span></p>
       <h3>数を先に出す</h3>
       <p class="why">良い案を一つ出そうとすると、最初の案を守りはじめる。先に数を出すと、選ぶ側に回れる。</p>
       <ul class="how">
@@ -127,7 +131,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i55">
+      <p class="meta"><span class="no">#55</span></p>
       <h3>普段と違う道を、通ってみる</h3>
       <p class="why">同じ道を通り、同じ店に入っていると、入ってくる情報も同じものになる。道を変えるだけで、見える看板も人も変わる。思いつきは探して得るものより、通りがかりに拾うもののほうが多い。</p>
       <ul class="how">
@@ -137,7 +142,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i56">
+      <p class="meta"><span class="no">#56</span></p>
       <h3>その場にいる人に、一つ聞いてみる</h3>
       <p class="why">調べて出てくるのは、誰かが書こうと思ったことだけ。その場にいる人が知っていることは、たいてい書かれていない。おすすめを一つ聞くだけで、検索では出てこない情報が入る。</p>
       <ul class="how">
@@ -148,7 +154,8 @@
       <p class="snag"><b>つまずくところ</b>長く話そうとすると相手の手を止める。一つ聞いて、礼を言って終わる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i57">
+      <p class="meta"><span class="no">#57</span></p>
       <h3>制約を、先に置く</h3>
       <p class="why">自由に考えていいと言われると、かえって出てこない。枠があると、その枠の中で手が動く。</p>
       <ul class="how">
@@ -164,7 +171,8 @@
     <span class="sec-n">02</span>
     <h2>変える</h2>
 
-    <div class="item">
+    <div class="item" id="i58">
+      <p class="meta"><span class="no">#58</span><span class="tag ev-p">実践知</span></p>
       <h3>逆から考える</h3>
       <p class="why">どうすればうまくいくかより、どうすれば失敗するかのほうが具体的に出る。出た失敗を裏返すと、やるべきことになる。</p>
       <ul class="how">
@@ -172,10 +180,11 @@
         <li>出てきたものを、裏返す</li>
         <li>裏返せないものは、本当の弱点として残す</li>
       </ul>
-      <p class="ev ev-p"><small>実践知</small>笑いながら出すほうが、遠慮が外れる。</p>
+      <p class="ev ev-p">笑いながら出すほうが、遠慮が外れる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i59">
+      <p class="meta"><span class="no">#59</span></p>
       <h3>他の分野のやり方を、当ててみる</h3>
       <p class="why">似た構造の問題は、別の業界ですでに解かれていることが多い。分野が遠いほど、組み合わせは新しく見える。</p>
       <ul class="how">
@@ -185,7 +194,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i60">
+      <p class="meta"><span class="no">#60</span></p>
       <h3>人に話してみる</h3>
       <p class="why">説明するために順番を組み直すので、話している途中で自分の考えが整う。相手の質問は、抜けている場所を指してくれる。</p>
       <ul class="how">
@@ -201,7 +211,8 @@
     <span class="sec-n">03</span>
     <h2>寝かせる</h2>
 
-    <div class="item">
+    <div class="item" id="i61">
+      <p class="meta"><span class="no">#61</span></p>
       <h3>一晩おく</h3>
       <p class="why">出したばかりの案は、出した労力の分だけ良く見える。一晩おくと、その色が落ちて、要るものだけが残る。</p>
       <ul class="how">
@@ -211,7 +222,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i62">
+      <p class="meta"><span class="no">#62</span></p>
       <h3>ぼんやりする時間を、作る</h3>
       <p class="why">考えようとしているあいだは、すでに知っていることの範囲を回る。風呂や移動、単純作業のように注意が緩む時間には、関係のなかった記憶どうしが勝手につながる。思いつきは、集中の外側で起きることが多い。</p>
       <ul class="how">
@@ -222,7 +234,8 @@
       <p class="snag"><b>つまずくところ</b>音や画面を入れると、緩む時間が埋まってしまう。手ぶらにするのがいちばん効く。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i63">
+      <p class="meta"><span class="no">#63</span></p>
       <h3>行き詰まったら、場所を変える</h3>
       <p class="why">同じ机では、同じ順番で考えてしまう。場所が変わると、思い出すものが変わる。</p>
       <ul class="how">
@@ -238,7 +251,8 @@
     <span class="sec-n">04</span>
     <h2>訓練する</h2>
 
-    <div class="item">
+    <div class="item" id="i64">
+      <p class="meta"><span class="no">#64</span></p>
       <h3>架空の世界を、細かく作る</h3>
       <p class="why">自分の発想は、いま住んでいる場所の決まりごとの上に乗っている。架空の土地・気候・歴史・制度を細かく決めていくと、当たり前にしていた前提が一つずつ選択肢に見えてくる。遊びとして長く続けられるのが、この訓練の強み。</p>
       <ul class="how">
@@ -249,7 +263,8 @@
       <p class="snag"><b>つまずくところ</b>設定を完成させようとすると手が止まる。矛盾を抱えたまま広げていくほうが続く。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i65">
+      <p class="meta"><span class="no">#65</span></p>
       <h3>本を適当に開いて、目についた言葉を課題に結びつける</h3>
       <p class="why">考えが進まないとき、頭の中にあるのは行き止まりまで通った道だけ。関係のない語を一つ混ぜると、通ったことのない筋を通ることになる。合うかどうかではなく、無理やり結びつけるのが要点。</p>
       <ul class="how">
@@ -259,7 +274,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i66">
+      <p class="meta"><span class="no">#66</span></p>
       <h3>別の時代や立場の人として、考えてみる</h3>
       <p class="why">同じ課題でも、立場が変われば何が問題なのかが変わる。別の時代の人や、立場のまったく違う人として考えると、自分がどの前提を置いていたのかが外から見える。</p>
       <ul class="how">
@@ -269,7 +285,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i67">
+      <p class="meta"><span class="no">#67</span></p>
       <h3>自分と正反対の役を、一日演じる</h3>
       <p class="why">自分の癖は、やめようとしているあいだは見えない。正反対の性格の人として一日を過ごすと、普段どう振る舞っているかが逆側から分かる。普段しない選び方を、実際に体で試せる。</p>
       <ul class="how">
@@ -280,7 +297,8 @@
       <p class="snag"><b>つまずくところ</b>仕事や大事な約束のある日には向かない。影響の小さい日を選ぶ。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i68">
+      <p class="meta"><span class="no">#68</span></p>
       <h3>夢を、起きてすぐ書き留める</h3>
       <p class="why">眠っているあいだの頭は、起きているときには結びつけない組み合わせを作る。ほとんどは使えないが、脈絡のなさそのものが手がかりになることがある。覚えていられるのは、目が覚めてすぐの数分だけ。</p>
       <ul class="how">
@@ -291,7 +309,8 @@
       <p class="snag"><b>つまずくところ</b>思い出そうとすると消える。整った文にしないで、単語だけでいい。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i69">
+      <p class="meta"><span class="no">#69</span><span class="tag ev-p">実践知</span></p>
       <h3>物に向かって、声に出して説明する</h3>
       <p class="why">黙って考えていると、分かったつもりの所を飛ばして進む。声に出すと飛ばせなくなり、前提と実際の食い違いがその場で出てくる。相手は聞いていなくていい。</p>
       <ul class="how">
@@ -300,7 +319,7 @@
         <li>「こうなるはず」と「実際はこう」の違いを言葉にする</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>頭の中で唱えるだけだと、また飛ばす。声に出す。</p>
-      <p class="ev ev-p"><small>実践知</small>プログラマの古典から広まったやり方。</p>
+      <p class="ev ev-p">プログラマの古典から広まったやり方。</p>
     </div>
 
   </section>
@@ -309,7 +328,8 @@
     <span class="sec-n">05</span>
     <h2>決める前に</h2>
 
-    <div class="item">
+    <div class="item" id="i70">
+      <p class="meta"><span class="no">#70</span></p>
       <h3>問いのほうを、書き直す</h3>
       <p class="why">解けないときは、答えではなく問いが悪いことが多い。問いを狭めるか、一段上げると、別の手が見える。</p>
       <ul class="how">
@@ -319,7 +339,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i71">
+      <p class="meta"><span class="no">#71</span></p>
       <h3>最悪の場合を、具体的に書く</h3>
       <p class="why">漠然とした不安は、大きさが分からないので手が止まる。具体的に書くと、たいてい思ったより小さく、備えも決まる。</p>
       <ul class="how">
@@ -329,7 +350,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i72">
+      <p class="meta"><span class="no">#72</span></p>
       <h3>運に賭ける前に、運以外を潰す</h3>
       <p class="why">当たるかどうかに全部を預けると、外れたときに学ぶものが何もない。先に調べられること、減らせるリスク、確かめられる前提を全部潰しておくと、残るのは小さな運だけになる。そこに賭けるのは、博打ではなく判断になる。</p>
       <ul class="how">
@@ -340,7 +362,8 @@
       <p class="snag"><b>つまずくところ</b>潰し続けていると、いつまでも決められない。潰す対象を先に数え、その分だけやる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i73">
+      <p class="meta"><span class="no">#73</span><span class="tag ev-m">一部に研究</span></p>
       <h3>一年後に大失敗したと仮定して、理由を書く</h3>
       <p class="why">これから起きうることを聞かれると、遠慮して当たり障りのない心配しか出てこない。すでに失敗したことにすると、理由を説明する形になるので、具体的な弱点が出る。</p>
       <ul class="how">
@@ -349,7 +372,7 @@
         <li>防げるものを、いまの対策に変える</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>小さな決定に使うと、ただの先延ばしになる。大きなものだけ。</p>
-      <p class="ev ev-m"><small>一部に研究</small>先に結果を決めてから振り返らせると、具体的な理由が出やすいことが示されている。大きな決定だけに使う。</p>
+      <p class="ev ev-m">先に結果を決めてから振り返らせると、具体的な理由が出やすいことが示されている。大きな決定だけに使う。</p>
     </div>
 
     <p class="tl">作るときの考え方は <a href="../way-of-creating/">創り方</a>。</p>

@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -108,7 +110,8 @@
     <span class="sec-n">01</span>
     <h2>机まわり</h2>
 
-    <div class="item">
+    <div class="item" id="i17">
+      <p class="meta"><span class="no">#17</span></p>
       <h3>机に出すのは、一つだけ</h3>
       <p class="why">視界に入るものは、見ていなくても注意を取る。別の仕事の資料が端にあるだけで、戻るのが遅くなる。</p>
       <ul class="how">
@@ -118,7 +121,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i18">
+      <p class="meta"><span class="no">#18</span></p>
       <h3>作業ごとに、場所を変える</h3>
       <p class="why">場所は合図になる。同じ机で全部やると切り替えに時間がかかるが、場所を変えると頭のほうが先に切り替わる。</p>
       <ul class="how">
@@ -128,7 +132,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i19">
+      <p class="meta"><span class="no">#19</span><span class="tag ev-m">一部に研究</span></p>
       <h3>スマホは、別の部屋に置く</h3>
       <p class="why">電源を切っても、伏せておいても、手の届く所にあるだけで注意の一部がそちらに残る。効いているのは見えないことではなく、取りに行く手間のほう。</p>
       <ul class="how">
@@ -137,10 +142,11 @@
         <li>終わったら、取りに行く</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>連絡が来ないか不安なら、家族の着信だけ鳴るようにしてから置く。</p>
-      <p class="ev ev-m"><small>一部に研究</small>近くにあるだけで作業の成績が下がるという実験がある。</p>
+      <p class="ev ev-m">近くにあるだけで作業の成績が下がるという実験がある。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i20">
+      <p class="meta"><span class="no">#20</span><span class="tag ev-p">実践知</span></p>
       <h3>誰かと並んで、別々の作業をする</h3>
       <p class="why">人がいる場では、取りかかるまでの時間が短くなる。会話が目的ではないので、同じ部屋にいるだけ、通話をつないでいるだけでいい。一人では始められない作業に効く。</p>
       <ul class="how">
@@ -149,7 +155,7 @@
         <li>あとは会話せず、各自の作業をする</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>相手がいないときは、作業の配信やオンラインの自習室でも代わりになる。</p>
-      <p class="ev ev-p"><small>実践知</small>利用者の自己申告が中心で、比べる相手を置いた試験はない。</p>
+      <p class="ev ev-p">利用者の自己申告が中心で、比べる相手を置いた試験はない。</p>
     </div>
 
   </section>
@@ -158,7 +164,8 @@
     <span class="sec-n">02</span>
     <h2>区切り</h2>
 
-    <div class="item">
+    <div class="item" id="i21">
+      <p class="meta"><span class="no">#21</span></p>
       <h3>25分で区切る</h3>
       <p class="why">終わりの見えない作業は、始めるのが重い。短く区切ると、始める判断が軽くなり、途中の疲れも溜まりにくい。</p>
       <ul class="how">
@@ -169,7 +176,8 @@
       <p class="snag"><b>つまずくところ</b>乗っているときに止めると惜しいが、止めたほうが次に戻りやすい。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i22">
+      <p class="meta"><span class="no">#22</span></p>
       <h3>やめるときは、途中でやめる</h3>
       <p class="why">切りのいいところで終えると、次に座ったとき何から書くかをまた考えることになる。途中で止めると、続きが見えている状態から始められる。</p>
       <ul class="how">
@@ -185,7 +193,8 @@
     <span class="sec-n">03</span>
     <h2>通知と連絡</h2>
 
-    <div class="item">
+    <div class="item" id="i23">
+      <p class="meta"><span class="no">#23</span><span class="tag ev-m">一部に研究</span></p>
       <h3>通知は、切っておく</h3>
       <p class="why">一度の着信で集中が切れると、戻るまでに十数分かかると言われる。見る時間を決めるほうが、結果として早く返せる。</p>
       <ul class="how">
@@ -193,10 +202,11 @@
         <li>例外にする相手だけ、鳴るようにしておく</li>
         <li>区切りごとに、まとめて見る</li>
       </ul>
-      <p class="ev ev-m"><small>一部に研究</small>割り込みのあと元の作業に戻るまでに時間がかかることが示されている。</p>
+      <p class="ev ev-m">割り込みのあと元の作業に戻るまでに時間がかかることが示されている。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i24">
+      <p class="meta"><span class="no">#24</span></p>
       <h3>連絡を見る時刻を、決めておく</h3>
       <p class="why">いつでも見る状態は、いつでも中断される状態でもある。時刻を決めると、相手にとっても返事の予想が立つ。</p>
       <ul class="how">
@@ -206,7 +216,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i25">
+      <p class="meta"><span class="no">#25</span><span class="tag ev-s">研究あり</span></p>
       <h3>画面を白黒にする</h3>
       <p class="why">色は、それ自体が合図になっている。白黒にすると通知や広告の赤や青が平らになり、意味もなく開く回数が減る。設定ひとつで、いつでも戻せる。</p>
       <ul class="how">
@@ -215,7 +226,7 @@
         <li>集中したい時間帯だけ、自動で切り替える</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>写真を選ぶときや地図を見るときは戻す。ずっと白黒にすると続かない。</p>
-      <p class="ev ev-s"><small>研究あり</small>比べる群を置いた試験で画面を見る時間が減った。減るのは主にSNSと流し見で、動画はあまり減らない。</p>
+      <p class="ev ev-s">比べる群を置いた試験で画面を見る時間が減った。減るのは主にSNSと流し見で、動画はあまり減らない。</p>
     </div>
 
   </section>
@@ -224,7 +235,8 @@
     <span class="sec-n">04</span>
     <h2>会議</h2>
 
-    <div class="item">
+    <div class="item" id="i26">
+      <p class="meta"><span class="no">#26</span></p>
       <h3>会議は25分・50分で切る</h3>
       <p class="why">次の予定にそのままつながる会議は、移動も記録も残さない。短く切ると、終わりの意識が働いて話も締まる。</p>
       <ul class="how">
@@ -234,7 +246,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i27">
+      <p class="meta"><span class="no">#27</span></p>
       <h3>終わりに、決まったことを読み上げる</h3>
       <p class="why">話した内容と、決まったことは違う。その場で声に出すと、認識の違いがその場で出る。</p>
       <ul class="how">
@@ -250,7 +263,8 @@
     <span class="sec-n">05</span>
     <h2>遊びにする</h2>
 
-    <div class="item">
+    <div class="item" id="i28">
+      <p class="meta"><span class="no">#28</span></p>
       <h3>終わった直後に、小さく報いる</h3>
       <p class="why">褒美を週末までまとめると、その作業とは結びつかない。終わった直後の小さなもの(コーヒー一杯、印を一つ付ける)のほうが、次に手をつける動機になる。大きさより、間を空けないことが効く。</p>
       <ul class="how">
@@ -261,7 +275,8 @@
       <p class="snag"><b>つまずくところ</b>褒美のほうが目的になると、作業が雑になる。大きくしないのはそのため。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i29">
+      <p class="meta"><span class="no">#29</span></p>
       <h3>人ではなく、前の自分と比べる</h3>
       <p class="why">他人と並べると、差が開いているあいだはずっと負けていることになり、続ける前に折れる。先週の自分と比べるだけなら、少しでも進めば前に出る。比べる相手を変えるだけで、同じ記録が励みに変わる。</p>
       <ul class="how">
@@ -271,7 +286,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i30">
+      <p class="meta"><span class="no">#30</span></p>
       <h3>終わったものを、捨てずに溜める</h3>
       <p class="why">終わった仕事は消えてしまうので、どれだけ進んだかが残らない。付箋に書いて貼り、終わったら剥がして一か所に貯めると、やった量が厚みとして見える。進んでいないと感じる日の支えになる。</p>
       <ul class="how">
@@ -281,7 +297,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i31">
+      <p class="meta"><span class="no">#31</span></p>
       <h3>いつもの作業に、ひとつだけ新しいことを混ぜる</h3>
       <p class="why">手順が完全に決まった作業は、体が勝手にやるので注意が離れていく。やり方を一つだけ変えると、確かめながら進めることになり、同じ作業でも没頭できる。全部を変えないのが要点。</p>
       <ul class="how">
@@ -291,7 +308,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i32">
+      <p class="meta"><span class="no">#32</span></p>
       <h3>仕組みに飽きたら、作り直す</h3>
       <p class="why">同じ仕組みを長く使うと慣れてきて、効かなくなる。効かなくなったことを自分の意志の弱さと考えると止まるが、仕組みの寿命だと考えれば作り直すだけで済む。</p>
       <ul class="how">
@@ -308,7 +326,8 @@
     <span class="sec-n">06</span>
     <h2>引き受け方</h2>
 
-    <div class="item">
+    <div class="item" id="i33">
+      <p class="meta"><span class="no">#33</span></p>
       <h3>やらないことを、決める</h3>
       <p class="why">足すより、減らすほうが時間に効く。何をやらないかが決まっていないと、全部が候補のまま残る。</p>
       <ul class="how">
@@ -319,7 +338,8 @@
       <p class="snag"><b>つまずくところ</b>やめた仕事ほど、誰かが困っていないか気になる。一か月だけ止めて様子を見る形にする。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i34">
+      <p class="meta"><span class="no">#34</span></p>
       <h3>即答せず、一度持ち帰る</h3>
       <p class="why">その場の勢いで引き受けた仕事は、来週の自分が払う。一拍おくと、断れるものと断れないものが分かれる。</p>
       <ul class="how">

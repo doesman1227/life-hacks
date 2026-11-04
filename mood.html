@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -119,7 +121,8 @@
     <span class="sec-n">01</span>
     <h2>呼吸</h2>
 
-    <div class="item">
+    <div class="item" id="i214">
+      <p class="meta"><span class="no">#214</span><span class="tag ev-m">一部に研究</span></p>
       <h3>呼吸を、数える</h3>
       <p class="why">気持ちを落ち着けようとするより、注意の向け先を変えるほうが早い。数えるという仕事があると、考えのほうが止まる。</p>
       <ul class="how">
@@ -127,10 +130,11 @@
         <li>十まで行ったら、一に戻る</li>
         <li>数を忘れたら、気づいた時点で一に戻す</li>
       </ul>
-      <p class="ev ev-m"><small>一部に研究</small>ゆっくりした呼吸が落ち着きに向かうという報告はあるが、数え方の違いまでは分かっていない。</p>
+      <p class="ev ev-m">ゆっくりした呼吸が落ち着きに向かうという報告はあるが、数え方の違いまでは分かっていない。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i215">
+      <p class="meta"><span class="no">#215</span></p>
       <h3>落ち着きたいときは、吐くほうを長くする</h3>
       <p class="why">息を吐いているあいだは体が休む側に寄り、吸っているあいだは動く側に寄る。落ち着きたいなら吐くほうを長くし(たとえば4秒吸って8秒吐く)、目を覚ましたいなら吸うほうを長くする。数を決めておくと、その場で考えずにできる。</p>
       <ul class="how">
@@ -147,7 +151,8 @@
     <span class="sec-n">02</span>
     <h2>体から戻す</h2>
 
-    <div class="item">
+    <div class="item" id="i216">
+      <p class="meta"><span class="no">#216</span></p>
       <h3>自然の中に、出る</h3>
       <p class="why">気分の切り替えとしては、いちばん安い。特別な場所でなくていい。屋外にいる時間そのものが効く。</p>
       <ul class="how">
@@ -157,7 +162,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i217">
+      <p class="meta"><span class="no">#217</span></p>
       <h3>体をゆるめる場所を、決めておく</h3>
       <p class="why">気分を気分で立て直そうとすると、考えるほど沈む。体の緊張がゆるむと、同じ出来事でも受け取り方が変わる。どこへ行けばゆるむかを先に決めておけば、落ちた日に探さなくていい。</p>
       <ul class="how">
@@ -168,7 +174,8 @@
       <p class="snag"><b>つまずくところ</b>「ゆるめる」ことを目的にすると力が入る。気持ちよさのために行くほうが続く。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i218">
+      <p class="meta"><span class="no">#218</span></p>
       <h3>今に戻りたいときは、体の感覚に触る</h3>
       <p class="why">考えが先に走っているときは、頭の中で止めようとしても止まらない。手を擦る、足を踏む、冷たいものを持つなど、体の感覚をはっきり作ると、注意がそちらに移る。道具も場所も要らないので、その場でできる。</p>
       <ul class="how">
@@ -178,7 +185,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i219">
+      <p class="meta"><span class="no">#219</span><span class="tag ev-w">根拠が弱い</span></p>
       <h3>見えるもの五つから、数えて戻る</h3>
       <p class="why">気持ちが高ぶっているときは、頭の中の言葉が速くなっている。数えながら感覚をたどると、注意が外側に移って速さが落ちる。一分で終わる。</p>
       <ul class="how">
@@ -187,7 +195,7 @@
         <li>匂い二つ、味一つで終える</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>うまくできなくていい。数えること自体が目的。</p>
-      <p class="ev ev-w"><small>根拠が弱い</small>臨床の現場で広く教えられているが、この手順そのものを調べた試験はほとんどない。低リスクのその場しのぎとして。</p>
+      <p class="ev ev-w">臨床の現場で広く教えられているが、この手順そのものを調べた試験はほとんどない。低リスクのその場しのぎとして。</p>
     </div>
 
   </section>
@@ -196,7 +204,8 @@
     <span class="sec-n">03</span>
     <h2>言葉にする</h2>
 
-    <div class="item">
+    <div class="item" id="i220">
+      <p class="meta"><span class="no">#220</span></p>
       <h3>感情に、名前と割合をつける</h3>
       <p class="why">何に揺れているのか分からないままだと、気持ちのほうが先に走る。「不安70、怒り30」のように名前と割合をつけると、数える側に注意が移り、暴れ方が収まる。正確さは要らない。</p>
       <ul class="how">
@@ -206,7 +215,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i221">
+      <p class="meta"><span class="no">#221</span></p>
       <h3>自分の強みを三つ書いて、朝に読む</h3>
       <p class="why">うまくいっていない時期は、状況の悪さと自分の価値が同じものに見えてくる。過去にできたことと自分の強みを書いて毎朝読むと、その二つが切り離される。内容は変えなくていい。</p>
       <ul class="how">
@@ -217,7 +227,8 @@
       <p class="snag"><b>つまずくところ</b>毎日新しく書こうとすると続かない。同じ三つを読み続けるほうが効く。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i222">
+      <p class="meta"><span class="no">#222</span></p>
       <h3>責めすぎているときは、人にかける言葉を自分にかける</h3>
       <p class="why">自分に対しては、友人には絶対に言わない言い方をしていることがある。同じ状況の友人になんと言うかを考えてから、それを自分に向けると、言い方のほうが行き過ぎていたと分かる。甘やかすことではなく、同じ基準に戻すこと。</p>
       <ul class="how">
@@ -227,7 +238,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i223">
+      <p class="meta"><span class="no">#223</span><span class="tag ev-s">研究あり</span></p>
       <h3>自分に厳しくなったら、三つの文を唱える</h3>
       <p class="why">失敗したときに自分へ向ける言葉は、他人に言うなら止めるような強さになる。決まった三つの文を持っておけば、その場で言い換えずに済む。</p>
       <ul class="how">
@@ -236,7 +248,7 @@
         <li>「いまの自分に優しくしよう」で終える</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>うまくいったときではなく、失敗した場面で使う。</p>
-      <p class="ev ev-s"><small>研究あり</small>八週間のプログラムの試験で、自分への慈しみと生活満足が上がった。対象は成功ではなく、失敗した場面。</p>
+      <p class="ev ev-s">八週間のプログラムの試験で、自分への慈しみと生活満足が上がった。対象は成功ではなく、失敗した場面。</p>
     </div>
 
   </section>
@@ -245,7 +257,8 @@
     <span class="sec-n">04</span>
     <h2>ひとりのとき</h2>
 
-    <div class="item">
+    <div class="item" id="i224">
+      <p class="meta"><span class="no">#224</span></p>
       <h3>一人の時間を、自分で選んだことにする</h3>
       <p class="why">同じ一人の時間でも、予定がなくて余ってしまった時間と、自分で空けた時間では、過ごしたあとの感じ方が違う。何をするかを先に決めて空けておくと、受け身の時間が自分の時間になる。</p>
       <ul class="how">
@@ -256,7 +269,8 @@
       <p class="snag"><b>つまずくところ</b>やることを決めずに空けると、結局は時間が余ったのと同じになる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i225">
+      <p class="meta"><span class="no">#225</span></p>
       <h3>「孤独」と「孤独感」を分ける</h3>
       <p class="why">一人でいるという状態と、寂しいという気分は別のものだが、重ねて考えると「一人だから寂しいのだ」という結論になり、人に会うしか手がなくなる。分けて見ると、一人のままでも寂しさだけを扱える。</p>
       <ul class="how">
@@ -266,7 +280,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i226">
+      <p class="meta"><span class="no">#226</span></p>
       <h3>寂しさは、過ぎるものとして扱う</h3>
       <p class="why">寂しさを自分の性格や人生の失敗として受け取ると、そこから動けなくなる。誰にでも来て、しばらくすると引く反応として扱えば、過ぎるまで待つという選択ができる。</p>
       <ul class="how">
@@ -277,7 +292,8 @@
       <p class="snag"><b>つまずくところ</b>過ぎない寂しさが何週間も続くときは、待つことではなく人に相談することが先になる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i227">
+      <p class="meta"><span class="no">#227</span></p>
       <h3>誰にも見せない前提で、書く</h3>
       <p class="why">人に見せる前提で書くと、説明できる形に整えてしまい、本当に困っていることが落ちる。読まれないと決めた紙の上では、矛盾したままでも書ける。書いたものを読み返すと、自分が何を気にしていたのかが外から見える。</p>
       <ul class="how">
@@ -287,7 +303,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i228">
+      <p class="meta"><span class="no">#228</span></p>
       <h3>他人への期待を、少し下げる</h3>
       <p class="why">寂しさは、相手が冷たいから起きるというより、こちらが期待していた分との差から起きることが多い。期待の高さを少し下げると、同じ出来事が物足りなさではなく、ささやかな親切として見える。</p>
       <ul class="how">
@@ -298,7 +315,8 @@
       <p class="snag"><b>つまずくところ</b>期待を下げることと、諦めることは違う。言えば済むことは、言う側に回す。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i229">
+      <p class="meta"><span class="no">#229</span></p>
       <h3>思い通りにならないものを、一つ育てる</h3>
       <p class="why">人も自分も、思い通りにはならない。植物や作りもののように、待つしかない相手を持つと、すぐに答えが出ない状態に耐える力がつく。一人の時間が、何かが進んでいる時間になる。</p>
       <ul class="how">
@@ -314,7 +332,8 @@
     <span class="sec-n">05</span>
     <h2>距離を取る</h2>
 
-    <div class="item">
+    <div class="item" id="i230">
+      <p class="meta"><span class="no">#230</span></p>
       <h3>SNSとニュースから、離れる日を作る</h3>
       <p class="why">入れるのをやめるだけで、戻ることがある。気分は、出来事より情報の量で決まっている部分がある。</p>
       <ul class="how">
@@ -324,7 +343,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i231">
+      <p class="meta"><span class="no">#231</span></p>
       <h3>連絡を返さない時間を、作る</h3>
       <p class="why">いつでも返せる状態は、休んでいない状態でもある。返さない時間を決めると、相手にも予想がつく。</p>
       <ul class="how">
@@ -334,7 +354,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i232">
+      <p class="meta"><span class="no">#232</span></p>
       <h3>友達の数を、数えない</h3>
       <p class="why">人の数は画面の上では数えられるが、自分が満ちているかどうかとは関係がない。数えはじめると、足りないほうにしか目が行かない。比べる相手が画面の中にしかいないことに気づくと、数は意味を失う。</p>
       <ul class="how">
@@ -344,7 +365,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i233">
+      <p class="meta"><span class="no">#233</span><span class="tag ev-m">一部に研究</span></p>
       <h3>心配に、営業時間を決める</h3>
       <p class="why">心配は、考えないようにするほど戻ってくる。禁じるのではなく、扱う時間を決めてそこまで送る。時間が来れば、行動できるものと、書いて閉じるものに分かれる。</p>
       <ul class="how">
@@ -353,7 +375,7 @@
         <li>時間になったら、次の一手を決めるか、書いて閉じる</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>寝る直前に置くと眠れなくなる。就寝の数時間前にする。</p>
-      <p class="ev ev-m"><small>一部に研究</small>認知行動療法の技法。不安の強い人では心配が減ったという試験がある一方、結果は研究によって分かれる。</p>
+      <p class="ev ev-m">認知行動療法の技法。不安の強い人では心配が減ったという試験がある一方、結果は研究によって分かれる。</p>
     </div>
 
   </section>
@@ -362,7 +384,8 @@
     <span class="sec-n">06</span>
     <h2>戻す</h2>
 
-    <div class="item">
+    <div class="item" id="i234">
+      <p class="meta"><span class="no">#234</span><span class="tag ev-m">一部に研究</span></p>
       <h3>感謝できることを、三つ書く</h3>
       <p class="why">悪いほうは放っておいても数えてしまう。良いほうは、数えないと残らない。</p>
       <ul class="how">
@@ -370,10 +393,11 @@
         <li>小さいことでいい</li>
         <li>同じことが続いても、かまわない</li>
       </ul>
-      <p class="ev ev-m"><small>一部に研究</small>効果を報告する研究は多いが、比べる相手の置き方によって結果が揺れる。</p>
+      <p class="ev ev-m">効果を報告する研究は多いが、比べる相手の置き方によって結果が揺れる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i235">
+      <p class="meta"><span class="no">#235</span></p>
       <h3>落ち込む時間を、先に決めておく</h3>
       <p class="why">落ち込むのをやめようとすると、やめられないこと自体が重なる。時間を決めて全力で落ち込むほうが、終わりが来る。終わったあとに一行ずつ書くことで、同じところを回らずに次へ移れる。</p>
       <ul class="how">
@@ -384,7 +408,8 @@
       <p class="snag"><b>つまずくところ</b>何日も続くようなら、時間を区切ることでは収まらない。人に話すほうが先。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i236">
+      <p class="meta"><span class="no">#236</span></p>
       <h3>他人の口で、自分に反論させる</h3>
       <p class="why">「自分はだめだ」という考えに自分の声で反論しても、同じ頭から出ているので通らない。はっきり物を言う他人になりきって「本当にそうか」と問わせると、同じ材料から違う結論が出る。</p>
       <ul class="how">
@@ -394,7 +419,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i237">
+      <p class="meta"><span class="no">#237</span></p>
       <h3>悪い出来事を、三つの軸で見直す</h3>
       <p class="why">嫌なことが起きると「自分は運が悪い」という話になりやすいが、それは性格の話にすり替わっている。いつまで続くか、どこまで及ぶか、変えられる部分はどこかの三つに分けると、天気のように扱える。</p>
       <ul class="how">
@@ -404,7 +430,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i238">
+      <p class="meta"><span class="no">#238</span></p>
       <h3>困ったことと、どう抜けたかを、対で書く</h3>
       <p class="why">困ったことだけを書くと、読み返したときに嫌な記録になる。どう抜けたか、あるいはどう受け入れたかを横に書いておくと、抜けた回数が目に見える形で溜まる。次に困ったときに、自分には抜けた実績があるという足場になる。</p>
       <ul class="how">
@@ -415,7 +442,8 @@
       <p class="snag"><b>つまずくところ</b>教訓を無理に作ろうとすると書けなくなる。抜けた手順だけで十分。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i239">
+      <p class="meta"><span class="no">#239</span></p>
       <h3>夜の判断は、翌朝に回す</h3>
       <p class="why">夜は、同じ事実でも悪いほうに寄る。朝に見ると、たいてい大きさが変わっている。</p>
       <ul class="how">
@@ -431,7 +459,8 @@
     <span class="sec-n">07</span>
     <h2>休む</h2>
 
-    <div class="item">
+    <div class="item" id="i240">
+      <p class="meta"><span class="no">#240</span></p>
       <h3>休みも、予定として入れる</h3>
       <p class="why">空いた時間は、必ず何かに埋められる。先に入れておかないと、休みは残らない。</p>
       <ul class="how">
@@ -441,7 +470,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i241">
+      <p class="meta"><span class="no">#241</span><span class="tag ev-s">研究あり</span></p>
       <h3>歩きながら、考える</h3>
       <p class="why">座ったまま考えると、同じ場所を回る。歩くと、考えのほうがほどける。</p>
       <ul class="how">
@@ -449,7 +479,7 @@
         <li>考えがまとまらなくても、歩き続ける</li>
         <li>出てきたら、その場で短く書く</li>
       </ul>
-      <p class="ev ev-s"><small>研究あり</small>歩行中と歩いた直後に発散的な思考が上がった四つの実験がある。答えを一つに絞る作業では、座るほうがよい。</p>
+      <p class="ev ev-s">歩行中と歩いた直後に発散的な思考が上がった四つの実験がある。答えを一つに絞る作業では、座るほうがよい。</p>
     </div>
 
     <p class="tl">気持ちの整え方そのものは <a href="../thinking/">考え方</a>。</p>

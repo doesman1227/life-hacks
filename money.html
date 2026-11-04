@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -116,7 +118,8 @@
     <span class="sec-n">01</span>
     <h2>貯める</h2>
 
-    <div class="item">
+    <div class="item" id="i172">
+      <p class="meta"><span class="no">#172</span></p>
       <h3>先に、貯める分を引く</h3>
       <p class="why">残ったら貯める形だと、残らない。先に引いて、残りで暮らす形にすると、我慢の場面が月末に来なくなる。</p>
       <ul class="how">
@@ -127,7 +130,8 @@
       <p class="snag"><b>つまずくところ</b>最初から高く設定すると、取り崩して元に戻る。続いた額から、少しずつ上げる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i173">
+      <p class="meta"><span class="no">#173</span></p>
       <h3>自動で移す</h3>
       <p class="why">毎月手で動かす形は、忙しい月に止まる。意志の介在する場所を減らすと、続くかどうかが性格と無関係になる。</p>
       <ul class="how">
@@ -137,7 +141,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i174">
+      <p class="meta"><span class="no">#174</span></p>
       <h3>入ってくる道を、一つにしないでおく</h3>
       <p class="why">入り口が一本だと、それが止まったときに選べることが何もなくなる。道が複数あると、一本が細くなっても判断に余裕が残る。増やすこと自体より、選べる状態を作っておくことに意味がある。</p>
       <ul class="how">
@@ -154,7 +159,8 @@
     <span class="sec-n">02</span>
     <h2>固定費</h2>
 
-    <div class="item">
+    <div class="item" id="i175">
+      <p class="meta"><span class="no">#175</span></p>
       <h3>固定費から見直す</h3>
       <p class="why">一度の手間が、毎月効き続ける。日々の節約と違って、意識し続ける必要がない。</p>
       <ul class="how">
@@ -164,7 +170,8 @@
       </ul>
     </div>
 
-    <div class="item me">
+    <div class="item me" id="i176">
+      <p class="meta"><span class="no">#176</span></p>
       <h3>サブスクは、道具箱として見る</h3>
       <p class="why">「毎月出ていくお金」として見ると、解約するかどうかの話にしかならない。道具箱として見ると、まだ使っていない機能が見える。</p>
       <ul class="how">
@@ -174,7 +181,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i177">
+      <p class="meta"><span class="no">#177</span></p>
       <h3>窓から逃げる分を、止める</h3>
       <p class="why">冷暖房の効きが悪い原因は、たいてい窓。壁より薄く、熱がそこから出入りする。温度設定を変えずに、逃げ道だけ塞ぐほうが、我慢せずに光熱費が下がる。</p>
       <ul class="how">
@@ -185,7 +193,8 @@
       <p class="snag"><b>つまずくところ</b>全部の窓をやろうとすると手が止まる。いちばん長くいる部屋の窓だけでいい。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i178">
+      <p class="meta"><span class="no">#178</span><span class="tag ev-p">実践知</span></p>
       <h3>定期課金は、続ける・やめる・交渉するの三つに分ける</h3>
       <p class="why">毎月の少額は、一つずつ見ても判断できない。全部を一枚に並べて最後に使った日を書くと、要らないものがはっきりする。三つに分けると、迷いが判断になる。</p>
       <ul class="how">
@@ -194,10 +203,10 @@
         <li>続ける・やめる・交渉するの三つに分ける</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>年に一度の課金は見落とす。十二か月さかのぼって見る。</p>
-      <p class="ev ev-p"><small>実践知</small></p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i179">
+      <p class="meta"><span class="no">#179</span><span class="tag ev-p">実践知</span></p>
       <h3>無料のお試しは、申し込んだその場で終わりの予定を入れる</h3>
       <p class="why">お試しが課金に変わるのは、気が変わったからではなく、忘れるから。申し込んだ瞬間がいちばん覚えている時間なので、そこで未来の自分に渡しておく。</p>
       <ul class="how">
@@ -206,10 +215,11 @@
         <li>使えるなら、その場で解約の手続きをする</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>予定の名前を「何を決めるのか」まで書かないと、当日に分からなくなる。</p>
-      <p class="ev ev-p"><small>実践知</small>衝動を抑えるのではなく、忘れることを防ぐ仕掛け。</p>
+      <p class="ev ev-p">衝動を抑えるのではなく、忘れることを防ぐ仕掛け。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i180">
+      <p class="meta"><span class="no">#180</span><span class="tag ev-p">実践知</span></p>
       <h3>やめる前に、高いので解約したいと言ってみる</h3>
       <p class="why">解約を受ける窓口は、引き止めのための値引きを出せることが多い。気に入っているが価格が理由だ、と伝えると、提案が出てくる余地ができる。断られても、失うのは数分。</p>
       <ul class="how">
@@ -218,7 +228,7 @@
         <li>提示された額・適用日・条件を、その場で書き留める</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>必ず下がるわけではない。下がらなければ、予定どおりやめる。</p>
-      <p class="ev ev-p"><small>実践知</small>実例の報告はあるが、どれくらい下がるかの統計はない。</p>
+      <p class="ev ev-p">実例の報告はあるが、どれくらい下がるかの統計はない。</p>
     </div>
 
   </section>
@@ -227,7 +237,8 @@
     <span class="sec-n">03</span>
     <h2>買い物</h2>
 
-    <div class="item me">
+    <div class="item me" id="i181">
+      <p class="meta"><span class="no">#181</span></p>
       <h3>表示価格ではなく、総額で比べる</h3>
       <p class="why">安く見えても、付け足すものや移動まで含めると差が縮まる。最後にいくらかかるかで比べる。</p>
       <ul class="how">
@@ -237,7 +248,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i182">
+      <p class="meta"><span class="no">#182</span></p>
       <h3>欲しくなったら、24時間おく</h3>
       <p class="why">欲しさは時間で減り、必要は残る。買わない判断ではなく、時間をおく判断にすると、我慢している感じがしない。</p>
       <ul class="how">
@@ -247,7 +259,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i183">
+      <p class="meta"><span class="no">#183</span></p>
       <h3>一回あたりに、直してみる</h3>
       <p class="why">高いか安いかは、値段ではなく使う回数で変わる。毎日使うものと、年に一度のものを、同じ基準で見ない。</p>
       <ul class="how">
@@ -257,7 +270,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i184">
+      <p class="meta"><span class="no">#184</span></p>
       <h3>時間が増えるほうに、お金を使う</h3>
       <p class="why">物は増えるほど置き場所と手入れを要求してくるが、時間が空くことには後始末がない。同じ金額を使うなら、手間を引き受けてくれるものや、移動と待ちを短くするものに回したほうが、残るものが大きい。</p>
       <ul class="how">
@@ -268,7 +282,8 @@
       <p class="snag"><b>つまずくところ</b>浮いた時間の使い道を決めていないと、空いた分だけ別のことで埋まる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i185">
+      <p class="meta"><span class="no">#185</span></p>
       <h3>同じものなら、店の自社ブランドを試す</h3>
       <p class="why">メーカーの商品には、広告費と流通の費用が乗っている。店が自分で企画して売るものは、その分が落ちるので安い。中身を作っているのが同じ工場であることも珍しくない。</p>
       <ul class="how">
@@ -285,7 +300,8 @@
     <span class="sec-n">04</span>
     <h2>把握</h2>
 
-    <div class="item me">
+    <div class="item me" id="i186">
+      <p class="meta"><span class="no">#186</span></p>
       <h3>一か所に集約し、見る頻度を決める</h3>
       <p class="why">見えていないものは判断できないが、見続けると今度はお金に心を取られる。集約するのは、考えなくていい時間を増やすため。</p>
       <ul class="how">
@@ -295,7 +311,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i187">
+      <p class="meta"><span class="no">#187</span></p>
       <h3>支払いを、一枚にまとめる</h3>
       <p class="why">通る道が少ないほど、記録が自動で揃う。分散していると、集計そのものが仕事になる。</p>
       <ul class="how">

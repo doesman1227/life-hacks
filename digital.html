@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -116,7 +118,8 @@
     <span class="sec-n">01</span>
     <h2>通知と画面</h2>
 
-    <div class="item">
+    <div class="item" id="i188">
+      <p class="meta"><span class="no">#188</span></p>
       <h3>通知は原則オフ、例外だけオン</h3>
       <p class="why">既定値を逆にする。全部切ってから必要なものだけ戻すと、戻らないものが本当に要らなかったものになる。</p>
       <ul class="how">
@@ -126,7 +129,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i189">
+      <p class="meta"><span class="no">#189</span></p>
       <h3>ホーム画面に置くものを減らす</h3>
       <p class="why">開く手間が増えると、開かなくなる。逆に、置いてあるだけで開いてしまう。置き方のほうを変える。</p>
       <ul class="how">
@@ -136,7 +140,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i190">
+      <p class="meta"><span class="no">#190</span><span class="tag ev-p">実践知</span></p>
       <h3>メールは読まず、送信者で検索してまとめて消す</h3>
       <p class="why">受信箱を一通ずつ片付けても、翌週には同じ量が戻る。減らすべきは、たまったものではなく入ってくる量のほう。送信者で検索すると、同じ相手の分がまとめて片付く。</p>
       <ul class="how">
@@ -145,7 +150,6 @@
         <li>届いたお知らせは、その場で配信を止める</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>一日に止めるのは数件でいい。全部やろうとすると続かない。</p>
-      <p class="ev ev-p"><small>実践知</small></p>
     </div>
 
   </section>
@@ -154,7 +158,8 @@
     <span class="sec-n">02</span>
     <h2>ファイル</h2>
 
-    <div class="item">
+    <div class="item" id="i191">
+      <p class="meta"><span class="no">#191</span></p>
       <h3>保存先を、一か所に決める</h3>
       <p class="why">探す時間が、いちばん長い。どこに置いたかを考えなくて済むだけで、作業の立ち上がりが速くなる。</p>
       <ul class="how">
@@ -164,7 +169,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i192">
+      <p class="meta"><span class="no">#192</span></p>
       <h3>名前の頭に、日付を書く</h3>
       <p class="why">並べるだけで時系列になる。整理の仕組みを作らなくても、名前の形だけで済む。</p>
       <ul class="how">
@@ -174,7 +180,8 @@
       </ul>
     </div>
 
-    <div class="item me">
+    <div class="item me" id="i193">
+      <p class="meta"><span class="no">#193</span></p>
       <h3>集める先を、一つにする</h3>
       <p class="why">道具は目的ごとに選んでいい。揃えるのは道具ではなく、データの行き先。同じ指標が重なるときは、どれを正とするかだけ決めておく。</p>
       <ul class="how">
@@ -190,7 +197,8 @@
     <span class="sec-n">03</span>
     <h2>入力</h2>
 
-    <div class="item">
+    <div class="item" id="i194">
+      <p class="meta"><span class="no">#194</span></p>
       <h3>ショートカットは、五つだけ覚える</h3>
       <p class="why">全部覚えようとすると、何も残らない。よく使う五つだけなら、一週間で手が覚える。</p>
       <ul class="how">
@@ -200,7 +208,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i195">
+      <p class="meta"><span class="no">#195</span></p>
       <h3>よく打つ文章は、登録しておく</h3>
       <p class="why">住所も定型文も、二度目からは打たない。打つ回数より、打ち間違いが減るほうが効く。</p>
       <ul class="how">
@@ -216,7 +225,8 @@
     <span class="sec-n">04</span>
     <h2>パスワード</h2>
 
-    <div class="item">
+    <div class="item" id="i196">
+      <p class="meta"><span class="no">#196</span></p>
       <h3>パスワードは、管理ソフトに任せる</h3>
       <p class="why">覚えることをやめると、全部を別のものにできる。使い回しをやめるのが、いちばん大きい。</p>
       <ul class="how">
@@ -226,7 +236,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i197">
+      <p class="meta"><span class="no">#197</span></p>
       <h3>二段階認証を、先に入れておく</h3>
       <p class="why">後から入れるのは、たいてい何かあった後。大事なものから順に、落ち着いているうちに済ませる。</p>
       <ul class="how">
@@ -242,7 +253,8 @@
     <span class="sec-n">05</span>
     <h2>写真</h2>
 
-    <div class="item">
+    <div class="item" id="i198">
+      <p class="meta"><span class="no">#198</span></p>
       <h3>撮ったその場で、要らないものを消す</h3>
       <p class="why">後でまとめて、はやらない。連写した直後なら、どれが要るかがまだ分かる。</p>
       <ul class="how">
@@ -252,7 +264,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i199">
+      <p class="meta"><span class="no">#199</span></p>
       <h3>見返すものだけ、別の場所に移す</h3>
       <p class="why">全部残すと、一枚も見返さない。選んだものだけを別にすると、そこが見返す場所になる。</p>
       <ul class="how">
@@ -262,7 +275,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i200">
+      <p class="meta"><span class="no">#200</span><span class="tag ev-p">実践知</span></p>
       <h3>全部見ようとせず、重複とスクリーンショットから消す</h3>
       <p class="why">数千枚を一枚ずつ判断すると、決めることに疲れて途中で終わる。明らかに要らない塊から処理すれば、判断しないまま枚数が減る。残りを見るのは、そのあとでいい。</p>
       <ul class="how">
@@ -271,7 +285,7 @@
         <li>十五分で切り上げ、月ごとに区切って進める</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>消す前に、戻せる期間があるかを確かめておく。</p>
-      <p class="ev ev-p"><small>実践知</small>一枚ずつ判断すると、決める疲れで続かない。</p>
+      <p class="ev ev-p">一枚ずつ判断すると、決める疲れで続かない。</p>
     </div>
 
   </section>

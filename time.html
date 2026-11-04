@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -106,7 +108,8 @@
     <span class="sec-n">01</span>
     <h2>朝</h2>
 
-    <div class="item">
+    <div class="item" id="i1">
+      <p class="meta"><span class="no">#1</span></p>
       <h3>重いものを、朝に</h3>
       <p class="why">判断力は、使うほど目減りする。朝いちばんの頭は、その日いちばん安い値段で買える資源になる。だから、同じ仕事でも朝に置くか夕方に置くかで、かかる時間がはっきり変わる。</p>
       <ul class="how">
@@ -117,7 +120,8 @@
       <p class="snag"><b>つまずくところ</b>重い仕事に二時間かかると見積もると、朝に置けなくなる。置くのは最初の30分ぶんだけでいい。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i2">
+      <p class="meta"><span class="no">#2</span></p>
       <h3>前の晩に、明日の三つを決めておく</h3>
       <p class="why">朝に「何からやるか」を考えると、いちばん高い時間を段取りに使うことになる。前の晩の自分は判断が粗いが、三つ選ぶくらいなら十分できる。</p>
       <ul class="how">
@@ -127,7 +131,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i3">
+      <p class="meta"><span class="no">#3</span></p>
       <h3>朝いちばんは、連絡より自分の仕事</h3>
       <p class="why">受信箱を先に開くと、その日の予定が人の都合で埋まる。返信は、相手の仕事を進める作業なので、自分の仕事を一つ終えてからでも遅くない。</p>
       <ul class="how">
@@ -138,7 +143,8 @@
       <p class="snag"><b>つまずくところ</b>急ぎが来ていないか不安なら、件名だけ見て閉じる。開くと返したくなる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i4">
+      <p class="meta"><span class="no">#4</span></p>
       <h3>始業の数時間前に、起きる</h3>
       <p class="why">日中は、人からの連絡と割り込みで時間が決まってしまう。誰も動いていない時間だけは、何を考えるかを自分で選べる。早く起きることが目的ではなく、邪魔が入らない時間を手に入れるのが目的。</p>
       <ul class="how">
@@ -149,7 +155,8 @@
       <p class="snag"><b>つまずくところ</b>夜を削って早起きすると、総量が減って判断力が落ちる。寝る時刻を先に動かす。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i5">
+      <p class="meta"><span class="no">#5</span></p>
       <h3>朝に、自分と話す時間を取る</h3>
       <p class="why">人の言葉や受信箱を先に入れると、その日の考えが人の都合から始まる。誰とも話さない時間に自分の考えを出しておくと、あとから来る話に対しても自分の順番で判断できる。</p>
       <ul class="how">
@@ -165,7 +172,8 @@
     <span class="sec-n">02</span>
     <h2>予定</h2>
 
-    <div class="item">
+    <div class="item" id="i6">
+      <p class="meta"><span class="no">#6</span></p>
       <h3>リストではなく、時間割に置く</h3>
       <p class="why">やることリストは、量は見えるが、入るかどうかが見えない。時間の枠に置いた瞬間、入らないことが分かり、減らす判断ができる。</p>
       <ul class="how">
@@ -176,7 +184,8 @@
       <p class="snag"><b>つまずくところ</b>予定を詰めきると、一つ崩れた時点で全部崩れる。半分だけ埋める。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i7">
+      <p class="meta"><span class="no">#7</span></p>
       <h3>自分の締め切りを、手前に置く</h3>
       <p class="why">本当の期限だけだと、着手は必ず期限際になる。手前に別の期限を作ると、そこで一度、形が見える。見せる相手がいる期限ほど効く。</p>
       <ul class="how">
@@ -186,7 +195,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i8">
+      <p class="meta"><span class="no">#8</span></p>
       <h3>目標を見る時刻を、決めておく</h3>
       <p class="why">遠い目標を常に意識していると、いま手元にあるものがいつも足りなく見えて、かえって進まない。見る時刻を朝か週に一度に決めてしまえば、それ以外の時間は目の前のことだけに使える。忘れている時間があるほうが進む。</p>
       <ul class="how">
@@ -196,7 +206,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i9">
+      <p class="meta"><span class="no">#9</span></p>
       <h3>三割は、目標と関係ないことに使う</h3>
       <p class="why">時間の全部を目標に向けると、うまくいかない時期に逃げ場がなくなる。関係のない趣味や新しいことに三割ほど残しておくと、そちらから次の手が入ってくることもある。余白は無駄ではなく、続けるための仕組み。</p>
       <ul class="how">
@@ -206,7 +217,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i10">
+      <p class="meta"><span class="no">#10</span></p>
       <h3>予定と予定の間を、空けておく</h3>
       <p class="why">移動と、記録と、頭の切り替えには必ず時間がかかる。そこを見ないで詰めると、遅れが後ろへ順送りになり、最後は全部が雑になる。</p>
       <ul class="how">
@@ -216,7 +228,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i11">
+      <p class="meta"><span class="no">#11</span><span class="tag ev-m">一部に研究</span></p>
       <h3>一日の終わりに、締めの手順を決める</h3>
       <p class="why">終わらなかった仕事は、閉じたあとも頭の中で続きを探し続ける。それが収まるのは、終わったときではなく、いつどこで再開するかが決まったとき。毎日同じ手順で閉じると、夜の時間が仕事から切り離される。</p>
       <ul class="how">
@@ -225,7 +238,7 @@
         <li>明日の予定を見てから、決まった言葉で閉じる</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>手順が長いと続かない。三分で終わる形にする。</p>
-      <p class="ev ev-m"><small>一部に研究</small>やり残しが頭に居座る現象と、いつどう再開するかを書くと収まるという実験がある。手順そのものを試した研究はない。</p>
+      <p class="ev ev-m">やり残しが頭に居座る現象と、いつどう再開するかを書くと収まるという実験がある。手順そのものを試した研究はない。</p>
     </div>
 
   </section>
@@ -234,7 +247,8 @@
     <span class="sec-n">03</span>
     <h2>細切れ時間</h2>
 
-    <div class="item">
+    <div class="item" id="i12">
+      <p class="meta"><span class="no">#12</span></p>
       <h3>二分で終わることは、その場で終える</h3>
       <p class="why">覚えておく、書き留める、思い出す、取りかかる。この一式のほうが、二分の作業より高くつく。短いものを溜めないだけで、リストは短くなる。</p>
       <ul class="how">
@@ -245,7 +259,8 @@
       <p class="snag"><b>つまずくところ</b>二分のつもりが十分かかることがある。延びたら、途中でも止めて予定に入れ直す。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i13">
+      <p class="meta"><span class="no">#13</span></p>
       <h3>待ち時間の持ち物を、先に決める</h3>
       <p class="why">移動や行列で何をするかをその場で考えると、たいてい画面を見て終わる。先に決めておけば、細切れの時間が一つの作業になる。</p>
       <ul class="how">
@@ -255,7 +270,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i14">
+      <p class="meta"><span class="no">#14</span></p>
       <h3>似た作業は、まとめる</h3>
       <p class="why">作業が変わるたびに、道具も頭も立ち上げ直すことになる。同じ種類をまとめると、その立ち上げが一回で済む。</p>
       <ul class="how">
@@ -271,7 +287,8 @@
     <span class="sec-n">04</span>
     <h2>先延ばし</h2>
 
-    <div class="item">
+    <div class="item" id="i15">
+      <p class="meta"><span class="no">#15</span></p>
       <h3>五分だけ、手をつける</h3>
       <p class="why">先延ばしは、やる気の問題ではなく、始めるところだけが重い。始めてしまえば、途中でやめるほうが気持ち悪くなる。</p>
       <ul class="how">
@@ -281,7 +298,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i16">
+      <p class="meta"><span class="no">#16</span></p>
       <h3>次の一手を、動作で書く</h3>
       <p class="why">「資料」「連絡」のような名詞では、手が動かない。動作で書いてあると、考えずに始められる。</p>
       <ul class="how">

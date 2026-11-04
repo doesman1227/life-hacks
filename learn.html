@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -107,7 +109,8 @@
     <span class="sec-n">01</span>
     <h2>読む</h2>
 
-    <div class="item">
+    <div class="item" id="i35">
+      <p class="meta"><span class="no">#35</span></p>
       <h3>読む前に、問いを一つ立てる</h3>
       <p class="why">何を知りたいかが決まっていないと、全部が同じ重さで流れていく。問いがあると、関係するところだけが浮いて見える。</p>
       <ul class="how">
@@ -117,7 +120,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i36">
+      <p class="meta"><span class="no">#36</span></p>
       <h3>一冊を、読み切らない</h3>
       <p class="why">通読は目的ではない。必要な章だけ読んで使うほうが、最後まで読んで忘れるより残る。</p>
       <ul class="how">
@@ -127,7 +131,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i37">
+      <p class="meta"><span class="no">#37</span></p>
       <h3>積んだ本は、見える場所に</h3>
       <p class="why">視界から消えた本は、読まれないまま時間だけが経つ。見える場所にあるだけで、手に取る回数が変わる。</p>
       <ul class="how">
@@ -137,7 +142,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i38">
+      <p class="meta"><span class="no">#38</span></p>
       <h3>本を、話し相手として読む</h3>
       <p class="why">話したいことがあるのに相手がいないとき、本は相手になる。著者はこちらの都合に合わせてくれないかわりに、何度でも同じ深さで応じてくれる。一人の時間を、黙って過ごす時間ではなく、人の考えと向き合う時間に変えられる。</p>
       <ul class="how">
@@ -153,7 +159,8 @@
     <span class="sec-n">02</span>
     <h2>残す</h2>
 
-    <div class="item">
+    <div class="item" id="i39">
+      <p class="meta"><span class="no">#39</span></p>
       <h3>読んだら、自分の言葉で三行</h3>
       <p class="why">引用をそのまま写しても、ほとんど残らない。言い換えた時点で、自分の持ちものになる。</p>
       <ul class="how">
@@ -163,7 +170,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i40">
+      <p class="meta"><span class="no">#40</span></p>
       <h3>引用と、思ったことを分けて書く</h3>
       <p class="why">あとで見たときに、どちらが本に書いてあったことか分からなくなると、どちらも使えなくなる。</p>
       <ul class="how">
@@ -173,7 +181,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i41">
+      <p class="meta"><span class="no">#41</span></p>
       <h3>出典は、その場で貼る</h3>
       <p class="why">後から探すほうが、読むより時間がかかる。見つけた瞬間が、いちばん安く記録できる。</p>
       <ul class="how">
@@ -189,7 +198,8 @@
     <span class="sec-n">03</span>
     <h2>身につける</h2>
 
-    <div class="item">
+    <div class="item" id="i42">
+      <p class="meta"><span class="no">#42</span></p>
       <h3>覚えるより、使う場面を決める</h3>
       <p class="why">使い道のない知識は、翌週には消える。どこで使うかが決まっていると、覚えようとしなくても残る。</p>
       <ul class="how">
@@ -199,7 +209,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i43">
+      <p class="meta"><span class="no">#43</span></p>
       <h3>「できない」を「まだできない」に言い換える</h3>
       <p class="why">「できない」は能力の話になるのでそこで終わる。「まだできない」と言い換えると、どこまで進んでいて次に何が要るかという段階の話に変わる。言い方を変えるだけだが、次の一手が出てくるかどうかが変わる。</p>
       <ul class="how">
@@ -210,7 +221,8 @@
       <p class="snag"><b>つまずくところ</b>何年も「まだ」のままなら、やり方か優先順位のほうを見る。言い換えは、先延ばしの言葉にもなる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i44">
+      <p class="meta"><span class="no">#44</span><span class="tag ev-s">研究あり</span></p>
       <h3>人に説明してみる</h3>
       <p class="why">説明できないところが、分かっていないところ。話した相手の反応で、どこが伝わらないかも分かる。</p>
       <ul class="how">
@@ -218,10 +230,11 @@
         <li>詰まったところを、読み直す</li>
         <li>相手がいなければ、書いて説明する</li>
       </ul>
-      <p class="ev ev-s"><small>研究あり</small>自分で説明させる学び方は、まとめ分析で中くらいの効果が報告されている。</p>
+      <p class="ev ev-s">自分で説明させる学び方は、まとめ分析で中くらいの効果が報告されている。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i45">
+      <p class="meta"><span class="no">#45</span></p>
       <h3>上達を、段階に分けておく</h3>
       <p class="why">「できるようになりたい」だけでは、どこまで来たのかが分からず、進んでいる実感も出ない。段階に切って名前をつけておくと、いまどこにいて次に何をすればいいかが決まる。進んだことも、自分で確かめられる。</p>
       <ul class="how">
@@ -232,7 +245,8 @@
       <p class="snag"><b>つまずくところ</b>段階を細かく作りすぎると、作ること自体で終わる。5つ程度にとどめる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i46">
+      <p class="meta"><span class="no">#46</span><span class="tag ev-s">研究あり</span></p>
       <h3>間隔を空けて、思い出す</h3>
       <p class="why">読み返すより、思い出そうとするほうが残る。間隔を空けるほど、思い出す負荷が上がり、定着も強くなる。</p>
       <ul class="how">
@@ -240,10 +254,11 @@
         <li>一週間後、一か月後にもう一度</li>
         <li>思い出せなかったところだけ、読み直す</li>
       </ul>
-      <p class="ev ev-s"><small>研究あり</small>学習法を比べたまとめで、最も再現性が高い部類とされる。</p>
+      <p class="ev ev-s">学習法を比べたまとめで、最も再現性が高い部類とされる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i47">
+      <p class="meta"><span class="no">#47</span><span class="tag ev-s">研究あり</span></p>
       <h3>読み返さず、白紙に書き出す</h3>
       <p class="why">読み返すと、知っている感じだけが強くなる。思い出す側に回ると、思い出せなかった所がそのまま穴として見える。手間がかかるほうが、あとに残る。</p>
       <ul class="how">
@@ -252,10 +267,11 @@
         <li>書けなかった所だけ、開いて確かめる</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>書けないと落ち込むが、書けないと分かったことが成果。</p>
-      <p class="ev ev-s"><small>研究あり</small>学習法を比べたまとめで、最も再現性が高い部類とされる。</p>
+      <p class="ev ev-s">学習法を比べたまとめで、最も再現性が高い部類とされる。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i48">
+      <p class="meta"><span class="no">#48</span><span class="tag ev-s">研究あり</span></p>
       <h3>ひとつを固めず、混ぜて練習する</h3>
       <p class="why">同じ型を続けて解くと、どの解き方を使うかを考えなくて済んでしまう。本番で要るのは、まさにその判断のほう。混ぜると手応えは悪くなるが、思い出せる形で残る。</p>
       <ul class="how">
@@ -264,7 +280,7 @@
         <li>間違えた型だけ、あとでまとめて見る</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>やっている最中は下手になった気がする。そこで元に戻さない。</p>
-      <p class="ev ev-s"><small>研究あり</small>同じ型を続けるより試験の成績が良くなることが示されている。</p>
+      <p class="ev ev-s">同じ型を続けるより試験の成績が良くなることが示されている。</p>
     </div>
 
   </section>
@@ -273,7 +289,8 @@
     <span class="sec-n">04</span>
     <h2>調べる</h2>
 
-    <div class="item">
+    <div class="item" id="i49">
+      <p class="meta"><span class="no">#49</span></p>
       <h3>一次情報まで、一度は降りる</h3>
       <p class="why">まとめは、まとめた人の都合で削られている。元の資料を一度見ておくと、どこが落ちているかが分かる。</p>
       <ul class="how">
@@ -284,7 +301,8 @@
       <p class="snag"><b>つまずくところ</b>全部を一次情報で確認しようとすると続かない。大事な判断に関わるものだけでいい。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i50">
+      <p class="meta"><span class="no">#50</span></p>
       <h3>常識とされていることの、出どころを見る</h3>
       <p class="why">常識として語られていることには、それを決めた人や時代の都合が入っている。誰がいつ何のために言い出したのかまで降りると、自分の場合にも当てはまるのかが判断できる。疑うためではなく、適用範囲を知るために見る。</p>
       <ul class="how">
@@ -301,7 +319,8 @@
     <span class="sec-n">05</span>
     <h2>疑う</h2>
 
-    <div class="item">
+    <div class="item" id="i51">
+      <p class="meta"><span class="no">#51</span></p>
       <h3>都合のいい材料だけ並んでいないか、見る</h3>
       <p class="why">説得しようとしている話は、都合の悪い材料を外して作られている。並んでいる材料が全部同じ方向を向いているときは、反対側が隠れていると考えたほうがいい。嘘を探すより、欠けているものを探す。</p>
       <ul class="how">
@@ -311,7 +330,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i52">
+      <p class="meta"><span class="no">#52</span></p>
       <h3>二択で迫られたら、中間を探す</h3>
       <p class="why">「賛成か反対か」のように極端な二つだけを見せるのは、どちらかを選ばせるためのやり方。実際にはその間に選べるものがあることが多い。選択肢の数を疑うだけで、迫られ方が変わる。</p>
       <ul class="how">

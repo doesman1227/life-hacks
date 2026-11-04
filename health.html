@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -117,7 +119,8 @@
     <span class="sec-n">01</span>
     <h2>運動</h2>
 
-    <div class="item me">
+    <div class="item me" id="i135">
+      <p class="meta"><span class="no">#135</span></p>
       <h3>会話できる強度で動く</h3>
       <p class="why">速さや量を追うと、翌日に響いて続かなくなる。会話ができる強度なら、毎回同じようにこなせる。翌日ぐったりするのは頑張った証ではなく、強度を下げるサイン。</p>
       <ul class="how">
@@ -127,7 +130,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i136">
+      <p class="meta"><span class="no">#136</span></p>
       <h3>食後すぐに、少し動く</h3>
       <p class="why">食後は血糖値がいちばん上がる時間帯で、そこで体を少し動かすと上がり方がゆるやかになる。長く続ける必要はなく、10分の早歩きか、その場でのスクワットで足りる。運動の時間を別に作らずに済む。</p>
       <ul class="how">
@@ -138,7 +142,8 @@
       <p class="snag"><b>つまずくところ</b>満腹で強く動くと気分が悪くなる。息が上がらない程度にする。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i137">
+      <p class="meta"><span class="no">#137</span></p>
       <h3>移動に混ぜる</h3>
       <p class="why">運動の時間を別に作ると、忙しい週から落ちる。移動に混ぜると、落ちる理由がなくなる。</p>
       <ul class="how">
@@ -148,7 +153,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i138">
+      <p class="meta"><span class="no">#138</span></p>
       <h3>着替えを、前の晩に出しておく</h3>
       <p class="why">行くかどうかを朝に考えると、たいてい行かない。着替えが出ていると、判断の前に手が動く。</p>
       <ul class="how">
@@ -158,7 +164,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i139">
+      <p class="meta"><span class="no">#139</span><span class="tag ev-s">研究あり</span></p>
       <h3>まとまった時間が取れない日は、一分を数回ばらまく</h3>
       <p class="why">運動の時間が取れない日は、ゼロになりやすい。一分を数回なら、着替えも移動もいらない。まとめてやるより劣るとしても、ゼロとの差のほうが大きい。</p>
       <ul class="how">
@@ -167,7 +174,7 @@
         <li>食後や仕事の切れ目に、一日数回入れる</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>心臓や膝に不安があるときは、強さを上げる前に相談する。</p>
-      <p class="ev ev-s"><small>研究あり</small>短い活動で食後の血糖の上がり方がゆるむという分析と、日常の短く強めの動きが死亡リスクの低さと関連したという大規模な解析がある。治療の代わりではない。</p>
+      <p class="ev ev-s">短い活動で食後の血糖の上がり方がゆるむという分析と、日常の短く強めの動きが死亡リスクの低さと関連したという大規模な解析がある。治療の代わりではない。</p>
     </div>
 
   </section>
@@ -176,7 +183,8 @@
     <span class="sec-n">02</span>
     <h2>姿勢と休憩</h2>
 
-    <div class="item me">
+    <div class="item me" id="i140">
+      <p class="meta"><span class="no">#140</span></p>
       <h3>疲れる前に、小さく戻す</h3>
       <p class="why">疲れてから大きく立て直すより、溜まる前に小さく戻すほうが安い。大事なのは完璧な休憩法ではなく、忙しい日でも差し込める短さにしておくこと。</p>
       <ul class="how">
@@ -186,7 +194,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i141">
+      <p class="meta"><span class="no">#141</span></p>
       <h3>30分に一度、立つ</h3>
       <p class="why">姿勢は時間で崩れる。意識で直すより、立つ回数を増やすほうが早い。</p>
       <ul class="how">
@@ -196,7 +205,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i142">
+      <p class="meta"><span class="no">#142</span></p>
       <h3>画面の上端を、目の高さに</h3>
       <p class="why">見下ろす角度が、首と肩に効く。机ではなく、画面の高さのほうを合わせる。</p>
       <ul class="how">
@@ -206,7 +216,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i143">
+      <p class="meta"><span class="no">#143</span><span class="tag ev-m">一部に研究</span></p>
       <h3>同じ姿勢を続けない。座る・立つ・歩くを回す</h3>
       <p class="why">悪いのは姿勢そのものより、同じ形のまま固まること。立ちっぱなしも、座りっぱなしと同じように体に来る。良い姿勢を保とうとするより、変え続けるほうが続く。</p>
       <ul class="how">
@@ -215,10 +226,11 @@
         <li>そのあと二分、歩くか伸ばす</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>立つ机がなくても、二分歩くだけで形になる。</p>
-      <p class="ev ev-m"><small>一部に研究</small>近年のまとめは、椅子そのものより姿勢を変えることを重く見る方向で一致しつつある。立ちっぱなしも同じく良くない。</p>
+      <p class="ev ev-m">近年のまとめは、椅子そのものより姿勢を変えることを重く見る方向で一致しつつある。立ちっぱなしも同じく良くない。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i144">
+      <p class="meta"><span class="no">#144</span><span class="tag ev-p">実践知</span></p>
       <h3>猫背は、骨盤を立てて肩甲骨を寄せて戻す</h3>
       <p class="why">前かがみで縮むのは胸の側で、背中は伸ばされたまま固まる。骨盤を立ててから肩を後ろへ引くと、腰を反らさずに胸が開く。器具も場所もいらない。</p>
       <ul class="how">
@@ -227,7 +239,6 @@
         <li>三十秒そのままにして、力を抜く</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>腰を反らすと別の所が痛くなる。立てるだけでいい。</p>
-      <p class="ev ev-p"><small>実践知</small></p>
     </div>
 
   </section>
@@ -236,7 +247,8 @@
     <span class="sec-n">03</span>
     <h2>目と肩</h2>
 
-    <div class="item">
+    <div class="item" id="i145">
+      <p class="meta"><span class="no">#145</span></p>
       <h3>20分ごとに、20秒、遠くを見る</h3>
       <p class="why">近くを見続けると、目のピントを合わせる筋肉が固まる。遠くを見るのは、その筋肉を休ませる動作。</p>
       <ul class="how">
@@ -246,7 +258,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i146">
+      <p class="meta"><span class="no">#146</span></p>
       <h3>肩を上げて、力を抜く</h3>
       <p class="why">力を抜こうとしても抜けない。一度入れてから抜くほうが、早く落ちる。</p>
       <ul class="how">
@@ -262,7 +275,8 @@
     <span class="sec-n">04</span>
     <h2>続ける</h2>
 
-    <div class="item me">
+    <div class="item me" id="i147">
+      <p class="meta"><span class="no">#147</span></p>
       <h3>やめない理由を、一つに絞らない</h3>
       <p class="why">続いている習慣はどれも目的が複数ある。ジムは運動と、大きなお風呂と、人のいる場所にいること。目的が複数あると、動機が一つ切れても止まらない。</p>
       <ul class="how">
@@ -272,7 +286,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i148">
+      <p class="meta"><span class="no">#148</span></p>
       <h3>記録は、やったかどうかだけ</h3>
       <p class="why">量や数字を書き始めると、書くこと自体が重くなって止まる。やったかどうかだけなら、途切れても戻れる。</p>
       <ul class="how">
@@ -288,7 +303,8 @@
     <span class="sec-n">05</span>
     <h2>検診</h2>
 
-    <div class="item me">
+    <div class="item me" id="i149">
+      <p class="meta"><span class="no">#149</span></p>
       <h3>定期で、人に見てもらう</h3>
       <p class="why">自分の感覚では、ゆっくりした変化は拾えない。毎月の整体や、半年ごとの歯科検診のように、定期で外から見てもらう。</p>
       <ul class="how">
@@ -298,7 +314,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i150">
+      <p class="meta"><span class="no">#150</span></p>
       <h3>次の予約は、帰る前に取る</h3>
       <p class="why">あとで取ると、取らない。帰る前なら、その場の数十秒で済む。</p>
       <ul class="how">

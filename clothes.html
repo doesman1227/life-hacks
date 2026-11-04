@@ -58,10 +58,12 @@
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
+  .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .tag.ev-w{border-style:dashed}
   .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
@@ -116,7 +118,8 @@
     <span class="sec-n">01</span>
     <h2>選ぶ</h2>
 
-    <div class="item me">
+    <div class="item me" id="i99">
+      <p class="meta"><span class="no">#99</span></p>
       <h3>組み合わせごと、人に決めてもらう</h3>
       <p class="why">制服化が「自分でルールを決めて選択肢を減らす」やり方なのに対して、これは組み合わせを考える仕事そのものを外に出すやり方。結果は同じで、朝に使う意思の量が減る。</p>
       <ul class="how">
@@ -126,7 +129,8 @@
       </ul>
     </div>
 
-    <div class="item me">
+    <div class="item me" id="i100">
+      <p class="meta"><span class="no">#100</span></p>
       <h3>下を固定して、上で幅を作る</h3>
       <p class="why">組み合わせの数は、上半身だけで十分作れる。下を固定すると、迷う場所が半分になり、靴も合わせやすくなる。</p>
       <ul class="how">
@@ -136,7 +140,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i101">
+      <p class="meta"><span class="no">#101</span></p>
       <h3>制服化する</h3>
       <p class="why">毎朝の判断を、一度の決定に置き換えるやり方。選択の回数そのものが減るので、朝の負荷が下がる。</p>
       <ul class="how">
@@ -153,7 +158,8 @@
     <span class="sec-n">02</span>
     <h2>買う</h2>
 
-    <div class="item me">
+    <div class="item me" id="i102">
+      <p class="meta"><span class="no">#102</span></p>
       <h3>直さずに、買い替える</h3>
       <p class="why">手放したくなるのは形が傷んだときではなく、毛玉やへたりで触り心地が変わったとき。そこは修理では戻らない。</p>
       <ul class="how">
@@ -163,7 +169,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i103">
+      <p class="meta"><span class="no">#103</span></p>
       <h3>手持ちと三通り組めないなら、買わない</h3>
       <p class="why">一着で完結する服は、出番が来ないまま残る。手持ちと三通り組めるかどうかで、買う前に使用回数が読める。</p>
       <ul class="how">
@@ -173,7 +180,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i104">
+      <p class="meta"><span class="no">#104</span></p>
       <h3>試着しないものは、買わない</h3>
       <p class="why">サイズ表は、同じ数字でも作りが違う。見るのは丈や胸囲より、肩の位置と袖の長さ。</p>
       <ul class="how">
@@ -183,7 +191,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i105">
+      <p class="meta"><span class="no">#105</span><span class="tag ev-p">実践知</span></p>
       <h3>靴下は、同じものだけを買う</h3>
       <p class="why">組にする手間は、種類が多いことから来ている。一種類に統一すると、片方なくしても残り全部と組になり、探す作業そのものが消える。傷んだら、同じものを買い足す。</p>
       <ul class="how">
@@ -192,7 +201,6 @@
         <li>傷んだら、同じものを買い足す</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>冠婚葬祭と運動用は、別にしておく。</p>
-      <p class="ev ev-p"><small>実践知</small></p>
     </div>
 
   </section>
@@ -201,7 +209,8 @@
     <span class="sec-n">03</span>
     <h2>手入れ</h2>
 
-    <div class="item me">
+    <div class="item me" id="i106">
+      <p class="meta"><span class="no">#106</span></p>
       <h3>季節の変わり目に、まとめて出す</h3>
       <p class="why">着るたびに出すのではなく、一シーズンの終わりにまとめて出す。しまう前に整える、というリズムにすると、来年そのまま着られる。</p>
       <ul class="how">
@@ -212,7 +221,8 @@
       <p class="snag"><b>つまずくところ</b>思いついたときにやると、年によって抜ける。衣替えの日と同じ日に固定する。</p>
     </div>
 
-    <div class="item">
+    <div class="item" id="i107">
+      <p class="meta"><span class="no">#107</span></p>
       <h3>同じ靴を、続けて履かない</h3>
       <p class="why">靴は一日履くと湿気を含む。一日休ませると乾いて、型崩れと傷みが目に見えて減る。</p>
       <ul class="how">
@@ -222,7 +232,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i108">
+      <p class="meta"><span class="no">#108</span></p>
       <h3>帰ったら、ブラシをかける</h3>
       <p class="why">汚れは、積もる前なら払うだけで落ちる。帰宅後の数十秒を定位置の動作にすると、手入れが行事でなくなる。</p>
       <ul class="how">
@@ -238,7 +249,8 @@
     <span class="sec-n">04</span>
     <h2>手放す</h2>
 
-    <div class="item">
+    <div class="item" id="i109">
+      <p class="meta"><span class="no">#109</span></p>
       <h3>着たら、ハンガーを逆向きに戻す</h3>
       <p class="why">持っている服のうち、実際に着ているものは思ったより少ない。向きで記録すると、数えなくても分かる。</p>
       <ul class="how">
@@ -248,7 +260,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i110">
+      <p class="meta"><span class="no">#110</span></p>
       <h3>一年袖を通していない服は、出す</h3>
       <p class="why">一年という事実で切ると、迷いの回数が減る。迷ったものだけ、あとで感覚で見ればいい。</p>
       <ul class="how">
@@ -258,7 +271,8 @@
       </ul>
     </div>
 
-    <div class="item">
+    <div class="item" id="i111">
+      <p class="meta"><span class="no">#111</span><span class="tag ev-p">実践知</span></p>
       <h3>三か月、決めた数だけで暮らしてみる</h3>
       <p class="why">捨てるかどうかを考えると、手放す怖さが先に立つ。使わずに済むかを先に試せば、材料が増える。開けずに済んだ箱の中身は、無くても困らなかったもの。</p>
       <ul class="how">
@@ -267,7 +281,7 @@
         <li>三か月後、開けずに済んだものを手放す</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>数を先に決めると苦しくなる。実際に着ているものから選ぶ。</p>
-      <p class="ev ev-p"><small>実践知</small>捨てる判断の前に、使わずに済むかを試せるのが利点。</p>
+      <p class="ev ev-p">捨てる判断の前に、使わずに済むかを試せるのが利点。</p>
     </div>
 
     <p class="tl">自分の服の記録は <a href="../clothes/">着る</a>。</p>

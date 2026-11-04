@@ -57,18 +57,27 @@
     vertical-align:.32em;margin-right:.6em}
   p{margin:0 0 14px}
 
-  .points{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
-  .points li{padding:12px 16px;background:var(--card);border-radius:3px;font-size:.95rem;line-height:1.75}
+  .points{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+  .points li{padding:15px 18px 16px;background:var(--card);border-radius:4px;font-size:.95rem;line-height:1.75}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 8px}
+  .meta .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
+  .meta .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
+    font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
+  .meta .tag.ev-s{border-color:var(--accent);color:var(--accent)}
+  .meta .tag.ev-w{border-style:dashed}
+  .more{display:inline-block;margin-top:11px;font-size:.74rem;color:var(--accent);text-decoration:none}
+  .more:hover{text-decoration:underline}
   .points b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;margin-bottom:1px}
   .points span{color:var(--muted);font-size:.9rem}
   .points li.me b::before{content:"●";color:var(--accent);font-size:.62em;vertical-align:.22em;margin-right:.5em}
   .points li.try b::before{content:"○";color:var(--accent);font-size:.62em;vertical-align:.22em;margin-right:.5em}
 
-  .ev{display:block;margin-top:8px;font-style:normal;font-size:.74rem;line-height:1.7;color:var(--faint)}
-  .ev small{display:inline-block;padding:1px 8px;margin-right:.7em;border:1px solid var(--line);
-    border-radius:999px;font-size:.66rem;letter-spacing:.08em;color:var(--muted);white-space:nowrap}
-  .ev-s small{border-color:var(--accent);color:var(--accent)}
-  .ev-w small{border-color:var(--faint);color:var(--faint);border-style:dashed}
+  .ev{display:block;margin-top:9px;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+
+  .tiles{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
+  .tiles div{flex:1 1 8rem;padding:13px 16px;background:var(--card);border-radius:4px}
+  .tiles b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.5rem;line-height:1.35}
+  .tiles span{font-size:.72rem;color:var(--faint)}
 
   .filter{margin:28px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
   .filter input{width:100%;padding:11px 14px;background:var(--card);border:1px solid var(--line);
@@ -110,6 +119,12 @@
     <p class="lead">世の中で言われているライフハックを集めた候補の一覧です。この中から、採用するものを決めていきます。</p>
     <p class="legend"><i>●</i> はやっているもの、<i>○</i> は試しているもの。印のないものは候補です。裏付けの強さが分かったものは、項目の下に書いています。何も書いていないものは、まだ調べていません。</p>
     <p class="legend">いくつかの場面には、いま自分が最善だと思っているやり方を先頭に置いています。</p>
+    <div class="tiles">
+      <div><b>307</b><span>候補</span></div>
+      <div><b>21</b><span>やっている</span></div>
+      <div><b>49</b><span>裏付けを調べた</span></div>
+      <div><b>3</b><span>根拠が弱い（別掲）</span></div>
+    </div>
     <ul class="toc">
       <li><a href="#time">時間</a></li>
       <li><a href="#focus">集中</a></li>
@@ -150,31 +165,96 @@
     <p class="note">やることを減らすより、置き場所を決める。</p>
     <h3>朝</h3>
     <ul class="points">
-      <li><b>重いものを、朝に</b><span>判断力が一番ある時間を、一番重い仕事に使う。</span></li>
-      <li><b>前の晩に、明日の三つを決めておく</b><span>朝いちばんに、何をするか考えない。</span></li>
-      <li><b>朝いちばんは、連絡より自分の仕事</b><span>受信箱を開くと、その日は人の予定で埋まる。</span></li>
-      <li><b>始業の数時間前に、起きる</b><span>人が動き出す前の時間だけは、邪魔が入らない。</span></li>
-      <li><b>朝に、自分と話す時間を取る</b><span>人の言葉が入る前に考えると、自分の順番で決められる。</span></li>
+      <li id="c1">
+        <p class="meta"><span class="no">#1</span><span class="tag">時間</span></p>
+        <b>重いものを、朝に</b><span>判断力が一番ある時間を、一番重い仕事に使う。</span>
+        <a class="more" href="time.html#i1">くわしく →</a>
+      </li>
+      <li id="c2">
+        <p class="meta"><span class="no">#2</span><span class="tag">時間</span></p>
+        <b>前の晩に、明日の三つを決めておく</b><span>朝いちばんに、何をするか考えない。</span>
+        <a class="more" href="time.html#i2">くわしく →</a>
+      </li>
+      <li id="c3">
+        <p class="meta"><span class="no">#3</span><span class="tag">時間</span></p>
+        <b>朝いちばんは、連絡より自分の仕事</b><span>受信箱を開くと、その日は人の予定で埋まる。</span>
+        <a class="more" href="time.html#i3">くわしく →</a>
+      </li>
+      <li id="c4">
+        <p class="meta"><span class="no">#4</span><span class="tag">時間</span></p>
+        <b>始業の数時間前に、起きる</b><span>人が動き出す前の時間だけは、邪魔が入らない。</span>
+        <a class="more" href="time.html#i4">くわしく →</a>
+      </li>
+      <li id="c5">
+        <p class="meta"><span class="no">#5</span><span class="tag">時間</span></p>
+        <b>朝に、自分と話す時間を取る</b><span>人の言葉が入る前に考えると、自分の順番で決められる。</span>
+        <a class="more" href="time.html#i5">くわしく →</a>
+      </li>
     </ul>
     <h3>予定</h3>
     <ul class="points">
-      <li><b>リストではなく、時間割に置く</b><span>いつやるかが決まっていないものは、やらない。</span></li>
-      <li><b>自分の締め切りを、手前に置く</b><span>本当の期限の前に、見せる相手のいる期限を作る。</span></li>
-      <li><b>目標を見る時刻を、決めておく</b><span>常に見ていると、手元のほうが進まない。</span></li>
-      <li><b>三割は、目標と関係ないことに使う</b><span>全部を向けると、続かなくなる。</span></li>
-      <li><b>予定と予定の間を、空けておく</b><span>移動と記録の時間は、必ずかかる。</span></li>
-      <li><b>一日の終わりに、締めの手順を決める</b><span>やり残しを書き出し、次の一手といつやるかを書いてから閉じる。</span><em class="ev ev-m"><small>一部に研究</small>やり残しが頭に居座る現象と、いつどう再開するかを書くと収まるという実験がある。手順そのものを試した研究はない。</em></li>
+      <li id="c6">
+        <p class="meta"><span class="no">#6</span><span class="tag">時間</span></p>
+        <b>リストではなく、時間割に置く</b><span>いつやるかが決まっていないものは、やらない。</span>
+        <a class="more" href="time.html#i6">くわしく →</a>
+      </li>
+      <li id="c7">
+        <p class="meta"><span class="no">#7</span><span class="tag">時間</span></p>
+        <b>自分の締め切りを、手前に置く</b><span>本当の期限の前に、見せる相手のいる期限を作る。</span>
+        <a class="more" href="time.html#i7">くわしく →</a>
+      </li>
+      <li id="c8">
+        <p class="meta"><span class="no">#8</span><span class="tag">時間</span></p>
+        <b>目標を見る時刻を、決めておく</b><span>常に見ていると、手元のほうが進まない。</span>
+        <a class="more" href="time.html#i8">くわしく →</a>
+      </li>
+      <li id="c9">
+        <p class="meta"><span class="no">#9</span><span class="tag">時間</span></p>
+        <b>三割は、目標と関係ないことに使う</b><span>全部を向けると、続かなくなる。</span>
+        <a class="more" href="time.html#i9">くわしく →</a>
+      </li>
+      <li id="c10">
+        <p class="meta"><span class="no">#10</span><span class="tag">時間</span></p>
+        <b>予定と予定の間を、空けておく</b><span>移動と記録の時間は、必ずかかる。</span>
+        <a class="more" href="time.html#i10">くわしく →</a>
+      </li>
+      <li id="c11">
+        <p class="meta"><span class="no">#11</span><span class="tag">時間</span><span class="tag ev-m">一部に研究</span></p>
+        <b>一日の終わりに、締めの手順を決める</b><span>やり残しを書き出し、次の一手といつやるかを書いてから閉じる。</span>
+        <em class="ev ev-m">やり残しが頭に居座る現象と、いつどう再開するかを書くと収まるという実験がある。手順そのものを試した研究はない。</em>
+        <a class="more" href="time.html#i11">くわしく →</a>
+      </li>
     </ul>
     <h3>細切れ時間</h3>
     <ul class="points">
-      <li><b>二分で終わることは、その場で終える</b><span>覚えておく手間のほうが高くつく。</span></li>
-      <li><b>待ち時間の持ち物を、先に決める</b><span>移動と行列で何をするかを、その場で考えない。</span></li>
-      <li><b>似た作業は、まとめる</b><span>切り替えのたびに立ち上げ直す時間が消える。</span></li>
+      <li id="c12">
+        <p class="meta"><span class="no">#12</span><span class="tag">時間</span></p>
+        <b>二分で終わることは、その場で終える</b><span>覚えておく手間のほうが高くつく。</span>
+        <a class="more" href="time.html#i12">くわしく →</a>
+      </li>
+      <li id="c13">
+        <p class="meta"><span class="no">#13</span><span class="tag">時間</span></p>
+        <b>待ち時間の持ち物を、先に決める</b><span>移動と行列で何をするかを、その場で考えない。</span>
+        <a class="more" href="time.html#i13">くわしく →</a>
+      </li>
+      <li id="c14">
+        <p class="meta"><span class="no">#14</span><span class="tag">時間</span></p>
+        <b>似た作業は、まとめる</b><span>切り替えのたびに立ち上げ直す時間が消える。</span>
+        <a class="more" href="time.html#i14">くわしく →</a>
+      </li>
     </ul>
     <h3>先延ばし</h3>
     <ul class="points">
-      <li><b>五分だけ、手をつける</b><span>始めてしまえば、止めるほうが難しくなる。</span></li>
-      <li><b>次の一手を、動作で書く</b><span>「資料」ではなく「表紙を作る」と書く。</span></li>
+      <li id="c15">
+        <p class="meta"><span class="no">#15</span><span class="tag">時間</span></p>
+        <b>五分だけ、手をつける</b><span>始めてしまえば、止めるほうが難しくなる。</span>
+        <a class="more" href="time.html#i15">くわしく →</a>
+      </li>
+      <li id="c16">
+        <p class="meta"><span class="no">#16</span><span class="tag">時間</span></p>
+        <b>次の一手を、動作で書く</b><span>「資料」ではなく「表紙を作る」と書く。</span>
+        <a class="more" href="time.html#i16">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="time.html">くわしく見る →</a></p>
   </section>
@@ -184,39 +264,115 @@
     <p class="note">集中は、途切れてから戻るまでが高い。</p>
     <h3>机まわり</h3>
     <ul class="points">
-      <li><b>机に出すのは、一つだけ</b><span>視界に入るものが少ないほど戻りやすい。</span></li>
-      <li><b>作業ごとに、場所を変える</b><span>場所が合図になり、切り替えが早くなる。</span></li>
-      <li><b>スマホは、別の部屋に置く</b><span>電源を切って伏せても、手の届く所にあるだけで削られる。</span><em class="ev ev-m"><small>一部に研究</small>近くにあるだけで作業の成績が下がるという実験がある。</em></li>
-      <li><b>誰かと並んで、別々の作業をする</b><span>会話はしない。始めに今日やることを一言だけ宣言する。</span><em class="ev ev-p"><small>実践知</small>利用者の自己申告が中心で、比べる相手を置いた試験はない。</em></li>
+      <li id="c17">
+        <p class="meta"><span class="no">#17</span><span class="tag">集中</span></p>
+        <b>机に出すのは、一つだけ</b><span>視界に入るものが少ないほど戻りやすい。</span>
+        <a class="more" href="focus.html#i17">くわしく →</a>
+      </li>
+      <li id="c18">
+        <p class="meta"><span class="no">#18</span><span class="tag">集中</span></p>
+        <b>作業ごとに、場所を変える</b><span>場所が合図になり、切り替えが早くなる。</span>
+        <a class="more" href="focus.html#i18">くわしく →</a>
+      </li>
+      <li id="c19">
+        <p class="meta"><span class="no">#19</span><span class="tag">集中</span><span class="tag ev-m">一部に研究</span></p>
+        <b>スマホは、別の部屋に置く</b><span>電源を切って伏せても、手の届く所にあるだけで削られる。</span>
+        <em class="ev ev-m">近くにあるだけで作業の成績が下がるという実験がある。</em>
+        <a class="more" href="focus.html#i19">くわしく →</a>
+      </li>
+      <li id="c20">
+        <p class="meta"><span class="no">#20</span><span class="tag">集中</span><span class="tag ev-p">実践知</span></p>
+        <b>誰かと並んで、別々の作業をする</b><span>会話はしない。始めに今日やることを一言だけ宣言する。</span>
+        <em class="ev ev-p">利用者の自己申告が中心で、比べる相手を置いた試験はない。</em>
+        <a class="more" href="focus.html#i20">くわしく →</a>
+      </li>
     </ul>
     <h3>区切り</h3>
     <ul class="points">
-      <li><b>25分で区切る</b><span>終わりが見えていると、始めやすい。</span></li>
-      <li><b>やめるときは、途中でやめる</b><span>次に座ったとき、書き出しに困らない。</span></li>
+      <li id="c21">
+        <p class="meta"><span class="no">#21</span><span class="tag">集中</span></p>
+        <b>25分で区切る</b><span>終わりが見えていると、始めやすい。</span>
+        <a class="more" href="focus.html#i21">くわしく →</a>
+      </li>
+      <li id="c22">
+        <p class="meta"><span class="no">#22</span><span class="tag">集中</span></p>
+        <b>やめるときは、途中でやめる</b><span>次に座ったとき、書き出しに困らない。</span>
+        <a class="more" href="focus.html#i22">くわしく →</a>
+      </li>
     </ul>
     <h3>通知と連絡</h3>
     <ul class="points">
-      <li><b>通知は、切っておく</b><span>一度の着信で、戻るのに十数分かかる。</span><em class="ev ev-m"><small>一部に研究</small>割り込みのあと元の作業に戻るまでに時間がかかることが示されている。</em></li>
-      <li><b>連絡を見る時刻を、決めておく</b><span>いつでも見るより、決まった時刻のほうが早く返せる。</span></li>
-      <li><b>画面を白黒にする</b><span>色の報酬を落とすと、意味もなく開く回数が減る。</span><em class="ev ev-s"><small>研究あり</small>比べる群を置いた試験で画面を見る時間が減った。減るのは主にSNSと流し見で、動画はあまり減らない。</em></li>
+      <li id="c23">
+        <p class="meta"><span class="no">#23</span><span class="tag">集中</span><span class="tag ev-m">一部に研究</span></p>
+        <b>通知は、切っておく</b><span>一度の着信で、戻るのに十数分かかる。</span>
+        <em class="ev ev-m">割り込みのあと元の作業に戻るまでに時間がかかることが示されている。</em>
+        <a class="more" href="focus.html#i23">くわしく →</a>
+      </li>
+      <li id="c24">
+        <p class="meta"><span class="no">#24</span><span class="tag">集中</span></p>
+        <b>連絡を見る時刻を、決めておく</b><span>いつでも見るより、決まった時刻のほうが早く返せる。</span>
+        <a class="more" href="focus.html#i24">くわしく →</a>
+      </li>
+      <li id="c25">
+        <p class="meta"><span class="no">#25</span><span class="tag">集中</span><span class="tag ev-s">研究あり</span></p>
+        <b>画面を白黒にする</b><span>色の報酬を落とすと、意味もなく開く回数が減る。</span>
+        <em class="ev ev-s">比べる群を置いた試験で画面を見る時間が減った。減るのは主にSNSと流し見で、動画はあまり減らない。</em>
+        <a class="more" href="focus.html#i25">くわしく →</a>
+      </li>
     </ul>
     <h3>会議</h3>
     <ul class="points">
-      <li><b>会議は25分・50分で切る</b><span>移動と記録の時間を、最初から残しておく。</span></li>
-      <li><b>終わりに、決まったことを読み上げる</b><span>話したことではなく、決まったことだけを残す。</span></li>
+      <li id="c26">
+        <p class="meta"><span class="no">#26</span><span class="tag">集中</span></p>
+        <b>会議は25分・50分で切る</b><span>移動と記録の時間を、最初から残しておく。</span>
+        <a class="more" href="focus.html#i26">くわしく →</a>
+      </li>
+      <li id="c27">
+        <p class="meta"><span class="no">#27</span><span class="tag">集中</span></p>
+        <b>終わりに、決まったことを読み上げる</b><span>話したことではなく、決まったことだけを残す。</span>
+        <a class="more" href="focus.html#i27">くわしく →</a>
+      </li>
     </ul>
     <h3>遊びにする</h3>
     <ul class="points">
-      <li><b>終わった直後に、小さく報いる</b><span>後でまとめて褒めても、効かない。</span></li>
-      <li><b>人ではなく、前の自分と比べる</b><span>他人と並べると、続ける前に折れる。</span></li>
-      <li><b>終わったものを、捨てずに溜める</b><span>付箋を剥がして貯める。進んだ量が目に見える。</span></li>
-      <li><b>いつもの作業に、ひとつだけ新しいことを混ぜる</b><span>同じ手順のままだと、注意が離れていく。</span></li>
-      <li><b>仕組みに飽きたら、作り直す</b><span>同じルールは、いつか効かなくなる。</span></li>
+      <li id="c28">
+        <p class="meta"><span class="no">#28</span><span class="tag">集中</span></p>
+        <b>終わった直後に、小さく報いる</b><span>後でまとめて褒めても、効かない。</span>
+        <a class="more" href="focus.html#i28">くわしく →</a>
+      </li>
+      <li id="c29">
+        <p class="meta"><span class="no">#29</span><span class="tag">集中</span></p>
+        <b>人ではなく、前の自分と比べる</b><span>他人と並べると、続ける前に折れる。</span>
+        <a class="more" href="focus.html#i29">くわしく →</a>
+      </li>
+      <li id="c30">
+        <p class="meta"><span class="no">#30</span><span class="tag">集中</span></p>
+        <b>終わったものを、捨てずに溜める</b><span>付箋を剥がして貯める。進んだ量が目に見える。</span>
+        <a class="more" href="focus.html#i30">くわしく →</a>
+      </li>
+      <li id="c31">
+        <p class="meta"><span class="no">#31</span><span class="tag">集中</span></p>
+        <b>いつもの作業に、ひとつだけ新しいことを混ぜる</b><span>同じ手順のままだと、注意が離れていく。</span>
+        <a class="more" href="focus.html#i31">くわしく →</a>
+      </li>
+      <li id="c32">
+        <p class="meta"><span class="no">#32</span><span class="tag">集中</span></p>
+        <b>仕組みに飽きたら、作り直す</b><span>同じルールは、いつか効かなくなる。</span>
+        <a class="more" href="focus.html#i32">くわしく →</a>
+      </li>
     </ul>
     <h3>引き受け方</h3>
     <ul class="points">
-      <li><b>やらないことを、決める</b><span>足すより、減らすほうが効く。</span></li>
-      <li><b>即答せず、一度持ち帰る</b><span>その場の勢いで決めると、来週の自分が払う。</span></li>
+      <li id="c33">
+        <p class="meta"><span class="no">#33</span><span class="tag">集中</span></p>
+        <b>やらないことを、決める</b><span>足すより、減らすほうが効く。</span>
+        <a class="more" href="focus.html#i33">くわしく →</a>
+      </li>
+      <li id="c34">
+        <p class="meta"><span class="no">#34</span><span class="tag">集中</span></p>
+        <b>即答せず、一度持ち帰る</b><span>その場の勢いで決めると、来週の自分が払う。</span>
+        <a class="more" href="focus.html#i34">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="focus.html">くわしく見る →</a>　仕事の進め方は <a href="../way-of-working/">働き方</a>。</p>
   </section>
@@ -226,36 +382,112 @@
     <p class="note">覚えることより、残る形で入れること。</p>
     <h3>読む</h3>
     <ul class="points">
-      <li><b>読む前に、問いを一つ立てる</b><span>何を知りたいかが決まっていないと、読んでも残らない。</span></li>
-      <li><b>一冊を、読み切らない</b><span>必要な章だけ読む。通読は目的ではない。</span></li>
-      <li><b>積んだ本は、見える場所に</b><span>視界から消えた本は、読まれない。</span></li>
-      <li><b>本を、話し相手として読む</b><span>著者の考えとなら、一人でも対話できる。</span></li>
+      <li id="c35">
+        <p class="meta"><span class="no">#35</span><span class="tag">学び</span></p>
+        <b>読む前に、問いを一つ立てる</b><span>何を知りたいかが決まっていないと、読んでも残らない。</span>
+        <a class="more" href="learn.html#i35">くわしく →</a>
+      </li>
+      <li id="c36">
+        <p class="meta"><span class="no">#36</span><span class="tag">学び</span></p>
+        <b>一冊を、読み切らない</b><span>必要な章だけ読む。通読は目的ではない。</span>
+        <a class="more" href="learn.html#i36">くわしく →</a>
+      </li>
+      <li id="c37">
+        <p class="meta"><span class="no">#37</span><span class="tag">学び</span></p>
+        <b>積んだ本は、見える場所に</b><span>視界から消えた本は、読まれない。</span>
+        <a class="more" href="learn.html#i37">くわしく →</a>
+      </li>
+      <li id="c38">
+        <p class="meta"><span class="no">#38</span><span class="tag">学び</span></p>
+        <b>本を、話し相手として読む</b><span>著者の考えとなら、一人でも対話できる。</span>
+        <a class="more" href="learn.html#i38">くわしく →</a>
+      </li>
     </ul>
     <h3>残す</h3>
     <ul class="points">
-      <li><b>読んだら、自分の言葉で三行</b><span>引用は残らない。言い換えた時点で自分のものになる。</span></li>
-      <li><b>引用と、思ったことを分けて書く</b><span>混ざると、あとでどちらも使えなくなる。</span></li>
-      <li><b>出典は、その場で貼る</b><span>後から探すほうが、読むより時間がかかる。</span></li>
+      <li id="c39">
+        <p class="meta"><span class="no">#39</span><span class="tag">学び</span></p>
+        <b>読んだら、自分の言葉で三行</b><span>引用は残らない。言い換えた時点で自分のものになる。</span>
+        <a class="more" href="learn.html#i39">くわしく →</a>
+      </li>
+      <li id="c40">
+        <p class="meta"><span class="no">#40</span><span class="tag">学び</span></p>
+        <b>引用と、思ったことを分けて書く</b><span>混ざると、あとでどちらも使えなくなる。</span>
+        <a class="more" href="learn.html#i40">くわしく →</a>
+      </li>
+      <li id="c41">
+        <p class="meta"><span class="no">#41</span><span class="tag">学び</span></p>
+        <b>出典は、その場で貼る</b><span>後から探すほうが、読むより時間がかかる。</span>
+        <a class="more" href="learn.html#i41">くわしく →</a>
+      </li>
     </ul>
     <h3>身につける</h3>
     <ul class="points">
-      <li><b>覚えるより、使う場面を決める</b><span>使い道のない知識は、翌週には消える。</span></li>
-      <li><b>「できない」を「まだできない」に言い換える</b><span>能力の話から、段階の話に変わる。</span></li>
-      <li><b>人に説明してみる</b><span>説明できないところが、分かっていないところ。</span><em class="ev ev-s"><small>研究あり</small>自分で説明させる学び方は、まとめ分析で中くらいの効果が報告されている。</em></li>
-      <li><b>上達を、段階に分けておく</b><span>どこまで来たかが分かると、次に何をするかが決まる。</span></li>
-      <li><b>間隔を空けて、思い出す</b><span>読み返すより、思い出そうとするほうが残る。</span><em class="ev ev-s"><small>研究あり</small>学習法を比べたまとめで、最も再現性が高い部類とされる。</em></li>
-      <li><b>読み返さず、白紙に書き出す</b><span>思い出す側に回ると、抜けている所がその場で分かる。</span><em class="ev ev-s"><small>研究あり</small>学習法を比べたまとめで、最も再現性が高い部類とされる。</em></li>
-      <li><b>ひとつを固めず、混ぜて練習する</b><span>同じ型を続けて解かず、種類を交ぜる。手応えは悪いのに、結果は良くなる。</span><em class="ev ev-s"><small>研究あり</small>同じ型を続けるより試験の成績が良くなることが示されている。</em></li>
+      <li id="c42">
+        <p class="meta"><span class="no">#42</span><span class="tag">学び</span></p>
+        <b>覚えるより、使う場面を決める</b><span>使い道のない知識は、翌週には消える。</span>
+        <a class="more" href="learn.html#i42">くわしく →</a>
+      </li>
+      <li id="c43">
+        <p class="meta"><span class="no">#43</span><span class="tag">学び</span></p>
+        <b>「できない」を「まだできない」に言い換える</b><span>能力の話から、段階の話に変わる。</span>
+        <a class="more" href="learn.html#i43">くわしく →</a>
+      </li>
+      <li id="c44">
+        <p class="meta"><span class="no">#44</span><span class="tag">学び</span><span class="tag ev-s">研究あり</span></p>
+        <b>人に説明してみる</b><span>説明できないところが、分かっていないところ。</span>
+        <em class="ev ev-s">自分で説明させる学び方は、まとめ分析で中くらいの効果が報告されている。</em>
+        <a class="more" href="learn.html#i44">くわしく →</a>
+      </li>
+      <li id="c45">
+        <p class="meta"><span class="no">#45</span><span class="tag">学び</span></p>
+        <b>上達を、段階に分けておく</b><span>どこまで来たかが分かると、次に何をするかが決まる。</span>
+        <a class="more" href="learn.html#i45">くわしく →</a>
+      </li>
+      <li id="c46">
+        <p class="meta"><span class="no">#46</span><span class="tag">学び</span><span class="tag ev-s">研究あり</span></p>
+        <b>間隔を空けて、思い出す</b><span>読み返すより、思い出そうとするほうが残る。</span>
+        <em class="ev ev-s">学習法を比べたまとめで、最も再現性が高い部類とされる。</em>
+        <a class="more" href="learn.html#i46">くわしく →</a>
+      </li>
+      <li id="c47">
+        <p class="meta"><span class="no">#47</span><span class="tag">学び</span><span class="tag ev-s">研究あり</span></p>
+        <b>読み返さず、白紙に書き出す</b><span>思い出す側に回ると、抜けている所がその場で分かる。</span>
+        <em class="ev ev-s">学習法を比べたまとめで、最も再現性が高い部類とされる。</em>
+        <a class="more" href="learn.html#i47">くわしく →</a>
+      </li>
+      <li id="c48">
+        <p class="meta"><span class="no">#48</span><span class="tag">学び</span><span class="tag ev-s">研究あり</span></p>
+        <b>ひとつを固めず、混ぜて練習する</b><span>同じ型を続けて解かず、種類を交ぜる。手応えは悪いのに、結果は良くなる。</span>
+        <em class="ev ev-s">同じ型を続けるより試験の成績が良くなることが示されている。</em>
+        <a class="more" href="learn.html#i48">くわしく →</a>
+      </li>
     </ul>
     <h3>調べる</h3>
     <ul class="points">
-      <li><b>一次情報まで、一度は降りる</b><span>まとめは、まとめた人の都合で削られている。</span></li>
-      <li><b>常識とされていることの、出どころを見る</b><span>そのルールを決めた人の都合が、入っている。</span></li>
+      <li id="c49">
+        <p class="meta"><span class="no">#49</span><span class="tag">学び</span></p>
+        <b>一次情報まで、一度は降りる</b><span>まとめは、まとめた人の都合で削られている。</span>
+        <a class="more" href="learn.html#i49">くわしく →</a>
+      </li>
+      <li id="c50">
+        <p class="meta"><span class="no">#50</span><span class="tag">学び</span></p>
+        <b>常識とされていることの、出どころを見る</b><span>そのルールを決めた人の都合が、入っている。</span>
+        <a class="more" href="learn.html#i50">くわしく →</a>
+      </li>
     </ul>
     <h3>疑う</h3>
     <ul class="points">
-      <li><b>都合のいい材料だけ並んでいないか、見る</b><span>反対側の材料が一つも出てこない話は、片側しか見ていない。</span></li>
-      <li><b>二択で迫られたら、中間を探す</b><span>極端な二つだけ見せるのは、選ばせるためのやり方。</span></li>
+      <li id="c51">
+        <p class="meta"><span class="no">#51</span><span class="tag">学び</span></p>
+        <b>都合のいい材料だけ並んでいないか、見る</b><span>反対側の材料が一つも出てこない話は、片側しか見ていない。</span>
+        <a class="more" href="learn.html#i51">くわしく →</a>
+      </li>
+      <li id="c52">
+        <p class="meta"><span class="no">#52</span><span class="tag">学び</span></p>
+        <b>二択で迫られたら、中間を探す</b><span>極端な二つだけ見せるのは、選ばせるためのやり方。</span>
+        <a class="more" href="learn.html#i52">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="learn.html">くわしく見る →</a></p>
   </section>
@@ -266,39 +498,126 @@
     <p class="note">考えるのではなく、考えが出る形を作る。</p>
     <h3>広げる</h3>
     <ul class="points">
-      <li><b>書きながら、考える</b><span>頭の中だけでは、同じところを回る。</span></li>
-      <li><b>数を先に出す</b><span>質は、数の中から選ぶもの。</span></li>
-      <li><b>普段と違う道を、通ってみる</b><span>同じ道からは、同じ情報しか入らない。</span></li>
-      <li><b>その場にいる人に、一つ聞いてみる</b><span>おすすめを聞くだけで、調べても出てこない話が入る。</span></li>
-      <li><b>制約を、先に置く</b><span>自由より、枠があるほうが出る。</span></li>
+      <li id="c53">
+        <p class="meta"><span class="no">#53</span><span class="tag">発想</span></p>
+        <b>書きながら、考える</b><span>頭の中だけでは、同じところを回る。</span>
+        <a class="more" href="ideas.html#i53">くわしく →</a>
+      </li>
+      <li id="c54">
+        <p class="meta"><span class="no">#54</span><span class="tag">発想</span></p>
+        <b>数を先に出す</b><span>質は、数の中から選ぶもの。</span>
+        <a class="more" href="ideas.html#i54">くわしく →</a>
+      </li>
+      <li id="c55">
+        <p class="meta"><span class="no">#55</span><span class="tag">発想</span></p>
+        <b>普段と違う道を、通ってみる</b><span>同じ道からは、同じ情報しか入らない。</span>
+        <a class="more" href="ideas.html#i55">くわしく →</a>
+      </li>
+      <li id="c56">
+        <p class="meta"><span class="no">#56</span><span class="tag">発想</span></p>
+        <b>その場にいる人に、一つ聞いてみる</b><span>おすすめを聞くだけで、調べても出てこない話が入る。</span>
+        <a class="more" href="ideas.html#i56">くわしく →</a>
+      </li>
+      <li id="c57">
+        <p class="meta"><span class="no">#57</span><span class="tag">発想</span></p>
+        <b>制約を、先に置く</b><span>自由より、枠があるほうが出る。</span>
+        <a class="more" href="ideas.html#i57">くわしく →</a>
+      </li>
     </ul>
     <h3>変える</h3>
     <ul class="points">
-      <li><b>逆から考える</b><span>どうすれば最悪にできるかを十個出し、一つずつ裏返す。</span><em class="ev ev-p"><small>実践知</small>笑いながら出すほうが、遠慮が外れる。</em></li>
-      <li><b>他の分野のやり方を、当ててみる</b><span>似た問題は、別の場所で解かれていることが多い。</span></li>
-      <li><b>人に話してみる</b><span>説明するために、考えのほうが整う。</span></li>
+      <li id="c58">
+        <p class="meta"><span class="no">#58</span><span class="tag">発想</span><span class="tag ev-p">実践知</span></p>
+        <b>逆から考える</b><span>どうすれば最悪にできるかを十個出し、一つずつ裏返す。</span>
+        <em class="ev ev-p">笑いながら出すほうが、遠慮が外れる。</em>
+        <a class="more" href="ideas.html#i58">くわしく →</a>
+      </li>
+      <li id="c59">
+        <p class="meta"><span class="no">#59</span><span class="tag">発想</span></p>
+        <b>他の分野のやり方を、当ててみる</b><span>似た問題は、別の場所で解かれていることが多い。</span>
+        <a class="more" href="ideas.html#i59">くわしく →</a>
+      </li>
+      <li id="c60">
+        <p class="meta"><span class="no">#60</span><span class="tag">発想</span></p>
+        <b>人に話してみる</b><span>説明するために、考えのほうが整う。</span>
+        <a class="more" href="ideas.html#i60">くわしく →</a>
+      </li>
     </ul>
     <h3>寝かせる</h3>
     <ul class="points">
-      <li><b>一晩おく</b><span>朝に見ると、半分は要らない。</span></li>
-      <li><b>ぼんやりする時間を、作る</b><span>風呂や移動中など、何もしない時間に考えがつながる。</span></li>
-      <li><b>行き詰まったら、場所を変える</b><span>同じ机では、同じ考えしか出ない。</span></li>
+      <li id="c61">
+        <p class="meta"><span class="no">#61</span><span class="tag">発想</span></p>
+        <b>一晩おく</b><span>朝に見ると、半分は要らない。</span>
+        <a class="more" href="ideas.html#i61">くわしく →</a>
+      </li>
+      <li id="c62">
+        <p class="meta"><span class="no">#62</span><span class="tag">発想</span></p>
+        <b>ぼんやりする時間を、作る</b><span>風呂や移動中など、何もしない時間に考えがつながる。</span>
+        <a class="more" href="ideas.html#i62">くわしく →</a>
+      </li>
+      <li id="c63">
+        <p class="meta"><span class="no">#63</span><span class="tag">発想</span></p>
+        <b>行き詰まったら、場所を変える</b><span>同じ机では、同じ考えしか出ない。</span>
+        <a class="more" href="ideas.html#i63">くわしく →</a>
+      </li>
     </ul>
     <h3>訓練する</h3>
     <ul class="points">
-      <li><b>架空の世界を、細かく作る</b><span>地理から制度まで決めていくと、現実の枠のほうが見えてくる。</span></li>
-      <li><b>本を適当に開いて、目についた言葉を課題に結びつける</b><span>関係のない語を混ぜると、道筋が変わる。</span></li>
-      <li><b>別の時代や立場の人として、考えてみる</b><span>自分の前提が、どこにあるのか分かる。</span></li>
-      <li><b>自分と正反対の役を、一日演じる</b><span>癖は、やめようとしているあいだは見えない。</span></li>
-      <li><b>夢を、起きてすぐ書き留める</b><span>脈絡のない組み合わせが、手がかりになることがある。</span></li>
-      <li><b>物に向かって、声に出して説明する</b><span>相手は人でなくていい。言葉にすると、飛ばしていた前提が出てくる。</span><em class="ev ev-p"><small>実践知</small>プログラマの古典から広まったやり方。</em></li>
+      <li id="c64">
+        <p class="meta"><span class="no">#64</span><span class="tag">発想</span></p>
+        <b>架空の世界を、細かく作る</b><span>地理から制度まで決めていくと、現実の枠のほうが見えてくる。</span>
+        <a class="more" href="ideas.html#i64">くわしく →</a>
+      </li>
+      <li id="c65">
+        <p class="meta"><span class="no">#65</span><span class="tag">発想</span></p>
+        <b>本を適当に開いて、目についた言葉を課題に結びつける</b><span>関係のない語を混ぜると、道筋が変わる。</span>
+        <a class="more" href="ideas.html#i65">くわしく →</a>
+      </li>
+      <li id="c66">
+        <p class="meta"><span class="no">#66</span><span class="tag">発想</span></p>
+        <b>別の時代や立場の人として、考えてみる</b><span>自分の前提が、どこにあるのか分かる。</span>
+        <a class="more" href="ideas.html#i66">くわしく →</a>
+      </li>
+      <li id="c67">
+        <p class="meta"><span class="no">#67</span><span class="tag">発想</span></p>
+        <b>自分と正反対の役を、一日演じる</b><span>癖は、やめようとしているあいだは見えない。</span>
+        <a class="more" href="ideas.html#i67">くわしく →</a>
+      </li>
+      <li id="c68">
+        <p class="meta"><span class="no">#68</span><span class="tag">発想</span></p>
+        <b>夢を、起きてすぐ書き留める</b><span>脈絡のない組み合わせが、手がかりになることがある。</span>
+        <a class="more" href="ideas.html#i68">くわしく →</a>
+      </li>
+      <li id="c69">
+        <p class="meta"><span class="no">#69</span><span class="tag">発想</span><span class="tag ev-p">実践知</span></p>
+        <b>物に向かって、声に出して説明する</b><span>相手は人でなくていい。言葉にすると、飛ばしていた前提が出てくる。</span>
+        <em class="ev ev-p">プログラマの古典から広まったやり方。</em>
+        <a class="more" href="ideas.html#i69">くわしく →</a>
+      </li>
     </ul>
     <h3>決める前に</h3>
     <ul class="points">
-      <li><b>問いのほうを、書き直す</b><span>解けないのは、問いが悪いことが多い。</span></li>
-      <li><b>最悪の場合を、具体的に書く</b><span>漠然とした不安は、書くと小さくなる。</span></li>
-      <li><b>運に賭ける前に、運以外を潰す</b><span>潰し終えて残った小さな運だけに、賭ける。</span></li>
-      <li><b>一年後に大失敗したと仮定して、理由を書く</b><span>失敗の物語を過去形で書くと、遠慮なく弱点が出る。</span><em class="ev ev-m"><small>一部に研究</small>先に結果を決めてから振り返らせると、具体的な理由が出やすいことが示されている。大きな決定だけに使う。</em></li>
+      <li id="c70">
+        <p class="meta"><span class="no">#70</span><span class="tag">発想</span></p>
+        <b>問いのほうを、書き直す</b><span>解けないのは、問いが悪いことが多い。</span>
+        <a class="more" href="ideas.html#i70">くわしく →</a>
+      </li>
+      <li id="c71">
+        <p class="meta"><span class="no">#71</span><span class="tag">発想</span></p>
+        <b>最悪の場合を、具体的に書く</b><span>漠然とした不安は、書くと小さくなる。</span>
+        <a class="more" href="ideas.html#i71">くわしく →</a>
+      </li>
+      <li id="c72">
+        <p class="meta"><span class="no">#72</span><span class="tag">発想</span></p>
+        <b>運に賭ける前に、運以外を潰す</b><span>潰し終えて残った小さな運だけに、賭ける。</span>
+        <a class="more" href="ideas.html#i72">くわしく →</a>
+      </li>
+      <li id="c73">
+        <p class="meta"><span class="no">#73</span><span class="tag">発想</span><span class="tag ev-m">一部に研究</span></p>
+        <b>一年後に大失敗したと仮定して、理由を書く</b><span>失敗の物語を過去形で書くと、遠慮なく弱点が出る。</span>
+        <em class="ev ev-m">先に結果を決めてから振り返らせると、具体的な理由が出やすいことが示されている。大きな決定だけに使う。</em>
+        <a class="more" href="ideas.html#i73">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="ideas.html">くわしく見る →</a>　作るときの考え方は <a href="../way-of-creating/">創り方</a>。</p>
   </section>
@@ -317,49 +636,152 @@
     </div>
     <h3>片付け</h3>
     <ul class="points">
-      <li class="me"><b>床から手をつける</b><span>床が見えると、部屋全体が片付いて見える。</span></li>
-      <li><b>一か所だけ、やる</b><span>部屋全体を目標にすると、始まらない。</span></li>
-      <li><b>平らな面を、空けておく</b><span>平らな場所には必ず物が溜まる。</span></li>
+      <li class="me" id="c74">
+        <p class="meta"><span class="no">#74</span><span class="tag">住む</span></p>
+        <b>床から手をつける</b><span>床が見えると、部屋全体が片付いて見える。</span>
+        <a class="more" href="home.html#i74">くわしく →</a>
+      </li>
+      <li id="c75">
+        <p class="meta"><span class="no">#75</span><span class="tag">住む</span></p>
+        <b>一か所だけ、やる</b><span>部屋全体を目標にすると、始まらない。</span>
+        <a class="more" href="home.html#i75">くわしく →</a>
+      </li>
+      <li id="c76">
+        <p class="meta"><span class="no">#76</span><span class="tag">住む</span></p>
+        <b>平らな面を、空けておく</b><span>平らな場所には必ず物が溜まる。</span>
+        <a class="more" href="home.html#i76">くわしく →</a>
+      </li>
     </ul>
     <h3>収納</h3>
     <ul class="points">
-      <li class="me"><b>定位置を決める</b><span>片付ける手間を、戻す手間に変える。</span></li>
-      <li><b>使う場所のそばに置く</b><span>動線から外れた収納は、使われない。</span></li>
-      <li><b>二動作以上かけない</b><span>扉を開けて箱を出して、では戻さなくなる。</span></li>
-      <li><b>シーツ一式を、枕カバーの中にしまう</b><span>セットで一つになるので、探すのと組み合わせるのが消える。</span><em class="ev ev-p"><small>実践知</small></em></li>
-      <li><b>充電器は、場所ごとに置いて動かさない</b><span>寝室・机・車にそれぞれ置く。持ち歩くのは旅行用の一組だけ。</span><em class="ev ev-p"><small>実践知</small>安い道具を複数持って、探す手間のほうを消す考え方。</em></li>
+      <li class="me" id="c77">
+        <p class="meta"><span class="no">#77</span><span class="tag">住む</span></p>
+        <b>定位置を決める</b><span>片付ける手間を、戻す手間に変える。</span>
+        <a class="more" href="home.html#i77">くわしく →</a>
+      </li>
+      <li id="c78">
+        <p class="meta"><span class="no">#78</span><span class="tag">住む</span></p>
+        <b>使う場所のそばに置く</b><span>動線から外れた収納は、使われない。</span>
+        <a class="more" href="home.html#i78">くわしく →</a>
+      </li>
+      <li id="c79">
+        <p class="meta"><span class="no">#79</span><span class="tag">住む</span></p>
+        <b>二動作以上かけない</b><span>扉を開けて箱を出して、では戻さなくなる。</span>
+        <a class="more" href="home.html#i79">くわしく →</a>
+      </li>
+      <li id="c80">
+        <p class="meta"><span class="no">#80</span><span class="tag">住む</span><span class="tag ev-p">実践知</span></p>
+        <b>シーツ一式を、枕カバーの中にしまう</b><span>セットで一つになるので、探すのと組み合わせるのが消える。</span>
+        <a class="more" href="home.html#i80">くわしく →</a>
+      </li>
+      <li id="c81">
+        <p class="meta"><span class="no">#81</span><span class="tag">住む</span><span class="tag ev-p">実践知</span></p>
+        <b>充電器は、場所ごとに置いて動かさない</b><span>寝室・机・車にそれぞれ置く。持ち歩くのは旅行用の一組だけ。</span>
+        <em class="ev ev-p">安い道具を複数持って、探す手間のほうを消す考え方。</em>
+        <a class="more" href="home.html#i81">くわしく →</a>
+      </li>
     </ul>
     <h3>手放す</h3>
     <ul class="points">
-      <li class="me"><b>事実で切ってから、感覚で見る</b><span>一年使っていないかを先に通し、残ったものを好きかどうかで見る。</span></li>
-      <li class="me"><b>買ったら、ひとつ手放す</b><span>総量を変えないと決めれば、増やすのを我慢しなくていい。</span></li>
-      <li><b>迷ったものは箱に入れ、日付を書く</b><span>半年開けなければ、中身を見ずに手放せる。</span></li>
-      <li><b>「捨てづらい」と感じたら、合図だと思う</b><span>迷っている時間のほうが、そのものより高い。</span></li>
+      <li class="me" id="c82">
+        <p class="meta"><span class="no">#82</span><span class="tag">住む</span></p>
+        <b>事実で切ってから、感覚で見る</b><span>一年使っていないかを先に通し、残ったものを好きかどうかで見る。</span>
+        <a class="more" href="home.html#i82">くわしく →</a>
+      </li>
+      <li class="me" id="c83">
+        <p class="meta"><span class="no">#83</span><span class="tag">住む</span></p>
+        <b>買ったら、ひとつ手放す</b><span>総量を変えないと決めれば、増やすのを我慢しなくていい。</span>
+        <a class="more" href="home.html#i83">くわしく →</a>
+      </li>
+      <li id="c84">
+        <p class="meta"><span class="no">#84</span><span class="tag">住む</span></p>
+        <b>迷ったものは箱に入れ、日付を書く</b><span>半年開けなければ、中身を見ずに手放せる。</span>
+        <a class="more" href="home.html#i84">くわしく →</a>
+      </li>
+      <li id="c85">
+        <p class="meta"><span class="no">#85</span><span class="tag">住む</span></p>
+        <b>「捨てづらい」と感じたら、合図だと思う</b><span>迷っている時間のほうが、そのものより高い。</span>
+        <a class="more" href="home.html#i85">くわしく →</a>
+      </li>
     </ul>
     <h3>掃除</h3>
     <ul class="points">
-      <li><b>汚れたその場で、ひと拭き</b><span>乾く前なら、洗剤も時間も要らない。</span></li>
-      <li><b>掃除道具は、使う場所ごとに置く</b><span>取りに行く距離が、やらない理由になる。</span></li>
-      <li><b>週に一度の場所は、曜日で決める</b><span>全部やる日を作らない。</span></li>
-      <li><b>風呂を出る前に、壁と床の水を切る</b><span>一、二分。残った水が、水垢とカビの元になる。</span><em class="ev ev-p"><small>実践知</small>論文はない。残り水を物理的に減らす、という理屈だけ。</em></li>
+      <li id="c86">
+        <p class="meta"><span class="no">#86</span><span class="tag">住む</span></p>
+        <b>汚れたその場で、ひと拭き</b><span>乾く前なら、洗剤も時間も要らない。</span>
+        <a class="more" href="home.html#i86">くわしく →</a>
+      </li>
+      <li id="c87">
+        <p class="meta"><span class="no">#87</span><span class="tag">住む</span></p>
+        <b>掃除道具は、使う場所ごとに置く</b><span>取りに行く距離が、やらない理由になる。</span>
+        <a class="more" href="home.html#i87">くわしく →</a>
+      </li>
+      <li id="c88">
+        <p class="meta"><span class="no">#88</span><span class="tag">住む</span></p>
+        <b>週に一度の場所は、曜日で決める</b><span>全部やる日を作らない。</span>
+        <a class="more" href="home.html#i88">くわしく →</a>
+      </li>
+      <li id="c89">
+        <p class="meta"><span class="no">#89</span><span class="tag">住む</span><span class="tag ev-p">実践知</span></p>
+        <b>風呂を出る前に、壁と床の水を切る</b><span>一、二分。残った水が、水垢とカビの元になる。</span>
+        <em class="ev ev-p">論文はない。残り水を物理的に減らす、という理屈だけ。</em>
+        <a class="more" href="home.html#i89">くわしく →</a>
+      </li>
     </ul>
     <h3>汚れ落とし</h3>
     <ul class="points">
-      <li><b>油汚れは、柑橘の皮でこする</b><span>皮に含まれるリモネンが、油を溶かす。</span></li>
-      <li><b>茶渋は、重曹を溶かしたお湯に置いておく</b><span>こすらずに落ちる。</span></li>
-      <li><b>古いストッキングと軍手を、取っておく</b><span>網戸や隙間は、布より手のほうが速い。</span></li>
+      <li id="c90">
+        <p class="meta"><span class="no">#90</span><span class="tag">住む</span></p>
+        <b>油汚れは、柑橘の皮でこする</b><span>皮に含まれるリモネンが、油を溶かす。</span>
+        <a class="more" href="home.html#i90">くわしく →</a>
+      </li>
+      <li id="c91">
+        <p class="meta"><span class="no">#91</span><span class="tag">住む</span></p>
+        <b>茶渋は、重曹を溶かしたお湯に置いておく</b><span>こすらずに落ちる。</span>
+        <a class="more" href="home.html#i91">くわしく →</a>
+      </li>
+      <li id="c92">
+        <p class="meta"><span class="no">#92</span><span class="tag">住む</span></p>
+        <b>古いストッキングと軍手を、取っておく</b><span>網戸や隙間は、布より手のほうが速い。</span>
+        <a class="more" href="home.html#i92">くわしく →</a>
+      </li>
     </ul>
     <h3>洗濯</h3>
     <ul class="points">
-      <li><b>入れる時点で、分けておく</b><span>洗う前の仕分けが、いちばん面倒な工程。</span></li>
-      <li><b>畳まないものを、決める</b><span>下着とタオルは種類別のカゴへ放り込み、シャツは干したハンガーのまましまう。</span><em class="ev ev-p"><small>実践知</small>干す→取り込む→畳む→しまう、の二工程を削る。</em></li>
-      <li><b>乾いたら、その日のうちにしまう</b><span>取り込んだまま積むと、山がたんすになる。</span></li>
+      <li id="c93">
+        <p class="meta"><span class="no">#93</span><span class="tag">住む</span></p>
+        <b>入れる時点で、分けておく</b><span>洗う前の仕分けが、いちばん面倒な工程。</span>
+        <a class="more" href="home.html#i93">くわしく →</a>
+      </li>
+      <li id="c94">
+        <p class="meta"><span class="no">#94</span><span class="tag">住む</span><span class="tag ev-p">実践知</span></p>
+        <b>畳まないものを、決める</b><span>下着とタオルは種類別のカゴへ放り込み、シャツは干したハンガーのまましまう。</span>
+        <em class="ev ev-p">干す→取り込む→畳む→しまう、の二工程を削る。</em>
+        <a class="more" href="home.html#i94">くわしく →</a>
+      </li>
+      <li id="c95">
+        <p class="meta"><span class="no">#95</span><span class="tag">住む</span></p>
+        <b>乾いたら、その日のうちにしまう</b><span>取り込んだまま積むと、山がたんすになる。</span>
+        <a class="more" href="home.html#i95">くわしく →</a>
+      </li>
     </ul>
     <h3>ごみ</h3>
     <ul class="points">
-      <li><b>替えの袋を、ごみ箱の底に入れておく</b><span>替えるのと出すのを、一動作にする。</span></li>
-      <li><b>出す日は、前の晩に玄関へ</b><span>朝に動かすと、忘れる。</span></li>
-      <li><b>資源ごみの置き場を、玄関の外に</b><span>部屋の中に溜めない。</span></li>
+      <li id="c96">
+        <p class="meta"><span class="no">#96</span><span class="tag">住む</span></p>
+        <b>替えの袋を、ごみ箱の底に入れておく</b><span>替えるのと出すのを、一動作にする。</span>
+        <a class="more" href="home.html#i96">くわしく →</a>
+      </li>
+      <li id="c97">
+        <p class="meta"><span class="no">#97</span><span class="tag">住む</span></p>
+        <b>出す日は、前の晩に玄関へ</b><span>朝に動かすと、忘れる。</span>
+        <a class="more" href="home.html#i97">くわしく →</a>
+      </li>
+      <li id="c98">
+        <p class="meta"><span class="no">#98</span><span class="tag">住む</span></p>
+        <b>資源ごみの置き場を、玄関の外に</b><span>部屋の中に溜めない。</span>
+        <a class="more" href="home.html#i98">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="home.html">くわしく見る →</a>　自分の部屋の記録は <a href="../home/">住む</a>。</p>
   </section>
@@ -377,28 +799,81 @@
     </div>
     <h3>選ぶ</h3>
     <ul class="points">
-      <li class="me"><b>組み合わせごと、人に決めてもらう</b><span>選ぶ仕事そのものを、外に出す。</span></li>
-      <li class="me"><b>下を固定して、上で幅を作る</b><span>組み合わせの数は、上半身だけで足りる。</span></li>
-      <li><b>制服化する</b><span>毎朝の判断を、一度の決定に置き換える。</span></li>
+      <li class="me" id="c99">
+        <p class="meta"><span class="no">#99</span><span class="tag">着る</span></p>
+        <b>組み合わせごと、人に決めてもらう</b><span>選ぶ仕事そのものを、外に出す。</span>
+        <a class="more" href="clothes.html#i99">くわしく →</a>
+      </li>
+      <li class="me" id="c100">
+        <p class="meta"><span class="no">#100</span><span class="tag">着る</span></p>
+        <b>下を固定して、上で幅を作る</b><span>組み合わせの数は、上半身だけで足りる。</span>
+        <a class="more" href="clothes.html#i100">くわしく →</a>
+      </li>
+      <li id="c101">
+        <p class="meta"><span class="no">#101</span><span class="tag">着る</span></p>
+        <b>制服化する</b><span>毎朝の判断を、一度の決定に置き換える。</span>
+        <a class="more" href="clothes.html#i101">くわしく →</a>
+      </li>
     </ul>
     <h3>買う</h3>
     <ul class="points">
-      <li class="me"><b>直さずに、買い替える</b><span>触り心地は、修理では戻らない。</span></li>
-      <li><b>手持ちと三通り組めないなら、買わない</b><span>一着で完結する服は、出番が来ない。</span></li>
-      <li><b>試着しないものは、買わない</b><span>サイズではなく、肩と袖の長さを見る。</span></li>
-      <li><b>靴下は、同じものだけを買う</b><span>片方なくしても、残り全部と組になる。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li class="me" id="c102">
+        <p class="meta"><span class="no">#102</span><span class="tag">着る</span></p>
+        <b>直さずに、買い替える</b><span>触り心地は、修理では戻らない。</span>
+        <a class="more" href="clothes.html#i102">くわしく →</a>
+      </li>
+      <li id="c103">
+        <p class="meta"><span class="no">#103</span><span class="tag">着る</span></p>
+        <b>手持ちと三通り組めないなら、買わない</b><span>一着で完結する服は、出番が来ない。</span>
+        <a class="more" href="clothes.html#i103">くわしく →</a>
+      </li>
+      <li id="c104">
+        <p class="meta"><span class="no">#104</span><span class="tag">着る</span></p>
+        <b>試着しないものは、買わない</b><span>サイズではなく、肩と袖の長さを見る。</span>
+        <a class="more" href="clothes.html#i104">くわしく →</a>
+      </li>
+      <li id="c105">
+        <p class="meta"><span class="no">#105</span><span class="tag">着る</span><span class="tag ev-p">実践知</span></p>
+        <b>靴下は、同じものだけを買う</b><span>片方なくしても、残り全部と組になる。</span>
+        <a class="more" href="clothes.html#i105">くわしく →</a>
+      </li>
     </ul>
     <h3>手入れ</h3>
     <ul class="points">
-      <li class="me"><b>季節の変わり目に、まとめて出す</b><span>しまう前に整える、というリズムにする。</span></li>
-      <li><b>同じ靴を、続けて履かない</b><span>一日休ませると長持ちする。</span></li>
-      <li><b>帰ったら、ブラシをかける</b><span>汚れは、落ちるうちに落とす。</span></li>
+      <li class="me" id="c106">
+        <p class="meta"><span class="no">#106</span><span class="tag">着る</span></p>
+        <b>季節の変わり目に、まとめて出す</b><span>しまう前に整える、というリズムにする。</span>
+        <a class="more" href="clothes.html#i106">くわしく →</a>
+      </li>
+      <li id="c107">
+        <p class="meta"><span class="no">#107</span><span class="tag">着る</span></p>
+        <b>同じ靴を、続けて履かない</b><span>一日休ませると長持ちする。</span>
+        <a class="more" href="clothes.html#i107">くわしく →</a>
+      </li>
+      <li id="c108">
+        <p class="meta"><span class="no">#108</span><span class="tag">着る</span></p>
+        <b>帰ったら、ブラシをかける</b><span>汚れは、落ちるうちに落とす。</span>
+        <a class="more" href="clothes.html#i108">くわしく →</a>
+      </li>
     </ul>
     <h3>手放す</h3>
     <ul class="points">
-      <li><b>着たら、ハンガーを逆向きに戻す</b><span>着ていない服が、一目で分かる。</span></li>
-      <li><b>一年袖を通していない服は、出す</b><span>迷ったら、来年も着ない。</span></li>
-      <li><b>三か月、決めた数だけで暮らしてみる</b><span>残りは箱に封をする。開けなかったものが、手放す候補。</span><em class="ev ev-p"><small>実践知</small>捨てる判断の前に、使わずに済むかを試せるのが利点。</em></li>
+      <li id="c109">
+        <p class="meta"><span class="no">#109</span><span class="tag">着る</span></p>
+        <b>着たら、ハンガーを逆向きに戻す</b><span>着ていない服が、一目で分かる。</span>
+        <a class="more" href="clothes.html#i109">くわしく →</a>
+      </li>
+      <li id="c110">
+        <p class="meta"><span class="no">#110</span><span class="tag">着る</span></p>
+        <b>一年袖を通していない服は、出す</b><span>迷ったら、来年も着ない。</span>
+        <a class="more" href="clothes.html#i110">くわしく →</a>
+      </li>
+      <li id="c111">
+        <p class="meta"><span class="no">#111</span><span class="tag">着る</span><span class="tag ev-p">実践知</span></p>
+        <b>三か月、決めた数だけで暮らしてみる</b><span>残りは箱に封をする。開けなかったものが、手放す候補。</span>
+        <em class="ev ev-p">捨てる判断の前に、使わずに済むかを試せるのが利点。</em>
+        <a class="more" href="clothes.html#i111">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="clothes.html">くわしく見る →</a>　自分の記録は <a href="../clothes/">着る</a>。</p>
   </section>
@@ -416,44 +891,138 @@
     </div>
     <h3>買い物</h3>
     <ul class="points">
-      <li><b>空腹のまま買い物に行かない</b><span>判断が甘くなる。</span><em class="ev ev-m"><small>一部に研究</small>空腹時に買う量が増えるという実験がある。</em></li>
-      <li><b>買うものを決めてから、店に入る</b><span>決めずに入ると、安さで決まる。</span></li>
-      <li><b>行く前に、冷蔵庫の中を撮る</b><span>店で写真を見れば、家にあるものを買わない。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li id="c112">
+        <p class="meta"><span class="no">#112</span><span class="tag">食べる</span><span class="tag ev-m">一部に研究</span></p>
+        <b>空腹のまま買い物に行かない</b><span>判断が甘くなる。</span>
+        <em class="ev ev-m">空腹時に買う量が増えるという実験がある。</em>
+        <a class="more" href="food.html#i112">くわしく →</a>
+      </li>
+      <li id="c113">
+        <p class="meta"><span class="no">#113</span><span class="tag">食べる</span></p>
+        <b>買うものを決めてから、店に入る</b><span>決めずに入ると、安さで決まる。</span>
+        <a class="more" href="food.html#i113">くわしく →</a>
+      </li>
+      <li id="c114">
+        <p class="meta"><span class="no">#114</span><span class="tag">食べる</span><span class="tag ev-p">実践知</span></p>
+        <b>行く前に、冷蔵庫の中を撮る</b><span>店で写真を見れば、家にあるものを買わない。</span>
+        <a class="more" href="food.html#i114">くわしく →</a>
+      </li>
     </ul>
     <h3>作る</h3>
     <ul class="points">
-      <li><b>作るなら、まとめて作る</b><span>減らすのは調理ではなく、始める回数。</span></li>
-      <li><b>一人の時間で、作れるものを増やす</b><span>没頭できて、人と過ごす場でも使える。</span></li>
-      <li><b>切るだけで食べられるものを、常に置く</b><span>疲れた日に、何も作れなくていい形にしておく。</span></li>
-      <li><b>先に食べる箱を、冷蔵庫に作る</b><span>開封済みと期限の近いものを一か所に。献立はそこから決める。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li id="c115">
+        <p class="meta"><span class="no">#115</span><span class="tag">食べる</span></p>
+        <b>作るなら、まとめて作る</b><span>減らすのは調理ではなく、始める回数。</span>
+        <a class="more" href="food.html#i115">くわしく →</a>
+      </li>
+      <li id="c116">
+        <p class="meta"><span class="no">#116</span><span class="tag">食べる</span></p>
+        <b>一人の時間で、作れるものを増やす</b><span>没頭できて、人と過ごす場でも使える。</span>
+        <a class="more" href="food.html#i116">くわしく →</a>
+      </li>
+      <li id="c117">
+        <p class="meta"><span class="no">#117</span><span class="tag">食べる</span></p>
+        <b>切るだけで食べられるものを、常に置く</b><span>疲れた日に、何も作れなくていい形にしておく。</span>
+        <a class="more" href="food.html#i117">くわしく →</a>
+      </li>
+      <li id="c118">
+        <p class="meta"><span class="no">#118</span><span class="tag">食べる</span><span class="tag ev-p">実践知</span></p>
+        <b>先に食べる箱を、冷蔵庫に作る</b><span>開封済みと期限の近いものを一か所に。献立はそこから決める。</span>
+        <a class="more" href="food.html#i118">くわしく →</a>
+      </li>
     </ul>
     <h3>台所の困りごと</h3>
     <ul class="points">
-      <li><b>しおれた葉物は、お湯に浸す</b><span>50度くらいのお湯に1〜2分。水を吸い直して戻る。</span></li>
-      <li><b>硬くなりそうな肉は、酸性のものに漬ける</b><span>炭酸飲料・ヨーグルト・塩麹。保水力が上がる。</span></li>
-      <li><b>手の油は、洗う前に砂糖でこする</b><span>石けんの量が、半分で済む。</span></li>
-      <li><b>余った香草は、油と一緒に凍らせる</b><span>刻んで製氷皿に入れ、油を注ぐ。使うときは、そのまま鍋に落とす。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li id="c119">
+        <p class="meta"><span class="no">#119</span><span class="tag">食べる</span></p>
+        <b>しおれた葉物は、お湯に浸す</b><span>50度くらいのお湯に1〜2分。水を吸い直して戻る。</span>
+        <a class="more" href="food.html#i119">くわしく →</a>
+      </li>
+      <li id="c120">
+        <p class="meta"><span class="no">#120</span><span class="tag">食べる</span></p>
+        <b>硬くなりそうな肉は、酸性のものに漬ける</b><span>炭酸飲料・ヨーグルト・塩麹。保水力が上がる。</span>
+        <a class="more" href="food.html#i120">くわしく →</a>
+      </li>
+      <li id="c121">
+        <p class="meta"><span class="no">#121</span><span class="tag">食べる</span></p>
+        <b>手の油は、洗う前に砂糖でこする</b><span>石けんの量が、半分で済む。</span>
+        <a class="more" href="food.html#i121">くわしく →</a>
+      </li>
+      <li id="c122">
+        <p class="meta"><span class="no">#122</span><span class="tag">食べる</span><span class="tag ev-p">実践知</span></p>
+        <b>余った香草は、油と一緒に凍らせる</b><span>刻んで製氷皿に入れ、油を注ぐ。使うときは、そのまま鍋に落とす。</span>
+        <a class="more" href="food.html#i122">くわしく →</a>
+      </li>
     </ul>
     <h3>外食</h3>
     <ul class="points">
-      <li class="me"><b>選ぶところで整える</b><span>自炊に寄せず、店選びで調整する。</span></li>
-      <li><b>量は、頼むときに決める</b><span>残すかどうかを、食べながら考えない。</span></li>
+      <li class="me" id="c123">
+        <p class="meta"><span class="no">#123</span><span class="tag">食べる</span></p>
+        <b>選ぶところで整える</b><span>自炊に寄せず、店選びで調整する。</span>
+        <a class="more" href="food.html#i123">くわしく →</a>
+      </li>
+      <li id="c124">
+        <p class="meta"><span class="no">#124</span><span class="tag">食べる</span></p>
+        <b>量は、頼むときに決める</b><span>残すかどうかを、食べながら考えない。</span>
+        <a class="more" href="food.html#i124">くわしく →</a>
+      </li>
     </ul>
     <h3>食べ方</h3>
     <ul class="points">
-      <li class="me"><b>最初のひと口だけ、味わう</b><span>全部の食事でなくていい。</span></li>
-      <li><b>先に、水を一杯</b><span>空腹と渇きを、混同しない。</span></li>
-      <li><b>皿の半分を、野菜で埋める</b><span>残りの半分の中では、好きなものを食べていい。</span></li>
-      <li><b>野菜から食べて、炭水化物は最後に</b><span>同じ献立でも、血糖値の上がり方が変わる。</span></li>
-      <li><b>皿を小さくする</b><span>量ではなく、器で満足を作る。</span><em class="ev ev-w"><small>根拠が弱い</small>よく引かれる実験は、のちに多くの論文が撤回された研究群に由来する。害はないが、効くと言い切る根拠はない。</em></li>
+      <li class="me" id="c125">
+        <p class="meta"><span class="no">#125</span><span class="tag">食べる</span></p>
+        <b>最初のひと口だけ、味わう</b><span>全部の食事でなくていい。</span>
+        <a class="more" href="food.html#i125">くわしく →</a>
+      </li>
+      <li id="c126">
+        <p class="meta"><span class="no">#126</span><span class="tag">食べる</span></p>
+        <b>先に、水を一杯</b><span>空腹と渇きを、混同しない。</span>
+        <a class="more" href="food.html#i126">くわしく →</a>
+      </li>
+      <li id="c127">
+        <p class="meta"><span class="no">#127</span><span class="tag">食べる</span></p>
+        <b>皿の半分を、野菜で埋める</b><span>残りの半分の中では、好きなものを食べていい。</span>
+        <a class="more" href="food.html#i127">くわしく →</a>
+      </li>
+      <li id="c128">
+        <p class="meta"><span class="no">#128</span><span class="tag">食べる</span></p>
+        <b>野菜から食べて、炭水化物は最後に</b><span>同じ献立でも、血糖値の上がり方が変わる。</span>
+        <a class="more" href="food.html#i128">くわしく →</a>
+      </li>
+      <li id="c129">
+        <p class="meta"><span class="no">#129</span><span class="tag">食べる</span><span class="tag ev-w">根拠が弱い</span></p>
+        <b>皿を小さくする</b><span>量ではなく、器で満足を作る。</span>
+        <em class="ev ev-w">よく引かれる実験は、のちに多くの論文が撤回された研究群に由来する。害はないが、効くと言い切る根拠はない。</em>
+        <a class="more" href="food.html#i129">くわしく →</a>
+      </li>
     </ul>
     <h3>続け方</h3>
     <ul class="points">
-      <li class="me"><b>我慢を、目的にしない</b><span>数字を減らすことより、健康な体になること。</span></li>
-      <li><b>落とす速さを、月1kgまでにする</b><span>急に落とすと、体が取り戻そうとする。</span></li>
-      <li><b>やめられないものは、時間を前にずらす</b><span>禁じるのではなく、順番を変える。</span></li>
-      <li><b>運動は、痩せるためではなく続けるために</b><span>消費量より、食欲と習慣への効き方が大きい。</span></li>
-      <li><b>食べたものを、写真に撮る</b><span>記録は、正確さより続くことのほうが効く。</span></li>
+      <li class="me" id="c130">
+        <p class="meta"><span class="no">#130</span><span class="tag">食べる</span></p>
+        <b>我慢を、目的にしない</b><span>数字を減らすことより、健康な体になること。</span>
+        <a class="more" href="food.html#i130">くわしく →</a>
+      </li>
+      <li id="c131">
+        <p class="meta"><span class="no">#131</span><span class="tag">食べる</span></p>
+        <b>落とす速さを、月1kgまでにする</b><span>急に落とすと、体が取り戻そうとする。</span>
+        <a class="more" href="food.html#i131">くわしく →</a>
+      </li>
+      <li id="c132">
+        <p class="meta"><span class="no">#132</span><span class="tag">食べる</span></p>
+        <b>やめられないものは、時間を前にずらす</b><span>禁じるのではなく、順番を変える。</span>
+        <a class="more" href="food.html#i132">くわしく →</a>
+      </li>
+      <li id="c133">
+        <p class="meta"><span class="no">#133</span><span class="tag">食べる</span></p>
+        <b>運動は、痩せるためではなく続けるために</b><span>消費量より、食欲と習慣への効き方が大きい。</span>
+        <a class="more" href="food.html#i133">くわしく →</a>
+      </li>
+      <li id="c134">
+        <p class="meta"><span class="no">#134</span><span class="tag">食べる</span></p>
+        <b>食べたものを、写真に撮る</b><span>記録は、正確さより続くことのほうが効く。</span>
+        <a class="more" href="food.html#i134">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="food.html">くわしく見る →</a>　自分の記録は <a href="../food/">食べる</a>。</p>
   </section>
@@ -471,34 +1040,100 @@
     </div>
     <h3>運動</h3>
     <ul class="points">
-      <li class="me"><b>会話できる強度で動く</b><span>翌日ぐったりするのは、強度を下げるサイン。</span></li>
-      <li><b>食後すぐに、少し動く</b><span>10分の早歩きか、その場でのスクワットでいい。</span></li>
-      <li><b>移動に混ぜる</b><span>運動の時間を作らず、階段とひと駅分で済ませる。</span></li>
-      <li><b>着替えを、前の晩に出しておく</b><span>行くかどうかを、朝に考えない。</span></li>
-      <li><b>まとまった時間が取れない日は、一分を数回ばらまく</b><span>階段を速く上がる、その場で数回。食後や仕事の切れ目に入れる。</span><em class="ev ev-s"><small>研究あり</small>短い活動で食後の血糖の上がり方がゆるむという分析と、日常の短く強めの動きが死亡リスクの低さと関連したという大規模な解析がある。治療の代わりではない。</em></li>
+      <li class="me" id="c135">
+        <p class="meta"><span class="no">#135</span><span class="tag">体</span></p>
+        <b>会話できる強度で動く</b><span>翌日ぐったりするのは、強度を下げるサイン。</span>
+        <a class="more" href="health.html#i135">くわしく →</a>
+      </li>
+      <li id="c136">
+        <p class="meta"><span class="no">#136</span><span class="tag">体</span></p>
+        <b>食後すぐに、少し動く</b><span>10分の早歩きか、その場でのスクワットでいい。</span>
+        <a class="more" href="health.html#i136">くわしく →</a>
+      </li>
+      <li id="c137">
+        <p class="meta"><span class="no">#137</span><span class="tag">体</span></p>
+        <b>移動に混ぜる</b><span>運動の時間を作らず、階段とひと駅分で済ませる。</span>
+        <a class="more" href="health.html#i137">くわしく →</a>
+      </li>
+      <li id="c138">
+        <p class="meta"><span class="no">#138</span><span class="tag">体</span></p>
+        <b>着替えを、前の晩に出しておく</b><span>行くかどうかを、朝に考えない。</span>
+        <a class="more" href="health.html#i138">くわしく →</a>
+      </li>
+      <li id="c139">
+        <p class="meta"><span class="no">#139</span><span class="tag">体</span><span class="tag ev-s">研究あり</span></p>
+        <b>まとまった時間が取れない日は、一分を数回ばらまく</b><span>階段を速く上がる、その場で数回。食後や仕事の切れ目に入れる。</span>
+        <em class="ev ev-s">短い活動で食後の血糖の上がり方がゆるむという分析と、日常の短く強めの動きが死亡リスクの低さと関連したという大規模な解析がある。治療の代わりではない。</em>
+        <a class="more" href="health.html#i139">くわしく →</a>
+      </li>
     </ul>
     <h3>姿勢と休憩</h3>
     <ul class="points">
-      <li class="me"><b>疲れる前に、小さく戻す</b><span>忙しくても差し込める短さにしておく。</span></li>
-      <li><b>30分に一度、立つ</b><span>姿勢は、時間で崩れる。</span></li>
-      <li><b>画面の上端を、目の高さに</b><span>見下ろす角度が、首と肩に効く。</span></li>
-      <li><b>同じ姿勢を続けない。座る・立つ・歩くを回す</b><span>良い姿勢を保つより、変え続けるほうを目標にする。</span><em class="ev ev-m"><small>一部に研究</small>近年のまとめは、椅子そのものより姿勢を変えることを重く見る方向で一致しつつある。立ちっぱなしも同じく良くない。</em></li>
-      <li><b>猫背は、骨盤を立てて肩甲骨を寄せて戻す</b><span>三十秒。器具はいらない。一時間に一度でいい。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li class="me" id="c140">
+        <p class="meta"><span class="no">#140</span><span class="tag">体</span></p>
+        <b>疲れる前に、小さく戻す</b><span>忙しくても差し込める短さにしておく。</span>
+        <a class="more" href="health.html#i140">くわしく →</a>
+      </li>
+      <li id="c141">
+        <p class="meta"><span class="no">#141</span><span class="tag">体</span></p>
+        <b>30分に一度、立つ</b><span>姿勢は、時間で崩れる。</span>
+        <a class="more" href="health.html#i141">くわしく →</a>
+      </li>
+      <li id="c142">
+        <p class="meta"><span class="no">#142</span><span class="tag">体</span></p>
+        <b>画面の上端を、目の高さに</b><span>見下ろす角度が、首と肩に効く。</span>
+        <a class="more" href="health.html#i142">くわしく →</a>
+      </li>
+      <li id="c143">
+        <p class="meta"><span class="no">#143</span><span class="tag">体</span><span class="tag ev-m">一部に研究</span></p>
+        <b>同じ姿勢を続けない。座る・立つ・歩くを回す</b><span>良い姿勢を保つより、変え続けるほうを目標にする。</span>
+        <em class="ev ev-m">近年のまとめは、椅子そのものより姿勢を変えることを重く見る方向で一致しつつある。立ちっぱなしも同じく良くない。</em>
+        <a class="more" href="health.html#i143">くわしく →</a>
+      </li>
+      <li id="c144">
+        <p class="meta"><span class="no">#144</span><span class="tag">体</span><span class="tag ev-p">実践知</span></p>
+        <b>猫背は、骨盤を立てて肩甲骨を寄せて戻す</b><span>三十秒。器具はいらない。一時間に一度でいい。</span>
+        <a class="more" href="health.html#i144">くわしく →</a>
+      </li>
     </ul>
     <h3>目と肩</h3>
     <ul class="points">
-      <li><b>20分ごとに、20秒、遠くを見る</b><span>目の疲れは、首と肩につながっている。</span></li>
-      <li><b>肩を上げて、力を抜く</b><span>力を抜くには、一度入れるほうが早い。</span></li>
+      <li id="c145">
+        <p class="meta"><span class="no">#145</span><span class="tag">体</span></p>
+        <b>20分ごとに、20秒、遠くを見る</b><span>目の疲れは、首と肩につながっている。</span>
+        <a class="more" href="health.html#i145">くわしく →</a>
+      </li>
+      <li id="c146">
+        <p class="meta"><span class="no">#146</span><span class="tag">体</span></p>
+        <b>肩を上げて、力を抜く</b><span>力を抜くには、一度入れるほうが早い。</span>
+        <a class="more" href="health.html#i146">くわしく →</a>
+      </li>
     </ul>
     <h3>続ける</h3>
     <ul class="points">
-      <li class="me"><b>やめない理由を、一つに絞らない</b><span>目的が複数ある習慣は、動機が一つ切れても止まらない。</span></li>
-      <li><b>記録は、やったかどうかだけ</b><span>量を書き始めると、続かない。</span></li>
+      <li class="me" id="c147">
+        <p class="meta"><span class="no">#147</span><span class="tag">体</span></p>
+        <b>やめない理由を、一つに絞らない</b><span>目的が複数ある習慣は、動機が一つ切れても止まらない。</span>
+        <a class="more" href="health.html#i147">くわしく →</a>
+      </li>
+      <li id="c148">
+        <p class="meta"><span class="no">#148</span><span class="tag">体</span></p>
+        <b>記録は、やったかどうかだけ</b><span>量を書き始めると、続かない。</span>
+        <a class="more" href="health.html#i148">くわしく →</a>
+      </li>
     </ul>
     <h3>検診</h3>
     <ul class="points">
-      <li class="me"><b>定期で、人に見てもらう</b><span>自分の感覚では拾えない変化がある。</span></li>
-      <li><b>次の予約は、帰る前に取る</b><span>あとで取ると、取らない。</span></li>
+      <li class="me" id="c149">
+        <p class="meta"><span class="no">#149</span><span class="tag">体</span></p>
+        <b>定期で、人に見てもらう</b><span>自分の感覚では拾えない変化がある。</span>
+        <a class="more" href="health.html#i149">くわしく →</a>
+      </li>
+      <li id="c150">
+        <p class="meta"><span class="no">#150</span><span class="tag">体</span></p>
+        <b>次の予約は、帰る前に取る</b><span>あとで取ると、取らない。</span>
+        <a class="more" href="health.html#i150">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="health.html">くわしく見る →</a>　自分の記録は <a href="../health-habits/">健康</a>。</p>
   </section>
@@ -517,36 +1152,124 @@
     </div>
     <h3>起きる</h3>
     <ul class="points">
-      <li><b>起きる時刻だけ、固定する</b><span>寝る時刻は、後からついてくる。</span></li>
-      <li><b>朝に、光を浴びる</b><span>体内時計は、朝で決まる。</span><em class="ev ev-s"><small>研究あり</small>体内時計を合わせる一番強い手がかりは光。曇りの日の屋外でも、室内の照明より明るい。</em></li>
-      <li><b>朝食で、たんぱく質を摂る</b><span>朝に入れた材料が、夜の眠気のもとになる。</span></li>
-      <li><b>コーヒーは、起きて90分あけてから</b><span>起きた直後は、体が自分で目を覚ましている。</span></li>
-      <li><b>眠る時間を、先に予定として取る</b><span>削るのは簡単だが、引かれるのは判断力。</span></li>
+      <li id="c151">
+        <p class="meta"><span class="no">#151</span><span class="tag">眠り</span></p>
+        <b>起きる時刻だけ、固定する</b><span>寝る時刻は、後からついてくる。</span>
+        <a class="more" href="sleep.html#i151">くわしく →</a>
+      </li>
+      <li id="c152">
+        <p class="meta"><span class="no">#152</span><span class="tag">眠り</span><span class="tag ev-s">研究あり</span></p>
+        <b>朝に、光を浴びる</b><span>体内時計は、朝で決まる。</span>
+        <em class="ev ev-s">体内時計を合わせる一番強い手がかりは光。曇りの日の屋外でも、室内の照明より明るい。</em>
+        <a class="more" href="sleep.html#i152">くわしく →</a>
+      </li>
+      <li id="c153">
+        <p class="meta"><span class="no">#153</span><span class="tag">眠り</span></p>
+        <b>朝食で、たんぱく質を摂る</b><span>朝に入れた材料が、夜の眠気のもとになる。</span>
+        <a class="more" href="sleep.html#i153">くわしく →</a>
+      </li>
+      <li id="c154">
+        <p class="meta"><span class="no">#154</span><span class="tag">眠り</span></p>
+        <b>コーヒーは、起きて90分あけてから</b><span>起きた直後は、体が自分で目を覚ましている。</span>
+        <a class="more" href="sleep.html#i154">くわしく →</a>
+      </li>
+      <li id="c155">
+        <p class="meta"><span class="no">#155</span><span class="tag">眠り</span></p>
+        <b>眠る時間を、先に予定として取る</b><span>削るのは簡単だが、引かれるのは判断力。</span>
+        <a class="more" href="sleep.html#i155">くわしく →</a>
+      </li>
     </ul>
     <h3>寝る前</h3>
     <ul class="points">
-      <li><b>カフェインは、昼まで</b><span>抜けるのに5〜6時間かかる。</span></li>
-      <li><b>寝る前に、明かりを落とす</b><span>暗さが、合図になる。</span></li>
-      <li><b>画面は、寝る2時間前に閉じる</b><span>画面の光は、脳に昼だと伝え続ける。</span></li>
-      <li><b>ぬるめの湯に、ゆっくり浸かる</b><span>上がったあとに体温が下がる流れが、眠気を作る。</span></li>
-      <li><b>目元と背中を、温めてほぐす</b><span>力が抜けると、呼吸のほうが先に落ち着く。</span></li>
-      <li><b>気になることは、書き出してから寝る</b><span>頭に残すと、覚えておくために起きてしまう。</span></li>
-      <li><b>風呂は、寝る一時間半前に済ませる</b><span>温まったあと体温が下がっていくのが、眠気の合図になる。</span><em class="ev ev-s"><small>研究あり</small>十七の研究をまとめた分析で、寝つくまでの時間が短くなった。四十度前後に十分以上。</em></li>
-      <li><b>寝る支度にも、合図をかける</b><span>起きる時刻だけでなく、灯りを落とす時刻にも知らせを置く。</span><em class="ev ev-m"><small>一部に研究</small>同じ順番を繰り返すこと自体には裏付けがあるが、この合図そのものを試した研究はない。</em></li>
+      <li id="c156">
+        <p class="meta"><span class="no">#156</span><span class="tag">眠り</span></p>
+        <b>カフェインは、昼まで</b><span>抜けるのに5〜6時間かかる。</span>
+        <a class="more" href="sleep.html#i156">くわしく →</a>
+      </li>
+      <li id="c157">
+        <p class="meta"><span class="no">#157</span><span class="tag">眠り</span></p>
+        <b>寝る前に、明かりを落とす</b><span>暗さが、合図になる。</span>
+        <a class="more" href="sleep.html#i157">くわしく →</a>
+      </li>
+      <li id="c158">
+        <p class="meta"><span class="no">#158</span><span class="tag">眠り</span></p>
+        <b>画面は、寝る2時間前に閉じる</b><span>画面の光は、脳に昼だと伝え続ける。</span>
+        <a class="more" href="sleep.html#i158">くわしく →</a>
+      </li>
+      <li id="c159">
+        <p class="meta"><span class="no">#159</span><span class="tag">眠り</span></p>
+        <b>ぬるめの湯に、ゆっくり浸かる</b><span>上がったあとに体温が下がる流れが、眠気を作る。</span>
+        <a class="more" href="sleep.html#i159">くわしく →</a>
+      </li>
+      <li id="c160">
+        <p class="meta"><span class="no">#160</span><span class="tag">眠り</span></p>
+        <b>目元と背中を、温めてほぐす</b><span>力が抜けると、呼吸のほうが先に落ち着く。</span>
+        <a class="more" href="sleep.html#i160">くわしく →</a>
+      </li>
+      <li id="c161">
+        <p class="meta"><span class="no">#161</span><span class="tag">眠り</span></p>
+        <b>気になることは、書き出してから寝る</b><span>頭に残すと、覚えておくために起きてしまう。</span>
+        <a class="more" href="sleep.html#i161">くわしく →</a>
+      </li>
+      <li id="c162">
+        <p class="meta"><span class="no">#162</span><span class="tag">眠り</span><span class="tag ev-s">研究あり</span></p>
+        <b>風呂は、寝る一時間半前に済ませる</b><span>温まったあと体温が下がっていくのが、眠気の合図になる。</span>
+        <em class="ev ev-s">十七の研究をまとめた分析で、寝つくまでの時間が短くなった。四十度前後に十分以上。</em>
+        <a class="more" href="sleep.html#i162">くわしく →</a>
+      </li>
+      <li id="c163">
+        <p class="meta"><span class="no">#163</span><span class="tag">眠り</span><span class="tag ev-m">一部に研究</span></p>
+        <b>寝る支度にも、合図をかける</b><span>起きる時刻だけでなく、灯りを落とす時刻にも知らせを置く。</span>
+        <em class="ev ev-m">同じ順番を繰り返すこと自体には裏付けがあるが、この合図そのものを試した研究はない。</em>
+        <a class="more" href="sleep.html#i163">くわしく →</a>
+      </li>
     </ul>
     <h3>寝床</h3>
     <ul class="points">
-      <li><b>寝床は、寝るためだけに使う</b><span>場所と行為を、結びつけておく。</span></li>
-      <li><b>眠れないときは、一度寝床を出る</b><span>粘ると、寝床が目覚めと結びつく。</span><em class="ev ev-s"><small>研究あり</small>不眠に対する認知行動療法の中核にある手順。</em></li>
-      <li><b>眠れない夜は、横になっているだけでいいと考える</b><span>焦りを足さないほうが、結果として眠れる。</span></li>
-      <li><b>重さのある毛布を、試す</b><span>軽い圧がかかると、落ち着く人がいる。</span></li>
+      <li id="c164">
+        <p class="meta"><span class="no">#164</span><span class="tag">眠り</span></p>
+        <b>寝床は、寝るためだけに使う</b><span>場所と行為を、結びつけておく。</span>
+        <a class="more" href="sleep.html#i164">くわしく →</a>
+      </li>
+      <li id="c165">
+        <p class="meta"><span class="no">#165</span><span class="tag">眠り</span><span class="tag ev-s">研究あり</span></p>
+        <b>眠れないときは、一度寝床を出る</b><span>粘ると、寝床が目覚めと結びつく。</span>
+        <em class="ev ev-s">不眠に対する認知行動療法の中核にある手順。</em>
+        <a class="more" href="sleep.html#i165">くわしく →</a>
+      </li>
+      <li id="c166">
+        <p class="meta"><span class="no">#166</span><span class="tag">眠り</span></p>
+        <b>眠れない夜は、横になっているだけでいいと考える</b><span>焦りを足さないほうが、結果として眠れる。</span>
+        <a class="more" href="sleep.html#i166">くわしく →</a>
+      </li>
+      <li id="c167">
+        <p class="meta"><span class="no">#167</span><span class="tag">眠り</span></p>
+        <b>重さのある毛布を、試す</b><span>軽い圧がかかると、落ち着く人がいる。</span>
+        <a class="more" href="sleep.html#i167">くわしく →</a>
+      </li>
     </ul>
     <h3>昼と夕方</h3>
     <ul class="points">
-      <li><b>昼寝は、20分まで</b><span>それ以上は、夜の眠りを削る。</span></li>
-      <li><b>夕方以降は、横にならない</b><span>短い居眠りが、いちばん効いてしまう。</span></li>
-      <li><b>夕方に、15分歩く</b><span>夕方の外の光が、夜のリズムを作る。</span></li>
-      <li><b>強い運動は、寝る4時間前までに終える</b><span>体が高ぶったままだと、寝つけない。</span></li>
+      <li id="c168">
+        <p class="meta"><span class="no">#168</span><span class="tag">眠り</span></p>
+        <b>昼寝は、20分まで</b><span>それ以上は、夜の眠りを削る。</span>
+        <a class="more" href="sleep.html#i168">くわしく →</a>
+      </li>
+      <li id="c169">
+        <p class="meta"><span class="no">#169</span><span class="tag">眠り</span></p>
+        <b>夕方以降は、横にならない</b><span>短い居眠りが、いちばん効いてしまう。</span>
+        <a class="more" href="sleep.html#i169">くわしく →</a>
+      </li>
+      <li id="c170">
+        <p class="meta"><span class="no">#170</span><span class="tag">眠り</span></p>
+        <b>夕方に、15分歩く</b><span>夕方の外の光が、夜のリズムを作る。</span>
+        <a class="more" href="sleep.html#i170">くわしく →</a>
+      </li>
+      <li id="c171">
+        <p class="meta"><span class="no">#171</span><span class="tag">眠り</span></p>
+        <b>強い運動は、寝る4時間前までに終える</b><span>体が高ぶったままだと、寝つけない。</span>
+        <a class="more" href="sleep.html#i171">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="sleep.html">くわしく見る →</a></p>
   </section>
@@ -564,31 +1287,97 @@
     </div>
     <h3>貯める</h3>
     <ul class="points">
-      <li><b>先に、貯める分を引く</b><span>残ったら貯めるのではなく、残りで暮らす。</span></li>
-      <li><b>自動で移す</b><span>意志の介在する場所を、減らす。</span></li>
-      <li><b>入ってくる道を、一つにしないでおく</b><span>一本だけだと、切れたときに選べない。</span></li>
+      <li id="c172">
+        <p class="meta"><span class="no">#172</span><span class="tag">おかね</span></p>
+        <b>先に、貯める分を引く</b><span>残ったら貯めるのではなく、残りで暮らす。</span>
+        <a class="more" href="money.html#i172">くわしく →</a>
+      </li>
+      <li id="c173">
+        <p class="meta"><span class="no">#173</span><span class="tag">おかね</span></p>
+        <b>自動で移す</b><span>意志の介在する場所を、減らす。</span>
+        <a class="more" href="money.html#i173">くわしく →</a>
+      </li>
+      <li id="c174">
+        <p class="meta"><span class="no">#174</span><span class="tag">おかね</span></p>
+        <b>入ってくる道を、一つにしないでおく</b><span>一本だけだと、切れたときに選べない。</span>
+        <a class="more" href="money.html#i174">くわしく →</a>
+      </li>
     </ul>
     <h3>固定費</h3>
     <ul class="points">
-      <li><b>固定費から見直す</b><span>一度の手間が、毎月効く。</span></li>
-      <li class="me"><b>サブスクは、道具箱として見る</b><span>解約を考える前に、何ができるのかを把握する。</span></li>
-      <li><b>窓から逃げる分を、止める</b><span>断熱シートやカーテンで、冷暖房費が下がる。</span></li>
-      <li><b>定期課金は、続ける・やめる・交渉するの三つに分ける</b><span>明細から全部書き出し、最後に使った日を並べてから決める。</span><em class="ev ev-p"><small>実践知</small></em></li>
-      <li><b>無料のお試しは、申し込んだその場で終わりの予定を入れる</b><span>二日前に知らせが来るようにしておく。</span><em class="ev ev-p"><small>実践知</small>衝動を抑えるのではなく、忘れることを防ぐ仕掛け。</em></li>
-      <li><b>やめる前に、高いので解約したいと言ってみる</b><span>引き止めの値引きを出せる窓口は多い。下がらなくても、失うのは電話代だけ。</span><em class="ev ev-p"><small>実践知</small>実例の報告はあるが、どれくらい下がるかの統計はない。</em></li>
+      <li id="c175">
+        <p class="meta"><span class="no">#175</span><span class="tag">おかね</span></p>
+        <b>固定費から見直す</b><span>一度の手間が、毎月効く。</span>
+        <a class="more" href="money.html#i175">くわしく →</a>
+      </li>
+      <li class="me" id="c176">
+        <p class="meta"><span class="no">#176</span><span class="tag">おかね</span></p>
+        <b>サブスクは、道具箱として見る</b><span>解約を考える前に、何ができるのかを把握する。</span>
+        <a class="more" href="money.html#i176">くわしく →</a>
+      </li>
+      <li id="c177">
+        <p class="meta"><span class="no">#177</span><span class="tag">おかね</span></p>
+        <b>窓から逃げる分を、止める</b><span>断熱シートやカーテンで、冷暖房費が下がる。</span>
+        <a class="more" href="money.html#i177">くわしく →</a>
+      </li>
+      <li id="c178">
+        <p class="meta"><span class="no">#178</span><span class="tag">おかね</span><span class="tag ev-p">実践知</span></p>
+        <b>定期課金は、続ける・やめる・交渉するの三つに分ける</b><span>明細から全部書き出し、最後に使った日を並べてから決める。</span>
+        <a class="more" href="money.html#i178">くわしく →</a>
+      </li>
+      <li id="c179">
+        <p class="meta"><span class="no">#179</span><span class="tag">おかね</span><span class="tag ev-p">実践知</span></p>
+        <b>無料のお試しは、申し込んだその場で終わりの予定を入れる</b><span>二日前に知らせが来るようにしておく。</span>
+        <em class="ev ev-p">衝動を抑えるのではなく、忘れることを防ぐ仕掛け。</em>
+        <a class="more" href="money.html#i179">くわしく →</a>
+      </li>
+      <li id="c180">
+        <p class="meta"><span class="no">#180</span><span class="tag">おかね</span><span class="tag ev-p">実践知</span></p>
+        <b>やめる前に、高いので解約したいと言ってみる</b><span>引き止めの値引きを出せる窓口は多い。下がらなくても、失うのは電話代だけ。</span>
+        <em class="ev ev-p">実例の報告はあるが、どれくらい下がるかの統計はない。</em>
+        <a class="more" href="money.html#i180">くわしく →</a>
+      </li>
     </ul>
     <h3>買い物</h3>
     <ul class="points">
-      <li class="me"><b>表示価格ではなく、総額で比べる</b><span>付け足すものと移動まで入れると、差は縮む。</span></li>
-      <li><b>欲しくなったら、24時間おく</b><span>欲しさは減り、必要は残る。</span></li>
-      <li><b>一回あたりに、直してみる</b><span>高いか安いかは、使う回数で変わる。</span></li>
-      <li><b>時間が増えるほうに、お金を使う</b><span>物を増やすより、空く時間を買う。</span></li>
-      <li><b>同じものなら、店の自社ブランドを試す</b><span>広告と流通の分だけ、安い。</span></li>
+      <li class="me" id="c181">
+        <p class="meta"><span class="no">#181</span><span class="tag">おかね</span></p>
+        <b>表示価格ではなく、総額で比べる</b><span>付け足すものと移動まで入れると、差は縮む。</span>
+        <a class="more" href="money.html#i181">くわしく →</a>
+      </li>
+      <li id="c182">
+        <p class="meta"><span class="no">#182</span><span class="tag">おかね</span></p>
+        <b>欲しくなったら、24時間おく</b><span>欲しさは減り、必要は残る。</span>
+        <a class="more" href="money.html#i182">くわしく →</a>
+      </li>
+      <li id="c183">
+        <p class="meta"><span class="no">#183</span><span class="tag">おかね</span></p>
+        <b>一回あたりに、直してみる</b><span>高いか安いかは、使う回数で変わる。</span>
+        <a class="more" href="money.html#i183">くわしく →</a>
+      </li>
+      <li id="c184">
+        <p class="meta"><span class="no">#184</span><span class="tag">おかね</span></p>
+        <b>時間が増えるほうに、お金を使う</b><span>物を増やすより、空く時間を買う。</span>
+        <a class="more" href="money.html#i184">くわしく →</a>
+      </li>
+      <li id="c185">
+        <p class="meta"><span class="no">#185</span><span class="tag">おかね</span></p>
+        <b>同じものなら、店の自社ブランドを試す</b><span>広告と流通の分だけ、安い。</span>
+        <a class="more" href="money.html#i185">くわしく →</a>
+      </li>
     </ul>
     <h3>把握</h3>
     <ul class="points">
-      <li class="me"><b>一か所に集約し、見る頻度を決める</b><span>見えないと判断できず、見続けると心を取られる。</span></li>
-      <li><b>支払いを、一枚にまとめる</b><span>通る道が少ないほど、記録が揃う。</span></li>
+      <li class="me" id="c186">
+        <p class="meta"><span class="no">#186</span><span class="tag">おかね</span></p>
+        <b>一か所に集約し、見る頻度を決める</b><span>見えないと判断できず、見続けると心を取られる。</span>
+        <a class="more" href="money.html#i186">くわしく →</a>
+      </li>
+      <li id="c187">
+        <p class="meta"><span class="no">#187</span><span class="tag">おかね</span></p>
+        <b>支払いを、一枚にまとめる</b><span>通る道が少ないほど、記録が揃う。</span>
+        <a class="more" href="money.html#i187">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="money.html">くわしく見る →</a>　自分の記録は <a href="../money/">おかね</a>。</p>
   </section>
@@ -605,31 +1394,84 @@
     </div>
     <h3>通知と画面</h3>
     <ul class="points">
-      <li><b>通知は原則オフ、例外だけオン</b><span>既定値を、逆にしておく。</span></li>
-      <li><b>ホーム画面に置くものを減らす</b><span>開く手間が増えると、開かなくなる。</span></li>
-      <li><b>メールは読まず、送信者で検索してまとめて消す</b><span>届いたお知らせは、その場で配信を止める。入口のほうを減らす。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li id="c188">
+        <p class="meta"><span class="no">#188</span><span class="tag">デジタル</span></p>
+        <b>通知は原則オフ、例外だけオン</b><span>既定値を、逆にしておく。</span>
+        <a class="more" href="digital.html#i188">くわしく →</a>
+      </li>
+      <li id="c189">
+        <p class="meta"><span class="no">#189</span><span class="tag">デジタル</span></p>
+        <b>ホーム画面に置くものを減らす</b><span>開く手間が増えると、開かなくなる。</span>
+        <a class="more" href="digital.html#i189">くわしく →</a>
+      </li>
+      <li id="c190">
+        <p class="meta"><span class="no">#190</span><span class="tag">デジタル</span><span class="tag ev-p">実践知</span></p>
+        <b>メールは読まず、送信者で検索してまとめて消す</b><span>届いたお知らせは、その場で配信を止める。入口のほうを減らす。</span>
+        <a class="more" href="digital.html#i190">くわしく →</a>
+      </li>
     </ul>
     <h3>ファイル</h3>
     <ul class="points">
-      <li><b>保存先を、一か所に決める</b><span>どこに置いたかを考える時間が消える。</span></li>
-      <li><b>名前の頭に、日付を書く</b><span>並べるだけで、時系列になる。</span></li>
-      <li class="me"><b>集める先を、一つにする</b><span>道具は目的ごとに選び、データの行き先だけ揃える。</span></li>
+      <li id="c191">
+        <p class="meta"><span class="no">#191</span><span class="tag">デジタル</span></p>
+        <b>保存先を、一か所に決める</b><span>どこに置いたかを考える時間が消える。</span>
+        <a class="more" href="digital.html#i191">くわしく →</a>
+      </li>
+      <li id="c192">
+        <p class="meta"><span class="no">#192</span><span class="tag">デジタル</span></p>
+        <b>名前の頭に、日付を書く</b><span>並べるだけで、時系列になる。</span>
+        <a class="more" href="digital.html#i192">くわしく →</a>
+      </li>
+      <li class="me" id="c193">
+        <p class="meta"><span class="no">#193</span><span class="tag">デジタル</span></p>
+        <b>集める先を、一つにする</b><span>道具は目的ごとに選び、データの行き先だけ揃える。</span>
+        <a class="more" href="digital.html#i193">くわしく →</a>
+      </li>
     </ul>
     <h3>入力</h3>
     <ul class="points">
-      <li><b>ショートカットは、五つだけ覚える</b><span>全部覚えようとすると、何も残らない。</span></li>
-      <li><b>よく打つ文章は、登録しておく</b><span>住所も定型文も、二度目からは打たない。</span></li>
+      <li id="c194">
+        <p class="meta"><span class="no">#194</span><span class="tag">デジタル</span></p>
+        <b>ショートカットは、五つだけ覚える</b><span>全部覚えようとすると、何も残らない。</span>
+        <a class="more" href="digital.html#i194">くわしく →</a>
+      </li>
+      <li id="c195">
+        <p class="meta"><span class="no">#195</span><span class="tag">デジタル</span></p>
+        <b>よく打つ文章は、登録しておく</b><span>住所も定型文も、二度目からは打たない。</span>
+        <a class="more" href="digital.html#i195">くわしく →</a>
+      </li>
     </ul>
     <h3>パスワード</h3>
     <ul class="points">
-      <li><b>パスワードは、管理ソフトに任せる</b><span>覚えることを、やめる。</span></li>
-      <li><b>二段階認証を、先に入れておく</b><span>後から入れるのは、たいてい何かあった後。</span></li>
+      <li id="c196">
+        <p class="meta"><span class="no">#196</span><span class="tag">デジタル</span></p>
+        <b>パスワードは、管理ソフトに任せる</b><span>覚えることを、やめる。</span>
+        <a class="more" href="digital.html#i196">くわしく →</a>
+      </li>
+      <li id="c197">
+        <p class="meta"><span class="no">#197</span><span class="tag">デジタル</span></p>
+        <b>二段階認証を、先に入れておく</b><span>後から入れるのは、たいてい何かあった後。</span>
+        <a class="more" href="digital.html#i197">くわしく →</a>
+      </li>
     </ul>
     <h3>写真</h3>
     <ul class="points">
-      <li><b>撮ったその場で、要らないものを消す</b><span>後でまとめては、やらない。</span></li>
-      <li><b>見返すものだけ、別の場所に移す</b><span>全部残すと、一枚も見返さない。</span></li>
-      <li><b>全部見ようとせず、重複とスクリーンショットから消す</b><span>標準機能の重複統合と、検索で出した塊だけを処理する。月ごとに十五分。</span><em class="ev ev-p"><small>実践知</small>一枚ずつ判断すると、決める疲れで続かない。</em></li>
+      <li id="c198">
+        <p class="meta"><span class="no">#198</span><span class="tag">デジタル</span></p>
+        <b>撮ったその場で、要らないものを消す</b><span>後でまとめては、やらない。</span>
+        <a class="more" href="digital.html#i198">くわしく →</a>
+      </li>
+      <li id="c199">
+        <p class="meta"><span class="no">#199</span><span class="tag">デジタル</span></p>
+        <b>見返すものだけ、別の場所に移す</b><span>全部残すと、一枚も見返さない。</span>
+        <a class="more" href="digital.html#i199">くわしく →</a>
+      </li>
+      <li id="c200">
+        <p class="meta"><span class="no">#200</span><span class="tag">デジタル</span><span class="tag ev-p">実践知</span></p>
+        <b>全部見ようとせず、重複とスクリーンショットから消す</b><span>標準機能の重複統合と、検索で出した塊だけを処理する。月ごとに十五分。</span>
+        <em class="ev ev-p">一枚ずつ判断すると、決める疲れで続かない。</em>
+        <a class="more" href="digital.html#i200">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="digital.html">くわしく見る →</a></p>
   </section>
@@ -639,28 +1481,80 @@
     <p class="note">判断を、出発前に済ませておく。</p>
     <h3>荷造り</h3>
     <ul class="points">
-      <li><b>服は、丸めて詰める</b><span>畳むよりしわになりにくく、容積も減る。</span></li>
-      <li><b>使う場面ごとに、袋を分ける</b><span>鞄の中に、小さな部屋を作る。</span></li>
-      <li><b>充電まわりは、一袋にまとめる</b><span>忘れものの多くはケーブルと変換器。</span></li>
+      <li id="c201">
+        <p class="meta"><span class="no">#201</span><span class="tag">旅と持ち物</span></p>
+        <b>服は、丸めて詰める</b><span>畳むよりしわになりにくく、容積も減る。</span>
+        <a class="more" href="travel.html#i201">くわしく →</a>
+      </li>
+      <li id="c202">
+        <p class="meta"><span class="no">#202</span><span class="tag">旅と持ち物</span></p>
+        <b>使う場面ごとに、袋を分ける</b><span>鞄の中に、小さな部屋を作る。</span>
+        <a class="more" href="travel.html#i202">くわしく →</a>
+      </li>
+      <li id="c203">
+        <p class="meta"><span class="no">#203</span><span class="tag">旅と持ち物</span></p>
+        <b>充電まわりは、一袋にまとめる</b><span>忘れものの多くはケーブルと変換器。</span>
+        <a class="more" href="travel.html#i203">くわしく →</a>
+      </li>
     </ul>
     <h3>出発前</h3>
     <ul class="points">
-      <li><b>前の晩に、玄関へ出しておく</b><span>朝の判断を、一つ減らす。</span></li>
-      <li><b>持ち物リストは、使い回す</b><span>毎回ゼロから考えない。</span></li>
-      <li><b>予約と身分証は、画面の外にも持つ</b><span>電池が切れても困らない形にする。</span></li>
-      <li><b>身分証とカードは、両面を撮って自分に送る</b><span>保険証書も同じ。なくしたときに、話が早い。</span><em class="ev ev-p"><small>実践知</small></em></li>
-      <li><b>カードは、別の銀行のものを二枚、別の場所に入れる</b><span>財布ごと失っても、片方が残る。</span><em class="ev ev-p"><small>実践知</small></em></li>
-      <li><b>預ける荷物は、中身ではなく外側を撮る</b><span>窓口では、言葉より写真のほうが通る。駐車場の区画も同じ。</span><em class="ev ev-p"><small>実践知</small></em></li>
-      <li><b>地図は、落としたあと機内モードで一度開く</b><span>落とせたつもりで、現地の圏外で気づくことが多い。</span><em class="ev ev-p"><small>実践知</small></em></li>
+      <li id="c204">
+        <p class="meta"><span class="no">#204</span><span class="tag">旅と持ち物</span></p>
+        <b>前の晩に、玄関へ出しておく</b><span>朝の判断を、一つ減らす。</span>
+        <a class="more" href="travel.html#i204">くわしく →</a>
+      </li>
+      <li id="c205">
+        <p class="meta"><span class="no">#205</span><span class="tag">旅と持ち物</span></p>
+        <b>持ち物リストは、使い回す</b><span>毎回ゼロから考えない。</span>
+        <a class="more" href="travel.html#i205">くわしく →</a>
+      </li>
+      <li id="c206">
+        <p class="meta"><span class="no">#206</span><span class="tag">旅と持ち物</span></p>
+        <b>予約と身分証は、画面の外にも持つ</b><span>電池が切れても困らない形にする。</span>
+        <a class="more" href="travel.html#i206">くわしく →</a>
+      </li>
+      <li id="c207">
+        <p class="meta"><span class="no">#207</span><span class="tag">旅と持ち物</span><span class="tag ev-p">実践知</span></p>
+        <b>身分証とカードは、両面を撮って自分に送る</b><span>保険証書も同じ。なくしたときに、話が早い。</span>
+        <a class="more" href="travel.html#i207">くわしく →</a>
+      </li>
+      <li id="c208">
+        <p class="meta"><span class="no">#208</span><span class="tag">旅と持ち物</span><span class="tag ev-p">実践知</span></p>
+        <b>カードは、別の銀行のものを二枚、別の場所に入れる</b><span>財布ごと失っても、片方が残る。</span>
+        <a class="more" href="travel.html#i208">くわしく →</a>
+      </li>
+      <li id="c209">
+        <p class="meta"><span class="no">#209</span><span class="tag">旅と持ち物</span><span class="tag ev-p">実践知</span></p>
+        <b>預ける荷物は、中身ではなく外側を撮る</b><span>窓口では、言葉より写真のほうが通る。駐車場の区画も同じ。</span>
+        <a class="more" href="travel.html#i209">くわしく →</a>
+      </li>
+      <li id="c210">
+        <p class="meta"><span class="no">#210</span><span class="tag">旅と持ち物</span><span class="tag ev-p">実践知</span></p>
+        <b>地図は、落としたあと機内モードで一度開く</b><span>落とせたつもりで、現地の圏外で気づくことが多い。</span>
+        <a class="more" href="travel.html#i210">くわしく →</a>
+      </li>
     </ul>
     <h3>移動中</h3>
     <ul class="points">
-      <li><b>次の乗り換えだけ、確認する</b><span>全部を覚えようとしない。</span></li>
-      <li><b>着く前に、現地の足を調べる</b><span>着いてからは、判断力が落ちている。</span></li>
+      <li id="c211">
+        <p class="meta"><span class="no">#211</span><span class="tag">旅と持ち物</span></p>
+        <b>次の乗り換えだけ、確認する</b><span>全部を覚えようとしない。</span>
+        <a class="more" href="travel.html#i211">くわしく →</a>
+      </li>
+      <li id="c212">
+        <p class="meta"><span class="no">#212</span><span class="tag">旅と持ち物</span></p>
+        <b>着く前に、現地の足を調べる</b><span>着いてからは、判断力が落ちている。</span>
+        <a class="more" href="travel.html#i212">くわしく →</a>
+      </li>
     </ul>
     <h3>現地</h3>
     <ul class="points">
-      <li><b>初日に、近所を一周する</b><span>地図より、歩いたほうが早く分かる。</span></li>
+      <li id="c213">
+        <p class="meta"><span class="no">#213</span><span class="tag">旅と持ち物</span></p>
+        <b>初日に、近所を一周する</b><span>地図より、歩いたほうが早く分かる。</span>
+        <a class="more" href="travel.html#i213">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="travel.html">くわしく見る →</a>　自分の旅の記録は <a href="../travel/">旅</a>。</p>
   </section>
@@ -680,52 +1574,170 @@
     </div>
     <h3>呼吸</h3>
     <ul class="points">
-      <li><b>呼吸を、数える</b><span>数えるほうに、注意が移る。</span><em class="ev ev-m"><small>一部に研究</small>ゆっくりした呼吸が落ち着きに向かうという報告はあるが、数え方の違いまでは分かっていない。</em></li>
-      <li><b>落ち着きたいときは、吐くほうを長くする</b><span>吸うほうを長くすると、逆に目が覚める。</span></li>
+      <li id="c214">
+        <p class="meta"><span class="no">#214</span><span class="tag">気持ち</span><span class="tag ev-m">一部に研究</span></p>
+        <b>呼吸を、数える</b><span>数えるほうに、注意が移る。</span>
+        <em class="ev ev-m">ゆっくりした呼吸が落ち着きに向かうという報告はあるが、数え方の違いまでは分かっていない。</em>
+        <a class="more" href="mood.html#i214">くわしく →</a>
+      </li>
+      <li id="c215">
+        <p class="meta"><span class="no">#215</span><span class="tag">気持ち</span></p>
+        <b>落ち着きたいときは、吐くほうを長くする</b><span>吸うほうを長くすると、逆に目が覚める。</span>
+        <a class="more" href="mood.html#i215">くわしく →</a>
+      </li>
     </ul>
     <h3>体から戻す</h3>
     <ul class="points">
-      <li><b>自然の中に、出る</b><span>気分の切り替えとしては、いちばん安い。</span></li>
-      <li><b>体をゆるめる場所を、決めておく</b><span>湯・サウナ・整体。気分は、体の側から戻ることがある。</span></li>
-      <li><b>今に戻りたいときは、体の感覚に触る</b><span>手を擦る、足を踏む。考えから、感覚のほうに移す。</span></li>
-      <li><b>見えるもの五つから、数えて戻る</b><span>見える五つ、触れる四つ、聞こえる三つ、匂い二つ、味一つ。約一分。</span><em class="ev ev-w"><small>根拠が弱い</small>臨床の現場で広く教えられているが、この手順そのものを調べた試験はほとんどない。低リスクのその場しのぎとして。</em></li>
+      <li id="c216">
+        <p class="meta"><span class="no">#216</span><span class="tag">気持ち</span></p>
+        <b>自然の中に、出る</b><span>気分の切り替えとしては、いちばん安い。</span>
+        <a class="more" href="mood.html#i216">くわしく →</a>
+      </li>
+      <li id="c217">
+        <p class="meta"><span class="no">#217</span><span class="tag">気持ち</span></p>
+        <b>体をゆるめる場所を、決めておく</b><span>湯・サウナ・整体。気分は、体の側から戻ることがある。</span>
+        <a class="more" href="mood.html#i217">くわしく →</a>
+      </li>
+      <li id="c218">
+        <p class="meta"><span class="no">#218</span><span class="tag">気持ち</span></p>
+        <b>今に戻りたいときは、体の感覚に触る</b><span>手を擦る、足を踏む。考えから、感覚のほうに移す。</span>
+        <a class="more" href="mood.html#i218">くわしく →</a>
+      </li>
+      <li id="c219">
+        <p class="meta"><span class="no">#219</span><span class="tag">気持ち</span><span class="tag ev-w">根拠が弱い</span></p>
+        <b>見えるもの五つから、数えて戻る</b><span>見える五つ、触れる四つ、聞こえる三つ、匂い二つ、味一つ。約一分。</span>
+        <em class="ev ev-w">臨床の現場で広く教えられているが、この手順そのものを調べた試験はほとんどない。低リスクのその場しのぎとして。</em>
+        <a class="more" href="mood.html#i219">くわしく →</a>
+      </li>
     </ul>
     <h3>言葉にする</h3>
     <ul class="points">
-      <li><b>感情に、名前と割合をつける</b><span>「不安70、怒り30」。数え始めると、暴れ方が収まる。</span></li>
-      <li><b>自分の強みを三つ書いて、朝に読む</b><span>いまの状況の悪さと、自分の価値を切り離しておく。</span></li>
-      <li><b>責めすぎているときは、人にかける言葉を自分にかける</b><span>友人が同じ状況なら、そこまで言わない。</span></li>
-      <li><b>自分に厳しくなったら、三つの文を唱える</b><span>これは苦しい瞬間だ。苦しみは誰にでもある。いまの自分に優しくしよう。</span><em class="ev ev-s"><small>研究あり</small>八週間のプログラムの試験で、自分への慈しみと生活満足が上がった。対象は成功ではなく、失敗した場面。</em></li>
+      <li id="c220">
+        <p class="meta"><span class="no">#220</span><span class="tag">気持ち</span></p>
+        <b>感情に、名前と割合をつける</b><span>「不安70、怒り30」。数え始めると、暴れ方が収まる。</span>
+        <a class="more" href="mood.html#i220">くわしく →</a>
+      </li>
+      <li id="c221">
+        <p class="meta"><span class="no">#221</span><span class="tag">気持ち</span></p>
+        <b>自分の強みを三つ書いて、朝に読む</b><span>いまの状況の悪さと、自分の価値を切り離しておく。</span>
+        <a class="more" href="mood.html#i221">くわしく →</a>
+      </li>
+      <li id="c222">
+        <p class="meta"><span class="no">#222</span><span class="tag">気持ち</span></p>
+        <b>責めすぎているときは、人にかける言葉を自分にかける</b><span>友人が同じ状況なら、そこまで言わない。</span>
+        <a class="more" href="mood.html#i222">くわしく →</a>
+      </li>
+      <li id="c223">
+        <p class="meta"><span class="no">#223</span><span class="tag">気持ち</span><span class="tag ev-s">研究あり</span></p>
+        <b>自分に厳しくなったら、三つの文を唱える</b><span>これは苦しい瞬間だ。苦しみは誰にでもある。いまの自分に優しくしよう。</span>
+        <em class="ev ev-s">八週間のプログラムの試験で、自分への慈しみと生活満足が上がった。対象は成功ではなく、失敗した場面。</em>
+        <a class="more" href="mood.html#i223">くわしく →</a>
+      </li>
     </ul>
     <h3>ひとりのとき</h3>
     <ul class="points">
-      <li><b>一人の時間を、自分で選んだことにする</b><span>予定がなくて一人なのと、選んで一人なのでは、効き方が違う。</span></li>
-      <li><b>「孤独」と「孤独感」を分ける</b><span>一人でいる状態と、寂しいという気分は別のもの。</span></li>
-      <li><b>寂しさは、過ぎるものとして扱う</b><span>性格の欠陥ではなく、誰にでも来る一時的な反応。</span></li>
-      <li><b>誰にも見せない前提で、書く</b><span>読まれないと決めると、本当のことが書ける。</span></li>
-      <li><b>他人への期待を、少し下げる</b><span>寂しさは、期待と現実の差から出てくる。</span></li>
-      <li><b>思い通りにならないものを、一つ育てる</b><span>植物でも作りものでも。待つ力がつく。</span></li>
+      <li id="c224">
+        <p class="meta"><span class="no">#224</span><span class="tag">気持ち</span></p>
+        <b>一人の時間を、自分で選んだことにする</b><span>予定がなくて一人なのと、選んで一人なのでは、効き方が違う。</span>
+        <a class="more" href="mood.html#i224">くわしく →</a>
+      </li>
+      <li id="c225">
+        <p class="meta"><span class="no">#225</span><span class="tag">気持ち</span></p>
+        <b>「孤独」と「孤独感」を分ける</b><span>一人でいる状態と、寂しいという気分は別のもの。</span>
+        <a class="more" href="mood.html#i225">くわしく →</a>
+      </li>
+      <li id="c226">
+        <p class="meta"><span class="no">#226</span><span class="tag">気持ち</span></p>
+        <b>寂しさは、過ぎるものとして扱う</b><span>性格の欠陥ではなく、誰にでも来る一時的な反応。</span>
+        <a class="more" href="mood.html#i226">くわしく →</a>
+      </li>
+      <li id="c227">
+        <p class="meta"><span class="no">#227</span><span class="tag">気持ち</span></p>
+        <b>誰にも見せない前提で、書く</b><span>読まれないと決めると、本当のことが書ける。</span>
+        <a class="more" href="mood.html#i227">くわしく →</a>
+      </li>
+      <li id="c228">
+        <p class="meta"><span class="no">#228</span><span class="tag">気持ち</span></p>
+        <b>他人への期待を、少し下げる</b><span>寂しさは、期待と現実の差から出てくる。</span>
+        <a class="more" href="mood.html#i228">くわしく →</a>
+      </li>
+      <li id="c229">
+        <p class="meta"><span class="no">#229</span><span class="tag">気持ち</span></p>
+        <b>思い通りにならないものを、一つ育てる</b><span>植物でも作りものでも。待つ力がつく。</span>
+        <a class="more" href="mood.html#i229">くわしく →</a>
+      </li>
     </ul>
     <h3>距離を取る</h3>
     <ul class="points">
-      <li><b>SNSとニュースから、離れる日を作る</b><span>入れるのをやめるだけで、戻ることがある。</span></li>
-      <li><b>連絡を返さない時間を、作る</b><span>いつでも返せる状態は、休んでいない状態。</span></li>
-      <li><b>友達の数を、数えない</b><span>比べる相手は、画面の中にしかいない。</span></li>
-      <li><b>心配に、営業時間を決める</b><span>一日十五分だけ。時間外に浮かんだらメモに書いて、その時間まで送る。</span><em class="ev ev-m"><small>一部に研究</small>認知行動療法の技法。不安の強い人では心配が減ったという試験がある一方、結果は研究によって分かれる。</em></li>
+      <li id="c230">
+        <p class="meta"><span class="no">#230</span><span class="tag">気持ち</span></p>
+        <b>SNSとニュースから、離れる日を作る</b><span>入れるのをやめるだけで、戻ることがある。</span>
+        <a class="more" href="mood.html#i230">くわしく →</a>
+      </li>
+      <li id="c231">
+        <p class="meta"><span class="no">#231</span><span class="tag">気持ち</span></p>
+        <b>連絡を返さない時間を、作る</b><span>いつでも返せる状態は、休んでいない状態。</span>
+        <a class="more" href="mood.html#i231">くわしく →</a>
+      </li>
+      <li id="c232">
+        <p class="meta"><span class="no">#232</span><span class="tag">気持ち</span></p>
+        <b>友達の数を、数えない</b><span>比べる相手は、画面の中にしかいない。</span>
+        <a class="more" href="mood.html#i232">くわしく →</a>
+      </li>
+      <li id="c233">
+        <p class="meta"><span class="no">#233</span><span class="tag">気持ち</span><span class="tag ev-m">一部に研究</span></p>
+        <b>心配に、営業時間を決める</b><span>一日十五分だけ。時間外に浮かんだらメモに書いて、その時間まで送る。</span>
+        <em class="ev ev-m">認知行動療法の技法。不安の強い人では心配が減ったという試験がある一方、結果は研究によって分かれる。</em>
+        <a class="more" href="mood.html#i233">くわしく →</a>
+      </li>
     </ul>
     <h3>戻す</h3>
     <ul class="points">
-      <li><b>感謝できることを、三つ書く</b><span>悪いほうだけ数えるのを、やめる。</span><em class="ev ev-m"><small>一部に研究</small>効果を報告する研究は多いが、比べる相手の置き方によって結果が揺れる。</em></li>
-      <li><b>落ち込む時間を、先に決めておく</b><span>5分だけ落ち込んで、学びと次の一手を一行ずつ書く。</span></li>
-      <li><b>他人の口で、自分に反論させる</b><span>「本当にそうか」は、自分の声では届かない。</span></li>
-      <li><b>悪い出来事を、三つの軸で見直す</b><span>いつまで続くか、どこまで及ぶか、変えられるか。性格の話にしない。</span></li>
-      <li><b>困ったことと、どう抜けたかを、対で書く</b><span>抜けた記録が溜まると、次に困ったときの足場になる。</span></li>
-      <li><b>夜の判断は、翌朝に回す</b><span>夜は、悪いほうに寄る。</span></li>
+      <li id="c234">
+        <p class="meta"><span class="no">#234</span><span class="tag">気持ち</span><span class="tag ev-m">一部に研究</span></p>
+        <b>感謝できることを、三つ書く</b><span>悪いほうだけ数えるのを、やめる。</span>
+        <em class="ev ev-m">効果を報告する研究は多いが、比べる相手の置き方によって結果が揺れる。</em>
+        <a class="more" href="mood.html#i234">くわしく →</a>
+      </li>
+      <li id="c235">
+        <p class="meta"><span class="no">#235</span><span class="tag">気持ち</span></p>
+        <b>落ち込む時間を、先に決めておく</b><span>5分だけ落ち込んで、学びと次の一手を一行ずつ書く。</span>
+        <a class="more" href="mood.html#i235">くわしく →</a>
+      </li>
+      <li id="c236">
+        <p class="meta"><span class="no">#236</span><span class="tag">気持ち</span></p>
+        <b>他人の口で、自分に反論させる</b><span>「本当にそうか」は、自分の声では届かない。</span>
+        <a class="more" href="mood.html#i236">くわしく →</a>
+      </li>
+      <li id="c237">
+        <p class="meta"><span class="no">#237</span><span class="tag">気持ち</span></p>
+        <b>悪い出来事を、三つの軸で見直す</b><span>いつまで続くか、どこまで及ぶか、変えられるか。性格の話にしない。</span>
+        <a class="more" href="mood.html#i237">くわしく →</a>
+      </li>
+      <li id="c238">
+        <p class="meta"><span class="no">#238</span><span class="tag">気持ち</span></p>
+        <b>困ったことと、どう抜けたかを、対で書く</b><span>抜けた記録が溜まると、次に困ったときの足場になる。</span>
+        <a class="more" href="mood.html#i238">くわしく →</a>
+      </li>
+      <li id="c239">
+        <p class="meta"><span class="no">#239</span><span class="tag">気持ち</span></p>
+        <b>夜の判断は、翌朝に回す</b><span>夜は、悪いほうに寄る。</span>
+        <a class="more" href="mood.html#i239">くわしく →</a>
+      </li>
     </ul>
     <h3>休む</h3>
     <ul class="points">
-      <li><b>休みも、予定として入れる</b><span>空いた時間は、必ず埋まる。</span></li>
-      <li><b>歩きながら、考える</b><span>座ったまま考えると、同じ場所を回る。</span><em class="ev ev-s"><small>研究あり</small>歩行中と歩いた直後に発散的な思考が上がった四つの実験がある。答えを一つに絞る作業では、座るほうがよい。</em></li>
+      <li id="c240">
+        <p class="meta"><span class="no">#240</span><span class="tag">気持ち</span></p>
+        <b>休みも、予定として入れる</b><span>空いた時間は、必ず埋まる。</span>
+        <a class="more" href="mood.html#i240">くわしく →</a>
+      </li>
+      <li id="c241">
+        <p class="meta"><span class="no">#241</span><span class="tag">気持ち</span><span class="tag ev-s">研究あり</span></p>
+        <b>歩きながら、考える</b><span>座ったまま考えると、同じ場所を回る。</span>
+        <em class="ev ev-s">歩行中と歩いた直後に発散的な思考が上がった四つの実験がある。答えを一つに絞る作業では、座るほうがよい。</em>
+        <a class="more" href="mood.html#i241">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="mood.html">くわしく見る →</a>　気持ちの整え方そのものは <a href="../thinking/">考え方</a>。</p>
   </section>
@@ -745,44 +1757,152 @@
     </div>
     <h3>メモ</h3>
     <ul class="points">
-      <li><b>全部、書き出す</b><span>覚えておく仕事を、紙に渡す。</span></li>
-      <li><b>目標の周りに、なぜ欲しいのかを並べて書く</b><span>数字が動かない時期は、そちらで進み具合を見る。</span></li>
-      <li><b>うまくいったことを、行動・準備・環境に分けて書く</b><span>運で片付けると、二度目が来ない。</span></li>
-      <li><b>書く場所を、一つに決める</b><span>どこに書いたかを思い出す時間が、いちばん無駄。</span></li>
+      <li id="c242">
+        <p class="meta"><span class="no">#242</span><span class="tag">頭の中</span></p>
+        <b>全部、書き出す</b><span>覚えておく仕事を、紙に渡す。</span>
+        <a class="more" href="mind.html#i242">くわしく →</a>
+      </li>
+      <li id="c243">
+        <p class="meta"><span class="no">#243</span><span class="tag">頭の中</span></p>
+        <b>目標の周りに、なぜ欲しいのかを並べて書く</b><span>数字が動かない時期は、そちらで進み具合を見る。</span>
+        <a class="more" href="mind.html#i243">くわしく →</a>
+      </li>
+      <li id="c244">
+        <p class="meta"><span class="no">#244</span><span class="tag">頭の中</span></p>
+        <b>うまくいったことを、行動・準備・環境に分けて書く</b><span>運で片付けると、二度目が来ない。</span>
+        <a class="more" href="mind.html#i244">くわしく →</a>
+      </li>
+      <li id="c245">
+        <p class="meta"><span class="no">#245</span><span class="tag">頭の中</span></p>
+        <b>書く場所を、一つに決める</b><span>どこに書いたかを思い出す時間が、いちばん無駄。</span>
+        <a class="more" href="mind.html#i245">くわしく →</a>
+      </li>
     </ul>
     <h3>目標</h3>
     <ul class="points">
-      <li><b>その目標が自分のものか、確かめる</b><span>他人の期待のため、恥をかかないため、になっていないか。</span></li>
-      <li><b>結果ではなく、道順を書く</b><span>「こうなりたい」より「次に何をするか」が、実行を決める。</span></li>
-      <li><b>道は、二つ以上用意する</b><span>一本だけだと、塞がった時点で止まる。</span></li>
-      <li><b>目標は、年に一度は書き直す</b><span>変わらないのは価値観のほうで、目標ではない。</span></li>
+      <li id="c246">
+        <p class="meta"><span class="no">#246</span><span class="tag">頭の中</span></p>
+        <b>その目標が自分のものか、確かめる</b><span>他人の期待のため、恥をかかないため、になっていないか。</span>
+        <a class="more" href="mind.html#i246">くわしく →</a>
+      </li>
+      <li id="c247">
+        <p class="meta"><span class="no">#247</span><span class="tag">頭の中</span></p>
+        <b>結果ではなく、道順を書く</b><span>「こうなりたい」より「次に何をするか」が、実行を決める。</span>
+        <a class="more" href="mind.html#i247">くわしく →</a>
+      </li>
+      <li id="c248">
+        <p class="meta"><span class="no">#248</span><span class="tag">頭の中</span></p>
+        <b>道は、二つ以上用意する</b><span>一本だけだと、塞がった時点で止まる。</span>
+        <a class="more" href="mind.html#i248">くわしく →</a>
+      </li>
+      <li id="c249">
+        <p class="meta"><span class="no">#249</span><span class="tag">頭の中</span></p>
+        <b>目標は、年に一度は書き直す</b><span>変わらないのは価値観のほうで、目標ではない。</span>
+        <a class="more" href="mind.html#i249">くわしく →</a>
+      </li>
     </ul>
     <h3>決める</h3>
     <ul class="points">
-      <li class="me"><b>決めるのは、一度でいい</b><span>決め直しが要らない形にしておく。</span></li>
-      <li><b>選択肢は、三つに絞る</b><span>多いほど、決められない。</span></li>
-      <li><b>何が手に入るかより、何が鍛えられるかで選ぶ</b><span>手に入れたものは減るが、身についたものは減らない。</span></li>
-      <li><b>「みんながやっている」を、理由にしない</b><span>多いことは、正しいこととは別。</span></li>
-      <li><b>気になったことは、48時間以内に一手だけ試す</b><span>検索する、一行送る。それだけで確かめられる。</span></li>
-      <li><b>迷ったら、小さく試す</b><span>考えるより、やってみるほうが早く分かる。</span></li>
-      <li><b>十分後・十か月後・十年後で見る</b><span>十分で重大だが十か月で消えるものは感情。逆は、見落としている本命。</span><em class="ev ev-p"><small>実践知</small>数字で比べるべき決定には向かない。</em></li>
+      <li class="me" id="c250">
+        <p class="meta"><span class="no">#250</span><span class="tag">頭の中</span></p>
+        <b>決めるのは、一度でいい</b><span>決め直しが要らない形にしておく。</span>
+        <a class="more" href="mind.html#i250">くわしく →</a>
+      </li>
+      <li id="c251">
+        <p class="meta"><span class="no">#251</span><span class="tag">頭の中</span></p>
+        <b>選択肢は、三つに絞る</b><span>多いほど、決められない。</span>
+        <a class="more" href="mind.html#i251">くわしく →</a>
+      </li>
+      <li id="c252">
+        <p class="meta"><span class="no">#252</span><span class="tag">頭の中</span></p>
+        <b>何が手に入るかより、何が鍛えられるかで選ぶ</b><span>手に入れたものは減るが、身についたものは減らない。</span>
+        <a class="more" href="mind.html#i252">くわしく →</a>
+      </li>
+      <li id="c253">
+        <p class="meta"><span class="no">#253</span><span class="tag">頭の中</span></p>
+        <b>「みんながやっている」を、理由にしない</b><span>多いことは、正しいこととは別。</span>
+        <a class="more" href="mind.html#i253">くわしく →</a>
+      </li>
+      <li id="c254">
+        <p class="meta"><span class="no">#254</span><span class="tag">頭の中</span></p>
+        <b>気になったことは、48時間以内に一手だけ試す</b><span>検索する、一行送る。それだけで確かめられる。</span>
+        <a class="more" href="mind.html#i254">くわしく →</a>
+      </li>
+      <li id="c255">
+        <p class="meta"><span class="no">#255</span><span class="tag">頭の中</span></p>
+        <b>迷ったら、小さく試す</b><span>考えるより、やってみるほうが早く分かる。</span>
+        <a class="more" href="mind.html#i255">くわしく →</a>
+      </li>
+      <li id="c256">
+        <p class="meta"><span class="no">#256</span><span class="tag">頭の中</span><span class="tag ev-p">実践知</span></p>
+        <b>十分後・十か月後・十年後で見る</b><span>十分で重大だが十か月で消えるものは感情。逆は、見落としている本命。</span>
+        <em class="ev ev-p">数字で比べるべき決定には向かない。</em>
+        <a class="more" href="mind.html#i256">くわしく →</a>
+      </li>
     </ul>
     <h3>もし〜なら</h3>
     <ul class="points">
-      <li><b>「もしXしたら、Yをする」の形で決める</b><span>条件と行動を対で持つと、その場で考えずに動ける。</span><em class="ev ev-s"><small>研究あり</small>多くの研究をまとめた分析で、実行の確率が上がることが示されている。</em></li>
-      <li><b>禁止ではなく、代わりにすることを決める</b><span>「〜しない」は反動が来る。置き換える先を書く。</span></li>
-      <li><b>つまずく日の分も、先に決めておく</b><span>疲れて帰った日に何をするかまで決めておく。</span></li>
-      <li><b>決めごとは、1〜3個までにする</b><span>増やすと、覚えていられない。</span></li>
+      <li id="c257">
+        <p class="meta"><span class="no">#257</span><span class="tag">頭の中</span><span class="tag ev-s">研究あり</span></p>
+        <b>「もしXしたら、Yをする」の形で決める</b><span>条件と行動を対で持つと、その場で考えずに動ける。</span>
+        <em class="ev ev-s">多くの研究をまとめた分析で、実行の確率が上がることが示されている。</em>
+        <a class="more" href="mind.html#i257">くわしく →</a>
+      </li>
+      <li id="c258">
+        <p class="meta"><span class="no">#258</span><span class="tag">頭の中</span></p>
+        <b>禁止ではなく、代わりにすることを決める</b><span>「〜しない」は反動が来る。置き換える先を書く。</span>
+        <a class="more" href="mind.html#i258">くわしく →</a>
+      </li>
+      <li id="c259">
+        <p class="meta"><span class="no">#259</span><span class="tag">頭の中</span></p>
+        <b>つまずく日の分も、先に決めておく</b><span>疲れて帰った日に何をするかまで決めておく。</span>
+        <a class="more" href="mind.html#i259">くわしく →</a>
+      </li>
+      <li id="c260">
+        <p class="meta"><span class="no">#260</span><span class="tag">頭の中</span></p>
+        <b>決めごとは、1〜3個までにする</b><span>増やすと、覚えていられない。</span>
+        <a class="more" href="mind.html#i260">くわしく →</a>
+      </li>
     </ul>
     <h3>習慣</h3>
     <ul class="points">
-      <li class="me"><b>すでにある出来事に、結びつける</b><span>新しい時間を作らず、起きることに乗せる。</span></li>
-      <li><b>評価を、続ける理由にしない</b><span>人の評価で始めたことは、評価がなくなると止まる。</span></li>
-      <li><b>二度目に困ったら、仕組みにする</b><span>一度目は、手でやる。</span></li>
-      <li><b>小さな不便を、自分で作っておく</b><span>一駅歩く、使わない日を作る。大きく困ったときの慣れになる。</span></li>
-      <li><b>一日休んでも、二日は休まない</b><span>途切れたことより、戻れないことが効く。</span></li>
-      <li><b>始める日は、区切りの日に合わせる</b><span>月初、週明け、誕生日の翌日、引っ越しの初日。失敗しても、次の区切りから。</span><em class="ev ev-s"><small>研究あり</small>大規模なデータで、区切りの日の直後に新しい行動が増えることが示されている。</em></li>
-      <li><b>好きなことを、面倒なことのときだけ解禁する</b><span>続きが気になるものを、運動や家事と抱き合わせる。</span><em class="ev ev-s"><small>研究あり</small>元の実験では通う回数が増え、六千人規模の追試でも効果は出たが小さく、時間が経つと薄れる。</em></li>
+      <li class="me" id="c261">
+        <p class="meta"><span class="no">#261</span><span class="tag">頭の中</span></p>
+        <b>すでにある出来事に、結びつける</b><span>新しい時間を作らず、起きることに乗せる。</span>
+        <a class="more" href="mind.html#i261">くわしく →</a>
+      </li>
+      <li id="c262">
+        <p class="meta"><span class="no">#262</span><span class="tag">頭の中</span></p>
+        <b>評価を、続ける理由にしない</b><span>人の評価で始めたことは、評価がなくなると止まる。</span>
+        <a class="more" href="mind.html#i262">くわしく →</a>
+      </li>
+      <li id="c263">
+        <p class="meta"><span class="no">#263</span><span class="tag">頭の中</span></p>
+        <b>二度目に困ったら、仕組みにする</b><span>一度目は、手でやる。</span>
+        <a class="more" href="mind.html#i263">くわしく →</a>
+      </li>
+      <li id="c264">
+        <p class="meta"><span class="no">#264</span><span class="tag">頭の中</span></p>
+        <b>小さな不便を、自分で作っておく</b><span>一駅歩く、使わない日を作る。大きく困ったときの慣れになる。</span>
+        <a class="more" href="mind.html#i264">くわしく →</a>
+      </li>
+      <li id="c265">
+        <p class="meta"><span class="no">#265</span><span class="tag">頭の中</span></p>
+        <b>一日休んでも、二日は休まない</b><span>途切れたことより、戻れないことが効く。</span>
+        <a class="more" href="mind.html#i265">くわしく →</a>
+      </li>
+      <li id="c266">
+        <p class="meta"><span class="no">#266</span><span class="tag">頭の中</span><span class="tag ev-s">研究あり</span></p>
+        <b>始める日は、区切りの日に合わせる</b><span>月初、週明け、誕生日の翌日、引っ越しの初日。失敗しても、次の区切りから。</span>
+        <em class="ev ev-s">大規模なデータで、区切りの日の直後に新しい行動が増えることが示されている。</em>
+        <a class="more" href="mind.html#i266">くわしく →</a>
+      </li>
+      <li id="c267">
+        <p class="meta"><span class="no">#267</span><span class="tag">頭の中</span><span class="tag ev-s">研究あり</span></p>
+        <b>好きなことを、面倒なことのときだけ解禁する</b><span>続きが気になるものを、運動や家事と抱き合わせる。</span>
+        <em class="ev ev-s">元の実験では通う回数が増え、六千人規模の追試でも効果は出たが小さく、時間が経つと薄れる。</em>
+        <a class="more" href="mind.html#i267">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="mind.html">くわしく見る →</a></p>
   </section>
@@ -792,52 +1912,152 @@
     <p class="note">相手の手間を、先に減らしておく。</p>
     <h3>ゆるい繋がり</h3>
     <ul class="points">
-      <li><b>親友を作ることに、こだわらない</b><span>雑談できる相手が何人かいるほうが、効く。</span></li>
-      <li><b>趣味のつながりに、顔を出す</b><span>程よい距離で、所属している感じが得られる。</span></li>
-      <li><b>消耗する関係は、頻度を下げる</b><span>断ち切らなくても、会う回数は選べる。</span></li>
-      <li><b>知り合いのままの相手を、切らさない</b><span>新しい話は、親しい人より知り合いから来る。</span></li>
-      <li><b>思い出してもらえる回数を、増やす</b><span>深く好かれようとしなくていい。思い出されるだけでいい。</span></li>
-      <li><b>回数を増やす前に、受け取り方を見る</b><span>人と会う量ではなく、自分の受け取り方のほうが効いていることがある。</span></li>
+      <li id="c268">
+        <p class="meta"><span class="no">#268</span><span class="tag">人づきあい</span></p>
+        <b>親友を作ることに、こだわらない</b><span>雑談できる相手が何人かいるほうが、効く。</span>
+        <a class="more" href="people.html#i268">くわしく →</a>
+      </li>
+      <li id="c269">
+        <p class="meta"><span class="no">#269</span><span class="tag">人づきあい</span></p>
+        <b>趣味のつながりに、顔を出す</b><span>程よい距離で、所属している感じが得られる。</span>
+        <a class="more" href="people.html#i269">くわしく →</a>
+      </li>
+      <li id="c270">
+        <p class="meta"><span class="no">#270</span><span class="tag">人づきあい</span></p>
+        <b>消耗する関係は、頻度を下げる</b><span>断ち切らなくても、会う回数は選べる。</span>
+        <a class="more" href="people.html#i270">くわしく →</a>
+      </li>
+      <li id="c271">
+        <p class="meta"><span class="no">#271</span><span class="tag">人づきあい</span></p>
+        <b>知り合いのままの相手を、切らさない</b><span>新しい話は、親しい人より知り合いから来る。</span>
+        <a class="more" href="people.html#i271">くわしく →</a>
+      </li>
+      <li id="c272">
+        <p class="meta"><span class="no">#272</span><span class="tag">人づきあい</span></p>
+        <b>思い出してもらえる回数を、増やす</b><span>深く好かれようとしなくていい。思い出されるだけでいい。</span>
+        <a class="more" href="people.html#i272">くわしく →</a>
+      </li>
+      <li id="c273">
+        <p class="meta"><span class="no">#273</span><span class="tag">人づきあい</span></p>
+        <b>回数を増やす前に、受け取り方を見る</b><span>人と会う量ではなく、自分の受け取り方のほうが効いていることがある。</span>
+        <a class="more" href="people.html#i273">くわしく →</a>
+      </li>
     </ul>
     <h3>深く付き合う</h3>
     <ul class="points">
-      <li><b>本音を話せる人を、数人持つ</b><span>広さより、深さ。全員と深くなくていい。</span></li>
-      <li><b>嫌いなものが合う相手を、大事にする</b><span>好きなものより、ずれにくい。</span></li>
-      <li><b>第三者の目を、一人持つ</b><span>従うためではなく、自分の見落としを知るために。</span></li>
-      <li><b>人の挑戦を、手伝う</b><span>助けた関係のほうが、長く残る。</span></li>
+      <li id="c274">
+        <p class="meta"><span class="no">#274</span><span class="tag">人づきあい</span></p>
+        <b>本音を話せる人を、数人持つ</b><span>広さより、深さ。全員と深くなくていい。</span>
+        <a class="more" href="people.html#i274">くわしく →</a>
+      </li>
+      <li id="c275">
+        <p class="meta"><span class="no">#275</span><span class="tag">人づきあい</span></p>
+        <b>嫌いなものが合う相手を、大事にする</b><span>好きなものより、ずれにくい。</span>
+        <a class="more" href="people.html#i275">くわしく →</a>
+      </li>
+      <li id="c276">
+        <p class="meta"><span class="no">#276</span><span class="tag">人づきあい</span></p>
+        <b>第三者の目を、一人持つ</b><span>従うためではなく、自分の見落としを知るために。</span>
+        <a class="more" href="people.html#i276">くわしく →</a>
+      </li>
+      <li id="c277">
+        <p class="meta"><span class="no">#277</span><span class="tag">人づきあい</span></p>
+        <b>人の挑戦を、手伝う</b><span>助けた関係のほうが、長く残る。</span>
+        <a class="more" href="people.html#i277">くわしく →</a>
+      </li>
     </ul>
     <h3>貸し借り</h3>
     <ul class="points">
-      <li><b>5分で終わる親切は、その日のうちにやる</b><span>自分の得意な範囲で、一日ひとつ。</span></li>
-      <li><b>小さな頼み事を、してみる</b><span>人は、助けてもらった相手より、助けた相手に親しみを持つ。</span></li>
+      <li id="c278">
+        <p class="meta"><span class="no">#278</span><span class="tag">人づきあい</span></p>
+        <b>5分で終わる親切は、その日のうちにやる</b><span>自分の得意な範囲で、一日ひとつ。</span>
+        <a class="more" href="people.html#i278">くわしく →</a>
+      </li>
+      <li id="c279">
+        <p class="meta"><span class="no">#279</span><span class="tag">人づきあい</span></p>
+        <b>小さな頼み事を、してみる</b><span>人は、助けてもらった相手より、助けた相手に親しみを持つ。</span>
+        <a class="more" href="people.html#i279">くわしく →</a>
+      </li>
     </ul>
     <h3>危ない関係</h3>
     <ul class="points">
-      <li><b>人から引き離そうとする相手を、警戒する</b><span>相談できる先を減らさせるのは、やり方の一つ。</span></li>
-      <li><b>否定のあとに急に優しくなる人に、気をつける</b><span>落としてから救う形は、依存を作る。</span></li>
-      <li><b>予定と時間を埋めてくる相手から、離れる</b><span>考える隙がないのは、偶然ではないことがある。</span></li>
-      <li><b>おかしいと感じたら、まず物理的に離れる</b><span>話し合って直すより、距離を取るほうが先に効く。</span></li>
+      <li id="c280">
+        <p class="meta"><span class="no">#280</span><span class="tag">人づきあい</span></p>
+        <b>人から引き離そうとする相手を、警戒する</b><span>相談できる先を減らさせるのは、やり方の一つ。</span>
+        <a class="more" href="people.html#i280">くわしく →</a>
+      </li>
+      <li id="c281">
+        <p class="meta"><span class="no">#281</span><span class="tag">人づきあい</span></p>
+        <b>否定のあとに急に優しくなる人に、気をつける</b><span>落としてから救う形は、依存を作る。</span>
+        <a class="more" href="people.html#i281">くわしく →</a>
+      </li>
+      <li id="c282">
+        <p class="meta"><span class="no">#282</span><span class="tag">人づきあい</span></p>
+        <b>予定と時間を埋めてくる相手から、離れる</b><span>考える隙がないのは、偶然ではないことがある。</span>
+        <a class="more" href="people.html#i282">くわしく →</a>
+      </li>
+      <li id="c283">
+        <p class="meta"><span class="no">#283</span><span class="tag">人づきあい</span></p>
+        <b>おかしいと感じたら、まず物理的に離れる</b><span>話し合って直すより、距離を取るほうが先に効く。</span>
+        <a class="more" href="people.html#i283">くわしく →</a>
+      </li>
     </ul>
     <h3>連絡</h3>
     <ul class="points">
-      <li><b>返事は、早く短く</b><span>長さより、早さのほうが喜ばれる。</span></li>
-      <li><b>日程は、候補を出す</b><span>相手に考えさせない。</span></li>
+      <li id="c284">
+        <p class="meta"><span class="no">#284</span><span class="tag">人づきあい</span></p>
+        <b>返事は、早く短く</b><span>長さより、早さのほうが喜ばれる。</span>
+        <a class="more" href="people.html#i284">くわしく →</a>
+      </li>
+      <li id="c285">
+        <p class="meta"><span class="no">#285</span><span class="tag">人づきあい</span></p>
+        <b>日程は、候補を出す</b><span>相手に考えさせない。</span>
+        <a class="more" href="people.html#i285">くわしく →</a>
+      </li>
     </ul>
     <h3>頼む・断る</h3>
     <ul class="points">
-      <li><b>頼むときは、期限と形を添える</b><span>曖昧な依頼は、戻ってこない。</span></li>
-      <li><b>断る理由は、一つだけ言う</b><span>並べるほど、弱くなる。</span></li>
+      <li id="c286">
+        <p class="meta"><span class="no">#286</span><span class="tag">人づきあい</span></p>
+        <b>頼むときは、期限と形を添える</b><span>曖昧な依頼は、戻ってこない。</span>
+        <a class="more" href="people.html#i286">くわしく →</a>
+      </li>
+      <li id="c287">
+        <p class="meta"><span class="no">#287</span><span class="tag">人づきあい</span></p>
+        <b>断る理由は、一つだけ言う</b><span>並べるほど、弱くなる。</span>
+        <a class="more" href="people.html#i287">くわしく →</a>
+      </li>
     </ul>
     <h3>約束</h3>
     <ul class="points">
-      <li><b>会ったら、その場で次を決める</b><span>後からの調整が、いちばん重い。</span></li>
-      <li><b>覚えておきたい日は、登録する</b><span>記憶ではなく、通知に任せる。</span></li>
+      <li id="c288">
+        <p class="meta"><span class="no">#288</span><span class="tag">人づきあい</span></p>
+        <b>会ったら、その場で次を決める</b><span>後からの調整が、いちばん重い。</span>
+        <a class="more" href="people.html#i288">くわしく →</a>
+      </li>
+      <li id="c289">
+        <p class="meta"><span class="no">#289</span><span class="tag">人づきあい</span></p>
+        <b>覚えておきたい日は、登録する</b><span>記憶ではなく、通知に任せる。</span>
+        <a class="more" href="people.html#i289">くわしく →</a>
+      </li>
     </ul>
     <h3>贈りもの</h3>
     <ul class="points">
-      <li><b>贈ったものを、記録しておく</b><span>次に迷わないし、重ならない。</span></li>
-      <li><b>消えるものを選ぶ</b><span>置き場所を相手に作らせない。</span></li>
-      <li><b>節目の連絡を、欠かさない</b><span>祝いと弔いは、どの連絡よりも残る。</span></li>
+      <li id="c290">
+        <p class="meta"><span class="no">#290</span><span class="tag">人づきあい</span></p>
+        <b>贈ったものを、記録しておく</b><span>次に迷わないし、重ならない。</span>
+        <a class="more" href="people.html#i290">くわしく →</a>
+      </li>
+      <li id="c291">
+        <p class="meta"><span class="no">#291</span><span class="tag">人づきあい</span></p>
+        <b>消えるものを選ぶ</b><span>置き場所を相手に作らせない。</span>
+        <a class="more" href="people.html#i291">くわしく →</a>
+      </li>
+      <li id="c292">
+        <p class="meta"><span class="no">#292</span><span class="tag">人づきあい</span></p>
+        <b>節目の連絡を、欠かさない</b><span>祝いと弔いは、どの連絡よりも残る。</span>
+        <a class="more" href="people.html#i292">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="people.html">くわしく見る →</a></p>
   </section>
@@ -847,36 +2067,96 @@
     <p class="note">困ってから探さないように、先に置いておく。</p>
     <h3>停電</h3>
     <ul class="points">
-      <li><b>懐中電灯は、水の入ったペットボトルに当てる</b><span>光が乱反射して、部屋全体が明るくなる。</span></li>
-      <li><b>明かりは、部屋ごとに一つ置く</b><span>暗くなってから、取りに行けない。</span></li>
-      <li><b>冷蔵庫は、開けない</b><span>開けなければ、数時間はもつ。</span></li>
+      <li id="c293">
+        <p class="meta"><span class="no">#293</span><span class="tag">備え</span></p>
+        <b>懐中電灯は、水の入ったペットボトルに当てる</b><span>光が乱反射して、部屋全体が明るくなる。</span>
+        <a class="more" href="ready.html#i293">くわしく →</a>
+      </li>
+      <li id="c294">
+        <p class="meta"><span class="no">#294</span><span class="tag">備え</span></p>
+        <b>明かりは、部屋ごとに一つ置く</b><span>暗くなってから、取りに行けない。</span>
+        <a class="more" href="ready.html#i294">くわしく →</a>
+      </li>
+      <li id="c295">
+        <p class="meta"><span class="no">#295</span><span class="tag">備え</span></p>
+        <b>冷蔵庫は、開けない</b><span>開けなければ、数時間はもつ。</span>
+        <a class="more" href="ready.html#i295">くわしく →</a>
+      </li>
     </ul>
     <h3>断水</h3>
     <ul class="points">
-      <li><b>飲む水と、流す水を分けて置く</b><span>必要な量が、桁ひとつ違う。</span></li>
-      <li><b>風呂の残り湯を、次に入れるまで流さない</b><span>トイレ一回分になる。</span></li>
+      <li id="c296">
+        <p class="meta"><span class="no">#296</span><span class="tag">備え</span></p>
+        <b>飲む水と、流す水を分けて置く</b><span>必要な量が、桁ひとつ違う。</span>
+        <a class="more" href="ready.html#i296">くわしく →</a>
+      </li>
+      <li id="c297">
+        <p class="meta"><span class="no">#297</span><span class="tag">備え</span></p>
+        <b>風呂の残り湯を、次に入れるまで流さない</b><span>トイレ一回分になる。</span>
+        <a class="more" href="ready.html#i297">くわしく →</a>
+      </li>
     </ul>
     <h3>備蓄</h3>
     <ul class="points">
-      <li><b>普段食べるものを、少し多めに買う</b><span>食べた分だけ買い足せば、期限切れで捨てない。</span></li>
-      <li><b>電池は、サイズを一つに寄せる</b><span>どの道具にも回せる。</span></li>
-      <li><b>火と水だけで食べられるものを、一食分置く</b><span>電気が止まっても作れる。</span></li>
+      <li id="c298">
+        <p class="meta"><span class="no">#298</span><span class="tag">備え</span></p>
+        <b>普段食べるものを、少し多めに買う</b><span>食べた分だけ買い足せば、期限切れで捨てない。</span>
+        <a class="more" href="ready.html#i298">くわしく →</a>
+      </li>
+      <li id="c299">
+        <p class="meta"><span class="no">#299</span><span class="tag">備え</span></p>
+        <b>電池は、サイズを一つに寄せる</b><span>どの道具にも回せる。</span>
+        <a class="more" href="ready.html#i299">くわしく →</a>
+      </li>
+      <li id="c300">
+        <p class="meta"><span class="no">#300</span><span class="tag">備え</span></p>
+        <b>火と水だけで食べられるものを、一食分置く</b><span>電気が止まっても作れる。</span>
+        <a class="more" href="ready.html#i300">くわしく →</a>
+      </li>
     </ul>
     <h3>持ち出し</h3>
     <ul class="points">
-      <li><b>持ち出す袋は、玄関に置く</b><span>奥にあると、持って出られない。</span></li>
-      <li><b>常備薬と眼鏡の予備を、その袋に入れる</b><span>買い直せないものから入れる。</span></li>
-      <li><b>小銭の現金を、少し入れておく</b><span>停電すると、カードも電子マネーも使えない。</span></li>
+      <li id="c301">
+        <p class="meta"><span class="no">#301</span><span class="tag">備え</span></p>
+        <b>持ち出す袋は、玄関に置く</b><span>奥にあると、持って出られない。</span>
+        <a class="more" href="ready.html#i301">くわしく →</a>
+      </li>
+      <li id="c302">
+        <p class="meta"><span class="no">#302</span><span class="tag">備え</span></p>
+        <b>常備薬と眼鏡の予備を、その袋に入れる</b><span>買い直せないものから入れる。</span>
+        <a class="more" href="ready.html#i302">くわしく →</a>
+      </li>
+      <li id="c303">
+        <p class="meta"><span class="no">#303</span><span class="tag">備え</span></p>
+        <b>小銭の現金を、少し入れておく</b><span>停電すると、カードも電子マネーも使えない。</span>
+        <a class="more" href="ready.html#i303">くわしく →</a>
+      </li>
     </ul>
     <h3>連絡</h3>
     <ul class="points">
-      <li><b>集まる場所を、先に決めておく</b><span>電話はつながらない前提で考える。</span></li>
-      <li><b>大事な書類は、写真に撮っておく</b><span>原本が手元になくても、話が進む。</span></li>
+      <li id="c304">
+        <p class="meta"><span class="no">#304</span><span class="tag">備え</span></p>
+        <b>集まる場所を、先に決めておく</b><span>電話はつながらない前提で考える。</span>
+        <a class="more" href="ready.html#i304">くわしく →</a>
+      </li>
+      <li id="c305">
+        <p class="meta"><span class="no">#305</span><span class="tag">備え</span></p>
+        <b>大事な書類は、写真に撮っておく</b><span>原本が手元になくても、話が進む。</span>
+        <a class="more" href="ready.html#i305">くわしく →</a>
+      </li>
     </ul>
     <h3>手元のもので</h3>
     <ul class="points">
-      <li><b>開かない袋は、10円玉を2枚で挟んですべらせる</b><span>はさみがなくても切れる。</span></li>
-      <li><b>スマホは、ラップで巻くと水とほこりを防げる</b><span>巻いたままでも操作できる。</span></li>
+      <li id="c306">
+        <p class="meta"><span class="no">#306</span><span class="tag">備え</span></p>
+        <b>開かない袋は、10円玉を2枚で挟んですべらせる</b><span>はさみがなくても切れる。</span>
+        <a class="more" href="ready.html#i306">くわしく →</a>
+      </li>
+      <li id="c307">
+        <p class="meta"><span class="no">#307</span><span class="tag">備え</span></p>
+        <b>スマホは、ラップで巻くと水とほこりを防げる</b><span>巻いたままでも操作できる。</span>
+        <a class="more" href="ready.html#i307">くわしく →</a>
+      </li>
     </ul>
     <p class="tl"><a href="ready.html">くわしく見る →</a></p>
   </section>
