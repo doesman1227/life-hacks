@@ -52,26 +52,28 @@
   h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
   .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
 
-  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
-  .item:last-of-type{border-bottom:0}
-  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item{margin:16px 0 0;padding:19px 20px 21px;background:var(--card);
+    border:1px solid var(--line);border-radius:6px}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.06rem;margin:0 0 7px;letter-spacing:.02em}
+  .lbl{display:block;margin:15px 0 8px;padding-top:13px;border-top:1px solid var(--line);
+    font-size:.63rem;letter-spacing:.18em;font-weight:700;color:var(--accent)}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
-  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev{display:block;margin:0;font-style:normal;font-size:.8rem;line-height:1.8;color:var(--muted)}
   .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
   .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
   .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
     font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
   .tag.ev-s{border-color:var(--accent);color:var(--accent)}
   .tag.ev-w{border-style:dashed}
-  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .why{color:var(--muted);font-size:.93rem;margin:0}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
   .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
     font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
   .how{counter-reset:step}
-  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
-    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag{margin:13px 0 0;padding:10px 14px;background:var(--bg);border:1px solid var(--line);
+    border-radius:3px;font-size:.86rem;color:var(--muted);line-height:1.8}
   .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
 
   .mine{margin:20px 0 0;padding:1px 0 1px 16px;border-left:2px solid var(--accent)}
@@ -119,9 +121,10 @@
     <h2>起きる</h2>
 
     <div class="item" id="i151">
-      <p class="meta"><span class="no">#151</span></p>
+      <p class="meta"><span class="no">#151</span><span class="tag">起きる</span></p>
       <h3>起きる時刻だけ、固定する</h3>
       <p class="why">寝る時刻は、その日の都合で動く。起きる時刻を固定すると、眠気のほうが後からついてくる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>休みの日も、起きる時刻を変えない</li>
         <li>眠い日は、昼に短く補う</li>
@@ -131,21 +134,24 @@
     </div>
 
     <div class="item" id="i152">
-      <p class="meta"><span class="no">#152</span><span class="tag ev-s">研究あり</span></p>
+      <p class="meta"><span class="no">#152</span><span class="tag">起きる</span><span class="tag ev-s">研究あり</span></p>
       <h3>朝に、光を浴びる</h3>
       <p class="why">体内時計は、朝の光で合う。起きてすぐ浴びるほど、その日の夜の眠気が早く来る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>起きたら、カーテンを開ける</li>
         <li>数分、窓際か外に出る</li>
         <li>曇りでも、屋外のほうが明るい</li>
       </ul>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-s">体内時計を合わせる一番強い手がかりは光。曇りの日の屋外でも、室内の照明より明るい。</p>
     </div>
 
     <div class="item" id="i153">
-      <p class="meta"><span class="no">#153</span></p>
+      <p class="meta"><span class="no">#153</span><span class="tag">起きる</span></p>
       <h3>朝食で、たんぱく質を摂る</h3>
       <p class="why">夜の眠気をつくるホルモンは、材料がないと作れない。その材料は朝のうちに入れたたんぱく質から時間をかけて変わっていくので、夜の眠りの準備は朝食から始まっている。納豆・卵・ヨーグルト・バナナのような身近なもので足りる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>朝に、たんぱく質のものを一つ決めて置く</li>
         <li>毎朝、同じものでいい</li>
@@ -154,9 +160,10 @@
     </div>
 
     <div class="item" id="i154">
-      <p class="meta"><span class="no">#154</span></p>
+      <p class="meta"><span class="no">#154</span><span class="tag">起きる</span></p>
       <h3>コーヒーは、起きて90分あけてから</h3>
       <p class="why">起きた直後は、体が自分の力で目を覚ましている時間帯。そこにカフェインを重ねても効きが薄く、切れたときの落ち込みのほうが大きい。少し待ってから飲むと、同じ一杯が効く。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>起きてすぐは、水か白湯にする</li>
         <li>一杯目を、起きて90分後あたりに置く</li>
@@ -166,9 +173,10 @@
     </div>
 
     <div class="item" id="i155">
-      <p class="meta"><span class="no">#155</span></p>
+      <p class="meta"><span class="no">#155</span><span class="tag">起きる</span></p>
       <h3>眠る時間を、先に予定として取る</h3>
       <p class="why">睡眠は、予定が詰まったときにいちばん削られる。削っても翌日すぐ困らないので削りやすいが、実際に引かれているのは判断力と機嫌。先に押さえておけば、削る対象が他に移る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>起きる時刻から、必要な時間を引いて就寝時刻を出す</li>
         <li>その時刻を、予定として入れておく</li>
@@ -184,9 +192,10 @@
     <h2>寝る前</h2>
 
     <div class="item" id="i156">
-      <p class="meta"><span class="no">#156</span></p>
+      <p class="meta"><span class="no">#156</span><span class="tag">寝る前</span></p>
       <h3>カフェインは、昼まで</h3>
       <p class="why">抜けるのに五、六時間かかる。夕方の一杯は、寝つきより眠りの深さに効く。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>昼を過ぎたら、カフェインを取らない</li>
         <li>午後は、カフェインのない飲み物に替える</li>
@@ -195,9 +204,10 @@
     </div>
 
     <div class="item" id="i157">
-      <p class="meta"><span class="no">#157</span></p>
+      <p class="meta"><span class="no">#157</span><span class="tag">寝る前</span></p>
       <h3>寝る前に、明かりを落とす</h3>
       <p class="why">暗さが合図になる。明るいままだと、体のほうが夜だと判断できない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>寝る一時間前から、照明を落とす</li>
         <li>手元だけ、暖色の明かりにする</li>
@@ -206,9 +216,10 @@
     </div>
 
     <div class="item" id="i158">
-      <p class="meta"><span class="no">#158</span></p>
+      <p class="meta"><span class="no">#158</span><span class="tag">寝る前</span></p>
       <h3>画面は、寝る2時間前に閉じる</h3>
       <p class="why">画面の光は、脳に「まだ昼だ」と伝え続ける。部屋の明かりを落としても、手元の画面を見ていれば合図が届かない。見る時間を切るのがいちばん効くが、難しければ明るさを落とすだけでも差が出る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>寝る時刻から2時間引いた時刻を決める</li>
         <li>その時刻に、端末を寝室の外に置く</li>
@@ -218,9 +229,10 @@
     </div>
 
     <div class="item" id="i159">
-      <p class="meta"><span class="no">#159</span></p>
+      <p class="meta"><span class="no">#159</span><span class="tag">寝る前</span></p>
       <h3>ぬるめの湯に、ゆっくり浸かる</h3>
       <p class="why">眠気は、体温が下がる流れの中で来る。熱い湯で短く済ませるより、ぬるめの湯に浸かって一度体温を上げておくと、上がったあとの下がり方が大きくなり、その流れに乗って眠れる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>就寝の1〜2時間前に入る</li>
         <li>熱くしすぎず、ゆっくり浸かる</li>
@@ -230,9 +242,10 @@
     </div>
 
     <div class="item" id="i160">
-      <p class="meta"><span class="no">#160</span></p>
+      <p class="meta"><span class="no">#160</span><span class="tag">寝る前</span></p>
       <h3>目元と背中を、温めてほぐす</h3>
       <p class="why">寝つけないときに力が入っているのは、たいてい目のまわりと肩から背中。そこがゆるむと、呼吸のほうが先に落ち着いてくる。眠ろうとするより、力を抜く場所を決めておくほうが早い。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>温めたタオルかアイマスクを、目に当てる</li>
         <li>肩と背中を、ローラーや手でほぐす</li>
@@ -241,9 +254,10 @@
     </div>
 
     <div class="item" id="i161">
-      <p class="meta"><span class="no">#161</span></p>
+      <p class="meta"><span class="no">#161</span><span class="tag">寝る前</span></p>
       <h3>気になることは、書き出してから寝る</h3>
       <p class="why">頭に残したままだと、覚えておくために眠りが浅くなる。外に出すと、思い出す必要がなくなる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>寝る前に、気がかりを全部書く</li>
         <li>明日やることも、一緒に書く</li>
@@ -252,28 +266,32 @@
     </div>
 
     <div class="item" id="i162">
-      <p class="meta"><span class="no">#162</span><span class="tag ev-s">研究あり</span></p>
+      <p class="meta"><span class="no">#162</span><span class="tag">寝る前</span><span class="tag ev-s">研究あり</span></p>
       <h3>風呂は、寝る一時間半前に済ませる</h3>
       <p class="why">眠気は、体の深い所の温度が下がるときに来る。湯で温めると手足の血管が開き、そのあと熱が逃げて下がっていく。直前に入ると、下がりきる前に寝床に入ることになる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>寝る一時間から二時間前に入る</li>
         <li>四十度前後の湯に、十分以上浸かる</li>
         <li>上がったあとは、部屋をやや涼しく保つ</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>熱い湯に短く入ると、かえって目が冴える。ぬるめに長く。</p>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-s">十七の研究をまとめた分析で、寝つくまでの時間が短くなった。四十度前後に十分以上。</p>
     </div>
 
     <div class="item" id="i163">
-      <p class="meta"><span class="no">#163</span><span class="tag ev-m">一部に研究</span></p>
+      <p class="meta"><span class="no">#163</span><span class="tag">寝る前</span><span class="tag ev-m">一部に研究</span></p>
       <h3>寝る支度にも、合図をかける</h3>
       <p class="why">寝る時刻は決めても、支度を始める時刻は決めていないことが多い。合図があれば、今日はまだ大丈夫という判断をしなくて済む。毎晩同じ順番にすると、その順番自体が眠気の合図になる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>灯りを落とす時刻に、知らせを置く</li>
         <li>鳴ったら、毎晩同じ短い順番を始める</li>
         <li>順番の最後は、必ず同じことにする</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>順番が長いと始められない。三つまでにする。</p>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-m">同じ順番を繰り返すこと自体には裏付けがあるが、この合図そのものを試した研究はない。</p>
     </div>
 
@@ -284,9 +302,10 @@
     <h2>寝床</h2>
 
     <div class="item" id="i164">
-      <p class="meta"><span class="no">#164</span></p>
+      <p class="meta"><span class="no">#164</span><span class="tag">寝床</span></p>
       <h3>寝床は、寝るためだけに使う</h3>
       <p class="why">場所と行為が結びつくと、横になった時点で眠くなる。寝床で起きている時間が長いと、その結びつきが薄れる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>寝床で、画面を見ない</li>
         <li>読書も、別の場所でする</li>
@@ -295,21 +314,24 @@
     </div>
 
     <div class="item" id="i165">
-      <p class="meta"><span class="no">#165</span><span class="tag ev-s">研究あり</span></p>
+      <p class="meta"><span class="no">#165</span><span class="tag">寝床</span><span class="tag ev-s">研究あり</span></p>
       <h3>眠れないときは、一度寝床を出る</h3>
       <p class="why">粘るほど、寝床が目覚めと結びつく。いったん出るほうが、結果として早く眠れる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>20分ほど眠れなければ、寝床を出る</li>
         <li>暗いところで、静かに過ごす</li>
         <li>眠くなったら、戻る</li>
       </ul>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-s">不眠に対する認知行動療法の中核にある手順。</p>
     </div>
 
     <div class="item" id="i166">
-      <p class="meta"><span class="no">#166</span></p>
+      <p class="meta"><span class="no">#166</span><span class="tag">寝床</span></p>
       <h3>眠れない夜は、横になっているだけでいいと考える</h3>
       <p class="why">「寝なければ」と思うほど緊張して眠れなくなる。目をつむって横になっているだけでも体は休んでいる、と考えると焦りが落ちて、結果として眠れることが多い。眠れたかどうかを採点しないほうがいい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>時計を見るのをやめる</li>
         <li>眠ることではなく、休むことを目的に置き直す</li>
@@ -319,9 +341,10 @@
     </div>
 
     <div class="item" id="i167">
-      <p class="meta"><span class="no">#167</span></p>
+      <p class="meta"><span class="no">#167</span><span class="tag">寝床</span></p>
       <h3>重さのある毛布を、試す</h3>
       <p class="why">軽い圧が全身にかかると落ち着く、という人がいる。体重の一割ほどの重さが目安とされる。合う合わないがはっきり分かれるものなので、揃えるより先に試すほうがいい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>体重の一割ほどの重さのものを選ぶ</li>
         <li>まず数日、試せる形で使う</li>
@@ -337,9 +360,10 @@
     <h2>昼と夕方</h2>
 
     <div class="item" id="i168">
-      <p class="meta"><span class="no">#168</span></p>
+      <p class="meta"><span class="no">#168</span><span class="tag">昼と夕方</span></p>
       <h3>昼寝は、20分まで</h3>
       <p class="why">20分を超えると深い眠りに入り、起きたあとが重くなる。短いほど、目覚めが軽い。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>タイマーを20分にする</li>
         <li>横になれないなら、座ったままでいい</li>
@@ -348,9 +372,10 @@
     </div>
 
     <div class="item" id="i169">
-      <p class="meta"><span class="no">#169</span></p>
+      <p class="meta"><span class="no">#169</span><span class="tag">昼と夕方</span></p>
       <h3>夕方以降は、横にならない</h3>
       <p class="why">夕方の短い居眠りが、夜の眠気をいちばん削る。眠いときほど、座って過ごす。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>夕方以降は、ソファで横にならない</li>
         <li>眠気が来たら、立って動く</li>
@@ -359,9 +384,10 @@
     </div>
 
     <div class="item" id="i170">
-      <p class="meta"><span class="no">#170</span></p>
+      <p class="meta"><span class="no">#170</span><span class="tag">昼と夕方</span></p>
       <h3>夕方に、15分歩く</h3>
       <p class="why">朝の光で始まったリズムは、夕方にもう一度外の光を浴びると整いやすい。歩くこと自体も夜の眠気につながるので、運動と光の両方を一度に取れる。長さは15分ほどで足りる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>夕方に、外に出る用事を一つ作る</li>
         <li>15分ほど歩く。速さは要らない</li>
@@ -370,9 +396,10 @@
     </div>
 
     <div class="item" id="i171">
-      <p class="meta"><span class="no">#171</span></p>
+      <p class="meta"><span class="no">#171</span><span class="tag">昼と夕方</span></p>
       <h3>強い運動は、寝る4時間前までに終える</h3>
       <p class="why">運動は眠りを深くするが、強い運動の直後は体が高ぶったままになり、寝つきだけは悪くなる。時間を空ければ両方取れるので、やめるのではなく時刻をずらす。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>強い運動は、夕方までに終える</li>
         <li>夜しか時間がない日は、強度を落とす</li>

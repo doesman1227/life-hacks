@@ -52,26 +52,28 @@
   h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
   .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
 
-  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
-  .item:last-of-type{border-bottom:0}
-  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item{margin:16px 0 0;padding:19px 20px 21px;background:var(--card);
+    border:1px solid var(--line);border-radius:6px}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.06rem;margin:0 0 7px;letter-spacing:.02em}
+  .lbl{display:block;margin:15px 0 8px;padding-top:13px;border-top:1px solid var(--line);
+    font-size:.63rem;letter-spacing:.18em;font-weight:700;color:var(--accent)}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
-  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev{display:block;margin:0;font-style:normal;font-size:.8rem;line-height:1.8;color:var(--muted)}
   .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
   .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
   .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
     font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
   .tag.ev-s{border-color:var(--accent);color:var(--accent)}
   .tag.ev-w{border-style:dashed}
-  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .why{color:var(--muted);font-size:.93rem;margin:0}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
   .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
     font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
   .how{counter-reset:step}
-  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
-    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag{margin:13px 0 0;padding:10px 14px;background:var(--bg);border:1px solid var(--line);
+    border-radius:3px;font-size:.86rem;color:var(--muted);line-height:1.8}
   .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
 
   .mine{margin:20px 0 0;padding:1px 0 1px 16px;border-left:2px solid var(--accent)}
@@ -121,21 +123,24 @@
     <h2>買い物</h2>
 
     <div class="item" id="i112">
-      <p class="meta"><span class="no">#112</span><span class="tag ev-m">一部に研究</span></p>
+      <p class="meta"><span class="no">#112</span><span class="tag">買い物</span><span class="tag ev-m">一部に研究</span></p>
       <h3>空腹のまま買い物に行かない</h3>
       <p class="why">空腹だと、量も種類も判断が甘くなる。買う前の状態のほうが、買い物のリストより効く。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>食後か、何か口に入れてから行く</li>
         <li>難しければ、先に飲み物を買う</li>
         <li>急いでいる日は、店に入らない</li>
       </ul>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-m">空腹時に買う量が増えるという実験がある。</p>
     </div>
 
     <div class="item" id="i113">
-      <p class="meta"><span class="no">#113</span></p>
+      <p class="meta"><span class="no">#113</span><span class="tag">買い物</span></p>
       <h3>買うものを決めてから、店に入る</h3>
       <p class="why">決めずに入ると、安さと陳列で決まる。先に決めておくと、店の中で考える時間が消える。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>買うものを、入る前に書く</li>
         <li>書いたもの以外は、一周目で取らない</li>
@@ -144,9 +149,10 @@
     </div>
 
     <div class="item" id="i114">
-      <p class="meta"><span class="no">#114</span><span class="tag ev-p">実践知</span></p>
+      <p class="meta"><span class="no">#114</span><span class="tag">買い物</span><span class="tag ev-p">実践知</span></p>
       <h3>行く前に、冷蔵庫の中を撮る</h3>
       <p class="why">同じものを二つ買うのは、覚えていないから起きる。店で思い出そうとしても思い出せないが、写真なら確かめられる。書き出す手間もいらない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>出る直前に、冷蔵庫と冷凍庫を撮る</li>
         <li>店で迷ったら、写真を見る</li>
@@ -162,9 +168,10 @@
     <h2>作る</h2>
 
     <div class="item" id="i115">
-      <p class="meta"><span class="no">#115</span></p>
+      <p class="meta"><span class="no">#115</span><span class="tag">作る</span></p>
       <h3>作るなら、まとめて作る</h3>
       <p class="why">減らすべきなのは調理そのものではなく、台所を立ち上げる回数。一度の支度で数回分を作ると、片付けも一回で済む。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>作る日を決めて、数回分をまとめて作る</li>
         <li>取り分けて、冷蔵・冷凍に分ける</li>
@@ -173,9 +180,10 @@
     </div>
 
     <div class="item" id="i116">
-      <p class="meta"><span class="no">#116</span></p>
+      <p class="meta"><span class="no">#116</span><span class="tag">作る</span></p>
       <h3>一人の時間で、作れるものを増やす</h3>
       <p class="why">一人の時間の使い道を決めておかないと、ただ時間が過ぎる。料理は、手を動かしているうちに没頭でき、結果が残り、そのうえ人と過ごす場でも使える。一人のために覚えたことが、一人のためだけに終わらない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>作れるようになりたいものを、一つ決める</li>
         <li>同じものを、何度か作る</li>
@@ -184,9 +192,10 @@
     </div>
 
     <div class="item" id="i117">
-      <p class="meta"><span class="no">#117</span></p>
+      <p class="meta"><span class="no">#117</span><span class="tag">作る</span></p>
       <h3>切るだけで食べられるものを、常に置く</h3>
       <p class="why">疲れた日に何も作れない前提で、台所を組んでおく。そこに何もないと、その日の食事がまるごと崩れる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>切るだけ・温めるだけのものを、常備する</li>
         <li>切らさないものを、三つだけ決める</li>
@@ -195,9 +204,10 @@
     </div>
 
     <div class="item" id="i118">
-      <p class="meta"><span class="no">#118</span><span class="tag ev-p">実践知</span></p>
+      <p class="meta"><span class="no">#118</span><span class="tag">作る</span><span class="tag ev-p">実践知</span></p>
       <h3>先に食べる箱を、冷蔵庫に作る</h3>
       <p class="why">捨てることになる食べものの多くは、見えない場所で期限を過ぎたもの。開封済みと期限の近いものを一か所に集めて目の高さに置くと、献立の出発点がそこになる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>透明な箱を、目の高さの手前に置く</li>
         <li>開封済みと期限の近いものを、全部そこへ移す</li>
@@ -213,9 +223,10 @@
     <h2>台所の困りごと</h2>
 
     <div class="item" id="i119">
-      <p class="meta"><span class="no">#119</span></p>
+      <p class="meta"><span class="no">#119</span><span class="tag">台所の困りごと</span></p>
       <h3>しおれた葉物は、お湯に浸す</h3>
       <p class="why">しなびた葉は水が抜けた状態で、冷水ではなかなか戻らない。50度くらいのお湯に当てると葉の気孔が開き、水を吸い直して食感が戻る。買ってから数日たった葉物を、捨てずに使い切れる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>50度ほどのお湯を張る(沸かした湯に同量の水)</li>
         <li>葉を1〜2分だけ浸す</li>
@@ -225,9 +236,10 @@
     </div>
 
     <div class="item" id="i120">
-      <p class="meta"><span class="no">#120</span></p>
+      <p class="meta"><span class="no">#120</span><span class="tag">台所の困りごと</span></p>
       <h3>硬くなりそうな肉は、酸性のものに漬ける</h3>
       <p class="why">肉が硬くなるのは、加熱で水分が抜けるから。漬け汁を酸性に寄せると肉の保水力が上がり、焼いても水が残る。炭酸飲料でもヨーグルトでも塩麹でも、理屈は同じ。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>炭酸飲料・ヨーグルト・塩麹のどれかに漬ける</li>
         <li>冷蔵庫で30分から数時間置く</li>
@@ -237,9 +249,10 @@
     </div>
 
     <div class="item" id="i121">
-      <p class="meta"><span class="no">#121</span></p>
+      <p class="meta"><span class="no">#121</span><span class="tag">台所の困りごと</span></p>
       <h3>手の油は、洗う前に砂糖でこする</h3>
       <p class="why">生肉や油を触った手は、ハンドソープだけでは何度も洗うことになる。先に砂糖をすり込むと、粒が油を抱えて浮かせるので、そのあとの石けんが少量で足りる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>大さじ一杯ほどの砂糖を、乾いた手にすり込む</li>
         <li>30秒ほどこする</li>
@@ -248,9 +261,10 @@
     </div>
 
     <div class="item" id="i122">
-      <p class="meta"><span class="no">#122</span><span class="tag ev-p">実践知</span></p>
+      <p class="meta"><span class="no">#122</span><span class="tag">台所の困りごと</span><span class="tag ev-p">実践知</span></p>
       <h3>余った香草は、油と一緒に凍らせる</h3>
       <p class="why">香りの強い葉ものは、そのまま冷蔵すると数日で色も香りも落ちる。刻んで油に沈めてから凍らせると空気に触れず、使うときに分ける手間もいらない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>余った香草を刻み、製氷皿に分けて入れる</li>
         <li>浸るくらいまで、油を注ぐ</li>
@@ -266,9 +280,10 @@
     <h2>外食</h2>
 
     <div class="item me" id="i123">
-      <p class="meta"><span class="no">#123</span></p>
+      <p class="meta"><span class="no">#123</span><span class="tag">外食</span></p>
       <h3>選ぶところで整える</h3>
       <p class="why">外食が中心なら、無理に自炊へ寄せない。店を選ぶところで整えれば、作らなくても形は変えられる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>よく行く店の中で、軽いものがある店を知っておく</li>
         <li>迷ったら、その店にする</li>
@@ -277,9 +292,10 @@
     </div>
 
     <div class="item" id="i124">
-      <p class="meta"><span class="no">#124</span></p>
+      <p class="meta"><span class="no">#124</span><span class="tag">外食</span></p>
       <h3>量は、頼むときに決める</h3>
       <p class="why">残すかどうかを食べながら考えると、たいてい全部食べる。頼む時点で決めてしまえば、我慢する場面が来ない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>頼むときに、量を選ぶ（少なめ・小盛り）</li>
         <li>足りなければ、あとから足す</li>
@@ -294,9 +310,10 @@
     <h2>食べ方</h2>
 
     <div class="item me" id="i125">
-      <p class="meta"><span class="no">#125</span></p>
+      <p class="meta"><span class="no">#125</span><span class="tag">食べ方</span></p>
       <h3>最初のひと口だけ、味わう</h3>
       <p class="why">全部の食事でなくていい、というのがこの工夫の要。色、香り、食感、温度に気づきながら食べるのを、最初のひと口にだけ置く。おいしかった食事は、場所や一緒にいた人と結びついて記憶に残る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>最初のひと口だけ、画面と会話を止める</li>
         <li>色・香り・食感・温度のどれかに気づく</li>
@@ -305,9 +322,10 @@
     </div>
 
     <div class="item" id="i126">
-      <p class="meta"><span class="no">#126</span></p>
+      <p class="meta"><span class="no">#126</span><span class="tag">食べ方</span></p>
       <h3>先に、水を一杯</h3>
       <p class="why">空腹と渇きは、似た感覚として出る。先に水を入れると、どちらだったかが分かれる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>食事の前に、コップ一杯の水を飲む</li>
         <li>そのうえで、まだ空腹かを見る</li>
@@ -316,9 +334,10 @@
     </div>
 
     <div class="item" id="i127">
-      <p class="meta"><span class="no">#127</span></p>
+      <p class="meta"><span class="no">#127</span><span class="tag">食べ方</span></p>
       <h3>皿の半分を、野菜で埋める</h3>
       <p class="why">何を減らすかを考えると我慢の話になるが、先に野菜で半分を埋めると、残りの半分の中では好きなものを食べられる。足すほうから決めるので、禁止の文を作らなくて済む。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>皿を出したら、先に野菜を半分に敷く</li>
         <li>残り半分に、主菜と主食を置く</li>
@@ -328,9 +347,10 @@
     </div>
 
     <div class="item" id="i128">
-      <p class="meta"><span class="no">#128</span></p>
+      <p class="meta"><span class="no">#128</span><span class="tag">食べ方</span></p>
       <h3>野菜から食べて、炭水化物は最後に</h3>
       <p class="why">同じ献立でも、食べる順番で血糖値の上がり方が変わる。先に野菜と汁物、次に主菜、最後にごはんにすると、急な上がり方になりにくく、食べ終わりの満腹感も早く来る。献立を変えずに済むのが、いちばん続く理由。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>汁物と野菜から手をつける</li>
         <li>次に、主菜を食べる</li>
@@ -339,14 +359,16 @@
     </div>
 
     <div class="item" id="i129">
-      <p class="meta"><span class="no">#129</span><span class="tag ev-w">根拠が弱い</span></p>
+      <p class="meta"><span class="no">#129</span><span class="tag">食べ方</span><span class="tag ev-w">根拠が弱い</span></p>
       <h3>皿を小さくする</h3>
       <p class="why">満足は量ではなく、見た目の占有率で決まる部分がある。同じ量でも、小さい皿に盛ると足りて見える。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>ひとまわり小さい皿に替える</li>
         <li>盛りきりにして、鍋ごと出さない</li>
         <li>足りなければ、おかわりを取りに行く</li>
       </ul>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-w">よく引かれる実験は、のちに多くの論文が撤回された研究群に由来する。害はないが、効くと言い切る根拠はない。</p>
     </div>
 
@@ -357,9 +379,10 @@
     <h2>続け方</h2>
 
     <div class="item me" id="i130">
-      <p class="meta"><span class="no">#130</span></p>
+      <p class="meta"><span class="no">#130</span><span class="tag">続け方</span></p>
       <h3>我慢を、目的にしない</h3>
       <p class="why">好きなものを手放す形は続かない。数字を減らすことより、健康な体になることを先に置くと、続く形が見つかる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>やめるものではなく、増やすものを決める</li>
         <li>好きなものは、頻度か量で調整する</li>
@@ -368,9 +391,10 @@
     </div>
 
     <div class="item" id="i131">
-      <p class="meta"><span class="no">#131</span></p>
+      <p class="meta"><span class="no">#131</span><span class="tag">続け方</span></p>
       <h3>落とす速さを、月1kgまでにする</h3>
       <p class="why">短期間で大きく落とすと、体のほうが取り戻そうとして食欲が強く出る。落ちた体重が戻るだけでなく、その繰り返しが続かなさの原因になる。ゆっくり落とすほうが、戻りにくい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>目標を、月1kgほどに置き直す</li>
         <li>週ごとの上下は見ない。月の平均で見る</li>
@@ -380,9 +404,10 @@
     </div>
 
     <div class="item" id="i132">
-      <p class="meta"><span class="no">#132</span></p>
+      <p class="meta"><span class="no">#132</span><span class="tag">続け方</span></p>
       <h3>やめられないものは、時間を前にずらす</h3>
       <p class="why">どうしてもやめられないものを禁じると、守れなかった日に全部が崩れる。食べる時間を早い側にずらすだけなら守れるし、寝る前に入れるよりは影響が小さい。やめる代わりに、順番を変える。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>やめられないものを、一つだけ挙げる</li>
         <li>それを食べる時間を、数時間前にずらす</li>
@@ -391,9 +416,10 @@
     </div>
 
     <div class="item" id="i133">
-      <p class="meta"><span class="no">#133</span></p>
+      <p class="meta"><span class="no">#133</span><span class="tag">続け方</span></p>
       <h3>運動は、痩せるためではなく続けるために</h3>
       <p class="why">運動で消費できる量は、食べる量に比べると小さい。それでも運動する意味があるのは、動いたあとのほうが食欲や気分が整い、続けやすくなるから。体重を減らす手段としてではなく、続ける土台として置くほうが、長く残る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>運動の目的を、体重から外す</li>
         <li>強度より、週に何回動けたかで見る</li>
@@ -402,9 +428,10 @@
     </div>
 
     <div class="item" id="i134">
-      <p class="meta"><span class="no">#134</span></p>
+      <p class="meta"><span class="no">#134</span><span class="tag">続け方</span></p>
       <h3>食べたものを、写真に撮る</h3>
       <p class="why">記録は、正確さより続くことのほうが効く。書く形式だと止まるが、撮るだけなら残る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>食べる前に、一枚撮る</li>
         <li>計算も記入もしない</li>

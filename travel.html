@@ -52,26 +52,28 @@
   h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
   .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
 
-  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
-  .item:last-of-type{border-bottom:0}
-  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item{margin:16px 0 0;padding:19px 20px 21px;background:var(--card);
+    border:1px solid var(--line);border-radius:6px}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.06rem;margin:0 0 7px;letter-spacing:.02em}
+  .lbl{display:block;margin:15px 0 8px;padding-top:13px;border-top:1px solid var(--line);
+    font-size:.63rem;letter-spacing:.18em;font-weight:700;color:var(--accent)}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
-  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev{display:block;margin:0;font-style:normal;font-size:.8rem;line-height:1.8;color:var(--muted)}
   .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
   .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
   .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
     font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
   .tag.ev-s{border-color:var(--accent);color:var(--accent)}
   .tag.ev-w{border-style:dashed}
-  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .why{color:var(--muted);font-size:.93rem;margin:0}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
   .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
     font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
   .how{counter-reset:step}
-  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
-    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag{margin:13px 0 0;padding:10px 14px;background:var(--bg);border:1px solid var(--line);
+    border-radius:3px;font-size:.86rem;color:var(--muted);line-height:1.8}
   .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
 
   .mine{margin:20px 0 0;padding:1px 0 1px 16px;border-left:2px solid var(--accent)}
@@ -109,9 +111,10 @@
     <h2>荷造り</h2>
 
     <div class="item" id="i201">
-      <p class="meta"><span class="no">#201</span></p>
+      <p class="meta"><span class="no">#201</span><span class="tag">荷造り</span></p>
       <h3>服は、丸めて詰める</h3>
       <p class="why">畳むよりしわになりにくく、容積も減る。隙間に押し込めるので、鞄の形に左右されない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>服を、くるくる丸める</li>
         <li>立てて並べる</li>
@@ -120,9 +123,10 @@
     </div>
 
     <div class="item" id="i202">
-      <p class="meta"><span class="no">#202</span></p>
+      <p class="meta"><span class="no">#202</span><span class="tag">荷造り</span></p>
       <h3>使う場面ごとに、袋を分ける</h3>
       <p class="why">鞄の中に小さな部屋を作ると、全部出さずに取り出せる。戻すときも、同じ場所に戻る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>着替え・洗面・書類などで、袋を分ける</li>
         <li>袋の色か形を変えて、見分ける</li>
@@ -131,9 +135,10 @@
     </div>
 
     <div class="item" id="i203">
-      <p class="meta"><span class="no">#203</span></p>
+      <p class="meta"><span class="no">#203</span><span class="tag">荷造り</span></p>
       <h3>充電まわりは、一袋にまとめる</h3>
       <p class="why">忘れものの多くは、ケーブルと変換器。まとめておくと、出発前の確認が一袋で済む。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>充電器・ケーブル・変換器を、一袋に入れる</li>
         <li>旅から帰っても、その袋から出さない</li>
@@ -148,9 +153,10 @@
     <h2>出発前</h2>
 
     <div class="item" id="i204">
-      <p class="meta"><span class="no">#204</span></p>
+      <p class="meta"><span class="no">#204</span><span class="tag">出発前</span></p>
       <h3>前の晩に、玄関へ出しておく</h3>
       <p class="why">朝の判断を一つ減らす。玄関にあるものは、持って出るしかなくなる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>前の晩に、荷物を玄関へ置く</li>
         <li>持って出るものを、全部その場所に集める</li>
@@ -159,9 +165,10 @@
     </div>
 
     <div class="item" id="i205">
-      <p class="meta"><span class="no">#205</span></p>
+      <p class="meta"><span class="no">#205</span><span class="tag">出発前</span></p>
       <h3>持ち物リストは、使い回す</h3>
       <p class="why">毎回ゼロから考えると、毎回同じものを忘れる。前回のリストを直して使うほうが早い。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>一度作ったリストを、残しておく</li>
         <li>行き先と季節で、少しだけ直す</li>
@@ -170,9 +177,10 @@
     </div>
 
     <div class="item" id="i206">
-      <p class="meta"><span class="no">#206</span></p>
+      <p class="meta"><span class="no">#206</span><span class="tag">出発前</span></p>
       <h3>予約と身分証は、画面の外にも持つ</h3>
       <p class="why">電池が切れても困らない形にしておく。紙一枚で済む場面は多い。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>予約と連絡先を、紙にも印刷する</li>
         <li>身分証の控えを、別の場所に入れる</li>
@@ -181,9 +189,10 @@
     </div>
 
     <div class="item" id="i207">
-      <p class="meta"><span class="no">#207</span><span class="tag ev-p">実践知</span></p>
+      <p class="meta"><span class="no">#207</span><span class="tag">出発前</span><span class="tag ev-p">実践知</span></p>
       <h3>身分証とカードは、両面を撮って自分に送る</h3>
       <p class="why">なくしたあとに要るのは、番号と有効期限と発行元。原本が手元になくても、画像があれば連絡が進む。出発前の十分で済み、荷物は増えない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>身分証・保険の証書・持っていくカードの表裏を撮る</li>
         <li>自分あてのメールか、取り出せる場所に置く</li>
@@ -193,9 +202,10 @@
     </div>
 
     <div class="item" id="i208">
-      <p class="meta"><span class="no">#208</span><span class="tag ev-p">実践知</span></p>
+      <p class="meta"><span class="no">#208</span><span class="tag">出発前</span><span class="tag ev-p">実践知</span></p>
       <h3>カードは、別の銀行のものを二枚、別の場所に入れる</h3>
       <p class="why">止まるときは、財布ごとなくすか、その一枚が使えなくなるかのどちらか。発行元の違う二枚を別の場所に入れておけば、どちらが起きても片方が残る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>発行元の違うカードを、二枚用意する</li>
         <li>同じ財布・同じポケットに入れない</li>
@@ -205,9 +215,10 @@
     </div>
 
     <div class="item" id="i209">
-      <p class="meta"><span class="no">#209</span><span class="tag ev-p">実践知</span></p>
+      <p class="meta"><span class="no">#209</span><span class="tag">出発前</span><span class="tag ev-p">実践知</span></p>
       <h3>預ける荷物は、中身ではなく外側を撮る</h3>
       <p class="why">紛失の窓口で聞かれるのは、色と形と大きさ。言葉で説明すると伝わらないが、写真なら一度で済む。中身の話は、そのあと。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>預ける前に、荷物全体を一枚撮る</li>
         <li>空港や大きな駐車場では、区画のサインも撮る</li>
@@ -217,9 +228,10 @@
     </div>
 
     <div class="item" id="i210">
-      <p class="meta"><span class="no">#210</span><span class="tag ev-p">実践知</span></p>
+      <p class="meta"><span class="no">#210</span><span class="tag">出発前</span><span class="tag ev-p">実践知</span></p>
       <h3>地図は、落としたあと機内モードで一度開く</h3>
       <p class="why">落としたつもりで落ちていないことがある。気づくのは、たいてい通信のない現地。機内モードにして一度開けば、その場で分かる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>行き先の地図を、出発前に落とす</li>
         <li>機内モードにして、実際に開いて確かめる</li>
@@ -235,9 +247,10 @@
     <h2>移動中</h2>
 
     <div class="item" id="i211">
-      <p class="meta"><span class="no">#211</span></p>
+      <p class="meta"><span class="no">#211</span><span class="tag">移動中</span></p>
       <h3>次の乗り換えだけ、確認する</h3>
       <p class="why">全部を覚えようとすると、どれも曖昧になる。次の一つだけなら、確実に持っていられる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>乗る前に、次の乗り換えだけ見る</li>
         <li>降りる駅と、出口の方向を覚える</li>
@@ -246,9 +259,10 @@
     </div>
 
     <div class="item" id="i212">
-      <p class="meta"><span class="no">#212</span></p>
+      <p class="meta"><span class="no">#212</span><span class="tag">移動中</span></p>
       <h3>着く前に、現地の足を調べる</h3>
       <p class="why">着いてからは、疲れていて判断力が落ちている。移動手段と料金だけでも先に知っておく。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>空港や駅から、宿までの行き方を調べる</li>
         <li>料金と所要時間を、控えておく</li>
@@ -263,9 +277,10 @@
     <h2>現地</h2>
 
     <div class="item" id="i213">
-      <p class="meta"><span class="no">#213</span></p>
+      <p class="meta"><span class="no">#213</span><span class="tag">現地</span></p>
       <h3>初日に、近所を一周する</h3>
       <p class="why">地図を見るより、歩いたほうが早く分かる。店と道の感覚ができると、残りの日が楽になる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>着いた日に、宿のまわりを歩く</li>
         <li>食べる場所と、買う場所を見ておく</li>

@@ -52,26 +52,28 @@
   h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
   .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
 
-  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
-  .item:last-of-type{border-bottom:0}
-  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item{margin:16px 0 0;padding:19px 20px 21px;background:var(--card);
+    border:1px solid var(--line);border-radius:6px}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.06rem;margin:0 0 7px;letter-spacing:.02em}
+  .lbl{display:block;margin:15px 0 8px;padding-top:13px;border-top:1px solid var(--line);
+    font-size:.63rem;letter-spacing:.18em;font-weight:700;color:var(--accent)}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
-  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev{display:block;margin:0;font-style:normal;font-size:.8rem;line-height:1.8;color:var(--muted)}
   .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
   .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
   .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
     font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
   .tag.ev-s{border-color:var(--accent);color:var(--accent)}
   .tag.ev-w{border-style:dashed}
-  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .why{color:var(--muted);font-size:.93rem;margin:0}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
   .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
     font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
   .how{counter-reset:step}
-  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
-    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag{margin:13px 0 0;padding:10px 14px;background:var(--bg);border:1px solid var(--line);
+    border-radius:3px;font-size:.86rem;color:var(--muted);line-height:1.8}
   .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
 
   .mine{margin:20px 0 0;padding:1px 0 1px 16px;border-left:2px solid var(--accent)}
@@ -113,9 +115,10 @@
     <h2>ゆるい繋がり</h2>
 
     <div class="item" id="i268">
-      <p class="meta"><span class="no">#268</span></p>
+      <p class="meta"><span class="no">#268</span><span class="tag">ゆるい繋がり</span></p>
       <h3>親友を作ることに、こだわらない</h3>
       <p class="why">「何でも話せる一人」を作ろうとすると、相手にも重く、見つかるまで何も進まない。雑談ができる相手が何人かいる状態のほうが、実際には寂しさが来にくい。関係の深さを一段だけ下げると、持てる数が増える。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>立ち話ができる相手を、思い出す</li>
         <li>その人たちに、用がなくても一言送る</li>
@@ -124,9 +127,10 @@
     </div>
 
     <div class="item" id="i269">
-      <p class="meta"><span class="no">#269</span></p>
+      <p class="meta"><span class="no">#269</span><span class="tag">ゆるい繋がり</span></p>
       <h3>趣味のつながりに、顔を出す</h3>
       <p class="why">共通の関心がある場所では、自己紹介も目的の説明も要らない。親しくならなくても「所属している」という感覚が得られるので、深い関係を作る負担なしに孤独感が下がる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>関心のある集まりを、一つ探す</li>
         <li>まず一回だけ、見に行く</li>
@@ -135,9 +139,10 @@
     </div>
 
     <div class="item" id="i270">
-      <p class="meta"><span class="no">#270</span></p>
+      <p class="meta"><span class="no">#270</span><span class="tag">ゆるい繋がり</span></p>
       <h3>消耗する関係は、頻度を下げる</h3>
       <p class="why">会ったあとに疲れが残る相手は確かにいる。ただ、断ち切るのは痛みが大きく、戻せない。会う回数と連絡の間隔を下げるだけで、消耗はかなり減る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>会ったあとに疲れる相手を、思い出す</li>
         <li>こちらから誘う回数を、減らす</li>
@@ -147,9 +152,10 @@
     </div>
 
     <div class="item" id="i271">
-      <p class="meta"><span class="no">#271</span></p>
+      <p class="meta"><span class="no">#271</span><span class="tag">ゆるい繋がり</span></p>
       <h3>知り合いのままの相手を、切らさない</h3>
       <p class="why">親しい相手とは話す内容が重なっていくが、知り合い程度の相手は自分が属していない場所にいる。新しい話や思いがけない機会は、そちらから入ってくることが多い。深くしようとしなくても、途切れさせないだけでいい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>しばらく連絡していない知り合いを、思い出す</li>
         <li>用がなくても、一行だけ送る</li>
@@ -158,9 +164,10 @@
     </div>
 
     <div class="item" id="i272">
-      <p class="meta"><span class="no">#272</span></p>
+      <p class="meta"><span class="no">#272</span><span class="tag">ゆるい繋がり</span></p>
       <h3>思い出してもらえる回数を、増やす</h3>
       <p class="why">機会は人を経由して来るので、相手の頭の中に自分がいるかどうかで決まる。深く好かれる必要はなく、何をしている人かが思い出せる状態であればいい。短い雑談と、自分のことを少し話しておくだけで足りる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>会ったときに、いま何をしているかを一言話す</li>
         <li>相手が関心を持ちそうなことを、一つ覚えて帰る</li>
@@ -170,9 +177,10 @@
     </div>
 
     <div class="item" id="i273">
-      <p class="meta"><span class="no">#273</span></p>
+      <p class="meta"><span class="no">#273</span><span class="tag">ゆるい繋がり</span></p>
       <h3>回数を増やす前に、受け取り方を見る</h3>
       <p class="why">寂しさを人と会う回数で埋めようとしても、会っているあいだだけで戻ってしまうことがある。効いているのが回数ではなく、自分の受け取り方(比べる癖や、嫌われている気がすること)である場合、そこを見ないかぎり何回会っても同じになる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>人と会ったあとでも寂しいかどうか、思い出す</li>
         <li>そうなら、何を思って寂しいのかを書く</li>
@@ -188,9 +196,10 @@
     <h2>深く付き合う</h2>
 
     <div class="item" id="i274">
-      <p class="meta"><span class="no">#274</span></p>
+      <p class="meta"><span class="no">#274</span><span class="tag">深く付き合う</span></p>
       <h3>本音を話せる人を、数人持つ</h3>
       <p class="why">一人に全部を預けると、その人がいないときに行き場がなくなる。話せる相手が数人いれば、話の種類ごとに分けられて、一人あたりの重さも下がる。広く作る必要はなく、数人でいい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>いま本音を話せる相手を、名前で書き出す</li>
         <li>二人以下なら、話せそうな相手を一人足す</li>
@@ -200,9 +209,10 @@
     </div>
 
     <div class="item" id="i275">
-      <p class="meta"><span class="no">#275</span></p>
+      <p class="meta"><span class="no">#275</span><span class="tag">深く付き合う</span></p>
       <h3>嫌いなものが合う相手を、大事にする</h3>
       <p class="why">好きなものが同じ相手は多いが、好みは移るのでずれていく。嫌なもの、我慢できないもの、許せないことが同じ相手とは、長く一緒にいても摩擦が起きにくい。深く付き合う相手を選ぶなら、こちらのほうが当てになる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>付き合いが長く続いている相手を、思い出す</li>
         <li>その人と、嫌いなものが合っているか確かめる</li>
@@ -211,9 +221,10 @@
     </div>
 
     <div class="item" id="i276">
-      <p class="meta"><span class="no">#276</span></p>
+      <p class="meta"><span class="no">#276</span><span class="tag">深く付き合う</span></p>
       <h3>第三者の目を、一人持つ</h3>
       <p class="why">自分の判断は、自分の見えている範囲でしか作れない。外から見てくれる人が一人いると、見落としに気づける。言われたとおりにするためではなく、自分の判断を点検するために置く。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>判断を話せる相手を、一人決める</li>
         <li>決める前に、一度話してみる</li>
@@ -223,9 +234,10 @@
     </div>
 
     <div class="item" id="i277">
-      <p class="meta"><span class="no">#277</span></p>
+      <p class="meta"><span class="no">#277</span><span class="tag">深く付き合う</span></p>
       <h3>人の挑戦を、手伝う</h3>
       <p class="why">頼まれて助けた関係は、こちらが困ったときにも残っている。見返りを約束して作る関係より長く続くし、手伝う側も、自分の次の挑戦の材料をもらえる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>身近で何かを始めた人を、一人思い出す</li>
         <li>できることを一つだけ申し出る</li>
@@ -240,9 +252,10 @@
     <h2>貸し借り</h2>
 
     <div class="item" id="i278">
-      <p class="meta"><span class="no">#278</span></p>
+      <p class="meta"><span class="no">#278</span><span class="tag">貸し借り</span></p>
       <h3>5分で終わる親切は、その日のうちにやる</h3>
       <p class="why">人を助けることは重く見積もられがちだが、知っていることを教える、人を紹介する程度なら数分で終わる。自分の得意な範囲にとどめれば削られるものがなく、続けられる。溜めると、やらないまま終わる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>頼まれたことのうち、5分で終わるものを選ぶ</li>
         <li>その日のうちに済ませる</li>
@@ -252,9 +265,10 @@
     </div>
 
     <div class="item" id="i279">
-      <p class="meta"><span class="no">#279</span></p>
+      <p class="meta"><span class="no">#279</span><span class="tag">貸し借り</span></p>
       <h3>小さな頼み事を、してみる</h3>
       <p class="why">人は、助けてもらった相手よりも、自分が助けた相手に親しみを持つ。こちらから小さく頼んで、きちんと礼を言うと、相手の側に関わった感覚が残る。頼ることは、距離を縮める方法でもある。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>相手の負担にならない、小さな頼み事を一つ選ぶ</li>
         <li>理由を添えて頼む</li>
@@ -270,9 +284,10 @@
     <h2>危ない関係</h2>
 
     <div class="item" id="i280">
-      <p class="meta"><span class="no">#280</span></p>
+      <p class="meta"><span class="no">#280</span><span class="tag">危ない関係</span></p>
       <h3>人から引き離そうとする相手を、警戒する</h3>
       <p class="why">家族や友人の悪口を言い、連絡を減らさせようとするのは、相談できる相手を奪うやり方。悪意がない場合もあるが、結果として判断を確かめる先がなくなる。人が減っていくかどうかは、自分で数えられる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>この半年で、連絡が減った相手を思い出す</li>
         <li>減った理由に、特定の誰かの言葉が入っていないか確かめる</li>
@@ -281,9 +296,10 @@
     </div>
 
     <div class="item" id="i281">
-      <p class="meta"><span class="no">#281</span></p>
+      <p class="meta"><span class="no">#281</span><span class="tag">危ない関係</span></p>
       <h3>否定のあとに急に優しくなる人に、気をつける</h3>
       <p class="why">強く否定されたあとの小さな親切は、普通より大きく感じる。落として救う形が繰り返されると、その相手だけが頼りだと思い込むようになる。優しさそのものではなく、その前に何があったかを見る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>優しくされて安心したとき、その直前を思い出す</li>
         <li>否定と親切が同じ相手から来ていないか確かめる</li>
@@ -293,9 +309,10 @@
     </div>
 
     <div class="item" id="i282">
-      <p class="meta"><span class="no">#282</span></p>
+      <p class="meta"><span class="no">#282</span><span class="tag">危ない関係</span></p>
       <h3>予定と時間を埋めてくる相手から、離れる</h3>
       <p class="why">予定を詰められて一人になる時間がなくなると、考え直す隙がなくなる。疲れと寝不足が重なれば、判断そのものが落ちる。おかしいかどうかを考える時間が取れないこと自体が、見るべき印になる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>一週間のうち、一人でいる時間を数える</li>
         <li>ほとんど無いなら、意図せずそうなったのか確かめる</li>
@@ -304,9 +321,10 @@
     </div>
 
     <div class="item" id="i283">
-      <p class="meta"><span class="no">#283</span></p>
+      <p class="meta"><span class="no">#283</span><span class="tag">危ない関係</span></p>
       <h3>おかしいと感じたら、まず物理的に離れる</h3>
       <p class="why">その場で話し合って直そうとすると、相手の土俵で考えることになる。距離を取って時間が経つと、元の感覚や価値観のほうが戻ってくる。考え方を変えるより、環境を変えるほうが先に効く。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>数日でいいので、会わない・連絡しない期間を作る</li>
         <li>その間に、以前からの知り合いに会う</li>
@@ -322,9 +340,10 @@
     <h2>連絡</h2>
 
     <div class="item" id="i284">
-      <p class="meta"><span class="no">#284</span></p>
+      <p class="meta"><span class="no">#284</span><span class="tag">連絡</span></p>
       <h3>返事は、早く短く</h3>
       <p class="why">長い返事を考えているうちに、返す時機を逃す。短くても早いほうが、相手の仕事が進む。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>すぐ返せるものは、その場で返す</li>
         <li>長くなるものは、いつ返すかだけ先に伝える</li>
@@ -333,9 +352,10 @@
     </div>
 
     <div class="item" id="i285">
-      <p class="meta"><span class="no">#285</span></p>
+      <p class="meta"><span class="no">#285</span><span class="tag">連絡</span></p>
       <h3>日程は、候補を出す</h3>
       <p class="why">「いつがいいですか」は、相手に考えさせる。候補があると、選ぶだけで済む。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>こちらから、三つほど候補を出す</li>
         <li>所要時間と場所も、一緒に書く</li>
@@ -350,9 +370,10 @@
     <h2>頼む・断る</h2>
 
     <div class="item" id="i286">
-      <p class="meta"><span class="no">#286</span></p>
+      <p class="meta"><span class="no">#286</span><span class="tag">頼む・断る</span></p>
       <h3>頼むときは、期限と形を添える</h3>
       <p class="why">曖昧な依頼は、戻ってこない。いつまでに、どんな形で欲しいかを言うと、相手も断りやすい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>期限を、具体的な日時で書く</li>
         <li>欲しい形（長さ・形式）を添える</li>
@@ -361,9 +382,10 @@
     </div>
 
     <div class="item" id="i287">
-      <p class="meta"><span class="no">#287</span></p>
+      <p class="meta"><span class="no">#287</span><span class="tag">頼む・断る</span></p>
       <h3>断る理由は、一つだけ言う</h3>
       <p class="why">理由を並べるほど、言い訳に見えて弱くなる。一つだけ言って、代わりに何ができるかを添える。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>断ると、先に伝える</li>
         <li>理由は、一つだけ</li>
@@ -378,9 +400,10 @@
     <h2>約束</h2>
 
     <div class="item" id="i288">
-      <p class="meta"><span class="no">#288</span></p>
+      <p class="meta"><span class="no">#288</span><span class="tag">約束</span></p>
       <h3>会ったら、その場で次を決める</h3>
       <p class="why">後からの日程調整が、いちばん重い。会っている場で決めると、数十秒で済む。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>別れる前に、次の予定を決める</li>
         <li>曖昧なら、仮でも日付を置く</li>
@@ -389,9 +412,10 @@
     </div>
 
     <div class="item" id="i289">
-      <p class="meta"><span class="no">#289</span></p>
+      <p class="meta"><span class="no">#289</span><span class="tag">約束</span></p>
       <h3>覚えておきたい日は、登録する</h3>
       <p class="why">記憶に頼ると、思い出したときには過ぎている。登録しておけば、覚えていなくても間に合う。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>誕生日や記念日を、カレンダーに入れる</li>
         <li>数日前に、通知が来るようにする</li>
@@ -406,9 +430,10 @@
     <h2>贈りもの</h2>
 
     <div class="item" id="i290">
-      <p class="meta"><span class="no">#290</span></p>
+      <p class="meta"><span class="no">#290</span><span class="tag">贈りもの</span></p>
       <h3>贈ったものを、記録しておく</h3>
       <p class="why">次に迷わないし、同じものが重ならない。もらったものも、一緒に残しておくと返しやすい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>贈ったものと日付を、一か所に書く</li>
         <li>もらったものも、同じ場所に書く</li>
@@ -417,9 +442,10 @@
     </div>
 
     <div class="item" id="i291">
-      <p class="meta"><span class="no">#291</span></p>
+      <p class="meta"><span class="no">#291</span><span class="tag">贈りもの</span></p>
       <h3>消えるものを選ぶ</h3>
       <p class="why">置き場所を相手に作らせない。食べるもの、使ってなくなるものは、好みが外れても残らない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>食べもの・消耗品から選ぶ</li>
         <li>形に残るものは、相手が決められる形にする</li>
@@ -428,9 +454,10 @@
     </div>
 
     <div class="item" id="i292">
-      <p class="meta"><span class="no">#292</span></p>
+      <p class="meta"><span class="no">#292</span><span class="tag">贈りもの</span></p>
       <h3>節目の連絡を、欠かさない</h3>
       <p class="why">普段の雑談は忘れられても、祝いと弔いの連絡は長く覚えられている。手間に対して残り方が大きいので、やり方を決めておくだけで関係が保てる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>祝い事と不幸の連絡を、見たらその日に返す</li>
         <li>定型の文を、一つ用意しておく</li>

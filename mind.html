@@ -52,26 +52,28 @@
   h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
   .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
 
-  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
-  .item:last-of-type{border-bottom:0}
-  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item{margin:16px 0 0;padding:19px 20px 21px;background:var(--card);
+    border:1px solid var(--line);border-radius:6px}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.06rem;margin:0 0 7px;letter-spacing:.02em}
+  .lbl{display:block;margin:15px 0 8px;padding-top:13px;border-top:1px solid var(--line);
+    font-size:.63rem;letter-spacing:.18em;font-weight:700;color:var(--accent)}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
-  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev{display:block;margin:0;font-style:normal;font-size:.8rem;line-height:1.8;color:var(--muted)}
   .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
   .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
   .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
     font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
   .tag.ev-s{border-color:var(--accent);color:var(--accent)}
   .tag.ev-w{border-style:dashed}
-  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .why{color:var(--muted);font-size:.93rem;margin:0}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
   .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
     font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
   .how{counter-reset:step}
-  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
-    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag{margin:13px 0 0;padding:10px 14px;background:var(--bg);border:1px solid var(--line);
+    border-radius:3px;font-size:.86rem;color:var(--muted);line-height:1.8}
   .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
 
   .mine{margin:20px 0 0;padding:1px 0 1px 16px;border-left:2px solid var(--accent)}
@@ -121,9 +123,10 @@
     <h2>メモ</h2>
 
     <div class="item" id="i242">
-      <p class="meta"><span class="no">#242</span></p>
+      <p class="meta"><span class="no">#242</span><span class="tag">メモ</span></p>
       <h3>全部、書き出す</h3>
       <p class="why">覚えておく仕事を紙に渡すと、考える場所が空く。覚えている限り、頭はそれを守り続ける。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>気になっていることを、全部書き出す</li>
         <li>整理はしない。出し切る</li>
@@ -132,9 +135,10 @@
     </div>
 
     <div class="item" id="i243">
-      <p class="meta"><span class="no">#243</span></p>
+      <p class="meta"><span class="no">#243</span><span class="tag">メモ</span></p>
       <h3>目標の周りに、なぜ欲しいのかを並べて書く</h3>
       <p class="why">数字で測れる成果は、停滞期には動かない。そこだけ見ていると進んでいないことになるが、自由が増えた、人とつながった、できることが増えたといった中身は動いている。紙の中央に目標、周りに価値観を書いておくと、何で進み具合を見ればいいかが残る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>紙の中央に、目標を書く</li>
         <li>その周りに、なぜそれが欲しいのかを言葉で散らす</li>
@@ -143,9 +147,10 @@
     </div>
 
     <div class="item" id="i244">
-      <p class="meta"><span class="no">#244</span></p>
+      <p class="meta"><span class="no">#244</span><span class="tag">メモ</span></p>
       <h3>うまくいったことを、行動・準備・環境に分けて書く</h3>
       <p class="why">うまくいったことを運で片付けると、二度目を起こせない。何をしたか、事前に何を用意していたか、どんな状況が味方したかに分けると、自分で選べた部分が残る。残った部分だけが、次に再現できる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>うまくいった出来事を、一つ書く</li>
         <li>したこと・用意していたこと・状況の三つに分ける</li>
@@ -155,9 +160,10 @@
     </div>
 
     <div class="item" id="i245">
-      <p class="meta"><span class="no">#245</span></p>
+      <p class="meta"><span class="no">#245</span><span class="tag">メモ</span></p>
       <h3>書く場所を、一つに決める</h3>
       <p class="why">どこに書いたかを思い出す時間が、いちばん無駄。書く場所は、探さなくていいことのほうが大事。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>書く場所を、一つに決める</li>
         <li>思いついたら、そこにだけ書く</li>
@@ -172,9 +178,10 @@
     <h2>目標</h2>
 
     <div class="item" id="i246">
-      <p class="meta"><span class="no">#246</span></p>
+      <p class="meta"><span class="no">#246</span><span class="tag">目標</span></p>
       <h3>その目標が自分のものか、確かめる</h3>
       <p class="why">他人の期待に応えるため、あるいは達成できなかったら恥ずかしいから続けている目標は、途中で力が出なくなる。自分にとって本当に大事か、過程そのものに楽しみがあるか、大切にしている価値観に沿っているか。この三つが揃っていれば、人に見られなくても続く。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>目標を一つ書き、誰のためかを書く</li>
         <li>達成できなくても平気かどうかを、書く</li>
@@ -184,9 +191,10 @@
     </div>
 
     <div class="item" id="i247">
-      <p class="meta"><span class="no">#247</span></p>
+      <p class="meta"><span class="no">#247</span><span class="tag">目標</span></p>
       <h3>結果ではなく、道順を書く</h3>
       <p class="why">「こうなりたい」だけでは、次に何をするかが決まらないので動けない。そこに至るまでの順番を具体的に書くと、やることが今日の行動に変わる。目標の大きさより、一手目の具体さが実行を決める。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>目指す状態を、一行で書く</li>
         <li>そこへ至る順番を、後ろから並べる</li>
@@ -196,9 +204,10 @@
     </div>
 
     <div class="item" id="i248">
-      <p class="meta"><span class="no">#248</span></p>
+      <p class="meta"><span class="no">#248</span><span class="tag">目標</span></p>
       <h3>道は、二つ以上用意する</h3>
       <p class="why">やり方が一本しかないと、そこが塞がった時点で目標ごと諦めることになる。同じ目標に向かう別の道を先に二つ三つ書いておけば、一本が駄目になっても乗り換えるだけで済む。挫折は、目標の大きさではなく道の数で決まる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>目標を一つ決める</li>
         <li>そこへ至る道を、三つ書き出す</li>
@@ -207,9 +216,10 @@
     </div>
 
     <div class="item" id="i249">
-      <p class="meta"><span class="no">#249</span></p>
+      <p class="meta"><span class="no">#249</span><span class="tag">目標</span></p>
       <h3>目標は、年に一度は書き直す</h3>
       <p class="why">状況も自分も変わるので、一度決めた目標を守り続けること自体が目的になると、合わないものを追いかけることになる。変わらないのは大事にしている価値観のほうで、目標はそこへ向かう手段。手段は書き直していい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>年に一度、目標を読み直す</li>
         <li>いまの価値観から見て、合っているか確かめる</li>
@@ -225,9 +235,10 @@
     <h2>決める</h2>
 
     <div class="item me" id="i250">
-      <p class="meta"><span class="no">#250</span></p>
+      <p class="meta"><span class="no">#250</span><span class="tag">決める</span></p>
       <h3>決めるのは、一度でいい</h3>
       <p class="why">定位置も、服の型も、決める作業は一度きり。あとは戻すだけ、足すだけになる。毎回考えないための工夫として効く。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>繰り返し迷っていることを、一度だけ決める</li>
         <li>決めたことを、書いて残す</li>
@@ -236,9 +247,10 @@
     </div>
 
     <div class="item" id="i251">
-      <p class="meta"><span class="no">#251</span></p>
+      <p class="meta"><span class="no">#251</span><span class="tag">決める</span></p>
       <h3>選択肢は、三つに絞る</h3>
       <p class="why">多いほど決められず、決めたあとも迷いが残る。先に絞るほうが、満足も高い。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>候補を、三つまでに絞る</li>
         <li>絞る基準を、先に決める</li>
@@ -247,9 +259,10 @@
     </div>
 
     <div class="item" id="i252">
-      <p class="meta"><span class="no">#252</span></p>
+      <p class="meta"><span class="no">#252</span><span class="tag">決める</span></p>
       <h3>何が手に入るかより、何が鍛えられるかで選ぶ</h3>
       <p class="why">手に入れたものは、使えば減り、流行れば古くなる。その過程で身についた力は減らない。選ぶときに「何が残るか」を基準にすると、外した選択からも何かが残るので、失敗の損が小さくなる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>選択肢ごとに、手に入るものを書く</li>
         <li>その横に、やってみて鍛えられるものを書く</li>
@@ -259,9 +272,10 @@
     </div>
 
     <div class="item" id="i253">
-      <p class="meta"><span class="no">#253</span></p>
+      <p class="meta"><span class="no">#253</span><span class="tag">決める</span></p>
       <h3>「みんながやっている」を、理由にしない</h3>
       <p class="why">多くの人がやっているという事実は、安心をくれるが、自分に合っている根拠にはならない。多いことと正しいことは別で、「みんな」の中身を数えると、たいてい身近な数人しかいない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>「みんな」が誰を指しているか、数えてみる</li>
         <li>その人たちの条件が、自分と同じか確かめる</li>
@@ -270,9 +284,10 @@
     </div>
 
     <div class="item" id="i254">
-      <p class="meta"><span class="no">#254</span></p>
+      <p class="meta"><span class="no">#254</span><span class="tag">決める</span></p>
       <h3>気になったことは、48時間以内に一手だけ試す</h3>
       <p class="why">気になるという感覚は、過去に見たものの蓄積から出てくる。当たるかどうかは分からないが、確かめるのは安い。検索する、一行送る、一度見に行く程度のことなら、二日のうちにできる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>気になったことを、その場で書き留める</li>
         <li>48時間以内にできる最小の一手を決める</li>
@@ -282,9 +297,10 @@
     </div>
 
     <div class="item" id="i255">
-      <p class="meta"><span class="no">#255</span></p>
+      <p class="meta"><span class="no">#255</span><span class="tag">決める</span></p>
       <h3>迷ったら、小さく試す</h3>
       <p class="why">考えて分かることには限りがある。小さく試すと、考えても出なかった事実が出る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>試せる最小の形を考える</li>
         <li>期限を決めて、やってみる</li>
@@ -293,15 +309,17 @@
     </div>
 
     <div class="item" id="i256">
-      <p class="meta"><span class="no">#256</span><span class="tag ev-p">実践知</span></p>
+      <p class="meta"><span class="no">#256</span><span class="tag">決める</span><span class="tag ev-p">実践知</span></p>
       <h3>十分後・十か月後・十年後で見る</h3>
       <p class="why">その場の判断は、いまの気持ちの大きさで決まる。三つの時間で同じことを見ると、十分で重大だが十か月で消えるものと、いまは小さいが十年残るものが分かれる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>決める前に、十分後にどう感じるかを言う</li>
         <li>十か月後、十年後と続ける</li>
         <li>三つの答えの差を見てから決める</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>数字で比べるべき決定には向かない。条件は、表にして比べる。</p>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-p">数字で比べるべき決定には向かない。</p>
     </div>
 
@@ -312,22 +330,25 @@
     <h2>もし〜なら</h2>
 
     <div class="item" id="i257">
-      <p class="meta"><span class="no">#257</span><span class="tag ev-s">研究あり</span></p>
+      <p class="meta"><span class="no">#257</span><span class="tag">もし〜なら</span><span class="tag ev-s">研究あり</span></p>
       <h3>「もしXしたら、Yをする」の形で決める</h3>
       <p class="why">「やろう」と思っているだけでは、その場で「いまやるか」を考え直すことになり、そこで止まる。条件と行動を対にして先に決めておくと、条件が来た時点で考えずに動ける。実行意図(if-then planning)として研究されてきた形で、多くの実験で、ただ目標を決めるより実行率が上がることが示されている。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>やりたいことを一つ選ぶ</li>
         <li>「もし◯◯したら」の条件を、毎日必ず起きることから選ぶ</li>
         <li>「そのとき△△をする」まで書いて、文として持つ</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>条件が「時間があったら」「気が向いたら」だと、いつまでも来ない。場所と動作で書く。</p>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-s">多くの研究をまとめた分析で、実行の確率が上がることが示されている。</p>
     </div>
 
     <div class="item" id="i258">
-      <p class="meta"><span class="no">#258</span></p>
+      <p class="meta"><span class="no">#258</span><span class="tag">もし〜なら</span></p>
       <h3>禁止ではなく、代わりにすることを決める</h3>
       <p class="why">「食べない」「見ない」という形は、その対象を思い出し続けることになり、我慢の量が増える。やめたい行動と同じ場面に、別の行動を入れておくと、我慢せずに場面ごと置き換わる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>やめたい行動が起きる場面を、一つ特定する</li>
         <li>その場面でできる、別の行動を一つ決める</li>
@@ -336,9 +357,10 @@
     </div>
 
     <div class="item" id="i259">
-      <p class="meta"><span class="no">#259</span></p>
+      <p class="meta"><span class="no">#259</span><span class="tag">もし〜なら</span></p>
       <h3>つまずく日の分も、先に決めておく</h3>
       <p class="why">うまくいく日の計画だけ作ると、疲れた日や気分が落ちた日に何もできず、そこで途切れる。崩れる場面を先に想定して最小の行動を決めておけば、ゼロの日が出ない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>途切れる原因を、一つ思い出す(疲れ・残業・落ち込み)</li>
         <li>その場面用に、極端に小さい行動を決める</li>
@@ -348,9 +370,10 @@
     </div>
 
     <div class="item" id="i260">
-      <p class="meta"><span class="no">#260</span></p>
+      <p class="meta"><span class="no">#260</span><span class="tag">もし〜なら</span></p>
       <h3>決めごとは、1〜3個までにする</h3>
       <p class="why">ルールを並べた時点では全部できる気がするが、運用するのは条件を覚えている自分なので、数が増えるほど発動しなくなる。いちばん困っていることに絞り、定着してから足す。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>いま困っていることを、順番に並べる</li>
         <li>上から1〜3個だけ選ぶ</li>
@@ -365,9 +388,10 @@
     <h2>習慣</h2>
 
     <div class="item me" id="i261">
-      <p class="meta"><span class="no">#261</span></p>
+      <p class="meta"><span class="no">#261</span><span class="tag">習慣</span></p>
       <h3>すでにある出来事に、結びつける</h3>
       <p class="why">新しい時間を作らず、すでに起きることに乗せる。買ったら手放す、季節が変わったら出す、のように。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>毎日・毎週、必ず起きることを探す</li>
         <li>その直後に、新しい習慣を置く</li>
@@ -376,9 +400,10 @@
     </div>
 
     <div class="item" id="i262">
-      <p class="meta"><span class="no">#262</span></p>
+      <p class="meta"><span class="no">#262</span><span class="tag">習慣</span></p>
       <h3>評価を、続ける理由にしない</h3>
       <p class="why">人に褒められるために始めたことは、褒められなくなった時点で理由を失う。面白いからやっている、という部分を自分で分かっていれば、見てくれる人がいない時期も続く。評価は、来たら受け取るだけにする。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>続けたいことについて、なぜやるのかを一行書く</li>
         <li>そこに人の評価が入っていたら、書き直す</li>
@@ -388,9 +413,10 @@
     </div>
 
     <div class="item" id="i263">
-      <p class="meta"><span class="no">#263</span></p>
+      <p class="meta"><span class="no">#263</span><span class="tag">習慣</span></p>
       <h3>二度目に困ったら、仕組みにする</h3>
       <p class="why">一度目は手でやったほうが早い。二度目に困ったときが、仕組みにする合図。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>同じことで二度困ったら、立ち止まる</li>
         <li>手順を書くか、自動にする</li>
@@ -399,9 +425,10 @@
     </div>
 
     <div class="item" id="i264">
-      <p class="meta"><span class="no">#264</span></p>
+      <p class="meta"><span class="no">#264</span><span class="tag">習慣</span></p>
       <h3>小さな不便を、自分で作っておく</h3>
       <p class="why">何も困らない状態が続くと、困ったときの振れ幅が大きくなる。一駅歩く、使わない日を作るといった小さな不便を自分から選んでおくと、不便そのものが平気になる。訓練というより、慣らしておくこと。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>週に一度だけ、自分で不便を選ぶ</li>
         <li>一駅歩く、買わない日にする程度にする</li>
@@ -411,9 +438,10 @@
     </div>
 
     <div class="item" id="i265">
-      <p class="meta"><span class="no">#265</span></p>
+      <p class="meta"><span class="no">#265</span><span class="tag">習慣</span></p>
       <h3>一日休んでも、二日は休まない</h3>
       <p class="why">途切れたこと自体より、戻れなくなることのほうが効く。一日なら、まだ習慣の中にいる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>休んだ翌日は、短くてもやる</li>
         <li>できない日は、最小の形でやる</li>
@@ -422,28 +450,32 @@
     </div>
 
     <div class="item" id="i266">
-      <p class="meta"><span class="no">#266</span><span class="tag ev-s">研究あり</span></p>
+      <p class="meta"><span class="no">#266</span><span class="tag">習慣</span><span class="tag ev-s">研究あり</span></p>
       <h3>始める日は、区切りの日に合わせる</h3>
       <p class="why">月の途中に始めると、それまでの自分の続きになる。月初や週明けのような区切りは、これまでと切り離して考えやすい。途切れたときも、次の区切りまで待てば、また切り離せる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>始めたいことを、次の区切りの日に置く</li>
         <li>その日を、予定として書いておく</li>
         <li>途切れたら、次の区切りから始め直す</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>区切りを待ちすぎると、始めない理由になる。次の月曜で十分。</p>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-s">大規模なデータで、区切りの日の直後に新しい行動が増えることが示されている。</p>
     </div>
 
     <div class="item" id="i267">
-      <p class="meta"><span class="no">#267</span><span class="tag ev-s">研究あり</span></p>
+      <p class="meta"><span class="no">#267</span><span class="tag">習慣</span><span class="tag ev-s">研究あり</span></p>
       <h3>好きなことを、面倒なことのときだけ解禁する</h3>
       <p class="why">面倒なことに意志で向かうのは続かない。続きが気になるものをそこでしか使えなくすると、面倒なほうに行く理由ができる。好きなほうを先に用意するのがこつ。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>続きが気になるものを、一つ選ぶ</li>
         <li>それを、運動や家事のときだけに限る</li>
         <li>面倒なほうの予定に、先に組み込む</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>時間が経つと効き目が薄れる。中身を入れ替える。</p>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-s">元の実験では通う回数が増え、六千人規模の追試でも効果は出たが小さく、時間が経つと薄れる。</p>
     </div>
 

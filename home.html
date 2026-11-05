@@ -52,26 +52,28 @@
   h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.25rem;letter-spacing:.04em;margin:0}
   .note{color:var(--faint);font-size:.82rem;margin:2px 0 0}
 
-  .item{padding:22px 0 20px;border-bottom:1px solid var(--line)}
-  .item:last-of-type{border-bottom:0}
-  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:0 0 4px;letter-spacing:.02em}
+  .item{margin:16px 0 0;padding:19px 20px 21px;background:var(--card);
+    border:1px solid var(--line);border-radius:6px}
+  .item h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.06rem;margin:0 0 7px;letter-spacing:.02em}
+  .lbl{display:block;margin:15px 0 8px;padding-top:13px;border-top:1px solid var(--line);
+    font-size:.63rem;letter-spacing:.18em;font-weight:700;color:var(--accent)}
   .item.me h3::before{content:"●";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
   .item.try h3::before{content:"○";color:var(--accent);font-size:.6em;vertical-align:.24em;margin-right:.5em}
-  .ev{display:block;margin:12px 0 0;font-style:normal;font-size:.76rem;line-height:1.75;color:var(--faint)}
+  .ev{display:block;margin:0;font-style:normal;font-size:.8rem;line-height:1.8;color:var(--muted)}
   .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 7px}
   .no{font-size:.68rem;letter-spacing:.06em;color:var(--faint)}
   .tag{padding:1px 9px;border:1px solid var(--line);border-radius:999px;
     font-size:.66rem;letter-spacing:.06em;line-height:1.8;color:var(--muted);white-space:nowrap}
   .tag.ev-s{border-color:var(--accent);color:var(--accent)}
   .tag.ev-w{border-style:dashed}
-  .why{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+  .why{color:var(--muted);font-size:.93rem;margin:0}
   .how{margin:0;padding:0;list-style:none}
   .how li{position:relative;padding-left:1.5em;font-size:.93rem;margin:0 0 6px}
   .how li::before{content:counter(step);counter-increment:step;position:absolute;left:0;top:.05em;
     font-size:.68rem;letter-spacing:.06em;color:var(--accent);opacity:.8}
   .how{counter-reset:step}
-  .snag{margin:12px 0 0;padding:10px 14px;background:var(--card);border-radius:3px;
-    font-size:.86rem;color:var(--muted);line-height:1.8}
+  .snag{margin:13px 0 0;padding:10px 14px;background:var(--bg);border:1px solid var(--line);
+    border-radius:3px;font-size:.86rem;color:var(--muted);line-height:1.8}
   .snag b{display:block;font-size:.64rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:2px}
 
   .mine{margin:20px 0 0;padding:1px 0 1px 16px;border-left:2px solid var(--accent)}
@@ -122,9 +124,10 @@
     <p class="note">終わらせることより、始められることを先に決める。</p>
 
     <div class="item me" id="i74">
-      <p class="meta"><span class="no">#74</span></p>
+      <p class="meta"><span class="no">#74</span><span class="tag">片付け</span></p>
       <h3>床から手をつける</h3>
       <p class="why">散らかりは、置ける面が埋まった順に広がる。最後に埋まるのが床なので、床にものがある状態は「かなり溜まっている」という一番遅い合図になる。そこを先に消すと、片付いた感覚がいちばん大きく返ってくる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>床のものを、一か所に集める（分類はまだしない）</li>
         <li>定位置があるものだけ、先に戻す</li>
@@ -133,10 +136,11 @@
       <p class="snag"><b>つまずくところ</b>集めた山の前で分類を始めると、そこで止まる。戻すのと決めるのは、別の日でいい。</p>
     </div>
 
-    <div class="itemNone" id="i75">
-      <p class="meta"><span class="no">#75</span></p>
+    <div class="item" id="i75">
+      <p class="meta"><span class="no">#75</span><span class="tag">片付け</span></p>
       <h3>一か所だけ、やる</h3>
       <p class="why">部屋全体を目標にすると、所要時間が読めないので始まらない。机の上、流しの中、玄関の三和土のように、終わりが見える範囲に区切ると、着手の判断が軽くなる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>今日やる場所を、ひとつだけ口に出す</li>
         <li>そこが終わったら、たとえ時間が余ってもやめる</li>
@@ -144,10 +148,11 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i76">
-      <p class="meta"><span class="no">#76</span></p>
+    <div class="item" id="i76">
+      <p class="meta"><span class="no">#76</span><span class="tag">片付け</span></p>
       <h3>平らな面を、空けておく</h3>
       <p class="why">平らで空いている場所は「とりあえず置ける場所」として使われる。置かれたものは次のものを呼ぶので、空けてあること自体が散らかりを防ぐ。逆に言えば、埋まった平面は放っておくと必ず層になる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>机・ダイニング・カウンターなど、平面を数える</li>
         <li>常設していいものを、各面に一つか二つだけ決める</li>
@@ -163,9 +168,10 @@
     <p class="note">しまう場所ではなく、戻す道をつくる。</p>
 
     <div class="item me" id="i77">
-      <p class="meta"><span class="no">#77</span></p>
+      <p class="meta"><span class="no">#77</span><span class="tag">収納</span></p>
       <h3>定位置を決める</h3>
       <p class="why">片付けを「作業」ではなく「戻す動作」に変える。決めるのは一度でよく、あとは毎回考えなくて済む。残りやすいものは、外から入ってきて止まるもの（郵便物、買ってきたもの）と、使ったあと戻り道がないもの（脱いだ服、ケーブル、読みかけの本）の二種類に割れる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>散らかる場所に残っているものを、書き出す</li>
         <li>「入ってくるもの」と「使ったあと戻るもの」に分ける</li>
@@ -174,10 +180,11 @@
       <p class="snag"><b>つまずくところ</b>きれいな場所に決めると続かない。見た目より、手が届く距離で決める。</p>
     </div>
 
-    <div class="itemNone" id="i78">
-      <p class="meta"><span class="no">#78</span></p>
+    <div class="item" id="i78">
+      <p class="meta"><span class="no">#78</span><span class="tag">収納</span></p>
       <h3>使う場所のそばに置く</h3>
       <p class="why">収納は、しまいやすさではなく取り出しやすさで決まる。動線から外れた場所は、出すのも戻すのも面倒になり、結局その辺に置かれる。同じものを二か所に分けて置くほうが、一か所にまとめるより回ることもある。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>そのものを、どこで使っているか思い出す</li>
         <li>使う場所から三歩以内に置けないか探す</li>
@@ -185,10 +192,11 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i79">
-      <p class="meta"><span class="no">#79</span></p>
+    <div class="item" id="i79">
+      <p class="meta"><span class="no">#79</span><span class="tag">収納</span></p>
       <h3>二動作以上かけない</h3>
       <p class="why">扉を開けて、箱を出して、蓋を開けて、ではしまわれない。よく使うものほど、動作の数が戻すかどうかを決める。見た目を揃える収納は、たいてい動作を増やしている。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>毎日使うものは、置くだけ・掛けるだけにする</li>
         <li>週に一度のものまでは、二動作まで許す</li>
@@ -196,28 +204,32 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i80">
-      <p class="meta"><span class="no">#80</span><span class="tag ev-p">実践知</span></p>
+    <div class="item" id="i80">
+      <p class="meta"><span class="no">#80</span><span class="tag">収納</span><span class="tag ev-p">実践知</span></p>
       <h3>シーツ一式を、枕カバーの中にしまう</h3>
       <p class="why">寝具は、枚数ではなく組み合わせを探すのに時間がかかる。洗って乾いた一式をまとめて枕カバーに入れておくと、棚から一つ取り出すだけで済む。残りが何組あるかも、見れば分かる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>洗って乾いたシーツ上下と枕カバーを、たたむ</li>
         <li>そのうち一枚の枕カバーに、残りを入れる</li>
         <li>棚には、その袋状のものだけを並べる</li>
       </ul>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-p">海外の家事のまとめで繰り返し挙がるやり方。研究の裏付けはない。</p>
     </div>
 
-    <div class="itemNone" id="i81">
-      <p class="meta"><span class="no">#81</span><span class="tag ev-p">実践知</span></p>
+    <div class="item" id="i81">
+      <p class="meta"><span class="no">#81</span><span class="tag">収納</span><span class="tag ev-p">実践知</span></p>
       <h3>充電器は、場所ごとに置いて動かさない</h3>
       <p class="why">充電器を一つだけ持って動かすと、探す時間と、どこかに置き忘れる回数が増える。安いものを必要な場所の数だけ買って動かさないほうが、結局は安く済む。持ち歩くのは旅行用の一組だけにする。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>寝室・机・車など、充電する場所を数える</li>
         <li>その数だけ買って、場所ごとに固定する</li>
         <li>旅行用に一組だけ、鞄に入れておく</li>
       </ul>
       <p class="snag"><b>つまずくところ</b>旅行用の一組を、家で使ってしまうと元に戻る。色を変えておく。</p>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-p">利用者の報告が中心で、裏付けは逸話のかたち。</p>
     </div>
   </section>
@@ -228,9 +240,10 @@
     <p class="note">増やすのを我慢するより、総量を決めてしまう。</p>
 
     <div class="item me" id="i82">
-      <p class="meta"><span class="no">#82</span></p>
+      <p class="meta"><span class="no">#82</span><span class="tag">手放す</span></p>
       <h3>事実で切ってから、感覚で見る</h3>
       <p class="why">最初から「好きかどうか」で見ると、ほとんどのものに迷いが出て手が止まる。先に期間という事実で機械的に絞り、残ったものだけを感覚で見ると、判断の回数そのものが減る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>一年使っていないものを、まず全部出す</li>
         <li>出したものだけを、好きかどうかで見る</li>
@@ -240,9 +253,10 @@
     </div>
 
     <div class="item me" id="i83">
-      <p class="meta"><span class="no">#83</span></p>
+      <p class="meta"><span class="no">#83</span><span class="tag">手放す</span></p>
       <h3>買ったら、ひとつ手放す</h3>
       <p class="why">総量を一定にすると決めておけば、買うことを我慢しなくていい。片付けを気が向いたときの作業ではなく、買うという出来事に結びつけるので、新しい時間を作らずに済む。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>買ったものと同じ種類のものから、ひとつ選ぶ</li>
         <li>選ぶのは、開封する前にする</li>
@@ -250,10 +264,11 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i84">
-      <p class="meta"><span class="no">#84</span></p>
+    <div class="item" id="i84">
+      <p class="meta"><span class="no">#84</span><span class="tag">手放す</span></p>
       <h3>迷ったものは箱に入れ、日付を書く</h3>
       <p class="why">捨てる判断を、今すぐ下さなくていい形にする。半年開けなかったという事実が、中身を見ずに手放す根拠になる。迷いを先送りするのではなく、期限付きで預ける。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>迷ったものを箱に入れ、今日の日付を書く</li>
         <li>半年後の日付を、カレンダーに入れる</li>
@@ -262,10 +277,11 @@
       <p class="snag"><b>つまずくところ</b>箱が増えると、ただの倉庫になる。箱は常に一つだけにする。</p>
     </div>
 
-    <div class="itemNone" id="i85">
-      <p class="meta"><span class="no">#85</span></p>
+    <div class="item" id="i85">
+      <p class="meta"><span class="no">#85</span><span class="tag">手放す</span></p>
       <h3>「捨てづらい」と感じたら、合図だと思う</h3>
       <p class="why">捨てづらいと感じているあいだ、そのものは場所だけでなく注意力も取り続けている。迷っている時間のほうが、ものの値段より高くつくことが多い。捨てづらさを、残す理由ではなく判断すべき合図として扱う。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>手に取って迷ったら、迷ったという事実を先に認める</li>
         <li>残す理由が見栄や「もったいない」だけなら、手放す</li>
@@ -280,10 +296,11 @@
     <h2>掃除</h2>
     <p class="note">まとめてやらないために、散らしておく。</p>
 
-    <div class="itemNone" id="i86">
-      <p class="meta"><span class="no">#86</span></p>
+    <div class="item" id="i86">
+      <p class="meta"><span class="no">#86</span><span class="tag">掃除</span></p>
       <h3>汚れたその場で、ひと拭き</h3>
       <p class="why">汚れは乾いて固まるほど落ちにくくなる。濡れているうちなら水だけで済み、洗剤も時間も道具も要らない。掃除という行事をなくして、調理や洗面の一部に混ぜてしまう。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>コンロ・洗面・鏡の近くに、拭くものを常設する</li>
         <li>使い終わりの最後の動作として、一度だけ拭く</li>
@@ -291,10 +308,11 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i87">
-      <p class="meta"><span class="no">#87</span></p>
+    <div class="item" id="i87">
+      <p class="meta"><span class="no">#87</span><span class="tag">掃除</span></p>
       <h3>掃除道具は、使う場所ごとに置く</h3>
       <p class="why">取りに行く距離が、そのままやらない理由になる。一式を一か所にまとめるのは管理の都合であって、使う側の都合ではない。道具が安いものほど、分散させたほうが回る。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>場所ごとに必要な道具を一つだけ選ぶ</li>
         <li>その場所の、手の届くところに置く</li>
@@ -302,10 +320,11 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i88">
-      <p class="meta"><span class="no">#88</span></p>
+    <div class="item" id="i88">
+      <p class="meta"><span class="no">#88</span><span class="tag">掃除</span></p>
       <h3>週に一度の場所は、曜日で決める</h3>
       <p class="why">「全部やる日」を作ると、その日が重くなって飛ぶ。場所を曜日に割り振ると、一日あたりが十分ほどになり、飛ばしても一週間後に戻ってくる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>週一でいい場所を、三つか四つ挙げる</li>
         <li>それぞれを別の曜日に割り当てる</li>
@@ -314,15 +333,17 @@
       <p class="snag"><b>つまずくところ</b>割り当てを増やすと、どの曜日も重くなる。曜日は埋めきらず、空の日を残す。</p>
     </div>
 
-    <div class="itemNone" id="i89">
-      <p class="meta"><span class="no">#89</span><span class="tag ev-p">実践知</span></p>
+    <div class="item" id="i89">
+      <p class="meta"><span class="no">#89</span><span class="tag">掃除</span><span class="tag ev-p">実践知</span></p>
       <h3>風呂を出る前に、壁と床の水を切る</h3>
       <p class="why">水垢もカビも、残った水から始まる。乾くのを待つのではなく、出る前の一、二分で水を下へ送ってしまうと、あとでこする回数が減る。道具は小さなもの一つでいい。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>最後に浴びたあと、体の水を手で切る</li>
         <li>壁とドアの水を、上から下へ送る</li>
         <li>床の水を、排水口のほうへ寄せる</li>
       </ul>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-p">論文はない。残り水を物理的に減らす、という理屈だけ。</p>
     </div>
   </section>
@@ -332,10 +353,11 @@
     <h2>汚れ落とし</h2>
     <p class="note">洗剤を足す前に、台所にあるものを試す。</p>
 
-    <div class="itemNone" id="i90">
-      <p class="meta"><span class="no">#90</span></p>
+    <div class="item" id="i90">
+      <p class="meta"><span class="no">#90</span><span class="tag">汚れ落とし</span></p>
       <h3>油汚れは、柑橘の皮でこする</h3>
       <p class="why">みかんやレモンの皮に多いリモネンは、油と馴染みがよく、固まった油膜をゆるめる。食べたあとの皮がそのまま使えるので、専用の洗剤を買い足さずに済む。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>食べたあとの皮を、白い内側ではなく外側で使う</li>
         <li>コンロまわりや換気扇の油を、皮の面でこする</li>
@@ -344,10 +366,11 @@
       <p class="snag"><b>つまずくところ</b>塗装やゴムのある面は、変色することがある。目立たないところで試してから使う。</p>
     </div>
 
-    <div class="itemNone" id="i91">
-      <p class="meta"><span class="no">#91</span></p>
+    <div class="item" id="i91">
+      <p class="meta"><span class="no">#91</span><span class="tag">汚れ落とし</span></p>
       <h3>茶渋は、重曹を溶かしたお湯に置いておく</h3>
       <p class="why">茶渋はこすって削るものだと思われているが、置いておくだけで浮く。スポンジが届かないコップの底にも効くので、力の要らないやり方のほうが確実に落ちる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>コップにお湯を張り、重曹を小さじ一杯溶かす</li>
         <li>一時間ほど置く</li>
@@ -356,10 +379,11 @@
       <p class="snag"><b>つまずくところ</b>塩でこする方法もあるが、薄い器や絵付けのある器は傷が付く。迷ったら重曹にする。</p>
     </div>
 
-    <div class="itemNone" id="i92">
-      <p class="meta"><span class="no">#92</span></p>
+    <div class="item" id="i92">
+      <p class="meta"><span class="no">#92</span><span class="tag">汚れ落とし</span></p>
       <h3>古いストッキングと軍手を、取っておく</h3>
       <p class="why">網戸・ブラインド・家具の隙間は、布だと面が合わず、掃除機だと口が入らない。手にはめるものに替えると、形のあるものを形のまま拭ける。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>破れたストッキングと、片方だけの軍手を捨てずに残す</li>
         <li>網戸やブラインドは、ストッキングを丸めて撫でる</li>
@@ -374,10 +398,11 @@
     <h2>洗濯</h2>
     <p class="note">面倒なのは洗うことではなく、その前後。</p>
 
-    <div class="itemNone" id="i93">
-      <p class="meta"><span class="no">#93</span></p>
+    <div class="item" id="i93">
+      <p class="meta"><span class="no">#93</span><span class="tag">洗濯</span></p>
       <h3>入れる時点で、分けておく</h3>
       <p class="why">洗濯でいちばん手数がかかるのは、洗う前の仕分け。脱ぐ時点で行き先が分かれていれば、その工程が丸ごと消える。分けるのは洗い方が違うものだけでよく、増やすほど続かない。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>かごを二つか三つに増やす（普段着／分けたいもの）</li>
         <li>かごは、脱ぐ場所に置く</li>
@@ -385,23 +410,26 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i94">
-      <p class="meta"><span class="no">#94</span><span class="tag ev-p">実践知</span></p>
+    <div class="item" id="i94">
+      <p class="meta"><span class="no">#94</span><span class="tag">洗濯</span><span class="tag ev-p">実践知</span></p>
       <h3>畳まないものを、決める</h3>
       <p class="why">畳む工程は、きれいさのためで、機能のためではない。下着やタオルのように見えないものは放り込む、シャツのように形が要るものは吊るす、と決めると、取り込みから収納までが一動作になる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>畳まないもの（放り込む・吊るす）を先に決める</li>
         <li>放り込む先は、仕切りのある箱にする</li>
         <li>シャツは、干したハンガーのままクローゼットへ戻す</li>
         <li>残ったものだけ畳む</li>
       </ul>
+      <p class="lbl">裏付け</p>
       <p class="ev ev-p">干す→取り込む→畳む→しまう、のうち二つを削る考え方。</p>
     </div>
 
-    <div class="itemNone" id="i95">
-      <p class="meta"><span class="no">#95</span></p>
+    <div class="item" id="i95">
+      <p class="meta"><span class="no">#95</span><span class="tag">洗濯</span></p>
       <h3>乾いたら、その日のうちにしまう</h3>
       <p class="why">取り込んだまま積むと、山そのものがたんすとして機能しはじめ、しまう動機が消える。乾いたものを一度も床や椅子に置かないだけで、洗濯は終わる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>取り込む時間を、しまえる時間に合わせる</li>
         <li>取り込みながら、そのまま行き先へ運ぶ</li>
@@ -416,10 +444,11 @@
     <h2>ごみ</h2>
     <p class="note">溜めないのではなく、出すまでを一本の線にする。</p>
 
-    <div class="itemNone" id="i96">
-      <p class="meta"><span class="no">#96</span></p>
+    <div class="item" id="i96">
+      <p class="meta"><span class="no">#96</span><span class="tag">ごみ</span></p>
       <h3>替えの袋を、ごみ箱の底に入れておく</h3>
       <p class="why">満杯のごみ箱を前に、袋を取りに行くところで手が止まる。底に数枚入れておけば、袋を縛って取り出し、そのまま次を広げるまでが一動作になる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>ごみ箱の底に、替えの袋を三枚ほど入れる</li>
         <li>袋を替えたら、残りの枚数を見る</li>
@@ -427,10 +456,11 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i97">
-      <p class="meta"><span class="no">#97</span></p>
+    <div class="item" id="i97">
+      <p class="meta"><span class="no">#97</span><span class="tag">ごみ</span></p>
       <h3>出す日は、前の晩に玄関へ</h3>
       <p class="why">朝は、出すかどうかを判断する余裕がない。前の晩のうちに玄関まで動かしておけば、朝は持って出るだけになる。忘れるのは記憶の問題ではなく、動かす時間帯の問題。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>収集日の前の晩に、まとめて玄関へ</li>
         <li>玄関に置く場所を、固定する</li>
@@ -438,10 +468,11 @@
       </ul>
     </div>
 
-    <div class="itemNone" id="i98">
-      <p class="meta"><span class="no">#98</span></p>
+    <div class="item" id="i98">
+      <p class="meta"><span class="no">#98</span><span class="tag">ごみ</span></p>
       <h3>資源ごみの置き場を、玄関の外に</h3>
       <p class="why">缶・瓶・段ボールは、たまる速さに対して出す機会が少ない。部屋の中に置き場を作ると、部屋が集積所になる。外に出せる場所があるなら、そこが一番いい収納になる。</p>
+      <p class="lbl">やり方</p>
       <ul class="how">
         <li>玄関の外や物置に、資源ごみの場所を決める</li>
         <li>段ボールは、受け取ったその場でたたむ</li>
