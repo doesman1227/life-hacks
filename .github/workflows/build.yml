@@ -1,0 +1,39 @@
+# build_items.py を走らせて items.json と共通ファイルの版を作り直す役。
+# これがあるので、GitHub の編集画面で build_items.py を直してコミットすれば、
+# 手元のパソコンを開かなくても公開まで進む。
+# 検証に引っかかると（月の書き方、コードの重複、領域の綴りなど）ここで止まり、
+# items.json は作り直されないので、おかしなデータのまま公開されることはない。
+name: ビルド
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-items
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: items.json を作り直す
+        run: python3 build_items.py
+
+      - name: 変わっていたらコミットする
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "変更なし"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "items.json を作り直す"
+          git push
